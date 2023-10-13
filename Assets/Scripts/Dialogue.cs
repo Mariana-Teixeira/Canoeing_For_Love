@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using TMPro;
+using Microsoft.Unity.VisualStudio.Editor;
 public class Dialogue : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
     private int index;
+
+    private GameObject character;
     // Start is called before the first frame update
     void Start()
     {
+        character = GameObject.FindWithTag("Ken");
         textComponent.text = string.Empty;
         StartDialogue();
     }
@@ -35,6 +40,12 @@ public class Dialogue : MonoBehaviour
     }
 
     IEnumerator TypeLine(){
+        if (lines[index].Contains("Ken")){
+            character.SetActive(true);
+        }
+        else{
+            character.SetActive(false);
+        }
         foreach(char c in lines[index].ToCharArray()){
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
