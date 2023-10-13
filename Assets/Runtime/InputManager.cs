@@ -1,9 +1,23 @@
+using DialogueTree;
 using UnityEngine;
 
-public class InputManager : Subject
+public class InputManager : MonoBehaviour
 {
-    private void Update()
+    DialogueManager treeManager;
+    InputInvoker invoker;
+
+    private void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) NotifyObserver();
+        treeManager = GetComponent<DialogueManager>();
+        invoker = new InputInvoker();
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ICommand nextNode = new NextNodeCommand(treeManager);
+            invoker.AddCommand(nextNode);
+        }
+    } 
 }

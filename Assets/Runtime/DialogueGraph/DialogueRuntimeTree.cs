@@ -1,48 +1,29 @@
-using System;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace DialogueTree
 {
-    public class DialogueRuntimeTree : MonoBehaviour, IObserver
+    public class DialogueRuntimeTree
     {
         DialogueData data;
         DialogueRuntimeNode currentNode;
-        public Subject inputSubject;
-        Invoker dialogueInvoker;
 
-        private void OnEnable() => inputSubject.AddObserver(this);
-        private void Awake() => LoadData();
-        void LoadData()
+        public DialogueRuntimeNode CurrentNode { get { return currentNode; } }
+
+        public DialogueRuntimeTree() => data = new DialogueData();
+
+        public void GoToNextNode()
         {
-            data = new DialogueData();
-            data.graph.TryGetValue(data.headNode, out currentNode);
+            if (currentNode == null)
+            {
+                Debug.Log("Setting Head Node");
+                data.graph.TryGetValue(data.headNode, out currentNode);
+            }
+            else
+            {
+                Debug.Log("Setting Next Node");
+                NPCNode node = (NPCNode)currentNode;
+                data.graph.TryGetValue(node.NextNodeGUID, out currentNode);
+            }
         }
-
-
-        private void Start()
-        {
-            dialogueInvoker = new Invoker();
-            ExecuteCommand();
-        }
-
-        public void OnNotify()
-        {
-            GoToNextNode();
-            ExecuteCommand();
-        }
-        void GoToNextNode()
-        {
-            NPCNode node = (NPCNode)currentNode;
-            data.graph.TryGetValue(node.NextNodeGUID, out currentNode);
-        }
-
-        public void ExecuteCommand()
-        {
-            ICommand command = new DisplayDialogueCommand(currentNode.ToString());
-            dialogueInvoker.AddCommand(command);
-        }
-
-        private void OnDisable() => inputSubject.RemoveObserver(this);
     }
 }

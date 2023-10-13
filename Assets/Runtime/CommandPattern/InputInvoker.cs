@@ -1,15 +1,14 @@
 using System.Collections.Generic;
-using System.Xml.Serialization;
 
-public class Invoker
+public class InputInvoker
 {
     Stack<ICommand> commands;
 
-    public Invoker() => commands = new Stack<ICommand>();
+    public InputInvoker() => commands = new Stack<ICommand>();
 
     public void AddCommand(ICommand command)
     {
         command.Execute();
-        //commands.Push(command);
+        commands.Push(command);
     }
 }
