@@ -1,68 +1,48 @@
 using System;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace DialogueTree
 {
-    // TODO: Command Pattern is specially useful for PlayerNode (because the player must pick a choice before moving to the NextNode).
-    public class DialogueRuntimeTree : MonoBehaviour
+    public class DialogueRuntimeTree : MonoBehaviour, IObserver
     {
         DialogueData data;
         DialogueRuntimeNode currentNode;
+        public Subject inputSubject;
+        Invoker dialogueInvoker;
 
-        public bool GoToOptionA;
-
-        private void Awake()
-        {
-            LoadData();
-            GoToNextNode();
-        }
-
-        /// <summary>
-        /// Loads a DialogueData file.
-        /// </summary>
+        private void OnEnable() => inputSubject.AddObserver(this);
+        private void Awake() => LoadData();
         void LoadData()
         {
             data = new DialogueData();
             data.graph.TryGetValue(data.headNode, out currentNode);
         }
 
-        /// <summary>
-        /// Updates currentNode.
-        /// </summary>
+
+        private void Start()
+        {
+            dialogueInvoker = new Invoker();
+            ExecuteCommand();
+        }
+
+        public void OnNotify()
+        {
+            GoToNextNode();
+            ExecuteCommand();
+        }
         void GoToNextNode()
         {
-            if (currentNode.GetType() == typeof(PlayerNode))
-            {
-                PlayerNode node = (PlayerNode)currentNode;
-                Guid nodeGuid =  GoToOptionA ? node.choices[0].NextNodeGUID : node.choices[1].NextNodeGUID;
-                LoadPlayerNode(node);
-                if (data.graph.TryGetValue(nodeGuid, out currentNode) == true) GoToNextNode();
-            }
-            else
-            {
-                NPCNode node = (NPCNode)currentNode;
-                LoadNPCNode(node);
-                if (data.graph.TryGetValue(node.NextNodeGUID, out currentNode) == true) GoToNextNode();
-            }
+            NPCNode node = (NPCNode)currentNode;
+            data.graph.TryGetValue(node.NextNodeGUID, out currentNode);
         }
 
-        /// <summary>
-        /// Invoke delegates that Gameplay Components should subscribe to.
-        /// </summary>
-        /// <param name="node"></param>
-        void LoadPlayerNode(PlayerNode node)
+        public void ExecuteCommand()
         {
-            Debug.Log(node.ToString());
+            ICommand command = new DisplayDialogueCommand(currentNode.ToString());
+            dialogueInvoker.AddCommand(command);
         }
 
-        /// <summary>
-        /// Invoke delegates that Gameplay Components should be listeners for.
-        /// </summary>
-        /// <param name="node"></param>
-        void LoadNPCNode(NPCNode node)
-        {
-            Debug.Log(node.ToString());
-        }
+        private void OnDisable() => inputSubject.RemoveObserver(this);
     }
 }

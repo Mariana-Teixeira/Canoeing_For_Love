@@ -1,6 +1,4 @@
 using System;
-using Unity.VisualScripting.Antlr3.Runtime;
-using UnityEditor;
 
 namespace DialogueTree
 {
@@ -11,22 +9,12 @@ namespace DialogueTree
     public class PlayerNode : DialogueRuntimeNode
     {
         public Guid Guid { get; private set; }
-        public Choices[] choices { get; private set; }
+        public Choices[] Choices { get; private set; }
 
         public PlayerNode(Guid guid, Choices[] choices)
         {
             this.Guid = guid;
-            this.choices = choices;
-        }
-
-        public override string ToString()
-        {
-            string s = string.Empty;
-            foreach (var choice in choices)
-            {
-                s += choice.ToString() + " | ";
-            }
-            return s;
+            this.Choices = choices;
         }
     }
 
