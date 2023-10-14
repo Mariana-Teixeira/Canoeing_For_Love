@@ -1,23 +1,42 @@
 using DialogueTree;
 using UnityEngine;
-
-public class InputManager : MonoBehaviour
+public class InputManager : MonoBehaviour, INodeSubscriber
 {
-    DialogueManager treeManager;
+    NodePublisher publisher;
     InputInvoker invoker;
+    DialogueManager treeManager;
+    ICommand command;
+
+    private void OnEnable() => publisher.AddObserver(this);
+    private void OnDisable() => publisher.RemoveObserver(this);
 
     private void Awake()
     {
-        treeManager = GetComponent<DialogueManager>();
+        publisher = GetComponent<NodePublisher>();
         invoker = new InputInvoker();
+        treeManager = GetComponent<DialogueManager>();
+    }
+    private void Start()
+    {
+        command = new StartDialogueCommand(treeManager);
+        invoker.AddCommand(command);
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            ICommand nextNode = new NextNodeCommand(treeManager);
-            invoker.AddCommand(nextNode);
+            invoker.AddCommand(command);
         }
-    } 
+    }
+
+    public void OnNotifyNPC(NPCNode node)
+    {
+        command = new NextNodeCommand(treeManager);
+    }
+
+    public void OnNotifyPlayer(PlayerNode node)
+    {
+        command = new ChooseNodeCommand(treeManager);
+    }
 }

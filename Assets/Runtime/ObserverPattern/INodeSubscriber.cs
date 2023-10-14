@@ -2,5 +2,6 @@ using DialogueTree;
 
 public interface INodeSubscriber
 {
-    public void OnNotify(DialogueRuntimeNode node);
+    public void OnNotifyNPC(NPCNode node);
+    public void OnNotifyPlayer(PlayerNode node);
 }

@@ -1,5 +1,3 @@
-using DialogueTree;
-
 public class NextNodeCommand : ICommand
 {
     DialogueManager treeManager;
@@ -12,5 +10,19 @@ public class NextNodeCommand : ICommand
     public void Execute()
     {
         treeManager.PublishNextNode();
+    }
+}
+public class ChooseNodeCommand : ICommand
+{
+    DialogueManager treeManager;
+
+    public ChooseNodeCommand(DialogueManager manager)
+    {
+        this.treeManager = manager;
+    }
+
+    public void Execute()
+    {
+        treeManager.PublishChosenNode();
     }
 }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Runtime/ObserverPattern/INodeSubscriber.cs.meta
 guid: 06a269a0af522aa40b7858f09be97a7a
+========
+guid: 43488d0f7b987804498fe50b372a1616
+>>>>>>>> dev/output-dialogue:Assets/Runtime/DialogueManager.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

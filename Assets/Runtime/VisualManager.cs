@@ -8,8 +8,14 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     private void OnEnable() => publisher.AddObserver(this);
     private void OnDisable() => publisher.RemoveObserver(this);
 
-    public void OnNotify(DialogueRuntimeNode node)
+    public void OnNotifyNPC(NPCNode node)
     {
         Debug.Log(node.ToString());
+    }
+
+    public void OnNotifyPlayer(PlayerNode node)
+    {
+        Debug.Log(node.ToString());
+        Debug.Log(node.Choices.Length);
     }
 }

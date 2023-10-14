@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace DialogueTree
@@ -24,6 +25,18 @@ namespace DialogueTree
                 NPCNode node = (NPCNode)currentNode;
                 data.graph.TryGetValue(node.NextNodeGUID, out currentNode);
             }
+        }
+
+        public void GoToHeadNode()
+        {
+            Debug.Log("Setting Head Node");
+            data.graph.TryGetValue(data.headNode, out currentNode);
+        }
+
+        public void GoToNextNode(Guid nextNode)
+        {
+            Debug.Log("Iterating through the Node Tree");
+            data.graph.TryGetValue(nextNode, out currentNode);
         }
     }
 }

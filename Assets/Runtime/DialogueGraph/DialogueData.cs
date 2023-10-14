@@ -17,7 +17,7 @@ public class DialogueData
         var choice_c = new Choices(npc_c.Guid, "choice_c");
         Choices[] choices = { choice_a, choice_c };
         var player_z = new PlayerNode(Guid.NewGuid(), choices);
-        headNode = npc_a.Guid;
+        headNode = player_z.Guid;
 
         graph = new Dictionary<Guid, DialogueRuntimeNode>
         {
