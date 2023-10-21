@@ -9,9 +9,9 @@ namespace DialogueTree
     public class PlayerNode : DialogueRuntimeNode
     {
         public Guid Guid { get; private set; }
-        public Choices[] Choices { get; private set; }
+        public DialogueChoices[] Choices { get; private set; }
 
-        public PlayerNode(Guid guid, Choices[] choices)
+        public PlayerNode(Guid guid, DialogueChoices[] choices)
         {
             this.Guid = guid;
             this.Choices = choices;
@@ -37,12 +37,12 @@ namespace DialogueTree
         }
     }
 
-    public struct Choices
+    public struct DialogueChoices
     {
         public Guid NextNodeGUID { get; private set; }
         string ChoiceDialogue;
 
-        public Choices(Guid nextNode, string dialogue)
+        public DialogueChoices(Guid nextNode, string dialogue)
         {
             this.NextNodeGUID = nextNode;
             this.ChoiceDialogue = dialogue;

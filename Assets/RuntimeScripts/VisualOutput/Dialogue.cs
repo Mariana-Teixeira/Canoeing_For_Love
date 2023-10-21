@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using TMPro;
-using Microsoft.Unity.VisualStudio.Editor;
-using System;
-using System.Runtime.InteropServices;
+
 public class Dialogue : MonoBehaviour
 {   
     // shows text on dialog window
@@ -19,7 +17,6 @@ public class Dialogue : MonoBehaviour
 
     // speed at which the text is written in the dialog window
     public float textSpeed;
-
 
     // used to iterate over the lines, might not be needed in the future
     private int index;

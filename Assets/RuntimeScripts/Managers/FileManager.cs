@@ -9,7 +9,7 @@ using UnityEngine;
 public class FileManager : MonoBehaviour
 {
     // path to where textfiles should be
-    public static readonly string rootPath = $"{Application.dataPath}/gameData/"; 
+    public static readonly string rootPath = $"{Application.dataPath}/GameData/"; 
 
     // reads text file and return lines off text
     public static List<string> ReadTextFile(string filePath, bool includeBlankLines = true){
