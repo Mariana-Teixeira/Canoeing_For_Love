@@ -1,4 +1,4 @@
-using DialogueTree;
+    using DialogueTree;
 using UnityEngine;
 public class InputManager : MonoBehaviour, INodeSubscriber
 {
@@ -24,7 +24,7 @@ public class InputManager : MonoBehaviour, INodeSubscriber
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             invoker.AddCommand(command);
         }
@@ -38,5 +38,10 @@ public class InputManager : MonoBehaviour, INodeSubscriber
     public void OnNotifyPlayer(PlayerNode node)
     {
         command = new ChooseNodeCommand(treeManager);
+    }
+
+    public void OnNotifyEndConversation()
+    {
+
     }
 }

@@ -2,55 +2,73 @@ using System;
 
 namespace DialogueTree
 {
-    // TODO: Refactor to Abstract Class or Interface.
     public class DialogueRuntimeNode
-    {}
+    {
+        public Guid Guid;
+        public string displayName;
+        public string DisplayName
+        {
+            get
+            {
+                return displayName;
+            }
+        }
+
+        public DialogueRuntimeNode(Guid myGuid, string characterName)
+        {
+            this.Guid = myGuid;
+            this.displayName = characterName;
+        }
+    }
 
     public class PlayerNode : DialogueRuntimeNode
     {
-        public Guid Guid { get; private set; }
         public DialogueChoices[] Choices { get; private set; }
 
-        public PlayerNode(Guid guid, DialogueChoices[] choices)
+        public PlayerNode(Guid myGuid, string playerName, DialogueChoices[] choices) : base(myGuid, playerName)
         {
-            this.Guid = guid;
             this.Choices = choices;
         }
     }
 
     public class NPCNode : DialogueRuntimeNode
     {
-        public Guid Guid { get; private set; }
         public Guid NextNodeGUID { get; private set; }
-        string NPCDialogue;
+        string characterDialogue;
+        string imagePath;
 
-        public NPCNode(Guid myGuid, Guid nextNodeGuid, string npcDialogue)
+        public string CharacterDialogue
         {
-            this.Guid = myGuid;
-            this.NextNodeGUID = nextNodeGuid;
-            this.NPCDialogue = npcDialogue;
+            get
+            {
+                return characterDialogue;
+            }
+        }
+        public string ImagePath
+        {
+            get
+            {
+                return imagePath;
+            }
         }
 
-        public override string ToString()
+        public NPCNode(Guid myGuid, Guid nextNodeGuid, string npcName, string npcDialogue, string imagePath) : base(myGuid, npcName)
         {
-            return NPCDialogue;
+            this.NextNodeGUID = nextNodeGuid;
+            this.characterDialogue = npcDialogue;
+            this.imagePath = imagePath;
         }
     }
 
     public struct DialogueChoices
     {
         public Guid NextNodeGUID { get; private set; }
-        string ChoiceDialogue;
+        string choiceDialogue;
 
         public DialogueChoices(Guid nextNode, string dialogue)
         {
             this.NextNodeGUID = nextNode;
-            this.ChoiceDialogue = dialogue;
-        }
-
-        public override string ToString()
-        {
-            return ChoiceDialogue;
+            this.choiceDialogue = dialogue;
         }
     }
 }
