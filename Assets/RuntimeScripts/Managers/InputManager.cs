@@ -7,6 +7,9 @@ public class InputManager : MonoBehaviour, INodeSubscriber
     DialogueManager treeManager;
     ICommand command;
 
+    private ChoicePanel cp;
+
+
     private void OnEnable() => publisher.AddObserver(this);
     private void OnDisable() => publisher.RemoveObserver(this);
 
@@ -20,6 +23,7 @@ public class InputManager : MonoBehaviour, INodeSubscriber
     {
         command = new StartDialogueCommand(treeManager);
         invoker.AddCommand(command);
+        cp = ChoicePanel.instace;
     }
 
     void Update()
@@ -28,6 +32,7 @@ public class InputManager : MonoBehaviour, INodeSubscriber
         {
             invoker.AddCommand(command);
         }
+        
     }
 
     public void OnNotifyNPC(NPCNode node)

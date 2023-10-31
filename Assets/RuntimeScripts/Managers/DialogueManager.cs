@@ -1,12 +1,23 @@
 using System;
 using System.Diagnostics;
 using DialogueTree;
+using System.Collections;
+using UnityEngine;
 
 public class DialogueManager : NodePublisher
 {
     DialogueRuntimeTree tree;
 
-    private void Awake() => tree = new DialogueRuntimeTree();
+    ChoicePanel cp;
+
+    private void Awake() {
+        tree = new DialogueRuntimeTree();
+        
+    } 
+
+    private void Start(){
+        cp = ChoicePanel.instace;
+    }
 
 
     public void StartDialogueTree()
@@ -23,16 +34,18 @@ public class DialogueManager : NodePublisher
         NotifyObserver(tree.CurrentNode);
     }
 
-    public void DisplayChoices()
-    {
-
-    }
 
     public void PublishChosenNode()
     {
         PlayerNode player = (PlayerNode)tree.CurrentNode;
-        Guid nextNode = player.Choices[0].NextNodeGUID;
+        StartCoroutine(CheckHasAnswer());
+        Guid nextNode = player.Choices[cp.getAnswer()].NextNodeGUID;
         tree.GoToNextNode(nextNode);
         NotifyObserver(tree.CurrentNode);
     }
+
+    public IEnumerator CheckHasAnswer(){
+        yield return new WaitUntil(()=>cp.getAnswer()!=-1);
+    }
+
 }

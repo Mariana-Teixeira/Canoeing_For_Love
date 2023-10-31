@@ -8,7 +8,7 @@ public class NodePublisher : MonoBehaviour
 
     public void AddObserver(INodeSubscriber obs) => observers.Add(obs);
     public void RemoveObserver(INodeSubscriber obs) => observers.Remove(obs);
-    protected void NotifyObserver(DialogueRuntimeNode node)
+    public void NotifyObserver(DialogueRuntimeNode node)
     {
         observers.ForEach
         (

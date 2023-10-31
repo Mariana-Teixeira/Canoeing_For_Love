@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ken
   - nameHolder
+  - ChoiceCanvas
   layers:
   - Default
   - TransparentFX
