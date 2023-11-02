@@ -12,21 +12,6 @@ namespace DialogueTree
 
         public DialogueRuntimeTree() => data = new DialogueData();
 
-        // public void GoToNextNode()
-        // {
-        //     if (currentNode == null)
-        //     {
-        //         Debug.Log("Setting Head Node");
-        //         data.graph.TryGetValue(data.headNode, out currentNode);
-        //     }
-        //     else
-        //     {
-        //         Debug.Log("Setting Next Node");
-        //         NPCNode node = (NPCNode)currentNode;
-        //         data.graph.TryGetValue(node.NextNodeGUID, out currentNode);
-        //     }
-        // }
-
         public void GoToHeadNode()
         {
             Debug.Log("Setting Head Node");

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,17 +16,12 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     public Image characterPortrait;
     public float textSpeed;
 
-    private GameObject choiceCanvas;
-
-    private GameObject button1;
-
-    private DialogueData dd;
-
     [SerializeField] private CanvasGroup dialogueCanvas;
+    [SerializeField] private CanvasGroup choiceCanvas;
 
 
     List<Guid> guids = new List<Guid>();
-    private ChoicePanel cp;
+    private ChoicesPanel choicePanel;
 
     NodePublisher publisher;
     private void Awake() => publisher = GetComponent<NodePublisher>();
@@ -36,25 +32,22 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     {
         dialogueComponent.text = string.Empty;
         nameComponent.text = string.Empty;
-        choiceCanvas = GameObject.Find("ChoiceCanvas");
-        button1 = GameObject.Find("Button");
-        cp = ChoicePanel.instace;
-        button1.SetActive(false);
-        dd = new DialogueData();
+
+        choicePanel = ChoicesPanel.instance;
+        choiceCanvas.enabled = false;
     }
 
     public void OnNotifyNPC(NPCNode node)
     {
-        dialogueCanvas.interactable = true;
-        dialogueCanvas.blocksRaycasts = true;
-        choiceCanvas.SetActive(false);
-        dialogueComponent.text = string.Empty;
         if (node == null)
         {
             EndDialogue();
             return;
         }
 
+        ToggleChoiceCanvas(false);
+
+        dialogueComponent.text = string.Empty;
         nameComponent.text = node.DisplayName;
         Sprite characterSprite = Resources.Load(node.ImagePath) as Sprite;
         characterPortrait.sprite = characterSprite;
@@ -63,29 +56,18 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
     public void OnNotifyPlayer(PlayerNode node)
     {
-        dialogueCanvas.interactable = false;
-        dialogueCanvas.blocksRaycasts = false;
-        List<string> choices = new List<string>();
-        
-        choiceCanvas.SetActive(true);
-        foreach(var dialogue in node.Choices){
-            print(dialogue.NextNodeGUID);
-            guids.Add(dialogue.NextNodeGUID);
-            choices.Add(dialogue.choiceDialogue); 
-        }
-        string[] choicesArray = choices.ToArray();
-        cp.Show(choicesArray);
-        // have to get a way to wait for the input before calling this function
-        StartCoroutine(CheckHasAnswer());
+        ToggleChoiceCanvas(true);
+        StartCoroutine(choicePanel.GenerateChoices(node.Choices));
     }
 
-    public IEnumerator CheckHasAnswer(){
-        yield return new WaitUntil(()=>cp.AcceptAnswer(index: cp.getAnswer()));
-        cp.Hide();
-        choiceCanvas.SetActive(false);        
+    void ToggleChoiceCanvas(bool boolean)
+    {
+        choiceCanvas.gameObject.SetActive(boolean);
+        dialogueCanvas.interactable = !boolean;
+        dialogueCanvas.blocksRaycasts = !boolean;
     }
 
-    public void EndDialogue()
+    void EndDialogue()
     {
         dialogueComponent.text = string.Empty;
         nameComponent.text = string.Empty;

@@ -8,7 +8,7 @@ public class DialogueManager : NodePublisher
 {
     DialogueRuntimeTree tree;
 
-    ChoicePanel cp;
+    ChoicesPanel choicePanel;
 
     private void Awake() {
         tree = new DialogueRuntimeTree();
@@ -16,7 +16,7 @@ public class DialogueManager : NodePublisher
     } 
 
     private void Start(){
-        cp = ChoicePanel.instace;
+        choicePanel = ChoicesPanel.instance;
     }
 
 
@@ -39,13 +39,13 @@ public class DialogueManager : NodePublisher
     {
         PlayerNode player = (PlayerNode)tree.CurrentNode;
         StartCoroutine(CheckHasAnswer());
-        Guid nextNode = player.Choices[cp.getAnswer()].NextNodeGUID;
+        Guid nextNode = player.Choices[choicePanel.GetAnswer()].NextNodeGUID;
         tree.GoToNextNode(nextNode);
         NotifyObserver(tree.CurrentNode);
     }
 
     public IEnumerator CheckHasAnswer(){
-        yield return new WaitUntil(()=>cp.getAnswer()!=-1);
+        yield return new WaitUntil(()=>choicePanel.GetAnswer()!=-1);
     }
 
 }

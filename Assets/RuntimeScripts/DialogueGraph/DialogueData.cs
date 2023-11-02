@@ -1,8 +1,6 @@
 using DialogueTree;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
 
 public class DialogueData
 {
@@ -15,13 +13,14 @@ public class DialogueData
         var charMaria = "Maria";
 
         // Instantiate a Dictionary for testing purposes.
-        var npc_e = new NPCNode(Guid.NewGuid(), Guid.Empty, "NPC", "AYYYYYYY", charMaria);
-        var npc_d = new NPCNode(Guid.NewGuid(), Guid.Empty, "OtherNPC", "OOOOOOO", charMorse);
+        var npc_e = new NPCNode(Guid.NewGuid(), Guid.Empty, "NPC", "npc_e", charMaria);
+        var npc_d = new NPCNode(Guid.NewGuid(), Guid.Empty, "OtherNPC", "npc_d", charMorse);
+
         var choice_e = new DialogueChoices(npc_e.Guid, "choice_e");
         var choice_d = new DialogueChoices(npc_d.Guid, "choice_d");
-
         DialogueChoices[] choices = { choice_e, choice_d };
         var player_z = new PlayerNode(Guid.NewGuid(), "Player", choices);
+
         var npc_c = new NPCNode(Guid.NewGuid(), player_z.Guid, "NPC", "npc_c", charMaria);
         var npc_b = new NPCNode(Guid.NewGuid(), npc_c.Guid, "OtherNPC", "npc_b", charMorse);
         var npc_a = new NPCNode(Guid.NewGuid(), npc_b.Guid, "NPC", "npc_a", charMaria);

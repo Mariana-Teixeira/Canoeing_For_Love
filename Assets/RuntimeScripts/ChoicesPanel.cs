@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Security;
-public class ChoicePanel : MonoBehaviour
+using DialogueTree;
+
+public class ChoicesPanel : MonoBehaviour
 {
-    public static ChoicePanel instace {set; get;}
+    public static ChoicesPanel instance {set; get;}
 
     private const float BUTTON_MIN_WIDTH = 50;
     private const float BUTTON_MAX_WIDTH = 500;
@@ -16,50 +18,33 @@ public class ChoicePanel : MonoBehaviour
     private const float BUTTON_HEIGHT_PADDING = 20;
 
     [SerializeField] private GameObject choiceButtonPrefab;
-
     [SerializeField] private VerticalLayoutGroup buttonLayoutGroup;
 
-    [SerializeField] private CanvasGroup canvasGroup;
-
     private List<ChoiceButton> buttons = new List<ChoiceButton>();
-
-    //boolean used to know if we are waiting for user choosing 
-    public bool isWaitingUser {get; private set;} = false;
     	
     public ChoicePanelDecision decision {get; private set;} = null;
 
-    void Awake(){
-        instace = this;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        canvasGroup.interactable = false;
-        canvasGroup.blocksRaycasts = false;
-    }
+    void Awake() => instance = this;
 
-    // Used to show options on buttons
-    public void Show(string[] choices){
+    /// <summary>
+    /// Generate and display buttons for each dialogue choice on screen.
+    /// </summary>
+    public IEnumerator GenerateChoices(DialogueChoices[] choices){
         decision = new ChoicePanelDecision(choices);
-        isWaitingUser = true;
-        canvasGroup.interactable = true;
-        canvasGroup.blocksRaycasts = true;
-
-        StartCoroutine(GenerateChoices(choices));
-    }
-
-    // Generates and displays choices and buttons on screen
-    private IEnumerator GenerateChoices(string[] choices){
         float maxWidth = 0;
-        // iterating and creating buttons for each option
+        
+        // Iterating and creating buttons for each option.
         for(int i  = 0; i < choices.Length; i++){
             ChoiceButton choiceButton;
-            if(i<buttons.Count){
+            if(i < buttons.Count)
+            {
                 choiceButton = buttons[i];
             }
-            else{
+            else
+            {
                 GameObject newButtonObject = Instantiate(choiceButtonPrefab, buttonLayoutGroup.transform);
                 newButtonObject.SetActive(true);
+
                 Button newButton = newButtonObject.GetComponent<Button>();
                 TextMeshProUGUI newTitle = newButton.GetComponentInChildren<TextMeshProUGUI>();
                 LayoutElement newLayout = newButton.GetComponent<LayoutElement>();
@@ -67,68 +52,73 @@ public class ChoicePanel : MonoBehaviour
                 choiceButton = new ChoiceButton {button=newButton, title=newTitle, layout=newLayout};
                 buttons.Add(choiceButton);
             }
+
             choiceButton.button.onClick.RemoveAllListeners();
             int buttonIndex = i;
             choiceButton.button.onClick.AddListener(() => AcceptAnswer(buttonIndex));
-            choiceButton.title.text = choices[i];
+            choiceButton.title.text = choices[i].choiceDialogue;
 
             float buttonWidth = Mathf.Clamp(BUTTON_WIDTH_PADDING + choiceButton.title.preferredWidth, BUTTON_MIN_WIDTH, BUTTON_MAX_WIDTH);
             maxWidth = Mathf.Max(maxWidth, buttonWidth);
         }
-        foreach(var button in buttons){
+
+        foreach(var button in buttons)
+        {
             button.layout.preferredWidth = maxWidth;
         }
 
-        for(int i = 0; i < buttons.Count; i++){
+        for(int i = 0; i < buttons.Count; i++)
+        {
             bool show = i < choices.Length;
             buttons[i].button.gameObject.SetActive(show);
 
         }
+
         yield return new WaitForEndOfFrame();
 
-        foreach(var button in buttons){
+        foreach(var button in buttons)
+        {
             int lines = button.title.textInfo.lineCount;
             button.layout.preferredHeight = BUTTON_HEIGHT_PADDING + (BUTTON_HEIGHT_LINE*lines);
         }
 
     }
 
-    // Hide canvas Group
-    public void Hide(){
-        isWaitingUser = false;
-        canvasGroup.interactable = false;
-        canvasGroup.blocksRaycasts = false;
-    }
-
-    // True if there's a valid answer
-    public bool AcceptAnswer(int index){
-
-        if(index < 0 || index > decision.choices.Length - 1){
+    /// <summary>
+    /// Return true if the answer is valid.
+    /// </summary>
+    public bool AcceptAnswer(int index)
+    {
+        if(index < 0 || index > decision.choices.Length - 1)
+        {
             return false;
         }
-        else{
+        else
+        {
             decision.answerIndex = index;
-            isWaitingUser = false;
             return true;
         }
         
     }
 
-    // get the answer
-    public int getAnswer(){
+    public int GetAnswer(){
         return decision.answerIndex;
     }
 
-    public class ChoicePanelDecision{
+    public class ChoicePanelDecision
+    {
         public int answerIndex = -1;
-        public string[] choices = new string [0];
-        public ChoicePanelDecision(string[] choices){
+        public DialogueChoices[] choices = new DialogueChoices[0];
+
+        public ChoicePanelDecision(DialogueChoices[] choices)
+        {
             answerIndex = -1;
             this.choices = choices;
         }
     }
 
-    private struct ChoiceButton{
+    private struct ChoiceButton
+    {
         public Button button;
         public TextMeshProUGUI title;
         public LayoutElement layout;
