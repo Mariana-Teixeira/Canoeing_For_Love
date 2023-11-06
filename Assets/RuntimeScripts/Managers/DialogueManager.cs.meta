@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Runtime/DialogueManager.cs.meta
 guid: 43488d0f7b987804498fe50b372a1616
-========
-guid: 9c781ef60ecd40340badea214a064bfd
->>>>>>>> dev/output-dialogue:Assets/Runtime/CommandPattern/StartDialogueCommand.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

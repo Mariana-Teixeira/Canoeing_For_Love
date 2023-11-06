@@ -11,11 +11,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
-  - 
-  - 
+  - Character
+  - Dialog
   - 
   - 
   - 
@@ -41,6 +41,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1426198647
+    locked: 0
+  - name: CloserBackground
+    uniqueID: 3299189473
+    locked: 0
+  - name: EvenCloserBackground
+    uniqueID: 2192910339
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Characters
+    uniqueID: 1358241361
+    locked: 0
+  - name: Dialog
+    uniqueID: 120259311
     locked: 0

@@ -48,11 +48,19 @@ public class CameraEventsManager : MonoBehaviour
             StopShake();
         }
         else{
+            
+            float edgeSize = 100f;
+            float moveAmout = 1f;
+            if(Input.mousePosition.x > Screen.width - edgeSize){
+                cvc.transform.position = new Vector3(- moveAmout * Time.deltaTime + cvc.transform.position.x, 0, -10);
+            }
+            else if(Input.mousePosition.x < edgeSize){
+                cvc.transform.position = new Vector3(moveAmout * Time.deltaTime + cvc.transform.position.x, 0, -10);
+            }
             cvc.m_Lens.OrthographicSize = Mathf.Lerp(cvc.m_Lens.OrthographicSize, 5, 0.05f);
-            cvc.transform.position = new Vector3(0, 0, -10);
+            // cvc.transform.position = new Vector3(0, 0, -10);
             StopShake();
         }
-        
     }
 
     public void StartShake(){
