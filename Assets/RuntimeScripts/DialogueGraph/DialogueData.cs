@@ -42,14 +42,14 @@ public class DialogueData
             { DialogueEvents.DISPLAY_DIALOGUE, "How are you?" },
             { DialogueEvents.DISPLAY_CHARACTER, Maria },
             { DialogueEvents.GO_TO_NEXT_NODE, player_z.Guid },
-            { DialogueEvents.ANIMATE_CAMERA, CameraAnimation.NORMAL },
+            { DialogueEvents.ANIMATE_CAMERA, CameraEvents.NORMAL },
         });
 
         var npc_b = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable{
             { DialogueEvents.DISPLAY_DIALOGUE, "Hey..." },
             { DialogueEvents.DISPLAY_CHARACTER, Morse },
             { DialogueEvents.GO_TO_NEXT_NODE, npc_c.Guid },
-            { DialogueEvents.ANIMATE_CAMERA, CameraAnimation.SHAKE_UP },
+            { DialogueEvents.ANIMATE_CAMERA, CameraEvents.SHAKE_UP },
         });
 
         var npc_a = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
