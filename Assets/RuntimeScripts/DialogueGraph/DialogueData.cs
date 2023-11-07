@@ -10,22 +10,54 @@ public class DialogueData
 
     public DialogueData()
     {
-        Character Player = new Character("Player", string.Empty);
         Character Morse = new Character("Morse", "Morse");
         Character Maria = new Character("Maria", "Maria");
 
         // Instantiate a Dictionary for testing purposes.
-        var npc_e = new NPCNode(Guid.NewGuid(), Maria, Guid.Empty, "npc_e");
-        var npc_d = new NPCNode(Guid.NewGuid(), Morse, Guid.Empty, "npc_d");
+        var npc_e = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
+        {
+            { DialogueEvents.DISPLAY_DIALOGUE, "Hey to you too!" },
+            { DialogueEvents.DISPLAY_CHARACTER, Maria },
+            { DialogueEvents.GO_TO_NEXT_NODE, Guid.Empty },
+        });
 
-        var choice_e = new DialogueChoices(npc_e.Guid, "choice_e");
-        var choice_d = new DialogueChoices(npc_d.Guid, "choice_d");
+        var npc_d = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
+        {
+            { DialogueEvents.DISPLAY_DIALOGUE, "I guess..." },
+            { DialogueEvents.DISPLAY_CHARACTER, Morse },
+            { DialogueEvents.GO_TO_NEXT_NODE, Guid.Empty },
+        });
+
+        var choice_e = new DialogueChoices(npc_e.Guid, "Hi guys!");
+        var choice_d = new DialogueChoices(npc_d.Guid, "The mood seems low.");
         DialogueChoices[] choices = { choice_e, choice_d };
-        var player_z = new PlayerNode(Guid.NewGuid(), Player, choices);
 
-        var npc_c = new NPCNode(Guid.NewGuid(), Maria, player_z.Guid, "NPC");
-        var npc_b = new NPCNode(Guid.NewGuid(), Morse, npc_c.Guid, "OtherNPC", new Hashtable{ { DialogueEvents.ANIMATE_CAMERA, CameraAnimation.SHAKE_UP } });
-        var npc_a = new NPCNode(Guid.NewGuid(), Maria, npc_b.Guid, "NPC");
+        var player_z = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
+        {
+            { DialogueEvents.OPEN_CHOICES_PANEL, choices },
+        });
+
+        var npc_c = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
+        {
+            { DialogueEvents.DISPLAY_DIALOGUE, "How are you?" },
+            { DialogueEvents.DISPLAY_CHARACTER, Maria },
+            { DialogueEvents.GO_TO_NEXT_NODE, player_z.Guid },
+            { DialogueEvents.ANIMATE_CAMERA, CameraAnimation.NORMAL },
+        });
+
+        var npc_b = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable{
+            { DialogueEvents.DISPLAY_DIALOGUE, "Hey..." },
+            { DialogueEvents.DISPLAY_CHARACTER, Morse },
+            { DialogueEvents.GO_TO_NEXT_NODE, npc_c.Guid },
+            { DialogueEvents.ANIMATE_CAMERA, CameraAnimation.SHAKE_UP },
+        });
+
+        var npc_a = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
+        {
+            { DialogueEvents.DISPLAY_DIALOGUE, "Hello!" },
+            { DialogueEvents.DISPLAY_CHARACTER, Maria },
+            { DialogueEvents.GO_TO_NEXT_NODE, npc_b.Guid },
+        });
         
         headNode = npc_a.Guid;
 
@@ -47,16 +79,3 @@ public class DialogueData
     void InstanciateFile()
     { }
 }
-
-public struct Character
-{
-    public string Name { get; private set; }
-    public string PortraitPath { get; private set; }
-    public Character(string name, string portraitPath)
-    {
-        this.Name = name;
-        this.PortraitPath = portraitPath;
-    }
-}
-
-public enum DialogueEvents { ANIMATE_CAMERA }

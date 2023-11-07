@@ -34,35 +34,38 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
     public void OnNotifyNode(DialogueRuntimeNode node)
     {
-        if (node.GetType() == typeof(PlayerNode))
-        {
-            PlayerNode pNode = (PlayerNode)node;
-            UpdatePlayer(pNode);
-        }
+        var hash = node.DialogueEvents;
+        if (hash.ContainsKey(DialogueEvents.OPEN_CHOICES_PANEL))
+            DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.OPEN_CHOICES_PANEL]);
+        else if (hash.ContainsKey(DialogueEvents.DISPLAY_DIALOGUE))
+            DisplayDialogue((string)hash[DialogueEvents.DISPLAY_DIALOGUE]);
         else
-        {
-            NPCNode nNode = (NPCNode)node;
-            UpdateNPC(nNode);
-        }
+            ClearDialogueBox();
+
+        if (hash.ContainsKey(DialogueEvents.DISPLAY_CHARACTER))
+            DisplayCharacter((Character)hash[DialogueEvents.DISPLAY_CHARACTER]);
     }
 
-    public void UpdateNPC(NPCNode node)
+    void DisplayDialogue(string dialogue)
     {
-        if (node == null)
-        {
-            EndDialogue();
-            return;
-        }
+        StopAllCoroutines();
         ToggleChoiceCanvas(false);
-        ChangeCharacterPortrait(node.Character);
         dialogueComponent.text = string.Empty;
-        StartCoroutine(TypeLine(node.Dialogue));
+        StartCoroutine(TypeLine(dialogue));
     }
 
-    public void UpdatePlayer(PlayerNode node)
+    void DisplayCharacter(Character character)
     {
+        nameComponent.text = character.Name;
+        Sprite characterSprite = Resources.Load(character.PortraitPath) as Sprite;
+        characterPortrait.sprite = characterSprite;
+    }
+
+    void DisplayChoicesPanel(DialogueChoices[] choices)
+    {
+        StopAllCoroutines();
         ToggleChoiceCanvas(true);
-        StartCoroutine(choicePanel.GenerateChoices(node.Choices));
+        StartCoroutine(choicePanel.GenerateChoices(choices));
     }
 
     void ToggleChoiceCanvas(bool boolean)
@@ -72,11 +75,10 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
         dialogueCanvas.blocksRaycasts = !boolean;
     }
 
-    void EndDialogue()
+    void ClearDialogueBox()
     {
         dialogueComponent.text = string.Empty;
         nameComponent.text = string.Empty;
-        StopAllCoroutines();
     }
 
     IEnumerator TypeLine(string dialogue)
@@ -86,12 +88,5 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
             dialogueComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
-    }
-
-    public void ChangeCharacterPortrait(Character character)
-    {
-        nameComponent.text = character.Name;
-        Sprite characterSprite = Resources.Load(character.PortraitPath) as Sprite;
-        characterPortrait.sprite = characterSprite;
     }
 }

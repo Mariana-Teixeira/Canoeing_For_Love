@@ -20,23 +20,22 @@ public class DialogueManager : NodePublisher
 
     public void ExecuteNodeTypeAction()
     {
-        Guid nextNodeGUID;
-        if (tree.CurrentNode.GetType() == typeof(NPCNode))
+        Guid nextNodeGUID = Guid.Empty;
+        var hash = tree.CurrentNode.DialogueEvents;
+        if (hash.ContainsKey(DialogueEvents.OPEN_CHOICES_PANEL))
         {
-            NPCNode node = (NPCNode)tree.CurrentNode;
-            nextNodeGUID = node.NextNodeGUID;
+            DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.OPEN_CHOICES_PANEL], out nextNodeGUID);
         }
-        else
+        else if (hash.ContainsKey(DialogueEvents.GO_TO_NEXT_NODE))
         {
-            PlayerNode node = (PlayerNode)tree.CurrentNode;
-            DisplayChoicesPanel(node, out nextNodeGUID);
+            nextNodeGUID = (Guid)hash[DialogueEvents.GO_TO_NEXT_NODE];
         }
         GoToNextNode(nextNodeGUID);
     }
-    public void DisplayChoicesPanel(PlayerNode node, out Guid nextNodeGuid)
+    public void DisplayChoicesPanel(DialogueChoices[] choices, out Guid nextNodeGuid)
     {
         StartCoroutine(CheckHasAnswer());
-        nextNodeGuid = node.Choices[choicePanel.GetAnswer()].NextNodeGUID;
+        nextNodeGuid = choices[choicePanel.GetAnswer()].NextNodeGUID;
     }
 
     public void GoToNextNode(Guid nextNodeGuid)

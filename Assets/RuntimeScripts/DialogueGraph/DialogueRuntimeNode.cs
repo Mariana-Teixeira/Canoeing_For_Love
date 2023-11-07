@@ -6,36 +6,23 @@ namespace DialogueTree
     public class DialogueRuntimeNode
     {
         public Guid Guid;
-        public Character Character { get; private set; }
         public Hashtable DialogueEvents { get; private set; }
 
-        public DialogueRuntimeNode(Guid myGuid, Character character, Hashtable dialogueEvents = null)
+        public DialogueRuntimeNode(Guid myGuid, Hashtable dialogueEvents = null)
         {
             this.Guid = myGuid;
-            this.Character = character;
             this.DialogueEvents = dialogueEvents;
         }
     }
 
-    public class PlayerNode : DialogueRuntimeNode
+    public struct Character
     {
-        public DialogueChoices[] Choices { get; private set; }
-
-        public PlayerNode(Guid myGuid, Character player, DialogueChoices[] choices, Hashtable dialogueEvents = null) : base(myGuid, player, dialogueEvents)
+        public string Name { get; private set; }
+        public string PortraitPath { get; private set; }
+        public Character(string name, string portraitPath)
         {
-            this.Choices = choices;
-        }
-    }
-
-    public class NPCNode : DialogueRuntimeNode
-    {
-        public Guid NextNodeGUID { get; private set; }
-        public string Dialogue { get; private set; }
-
-        public NPCNode(Guid myGuid, Character character, Guid nextNodeGuid, string dialogue, Hashtable dialogueEvents = null) : base(myGuid, character, dialogueEvents)
-        {
-            this.NextNodeGUID = nextNodeGuid;
-            this.Dialogue = dialogue;
+            this.Name = name;
+            this.PortraitPath = portraitPath;
         }
     }
 
@@ -49,5 +36,13 @@ namespace DialogueTree
             this.NextNodeGUID = nextNode;
             this.ChoiceDialogue = dialogue;
         }
+    }
+    public enum DialogueEvents
+    {
+        DISPLAY_DIALOGUE,
+        DISPLAY_CHARACTER,
+        GO_TO_NEXT_NODE,
+        OPEN_CHOICES_PANEL,
+        ANIMATE_CAMERA,
     }
 }
