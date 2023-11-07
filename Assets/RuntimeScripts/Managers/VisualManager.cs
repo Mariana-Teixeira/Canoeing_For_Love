@@ -1,11 +1,6 @@
 using DialogueTree;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,19 +9,19 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     public TextMeshProUGUI dialogueComponent;
     public TextMeshProUGUI nameComponent;
     public Image characterPortrait;
-    public float textSpeed;
+    public float textSpeed = 0.03f;
 
     [SerializeField] private CanvasGroup dialogueCanvas;
     [SerializeField] private CanvasGroup choiceCanvas;
 
-
-    List<Guid> guids = new List<Guid>();
     private ChoicesPanel choicePanel;
 
+    #region Node Publisher
     NodePublisher publisher;
     private void Awake() => publisher = GetComponent<NodePublisher>();
     private void OnEnable() => publisher.AddObserver(this);
     private void OnDisable() => publisher.RemoveObserver(this);
+    #endregion
 
     private void Start()
     {
@@ -37,24 +32,34 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
         choiceCanvas.enabled = false;
     }
 
-    public void OnNotifyNPC(NPCNode node)
+    public void OnNotifyNode(DialogueRuntimeNode node)
+    {
+        if (node.GetType() == typeof(PlayerNode))
+        {
+            PlayerNode pNode = (PlayerNode)node;
+            UpdatePlayer(pNode);
+        }
+        else
+        {
+            NPCNode nNode = (NPCNode)node;
+            UpdateNPC(nNode);
+        }
+    }
+
+    public void UpdateNPC(NPCNode node)
     {
         if (node == null)
         {
             EndDialogue();
             return;
         }
-
         ToggleChoiceCanvas(false);
-
+        ChangeCharacterPortrait(node.Character);
         dialogueComponent.text = string.Empty;
-        nameComponent.text = node.DisplayName;
-        Sprite characterSprite = Resources.Load(node.ImagePath) as Sprite;
-        characterPortrait.sprite = characterSprite;
-        StartCoroutine(TypeLine(node.CharacterDialogue));
+        StartCoroutine(TypeLine(node.Dialogue));
     }
 
-    public void OnNotifyPlayer(PlayerNode node)
+    public void UpdatePlayer(PlayerNode node)
     {
         ToggleChoiceCanvas(true);
         StartCoroutine(choicePanel.GenerateChoices(node.Choices));
@@ -81,5 +86,12 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
             dialogueComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+    }
+
+    public void ChangeCharacterPortrait(Character character)
+    {
+        nameComponent.text = character.Name;
+        Sprite characterSprite = Resources.Load(character.PortraitPath) as Sprite;
+        characterPortrait.sprite = characterSprite;
     }
 }

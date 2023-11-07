@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using DialogueTree;
 using System.Collections;
 using UnityEngine;
@@ -7,18 +6,11 @@ using UnityEngine;
 public class DialogueManager : NodePublisher
 {
     DialogueRuntimeTree tree;
-
     ChoicesPanel choicePanel;
 
-    private void Awake() {
-        tree = new DialogueRuntimeTree();
-        
-    } 
+    private void Awake() => tree = new DialogueRuntimeTree();
 
-    private void Start(){
-        choicePanel = ChoicesPanel.instance;
-    }
-
+    private void Start() => choicePanel = ChoicesPanel.instance;
 
     public void StartDialogueTree()
     {
@@ -26,26 +18,35 @@ public class DialogueManager : NodePublisher
         NotifyObserver(tree.CurrentNode);
     }
 
-    public void PublishNextNode()
+    public void ExecuteNodeTypeAction()
     {
-        NPCNode npc = (NPCNode)tree.CurrentNode;
-        Guid nextNode = npc.NextNodeGUID;
-        tree.GoToNextNode(nextNode);
-        NotifyObserver(tree.CurrentNode);
+        Guid nextNodeGUID;
+        if (tree.CurrentNode.GetType() == typeof(NPCNode))
+        {
+            NPCNode node = (NPCNode)tree.CurrentNode;
+            nextNodeGUID = node.NextNodeGUID;
+        }
+        else
+        {
+            PlayerNode node = (PlayerNode)tree.CurrentNode;
+            DisplayChoicesPanel(node, out nextNodeGUID);
+        }
+        GoToNextNode(nextNodeGUID);
     }
-
-
-    public void PublishChosenNode()
+    public void DisplayChoicesPanel(PlayerNode node, out Guid nextNodeGuid)
     {
-        PlayerNode player = (PlayerNode)tree.CurrentNode;
         StartCoroutine(CheckHasAnswer());
-        Guid nextNode = player.Choices[choicePanel.GetAnswer()].NextNodeGUID;
-        tree.GoToNextNode(nextNode);
+        nextNodeGuid = node.Choices[choicePanel.GetAnswer()].NextNodeGUID;
+    }
+
+    public void GoToNextNode(Guid nextNodeGuid)
+    {
+        tree.GoToNextNode(nextNodeGuid);
         NotifyObserver(tree.CurrentNode);
     }
+
 
     public IEnumerator CheckHasAnswer(){
         yield return new WaitUntil(()=>choicePanel.GetAnswer()!=-1);
     }
-
 }

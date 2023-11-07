@@ -32,14 +32,9 @@ public class InputManager : MonoBehaviour, INodeSubscriber
         
     }
 
-    public void OnNotifyNPC(NPCNode node)
+    public void OnNotifyNode(DialogueRuntimeNode node)
     {
         command = new NextNodeCommand(treeManager);
-    }
-
-    public void OnNotifyPlayer(PlayerNode node)
-    {
-        command = new ChooseNodeCommand(treeManager);
     }
 
     public void OnNotifyEndConversation()

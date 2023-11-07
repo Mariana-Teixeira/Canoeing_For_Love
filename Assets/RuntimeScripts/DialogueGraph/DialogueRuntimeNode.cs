@@ -1,23 +1,19 @@
 using System;
+using System.Collections;
 
 namespace DialogueTree
 {
     public class DialogueRuntimeNode
     {
         public Guid Guid;
-        public string displayName;
-        public string DisplayName
-        {
-            get
-            {
-                return displayName;
-            }
-        }
+        public Character Character { get; private set; }
+        public Hashtable DialogueEvents { get; private set; }
 
-        public DialogueRuntimeNode(Guid myGuid, string characterName)
+        public DialogueRuntimeNode(Guid myGuid, Character character, Hashtable dialogueEvents = null)
         {
             this.Guid = myGuid;
-            this.displayName = characterName;
+            this.Character = character;
+            this.DialogueEvents = dialogueEvents;
         }
     }
 
@@ -25,7 +21,7 @@ namespace DialogueTree
     {
         public DialogueChoices[] Choices { get; private set; }
 
-        public PlayerNode(Guid myGuid, string playerName, DialogueChoices[] choices) : base(myGuid, playerName)
+        public PlayerNode(Guid myGuid, Character player, DialogueChoices[] choices, Hashtable dialogueEvents = null) : base(myGuid, player, dialogueEvents)
         {
             this.Choices = choices;
         }
@@ -34,86 +30,24 @@ namespace DialogueTree
     public class NPCNode : DialogueRuntimeNode
     {
         public Guid NextNodeGUID { get; private set; }
-        string characterDialogue;
-        string imagePath;
+        public string Dialogue { get; private set; }
 
-        string soundPath;
-
-        string backgroundPath;
-
-        CameraEvents cameraE;
-
-        float textSpeed;
-
-        public string CharacterDialogue
-        {
-            get
-            {
-                return characterDialogue;
-            }
-        }
-        public string ImagePath
-        {
-            get
-            {
-                return imagePath;
-            }
-        }
-
-        public string SoundPath
-        {
-            get
-            {
-                return soundPath;
-            }
-        }
-
-        public string BackgroundPath
-        {
-            get
-            {
-                return backgroundPath;
-            }
-        }
-
-        public float TextSpeed
-        {
-            get
-            {
-                return textSpeed;
-            }
-        }
-
-        public CameraEvents CameraE
-        {
-            get
-            {
-                return cameraE;
-            }
-        }
-        
-
-        public NPCNode(Guid myGuid, Guid nextNodeGuid, string npcName, string npcDialogue, string imagePath = "", string soundPath =  "", string backgroundPath = "", float textSpeed = 0.3f, CameraEvents cameraE = CameraEvents.NORMAL) : base(myGuid, npcName)
+        public NPCNode(Guid myGuid, Character character, Guid nextNodeGuid, string dialogue, Hashtable dialogueEvents = null) : base(myGuid, character, dialogueEvents)
         {
             this.NextNodeGUID = nextNodeGuid;
-            this.characterDialogue = npcDialogue;
-            this.imagePath = imagePath;
-            this.backgroundPath = backgroundPath;
-            this.soundPath = soundPath;
-            this.cameraE = cameraE;
-            this.textSpeed = textSpeed;
+            this.Dialogue = dialogue;
         }
     }
 
     public struct DialogueChoices
     {
         public Guid NextNodeGUID { get; private set; }
-        public string choiceDialogue;
+        public string ChoiceDialogue { get; private set; }
 
         public DialogueChoices(Guid nextNode, string dialogue)
         {
             this.NextNodeGUID = nextNode;
-            this.choiceDialogue = dialogue;
+            this.ChoiceDialogue = dialogue;
         }
     }
 }
