@@ -8,23 +8,5 @@ public class NodePublisher : MonoBehaviour
 
     public void AddObserver(INodeSubscriber obs) => observers.Add(obs);
     public void RemoveObserver(INodeSubscriber obs) => observers.Remove(obs);
-    public void NotifyObserver(DialogueRuntimeNode node)
-    {
-        observers.ForEach
-        (
-            obs =>
-            {
-                if (node.GetType() == typeof(NPCNode))
-                {
-                    NPCNode npc = (NPCNode)node;
-                    obs.OnNotifyNPC(npc);
-                }
-                else if (node.GetType() == typeof(PlayerNode))
-                {
-                    PlayerNode player = (PlayerNode)node;
-                    obs.OnNotifyPlayer(player);
-                }
-            }
-        );
-    }
+    public void NotifyObserver(DialogueRuntimeNode node) => observers.ForEach(obs => obs.OnNotifyNode(node));
 }
