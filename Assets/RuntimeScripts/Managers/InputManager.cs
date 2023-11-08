@@ -3,19 +3,22 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour, INodeSubscriber
 {
-    NodePublisher publisher;
-    InputInvoker invoker;
     DialogueManager treeManager;
+    InputInvoker invoker;
     ICommand command;
+
+    #region Node Publisher
+    NodePublisher publisher;
 
     private void OnEnable() => publisher.AddObserver(this);
     private void OnDisable() => publisher.RemoveObserver(this);
+    #endregion
 
     private void Awake()
     {
         publisher = GetComponent<NodePublisher>();
-        invoker = new InputInvoker();
         treeManager = GetComponent<DialogueManager>();
+        invoker = new InputInvoker();
     }
     private void Start()
     {
@@ -25,25 +28,14 @@ public class InputManager : MonoBehaviour, INodeSubscriber
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             invoker.AddCommand(command);
-        }
-        
+        }  
     }
 
-    public void OnNotifyNPC(NPCNode node)
+    public void OnNotifyNode(DialogueRuntimeNode node)
     {
         command = new NextNodeCommand(treeManager);
-    }
-
-    public void OnNotifyPlayer(PlayerNode node)
-    {
-        command = new ChooseNodeCommand(treeManager);
-    }
-
-    public void OnNotifyEndConversation()
-    {
-
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Security;
 using DialogueTree;
 
 public class ChoicesPanel : MonoBehaviour
@@ -56,7 +55,7 @@ public class ChoicesPanel : MonoBehaviour
             choiceButton.button.onClick.RemoveAllListeners();
             int buttonIndex = i;
             choiceButton.button.onClick.AddListener(() => AcceptAnswer(buttonIndex));
-            choiceButton.title.text = choices[i].choiceDialogue;
+            choiceButton.title.text = choices[i].ChoiceDialogue;
 
             float buttonWidth = Mathf.Clamp(BUTTON_WIDTH_PADDING + choiceButton.title.preferredWidth, BUTTON_MIN_WIDTH, BUTTON_MAX_WIDTH);
             maxWidth = Mathf.Max(maxWidth, buttonWidth);

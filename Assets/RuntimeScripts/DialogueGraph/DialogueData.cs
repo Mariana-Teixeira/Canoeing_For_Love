@@ -1,5 +1,6 @@
 using DialogueTree;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 public class DialogueData
@@ -9,21 +10,54 @@ public class DialogueData
 
     public DialogueData()
     {
-        var charMorse = "Morse";
-        var charMaria = "Maria";
+        Character Morse = new Character("Morse", "Morse");
+        Character Maria = new Character("Maria", "Maria");
 
         // Instantiate a Dictionary for testing purposes.
-        var npc_e = new NPCNode(Guid.NewGuid(), Guid.Empty, "NPC", "npc_e", charMaria);
-        var npc_d = new NPCNode(Guid.NewGuid(), Guid.Empty, "OtherNPC", "npc_d", charMorse);
+        var npc_e = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
+        {
+            { DialogueEvents.DISPLAY_DIALOGUE, "Hey to you too!" },
+            { DialogueEvents.DISPLAY_CHARACTER, Maria },
+            { DialogueEvents.GO_TO_NEXT_NODE, Guid.Empty },
+        });
 
-        var choice_e = new DialogueChoices(npc_e.Guid, "choice_e");
-        var choice_d = new DialogueChoices(npc_d.Guid, "choice_d");
+        var npc_d = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
+        {
+            { DialogueEvents.DISPLAY_DIALOGUE, "I guess..." },
+            { DialogueEvents.DISPLAY_CHARACTER, Morse },
+            { DialogueEvents.GO_TO_NEXT_NODE, Guid.Empty },
+        });
+
+        var choice_e = new DialogueChoices(npc_e.Guid, "Hi guys!");
+        var choice_d = new DialogueChoices(npc_d.Guid, "The mood seems low.");
         DialogueChoices[] choices = { choice_e, choice_d };
-        var player_z = new PlayerNode(Guid.NewGuid(), "Player", choices);
 
-        var npc_c = new NPCNode(Guid.NewGuid(), player_z.Guid, "NPC", "npc_c", charMaria);
-        var npc_b = new NPCNode(Guid.NewGuid(), npc_c.Guid, "OtherNPC", "npc_b", charMorse);
-        var npc_a = new NPCNode(Guid.NewGuid(), npc_b.Guid, "NPC", "npc_a", charMaria);
+        var player_z = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
+        {
+            { DialogueEvents.OPEN_CHOICES_PANEL, choices },
+        });
+
+        var npc_c = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
+        {
+            { DialogueEvents.DISPLAY_DIALOGUE, "How are you?" },
+            { DialogueEvents.DISPLAY_CHARACTER, Maria },
+            { DialogueEvents.GO_TO_NEXT_NODE, player_z.Guid },
+            { DialogueEvents.ANIMATE_CAMERA, CameraEvents.NORMAL },
+        });
+
+        var npc_b = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable{
+            { DialogueEvents.DISPLAY_DIALOGUE, "Hey..." },
+            { DialogueEvents.DISPLAY_CHARACTER, Morse },
+            { DialogueEvents.GO_TO_NEXT_NODE, npc_c.Guid },
+            { DialogueEvents.ANIMATE_CAMERA, CameraEvents.SHAKE_UP },
+        });
+
+        var npc_a = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
+        {
+            { DialogueEvents.DISPLAY_DIALOGUE, "Hello!" },
+            { DialogueEvents.DISPLAY_CHARACTER, Maria },
+            { DialogueEvents.GO_TO_NEXT_NODE, npc_b.Guid },
+        });
         
         headNode = npc_a.Guid;
 
