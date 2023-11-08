@@ -592,10 +592,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91be192fa99dada41b398c7a4ae9a42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cvc: {fileID: 643129351}
+  virtualCamera: {fileID: 0}
   gameCamera: {fileID: 137099907}
-  cameraEvent: 0
-  run: 0
 --- !u!114 &137099910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3515,10 +3513,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91be192fa99dada41b398c7a4ae9a42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cvc: {fileID: 643129351}
+  virtualCamera: {fileID: 643129351}
   gameCamera: {fileID: 137099907}
-  cameraEvent: 0
-  run: 0
 --- !u!1 &769602781
 GameObject:
   m_ObjectHideFlags: 0

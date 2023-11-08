@@ -48,7 +48,7 @@ public class CameraEventsManager : MonoBehaviour
             StopShake();
         }
         else{
-            
+            StopShake();
             float edgeSize = 100f;
             float moveAmout = 1f;
             if(Input.mousePosition.x > Screen.width - edgeSize){
@@ -59,7 +59,6 @@ public class CameraEventsManager : MonoBehaviour
             }
             cvc.m_Lens.OrthographicSize = Mathf.Lerp(cvc.m_Lens.OrthographicSize, 5, 0.05f);
             // cvc.transform.position = new Vector3(0, 0, -10);
-            StopShake();
         }
     }
 

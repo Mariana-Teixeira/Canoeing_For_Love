@@ -20,7 +20,10 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
     private void OnDisable() => publisher.RemoveObserver(this);
     #endregion
 
-    void Start() => ChangeState(CameraAnimation.NORMAL);
+    void Start() {
+        StopShake();
+        ChangeState(CameraAnimation.NORMAL);
+    } 
 
     public void ChangeState(CameraAnimation newState)
     {
