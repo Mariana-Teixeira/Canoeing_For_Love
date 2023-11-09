@@ -1,6 +1,7 @@
 using UnityEngine;
 using Cinemachine;
 using DialogueTree;
+using System;
 
 public class CameraManager : MonoBehaviour, INodeSubscriber
 {
@@ -13,6 +14,9 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
 
     CameraAnimation currentState;
 
+    private readonly float edgeSize = 100f;
+    private readonly float moveAmout = 1f;
+
     #region Node Publisher
     NodePublisher publisher;
     private void Awake() => publisher = GetComponent<NodePublisher>();
@@ -24,6 +28,19 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
         StopShake();
         ChangeState(CameraAnimation.NORMAL);
     } 
+
+    void Update(){
+        
+        if(Input.mousePosition.x > Screen.width - edgeSize && currentState == CameraAnimation.NORMAL){
+            virtualCamera.transform.position = new Vector3(- moveAmout * Time.deltaTime + virtualCamera.transform.position.x, 0, -10);
+        }
+        else if(Input.mousePosition.x < edgeSize && currentState == CameraAnimation.NORMAL){
+            virtualCamera.transform.position = new Vector3(moveAmout * Time.deltaTime + virtualCamera.transform.position.x, 0, -10);
+        }
+        if(currentState == CameraAnimation.SHAKE_UP){
+            StartShake();
+        }
+    }
 
     public void ChangeState(CameraAnimation newState)
     {

@@ -9,9 +9,9 @@ public class ChoicesPanel : MonoBehaviour
 {
     public static ChoicesPanel instance {set; get;}
 
-    private const float BUTTON_MIN_WIDTH = 50;
-    private const float BUTTON_MAX_WIDTH = 500;
-    private const float BUTTON_WIDTH_PADDING = 25;
+    private const float BUTTON_MIN_WIDTH = 125;
+    private const float BUTTON_MAX_WIDTH = 1000;
+    private const float BUTTON_WIDTH_PADDING = 50;
 
     private const float BUTTON_HEIGHT_LINE = 50f;
     private const float BUTTON_HEIGHT_PADDING = 20;
@@ -30,7 +30,7 @@ public class ChoicesPanel : MonoBehaviour
     /// </summary>
     public IEnumerator GenerateChoices(DialogueChoices[] choices){
         decision = new ChoicePanelDecision(choices);
-        float maxWidth = 0;
+        float minWidth = 1111110;
         
         // Iterating and creating buttons for each option.
         for(int i  = 0; i < choices.Length; i++){
@@ -56,14 +56,14 @@ public class ChoicesPanel : MonoBehaviour
             int buttonIndex = i;
             choiceButton.button.onClick.AddListener(() => AcceptAnswer(buttonIndex));
             choiceButton.title.text = choices[i].ChoiceDialogue;
-
+            print(choiceButton.title.preferredWidth);
             float buttonWidth = Mathf.Clamp(BUTTON_WIDTH_PADDING + choiceButton.title.preferredWidth, BUTTON_MIN_WIDTH, BUTTON_MAX_WIDTH);
-            maxWidth = Mathf.Max(maxWidth, buttonWidth);
+            minWidth = Mathf.Min(minWidth, buttonWidth);
         }
 
         foreach(var button in buttons)
         {
-            button.layout.preferredWidth = maxWidth;
+            button.layout.minWidth = minWidth;
         }
 
         for(int i = 0; i < buttons.Count; i++)

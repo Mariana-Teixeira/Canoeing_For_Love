@@ -8,6 +8,8 @@ public class DialogueManager : NodePublisher
     DialogueRuntimeTree tree;
     ChoicesPanel choicePanel;
 
+    public Guid nextNode = Guid.Empty;
+
     private void Awake() => tree = new DialogueRuntimeTree();
 
     private void Start() => choicePanel = ChoicesPanel.instance;
@@ -20,22 +22,23 @@ public class DialogueManager : NodePublisher
 
     public void ExecuteNodeTypeAction()
     {
-        Guid nextNodeGUID = Guid.Empty;
         var hash = tree.CurrentNode.DialogueEvents;
         if (hash.ContainsKey(DialogueEvents.OPEN_CHOICES_PANEL))
         {
-            DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.OPEN_CHOICES_PANEL], out nextNodeGUID);
+            DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.OPEN_CHOICES_PANEL]);
         }
         else if (hash.ContainsKey(DialogueEvents.GO_TO_NEXT_NODE))
         {
-            nextNodeGUID = (Guid)hash[DialogueEvents.GO_TO_NEXT_NODE];
+            nextNode = (Guid)hash[DialogueEvents.GO_TO_NEXT_NODE];
+            GoToNextNode(nextNode);
         }
-        GoToNextNode(nextNodeGUID);
+       
     }
-    public void DisplayChoicesPanel(DialogueChoices[] choices, out Guid nextNodeGuid)
+    public void DisplayChoicesPanel(DialogueChoices[] choices)
     {
-        StartCoroutine(CheckHasAnswer());
-        nextNodeGuid = choices[choicePanel.GetAnswer()].NextNodeGUID;
+        StartCoroutine(CheckHasAnswer(choices: choices));
+        
+        
     }
 
     public void GoToNextNode(Guid nextNodeGuid)
@@ -45,7 +48,11 @@ public class DialogueManager : NodePublisher
     }
 
 
-    public IEnumerator CheckHasAnswer(){
+    public IEnumerator CheckHasAnswer(DialogueChoices[] choices){
         yield return new WaitUntil(()=>choicePanel.GetAnswer()!=-1);
+        print("fattypumpum");
+        print(choicePanel.GetAnswer());
+        nextNode = choices[choicePanel.GetAnswer()].NextNodeGUID;
+        GoToNextNode(nextNode);
     }
 }
