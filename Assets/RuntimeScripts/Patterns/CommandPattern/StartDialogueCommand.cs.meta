@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Runtime/DialogueManager.cs.meta
+guid: 3b9051d90404d174596fb9424ab8c3e0
+========
+guid: 9c781ef60ecd40340badea214a064bfd
+>>>>>>>> dev/output-dialogue:Assets/Runtime/CommandPattern/StartDialogueCommand.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
