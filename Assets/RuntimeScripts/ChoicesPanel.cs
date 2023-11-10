@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DialogueTree;
+using UnityEditor.VersionControl;
 
 public class ChoicesPanel : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class ChoicesPanel : MonoBehaviour
     private const float BUTTON_HEIGHT_LINE = 50f;
     private const float BUTTON_HEIGHT_PADDING = 20;
 
+    public TMP_FontAsset asset;
+
     [SerializeField] private GameObject choiceButtonPrefab;
     [SerializeField] private VerticalLayoutGroup buttonLayoutGroup;
 
@@ -23,7 +26,14 @@ public class ChoicesPanel : MonoBehaviour
     	
     public ChoicePanelDecision decision {get; private set;} = null;
 
-    void Awake() => instance = this;
+    void Awake() {
+        instance = this;
+        Font font = Resources.Load<Font>("Montserrat-Regular");
+        asset = TMP_FontAsset.CreateFontAsset(font);
+    }
+
+
+    
 
     /// <summary>
     /// Generate and display buttons for each dialogue choice on screen.
@@ -47,6 +57,10 @@ public class ChoicesPanel : MonoBehaviour
                 Button newButton = newButtonObject.GetComponent<Button>();
                 TextMeshProUGUI newTitle = newButton.GetComponentInChildren<TextMeshProUGUI>();
                 LayoutElement newLayout = newButton.GetComponent<LayoutElement>();
+                print(asset.faceInfo);
+                newTitle.font = asset;
+                newTitle.fontSize = 15;
+                newTitle.color = new Color(255,255,255,1);
 
                 choiceButton = new ChoiceButton {button=newButton, title=newTitle, layout=newLayout};
                 buttons.Add(choiceButton);
