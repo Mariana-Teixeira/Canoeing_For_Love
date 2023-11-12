@@ -15,17 +15,6 @@ namespace DialogueTree
         }
     }
 
-    public struct Character
-    {
-        public string Name { get; private set; }
-        public string PortraitPath { get; private set; }
-        public Character(string name, string portraitPath)
-        {
-            this.Name = name;
-            this.PortraitPath = portraitPath;
-        }
-    }
-
     public struct DialogueChoices
     {
         public Guid NextNodeGUID { get; private set; }
@@ -39,10 +28,12 @@ namespace DialogueTree
     }
     public enum DialogueEvents
     {
-        DISPLAY_DIALOGUE,
+        SHOW_DIALOGUE,
+        SHOW_NAMEPLATE,
         DISPLAY_CHARACTER,
-        GO_TO_NEXT_NODE,
-        OPEN_CHOICES_PANEL,
+        DISPLAY_BACKGROUND,
+        GOTO_NEXTNODE,
+        GOTO_CHOICESPANEL,
         ANIMATE_CAMERA,
     }
 }

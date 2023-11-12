@@ -9,31 +9,23 @@ public class MenuManager: MonoBehaviour
 {
 
     //Button new game
-    [SerializeField] public Button bng;
+    [SerializeField] public Button newGameButton;
 
     //Button resume
-    [SerializeField] public Button br;
+    [SerializeField] public Button resumeButton;
 
     //Button credits
-    [SerializeField] public Button bc;
+    [SerializeField] public Button creditButton;
 
     //Button exit
-    [SerializeField] public Button be;
+    [SerializeField] public Button exitButton;
 
-    // Start is called before the first frame update
     void Start()
     {
-        bng.onClick.AddListener(() => ManageButtons(0));
-        br.onClick.AddListener(() => ManageButtons(1));
-        bc.onClick.AddListener(() => ManageButtons(2));
-        be.onClick.AddListener(() => ManageButtons(3));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
+        newGameButton.onClick.AddListener(() => ManageButtons(0));
+        resumeButton.onClick.AddListener(() => ManageButtons(1));
+        creditButton.onClick.AddListener(() => ManageButtons(2));
+        exitButton.onClick.AddListener(() => ManageButtons(3));
     }
 
     public void ManageButtons(int i){
@@ -41,10 +33,10 @@ public class MenuManager: MonoBehaviour
             SceneManager.LoadScene(1);
         }
         else if (i == 1){
-            //SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(2);
         }
         else if (i == 2){
-            //SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(3);
         }
         else if (i == 3){
             Application.Quit();

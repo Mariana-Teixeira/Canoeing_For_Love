@@ -9,7 +9,8 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     public TextMeshProUGUI dialogueComponent;
     public TextMeshProUGUI nameComponent;
     public Image characterPortrait;
-    public float textSpeed = 0.03f;
+    public Image backgroundImage;
+    float textSpeed = 0.03f;
 
     [SerializeField] private CanvasGroup dialogueCanvas;
     [SerializeField] private CanvasGroup choiceCanvas;
@@ -35,15 +36,21 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     public void OnNotifyNode(DialogueRuntimeNode node)
     {
         var hash = node.DialogueEvents;
-        if (hash.ContainsKey(DialogueEvents.OPEN_CHOICES_PANEL))
-            DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.OPEN_CHOICES_PANEL]);
-        else if (hash.ContainsKey(DialogueEvents.DISPLAY_DIALOGUE))
-            DisplayDialogue((string)hash[DialogueEvents.DISPLAY_DIALOGUE]);
-        else
-            ClearDialogueBox();
+
+        if (hash.ContainsKey(DialogueEvents.GOTO_CHOICESPANEL))
+            DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.GOTO_CHOICESPANEL]);
+
+        if (hash.ContainsKey(DialogueEvents.SHOW_DIALOGUE))
+            DisplayDialogue((string)hash[DialogueEvents.SHOW_DIALOGUE]);
 
         if (hash.ContainsKey(DialogueEvents.DISPLAY_CHARACTER))
-            DisplayCharacter((Character)hash[DialogueEvents.DISPLAY_CHARACTER]);
+            DisplayCharacter((string)hash[DialogueEvents.DISPLAY_CHARACTER]);
+
+        if (hash.ContainsKey(DialogueEvents.DISPLAY_BACKGROUND))
+            DisplayBackground((string)hash[DialogueEvents.DISPLAY_BACKGROUND]);
+
+        if (hash.ContainsKey(DialogueEvents.SHOW_NAMEPLATE))
+            DisplayNameplate((string)hash[DialogueEvents.SHOW_NAMEPLATE]);
     }
 
     void DisplayDialogue(string dialogue)
@@ -54,11 +61,21 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
         StartCoroutine(TypeLine(dialogue));
     }
 
-    void DisplayCharacter(Character character)
+    void DisplayNameplate(string name)
     {
-        nameComponent.text = character.Name;
-        Sprite characterSprite = Resources.Load(character.PortraitPath) as Sprite;
+        nameComponent.text = name;
+    }
+
+    void DisplayCharacter(string characterPath)
+    {
+        Sprite characterSprite = Resources.Load(characterPath) as Sprite;
         characterPortrait.sprite = characterSprite;
+    }
+
+    void DisplayBackground(string backgroundPath)
+    {
+        Sprite backgroundSprite = Resources.Load(backgroundPath) as Sprite;
+        backgroundImage.sprite = backgroundSprite;
     }
 
     void DisplayChoicesPanel(DialogueChoices[] choices)

@@ -15,7 +15,7 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
     CameraAnimation currentState;
 
     private readonly float edgeSize = 100f;
-    private readonly float moveAmout = 1f;
+    private readonly float moveAmout = 0f;
 
     #region Node Publisher
     NodePublisher publisher;
