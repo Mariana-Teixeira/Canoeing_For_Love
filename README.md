@@ -3,7 +3,7 @@ This repository serves as the main avenue of documentation storage for the proje
 Elements of the group:
   - Bernardo Leandro
   - Gonçalo Nuno
-  - Ana Prata
+  - A. Margarida Prata
   - Mariana Teixeira
 
 The game being developed is a dating sim, named Canoeing For Love.
