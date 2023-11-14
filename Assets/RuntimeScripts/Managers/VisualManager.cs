@@ -44,7 +44,11 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
             DisplayDialogue((string)hash[DialogueEvents.SHOW_DIALOGUE]);
 
         if (hash.ContainsKey(DialogueEvents.DISPLAY_CHARACTER))
+        {
+            characterPortrait.enabled = true;
+            characterPortrait.color = Color.white;
             DisplayCharacter((string)hash[DialogueEvents.DISPLAY_CHARACTER]);
+        }
 
         if (hash.ContainsKey(DialogueEvents.DISPLAY_BACKGROUND))
             DisplayBackground((string)hash[DialogueEvents.DISPLAY_BACKGROUND]);
@@ -63,6 +67,11 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
     void DisplayNameplate(string name)
     {
+        if (name == "Narrator")
+            characterPortrait.color = Color.gray;
+        else
+            characterPortrait.color = Color.white;
+
         nameComponent.text = name;
     }
 
@@ -74,6 +83,12 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
     void DisplayBackground(string backgroundPath)
     {
+        if (backgroundPath == string.Empty)
+            backgroundImage.color = Color.black;
+        else
+            backgroundImage.color = Color.white;
+
+        characterPortrait.enabled = false;
         Sprite backgroundSprite = Resources.Load(backgroundPath) as Sprite;
         backgroundImage.sprite = backgroundSprite;
     }
