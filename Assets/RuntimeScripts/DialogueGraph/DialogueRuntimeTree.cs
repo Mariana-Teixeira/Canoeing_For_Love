@@ -16,6 +16,7 @@ namespace DialogueTree
         {
             Debug.Log("Setting Head Node");
             data.graph.TryGetValue(data.headNode, out currentNode);
+            
         }
 
         public void GoToNextNode(Guid nextNode)
