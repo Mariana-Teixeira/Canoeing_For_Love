@@ -23,13 +23,13 @@ public class DialogueManager : NodePublisher
     public void ExecuteNodeTypeAction()
     {
         var hash = tree.CurrentNode.DialogueEvents;
-        if (hash.ContainsKey(DialogueEvents.OPEN_CHOICES_PANEL))
+        if (hash.ContainsKey(DialogueEvents.GOTO_CHOICESPANEL))
         {
-            DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.OPEN_CHOICES_PANEL]);
+            DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.GOTO_CHOICESPANEL]);
         }
-        else if (hash.ContainsKey(DialogueEvents.GO_TO_NEXT_NODE))
+        else if (hash.ContainsKey(DialogueEvents.GOTO_NEXTNODE))
         {
-            nextNode = (Guid)hash[DialogueEvents.GO_TO_NEXT_NODE];
+            nextNode = (Guid)hash[DialogueEvents.GOTO_NEXTNODE];
             GoToNextNode(nextNode);
         }
        

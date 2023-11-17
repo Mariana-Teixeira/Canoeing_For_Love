@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DialogueTree;
-using UnityEditor.VersionControl;
 
 public class ChoicesPanel : MonoBehaviour
 {
