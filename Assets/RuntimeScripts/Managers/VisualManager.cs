@@ -77,19 +77,19 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
     void DisplayCharacter(string characterPath)
     {
-        Sprite characterSprite = Resources.Load(characterPath) as Sprite;
+        Sprite characterSprite = Resources.Load("characters/" + characterPath) as Sprite;
+        print(characterSprite);
         characterPortrait.sprite = characterSprite;
     }
 
     void DisplayBackground(string backgroundPath)
     {
-        if (backgroundPath == string.Empty)
+        if (backgroundPath == string.Empty){
+            characterPortrait.enabled = false;
             backgroundImage.color = Color.black;
-        else
-            backgroundImage.color = Color.white;
-
-        characterPortrait.enabled = false;
-        Sprite backgroundSprite = Resources.Load(backgroundPath) as Sprite;
+        }
+        //characterPortrait.enabled = false;
+        Sprite backgroundSprite = Resources.Load("backgrounds/" + backgroundPath) as Sprite;
         backgroundImage.sprite = backgroundSprite;
     }
 

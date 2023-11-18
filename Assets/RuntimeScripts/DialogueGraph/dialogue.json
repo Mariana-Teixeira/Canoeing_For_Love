@@ -3,17 +3,19 @@
     "id": 6,
     "type":1,
     "dialogue": "I'm feeling a little shit",
-    "character": "Morse",
+    "character": "allen",
     "nextnode": 0,
-    "animation": "shake"
+    "animation": "shake",
+    "background": "forest"
   },
   {
     "id": 5,
     "type":1,
     "dialogue": "I'm good, how about you?",
-    "character": "Morse",
+    "character": "allen",
     "nextnode": 0,
-    "animation": "normal"
+    "animation": "normal",
+    "background": "kens_house"
   },
   {
     "id": 4,
@@ -27,24 +29,27 @@
     "id": 3,
     "type":1,
     "dialogue": "How are you?",
-    "character": "Maria",
+    "character": "ken",
     "nextnode": 4,
-    "animation": "normal"
+    "animation": "normal",
+    "background": "kens_house"
   },
   {
     "id": 2,
     "type":1,
-    "dialogue": "Hello Maria!",
-    "character": "Morse",
+    "dialogue": "Hello Ken!",
+    "character": "allen",
     "nextnode": 3,
-    "animation": "normal"
+    "animation": "normal",
+    "background": "under_the_ocean"
   },
   {
     "id": 1,
     "type":1,
     "dialogue": "Hello good sir!",
-    "character": "Maria",
+    "character": "ken",
     "nextnode": 2,
-    "animation": "normal"
+    "animation": "normal",
+    "background": "under_the_ocean"
   }
 ]

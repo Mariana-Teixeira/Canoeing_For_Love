@@ -14,7 +14,7 @@ public class DialogueData
 
     public Dictionary<int, Guid> guids { get; private set; }
     public Guid headNode { get; private set; }
-    public Dictionary<string,Character> characterDict { get; private set; }
+    //public Dictionary<string,Character> characterDict { get; private set; }
 
     public Dictionary<string,CameraAnimation> cameraDict { get; private set; }
 
@@ -28,12 +28,12 @@ public class DialogueData
         var json = r.ReadToEnd();
         List<DialogueNode> dialogueNodes = JsonConvert.DeserializeObject<List<DialogueNode>>(json);
 
-        Character Morse = new Character("Morse", "Morse");
-        Character Maria = new Character("Maria", "Maria");
-        characterDict = new Dictionary<string,Character>{
-            { "Maria", Maria },
-            { "Morse", Morse }
-        };
+        // Character Morse = new Character("Morse", "Morse");
+        // Character Maria = new Character("Maria", "Maria");
+        // characterDict = new Dictionary<string,Character>{
+        //     { "Maria", Maria },
+        //     { "Morse", Morse }
+        // };
 
         cameraDict = new Dictionary<string,CameraAnimation>{
             { "normal", CameraAnimation.NORMAL },
@@ -52,20 +52,35 @@ public class DialogueData
             // { npc_e.Guid, npc_e }
         };
 
+         var endNode = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
+        {
+            { DialogueEvents.SHOW_DIALOGUE, "End of Playable" },
+
+            { DialogueEvents.SHOW_NAMEPLATE, "Developers" },
+
+            { DialogueEvents.DISPLAY_BACKGROUND, string.Empty },
+        });    
+        guids.Add(dialogueNodes.Count+1, endNode.Guid);
+        graph.Add(guids[key: dialogueNodes.Count+1], endNode);
+
         foreach (var n in dialogueNodes){
             Hashtable hasher = new Hashtable();
             guids.Add(n.Id, Guid.NewGuid());
             if (n.Dialogue!=null){
-                hasher.Add(DialogueEvents.DISPLAY_DIALOGUE, n.Dialogue);
+                hasher.Add(DialogueEvents.SHOW_DIALOGUE, n.Dialogue);
+            }
+            if (n.Background!=null){
+                hasher.Add(DialogueEvents.DISPLAY_BACKGROUND, n.Background);
             }
             if (n.Character!=null){
-                hasher.Add(DialogueEvents.DISPLAY_CHARACTER, characterDict[n.Character]);
+                hasher.Add(DialogueEvents.DISPLAY_CHARACTER, n.Character);
+                hasher.Add(DialogueEvents.SHOW_NAMEPLATE, string.Concat(n.Character[0].ToString().ToUpper(), n.Character.Substring(1)));
             }
             if(n.NextNode!=0){
-                hasher.Add(DialogueEvents.GO_TO_NEXT_NODE, guids[n.NextNode]);
+                hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[n.NextNode]);
             }
             else if(n.NextNode==0){
-                hasher.Add(DialogueEvents.GO_TO_NEXT_NODE, Guid.Empty);
+                hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[dialogueNodes.Count+1]);
             }
             if(n.Animation!=null){
                 hasher.Add(DialogueEvents.ANIMATE_CAMERA, cameraDict[n.Animation]);
@@ -78,7 +93,7 @@ public class DialogueData
                     
                 }
                 DialogueChoices[] choices = choices2.ToArray();
-                hasher.Add(DialogueEvents.OPEN_CHOICES_PANEL, choices);
+                hasher.Add(DialogueEvents.GOTO_CHOICESPANEL, choices);
             }
             var npc = new DialogueRuntimeNode(guids[n.Id], hasher);
             if (n.Id==1){
@@ -88,16 +103,7 @@ public class DialogueData
         } 
 
 
-        var endNode = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
-        {
-            { DialogueEvents.SHOW_DIALOGUE, "End of Playable" },
-
-            { DialogueEvents.SHOW_NAMEPLATE, "Developers" },
-
-            { DialogueEvents.DISPLAY_BACKGROUND, string.Empty },
-        });    
-        guids.Add(n.Length+1, Guid.NewGuid());
-        graph.Add(guids[n.Length+1], endNode);
+       
     }
 
     /// <summary>
@@ -113,6 +119,8 @@ public class DialogueNode
     public int Id { get; set; }
     public int Type { get; set; }
     public string Dialogue { get; set; }
+
+    public string Background { get; set; }
     public string Character { get; set; }
     public int NextNode { get; set; }
     public string Animation { get; set; }
