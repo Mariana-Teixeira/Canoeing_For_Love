@@ -57,9 +57,11 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
         if (!node.DialogueEvents.ContainsKey(DialogueEvents.ANIMATE_CAMERA)){
             ChangeState(CameraAnimation.NORMAL);
         }
-
-        CameraAnimation animation = (CameraAnimation)node.DialogueEvents[DialogueEvents.ANIMATE_CAMERA];
-        ChangeState(animation);
+        else
+        {
+            CameraAnimation animation = (CameraAnimation)node.DialogueEvents[DialogueEvents.ANIMATE_CAMERA];
+            ChangeState(animation);
+        }
     }
 
     void EnterState()
