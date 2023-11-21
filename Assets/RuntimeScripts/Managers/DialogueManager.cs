@@ -50,8 +50,6 @@ public class DialogueManager : NodePublisher
 
     public IEnumerator CheckHasAnswer(DialogueChoices[] choices){
         yield return new WaitUntil(()=>choicePanel.GetAnswer()!=-1);
-        print("fattypumpum");
-        print(choicePanel.GetAnswer());
         nextNode = choices[choicePanel.GetAnswer()].NextNodeGUID;
         GoToNextNode(nextNode);
     }

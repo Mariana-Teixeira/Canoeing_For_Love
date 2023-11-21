@@ -6,11 +6,17 @@ using UnityEngine.UI;
 
 public class VisualManager : MonoBehaviour, INodeSubscriber
 {
+    public static VisualManager instanceVisual {get; set;}
     public TextMeshProUGUI dialogueComponent;
     public TextMeshProUGUI nameComponent;
     public Image characterPortrait;
     public Image backgroundImage;
     float textSpeed = 0.03f;
+
+    public string dialogueChecker = "";
+
+    public bool lineFinish = false;
+
 
     [SerializeField] private CanvasGroup dialogueCanvas;
     [SerializeField] private CanvasGroup choiceCanvas;
@@ -19,7 +25,10 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
     #region Node Publisher
     NodePublisher publisher;
-    private void Awake() => publisher = GetComponent<NodePublisher>();
+    private void Awake() {
+        publisher = GetComponent<NodePublisher>();
+        instanceVisual = this;
+    } 
     private void OnEnable() => publisher.AddObserver(this);
     private void OnDisable() => publisher.RemoveObserver(this);
     #endregion
@@ -40,8 +49,10 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
         if (hash.ContainsKey(DialogueEvents.GOTO_CHOICESPANEL))
             DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.GOTO_CHOICESPANEL]);
 
-        if (hash.ContainsKey(DialogueEvents.SHOW_DIALOGUE))
+        if (hash.ContainsKey(DialogueEvents.SHOW_DIALOGUE)){
             DisplayDialogue((string)hash[DialogueEvents.SHOW_DIALOGUE]);
+        }
+            
 
         if (hash.ContainsKey(DialogueEvents.DISPLAY_CHARACTER))
         {
@@ -59,10 +70,13 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
     void DisplayDialogue(string dialogue)
     {
-        StopAllCoroutines();
+        lineFinish = false;
         ToggleChoiceCanvas(false);
+        StopAllCoroutines();
+    
         dialogueComponent.text = string.Empty;
         StartCoroutine(TypeLine(dialogue));
+          
     }
 
     void DisplayNameplate(string name)
@@ -113,12 +127,20 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
         nameComponent.text = string.Empty;
     }
 
+    public void FinishLine(){
+        StopAllCoroutines();
+        dialogueComponent.text = dialogueChecker;
+        lineFinish = true;
+    }
+
     IEnumerator TypeLine(string dialogue)
     {
+        dialogueChecker = dialogue;
         foreach (char c in dialogue.ToCharArray())
         {
             dialogueComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+        lineFinish = true;
     }
 }

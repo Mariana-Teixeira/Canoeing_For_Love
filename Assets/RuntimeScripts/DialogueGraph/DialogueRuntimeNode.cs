@@ -35,5 +35,6 @@ namespace DialogueTree
         GOTO_NEXTNODE,
         GOTO_CHOICESPANEL,
         ANIMATE_CAMERA,
+        PLAY_SOUND,
     }
 }

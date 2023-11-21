@@ -54,7 +54,9 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
     public void OnNotifyNode(DialogueRuntimeNode node)
     {
         if (node.DialogueEvents == null) return;
-        if (!node.DialogueEvents.ContainsKey(DialogueEvents.ANIMATE_CAMERA)) return;
+        if (!node.DialogueEvents.ContainsKey(DialogueEvents.ANIMATE_CAMERA)){
+            ChangeState(CameraAnimation.NORMAL);
+        }
 
         CameraAnimation animation = (CameraAnimation)node.DialogueEvents[DialogueEvents.ANIMATE_CAMERA];
         ChangeState(animation);

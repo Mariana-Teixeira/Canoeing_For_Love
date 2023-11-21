@@ -7,6 +7,8 @@ public class InputManager : MonoBehaviour, INodeSubscriber
     InputInvoker invoker;
     ICommand command;
 
+    VisualManager vm;
+
     #region Node Publisher
     NodePublisher publisher;
 
@@ -24,14 +26,20 @@ public class InputManager : MonoBehaviour, INodeSubscriber
     {
         command = new StartDialogueCommand(treeManager);
         invoker.AddCommand(command);
+        vm = VisualManager.instanceVisual;
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            invoker.AddCommand(command);
-        }  
+        if (Input.GetMouseButtonDown(0) ){
+            if(vm.lineFinish){
+                invoker.AddCommand(command);
+            }
+            else  {
+                vm.FinishLine();
+            }
+        }
+        
     }
 
     public void OnNotifyNode(DialogueRuntimeNode node)

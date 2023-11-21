@@ -920,6 +920,7 @@ GameObject:
   - component: {fileID: 752905247}
   - component: {fileID: 752905251}
   - component: {fileID: 752905252}
+  - component: {fileID: 752905253}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1013,6 +1014,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 643129351}
   gameCamera: {fileID: 137099907}
+--- !u!114 &752905253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752905246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6782dbd0d659140a0f24b1ee543bb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &779756014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,7 +1227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1487,7 +1500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.021668848, g: 0, b: 0.8301887, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

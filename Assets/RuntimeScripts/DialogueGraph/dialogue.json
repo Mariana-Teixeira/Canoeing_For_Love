@@ -6,16 +6,18 @@
     "character": "allen",
     "nextnode": 0,
     "animation": "shake",
-    "background": "forest"
+    "background": "forest",
+    "audio": "audio4"
   },
   {
     "id": 5,
     "type":1,
-    "dialogue": "I'm good, how about you?",
+    "dialogue": "I'm good, how about you? rereraraefsfbgrefasfdgfdbgrfeqwdeadsfdgf",
     "character": "allen",
     "nextnode": 0,
     "animation": "normal",
-    "background": "kens_house"
+    "background": "kens_house",
+    "audio": "audio4"
   },
   {
     "id": 4,
@@ -28,28 +30,31 @@
   {
     "id": 3,
     "type":1,
-    "dialogue": "How are you?",
+    "dialogue": "How are you? rereraraefsfbgrefasfdgfdbgrfeqwdeadsfdgf",
     "character": "ken",
     "nextnode": 4,
     "animation": "normal",
-    "background": "kens_house"
+    "background": "kens_house",
+    "audio": "audio3"
   },
   {
     "id": 2,
     "type":1,
-    "dialogue": "Hello Ken!",
+    "dialogue": "Hello Ken! rereraraefsfbgrefasfdgfdbgrfeqwdeadsfdgf",
     "character": "allen",
     "nextnode": 3,
     "animation": "normal",
-    "background": "under_the_ocean"
+    "background": "under_the_ocean",
+    "audio": "audio2"
   },
   {
     "id": 1,
     "type":1,
-    "dialogue": "Hello good sir!",
+    "dialogue": "Hello good sir! rereraraefsfbgrefasfdgfdbgrfeqwdeadsfdgf",
     "character": "ken",
     "nextnode": 2,
     "animation": "normal",
-    "background": "under_the_ocean"
+    "background": "under_the_ocean",
+    "audio": "audio1"
   }
 ]

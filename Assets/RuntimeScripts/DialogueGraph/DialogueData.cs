@@ -7,6 +7,7 @@ using System.IO;
 using UnityEngine;
 using Newtonsoft.Json;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 public class DialogueData
 {
@@ -85,6 +86,10 @@ public class DialogueData
             if(n.Animation!=null){
                 hasher.Add(DialogueEvents.ANIMATE_CAMERA, cameraDict[n.Animation]);
             }
+            if(n.Audio!=null){
+                UnityEngine.Debug.Log("TEmos audio no json");
+                hasher.Add(DialogueEvents.PLAY_SOUND,n.Audio);
+            }
             if(n.Choices!=null){
                 List<DialogueChoices> choices2 = new ();
                 foreach(var choice in n.Choices){
@@ -124,6 +129,8 @@ public class DialogueNode
     public string Character { get; set; }
     public int NextNode { get; set; }
     public string Animation { get; set; }
+
+    public string Audio {get; set;}
     public List<Choice> Choices { get; set; }
 }
 
