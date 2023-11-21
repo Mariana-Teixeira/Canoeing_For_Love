@@ -6,10 +6,17 @@ using UnityEngine.UI;
 
 public class VisualManager : MonoBehaviour, INodeSubscriber
 {
+    public static VisualManager instanceVisual {get; set;}
     public TextMeshProUGUI dialogueComponent;
     public TextMeshProUGUI nameComponent;
     public Image characterPortrait;
-    public float textSpeed = 0.03f;
+    public Image backgroundImage;
+    float textSpeed = 0.03f;
+
+    public string dialogueChecker = "";
+
+    public bool lineFinish = false;
+
 
     [SerializeField] private CanvasGroup dialogueCanvas;
     [SerializeField] private CanvasGroup choiceCanvas;
@@ -18,7 +25,10 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
     #region Node Publisher
     NodePublisher publisher;
-    private void Awake() => publisher = GetComponent<NodePublisher>();
+    private void Awake() {
+        publisher = GetComponent<NodePublisher>();
+        instanceVisual = this;
+    } 
     private void OnEnable() => publisher.AddObserver(this);
     private void OnDisable() => publisher.RemoveObserver(this);
     #endregion
@@ -35,30 +45,66 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     public void OnNotifyNode(DialogueRuntimeNode node)
     {
         var hash = node.DialogueEvents;
-        if (hash.ContainsKey(DialogueEvents.OPEN_CHOICES_PANEL))
-            DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.OPEN_CHOICES_PANEL]);
-        else if (hash.ContainsKey(DialogueEvents.DISPLAY_DIALOGUE))
-            DisplayDialogue((string)hash[DialogueEvents.DISPLAY_DIALOGUE]);
-        else
-            ClearDialogueBox();
+
+        if (hash.ContainsKey(DialogueEvents.GOTO_CHOICESPANEL))
+            DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.GOTO_CHOICESPANEL]);
+
+        if (hash.ContainsKey(DialogueEvents.SHOW_DIALOGUE)){
+            DisplayDialogue((string)hash[DialogueEvents.SHOW_DIALOGUE]);
+        }
+            
 
         if (hash.ContainsKey(DialogueEvents.DISPLAY_CHARACTER))
-            DisplayCharacter((Character)hash[DialogueEvents.DISPLAY_CHARACTER]);
+        {
+            characterPortrait.enabled = true;
+            characterPortrait.color = Color.white;
+            DisplayCharacter((string)hash[DialogueEvents.DISPLAY_CHARACTER]);
+        }
+
+        if (hash.ContainsKey(DialogueEvents.DISPLAY_BACKGROUND))
+            DisplayBackground((string)hash[DialogueEvents.DISPLAY_BACKGROUND]);
+
+        if (hash.ContainsKey(DialogueEvents.SHOW_NAMEPLATE))
+            DisplayNameplate((string)hash[DialogueEvents.SHOW_NAMEPLATE]);
     }
 
     void DisplayDialogue(string dialogue)
     {
-        StopAllCoroutines();
+        lineFinish = false;
         ToggleChoiceCanvas(false);
+        StopAllCoroutines();
+    
         dialogueComponent.text = string.Empty;
         StartCoroutine(TypeLine(dialogue));
+          
     }
 
-    void DisplayCharacter(Character character)
+    void DisplayNameplate(string name)
     {
-        nameComponent.text = character.Name;
-        Sprite characterSprite = Resources.Load(character.PortraitPath) as Sprite;
+        if (name == "Narrator")
+            characterPortrait.color = Color.gray;
+        else
+            characterPortrait.color = Color.white;
+
+        nameComponent.text = name;
+    }
+
+    void DisplayCharacter(string characterPath)
+    {
+        Sprite characterSprite = Resources.Load("characters/" + characterPath) as Sprite;
+        print(characterSprite);
         characterPortrait.sprite = characterSprite;
+    }
+
+    void DisplayBackground(string backgroundPath)
+    {
+        if (backgroundPath == string.Empty){
+            characterPortrait.enabled = false;
+            backgroundImage.color = Color.black;
+        }
+        //characterPortrait.enabled = false;
+        Sprite backgroundSprite = Resources.Load("backgrounds/" + backgroundPath) as Sprite;
+        backgroundImage.sprite = backgroundSprite;
     }
 
     void DisplayChoicesPanel(DialogueChoices[] choices)
@@ -81,12 +127,20 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
         nameComponent.text = string.Empty;
     }
 
+    public void FinishLine(){
+        StopAllCoroutines();
+        dialogueComponent.text = dialogueChecker;
+        lineFinish = true;
+    }
+
     IEnumerator TypeLine(string dialogue)
     {
+        dialogueChecker = dialogue;
         foreach (char c in dialogue.ToCharArray())
         {
             dialogueComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+        lineFinish = true;
     }
 }

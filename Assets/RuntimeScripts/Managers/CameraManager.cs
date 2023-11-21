@@ -15,7 +15,7 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
     CameraAnimation currentState;
 
     private readonly float edgeSize = 100f;
-    private readonly float moveAmout = 1f;
+    private readonly float moveAmout = 0f;
 
     #region Node Publisher
     NodePublisher publisher;
@@ -54,7 +54,9 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
     public void OnNotifyNode(DialogueRuntimeNode node)
     {
         if (node.DialogueEvents == null) return;
-        if (!node.DialogueEvents.ContainsKey(DialogueEvents.ANIMATE_CAMERA)) return;
+        if (!node.DialogueEvents.ContainsKey(DialogueEvents.ANIMATE_CAMERA)){
+            ChangeState(CameraAnimation.NORMAL);
+        }
 
         CameraAnimation animation = (CameraAnimation)node.DialogueEvents[DialogueEvents.ANIMATE_CAMERA];
         ChangeState(animation);
