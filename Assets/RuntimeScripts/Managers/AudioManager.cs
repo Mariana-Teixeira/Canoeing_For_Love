@@ -27,11 +27,8 @@ public class AudioManager : MonoBehaviour, INodeSubscriber
 
     public void OnNotifyNode(DialogueRuntimeNode node)
     {   
-        print("Entrei no audio, antes dos checks");
         if (node.DialogueEvents == null) return;
         if (!node.DialogueEvents.ContainsKey(DialogueEvents.PLAY_SOUND)) return;
-        print("Entrei no audio");
-        print((string)node.DialogueEvents[DialogueEvents.PLAY_SOUND]);
         AudioSource playSound = gameObject.AddComponent<AudioSource>();
         playSound.clip = Resources.Load("audio/" + (string)node.DialogueEvents[DialogueEvents.PLAY_SOUND]) as AudioClip;
         playSound.Play();
