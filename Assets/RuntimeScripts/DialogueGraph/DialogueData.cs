@@ -63,7 +63,6 @@ public class DialogueData
                 hasher.Add(DialogueEvents.ANIMATE_CAMERA, cameraDict[node.Animation]);
             }
             if(node.Audio!=null){
-                UnityEngine.Debug.Log("TEmos audio no json");
                 hasher.Add(DialogueEvents.PLAY_SOUND,node.Audio);
             }
             if(node.Choices!=null){

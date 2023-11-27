@@ -33,7 +33,7 @@ public class MenuManager: MonoBehaviour
             SceneManager.LoadScene(1);
         }
         else if (i == 1){
-            //SceneManager.LoadScene(2);
+            SceneManager.LoadScene(2);
         }
         else if (i == 2){
             //SceneManager.LoadScene(3);

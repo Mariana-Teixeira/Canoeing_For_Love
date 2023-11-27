@@ -1,3 +1,29 @@
 {
-    "node": 3
+  "loaders": [
+    {
+      "node": 7,
+      "image": "image0"
+    },
+    {
+      "node": 3,
+      "image": "image1"
+    },
+    {
+      "node": 2,
+      "image": "image2"
+    },
+    {
+      "node": 0,
+      "image": ""
+    },
+    {
+      "node": 0,
+      "image": ""
+    },
+    {
+      "node": 0,
+      "image": ""
+    }
+  ],
+  "active": 1
 }

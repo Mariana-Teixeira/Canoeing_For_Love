@@ -16,7 +16,7 @@ public class DataToSave{
         this.node = n;
     }
 
-    public void getNode(int n){
-        this.node = n;
+    public int getNode(){
+        return this.node;
     }
 }

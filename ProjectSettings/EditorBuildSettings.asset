@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialogue-Testing.unity
     guid: 8196a15bb9dec35459ccde926d274b74
+  - enabled: 1
+    path: Assets/Scenes/LoadMenu.unity
+    guid: 7946d1bd5aa401149bb2fa0d4dd878be
   m_configObjects: {}
