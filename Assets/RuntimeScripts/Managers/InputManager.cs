@@ -7,6 +7,8 @@ public class InputManager : MonoBehaviour, INodeSubscriber
     InputInvoker invoker;
     ICommand command;
 
+    ICommand comms;
+
     VisualManager vm;
 
     #region Node Publisher
@@ -24,6 +26,8 @@ public class InputManager : MonoBehaviour, INodeSubscriber
     }
     private void Start()
     {
+        comms = new LoadFileCommand(treeManager);
+        invoker.AddCommand(comms);
         command = new StartDialogueCommand(treeManager);
         invoker.AddCommand(command);
         vm = VisualManager.instanceVisual;
@@ -45,5 +49,10 @@ public class InputManager : MonoBehaviour, INodeSubscriber
     public void OnNotifyNode(DialogueRuntimeNode node)
     {
         command = new NextNodeCommand(treeManager);
+    }
+
+    void OnApplicationQuit(){
+        command = new SaveFileCommand(treeManager);
+        invoker.AddCommand(command);
     }
 }

@@ -5,17 +5,17 @@ namespace DialogueTree
 {
     public class DialogueRuntimeTree
     {
-        DialogueData data;
+        public DialogueData data;
         DialogueRuntimeNode currentNode;
 
         public DialogueRuntimeNode CurrentNode { get { return currentNode; } }
 
         public DialogueRuntimeTree() => data = new DialogueData();
 
-        public void GoToHeadNode()
+        public void GoToHeadNode(Guid headNode)
         {
             Debug.Log("Setting Head Node");
-            data.graph.TryGetValue(data.headNode, out currentNode);
+            data.graph.TryGetValue(headNode, out currentNode);
             
         }
 
