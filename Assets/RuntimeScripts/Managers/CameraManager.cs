@@ -8,7 +8,11 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
     [SerializeField] CinemachineVirtualCamera virtualCamera;
     [SerializeField] Camera gameCamera;
 
-    private float shakeIntensity = 1.0f;
+    [SerializeField] GameObject background;
+
+    [SerializeField] GameObject character;
+
+    private float shakeIntensity = 0.1f;
 
     private CinemachineBasicMultiChannelPerlin multiChannelPerlin;
 
@@ -16,6 +20,10 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
 
     private readonly float edgeSize = 100f;
     private readonly float moveAmout = 0f;
+
+    Vector3 charPos;
+
+    Vector3 backPos;
 
     #region Node Publisher
     NodePublisher publisher;
@@ -25,6 +33,8 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
     #endregion
 
     void Start() {
+        charPos = character.transform.position;
+        backPos = background.transform.position;
         StopShake();
         ChangeState(CameraAnimation.NORMAL);
     } 
@@ -101,14 +111,19 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
 
     public void StartShake()
     {
-        multiChannelPerlin = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        multiChannelPerlin.m_AmplitudeGain = shakeIntensity;
+        // multiChannelPerlin = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        // multiChannelPerlin.m_AmplitudeGain = shakeIntensity;
+        background.transform.position = (Vector3)(UnityEngine.Random.insideUnitCircle * shakeIntensity);  
+        character.transform.position = (Vector3)(UnityEngine.Random.insideUnitCircle * shakeIntensity);  
+        
     }
 
     public void StopShake()
     {
         multiChannelPerlin = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         multiChannelPerlin.m_AmplitudeGain = 0f;
+        background.transform.position = backPos;
+        character.transform.position = charPos;
     }
 }
 

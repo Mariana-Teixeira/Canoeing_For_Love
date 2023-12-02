@@ -347,7 +347,7 @@
     "dialogue": "It's almost time to start making lunch, but the kitchen is not big enough for 3 people to cook at the same time. At least if someone didn't occupy half the kitchen just by standing there.",
     "character": "allen",
     "nextnode": 40,
-    "animation": "normal",
+    "animation": "shake",
     "background": "black"
   },
   {  
@@ -361,7 +361,7 @@
   {  
     "id": 37,
     "dialogue": "You see Ken smile while preparing everything. He helps you get on board and canoes away to the town's market. The trip was uneventful. You get all the ingredients and while canoeing back to the house you hear Ken humming a song.",
-    "character": "ken",
+    "character": "Narrator",
     "nextnode": 38,
     "animation": "normal",
     "background": "lake"
@@ -592,7 +592,7 @@
     "dialogue": "Morning! I forgot to buy ingredients to make pancakes for breakfast, so I'm packing my canoe to go to the market.",
     "character": "ken",
     "nextnode": 9,
-    "animation": "normal",
+    "animation": "shake",
     "background": "kens_house"
   },
   {
