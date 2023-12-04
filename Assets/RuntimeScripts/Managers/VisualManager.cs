@@ -13,9 +13,8 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     public Image backgroundImage;
     float textSpeed = 0.03f;
 
-    public string dialogueChecker = "";
-
-    public bool lineFinish = false;
+    [HideInInspector] public string dialogueChecker = "";
+    [HideInInspector] public bool lineFinish = false;
 
 
     [SerializeField] private CanvasGroup dialogueCanvas;
@@ -46,13 +45,11 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     {
         var hash = node.DialogueEvents;
 
-        if (hash.ContainsKey(DialogueEvents.GOTO_CHOICESPANEL))
-            DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.GOTO_CHOICESPANEL]);
+        if (hash.ContainsKey(DialogueEvents.SHOW_CHOICESPANEL))
+            DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.SHOW_CHOICESPANEL]);
 
-        if (hash.ContainsKey(DialogueEvents.SHOW_DIALOGUE)){
-            DisplayDialogue((string)hash[DialogueEvents.SHOW_DIALOGUE]);
-        }
-            
+        if (hash.ContainsKey(DialogueEvents.SHOW_DIALOGUE))
+            DisplayDialogue((string)hash[DialogueEvents.SHOW_DIALOGUE]);            
 
         if (hash.ContainsKey(DialogueEvents.DISPLAY_CHARACTER))
         {
@@ -75,8 +72,7 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
         StopAllCoroutines();
     
         dialogueComponent.text = string.Empty;
-        StartCoroutine(TypeLine(dialogue));
-          
+        StartCoroutine(TypeLine(dialogue));  
     }
 
     void DisplayNameplate(string name)
@@ -92,7 +88,6 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     void DisplayCharacter(string characterPath)
     {
         Sprite characterSprite = Resources.Load("characters/" + characterPath) as Sprite;
-        print(characterSprite);
         characterPortrait.sprite = characterSprite;
     }
 
@@ -119,12 +114,6 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
         choiceCanvas.gameObject.SetActive(boolean);
         dialogueCanvas.interactable = !boolean;
         dialogueCanvas.blocksRaycasts = !boolean;
-    }
-
-    void ClearDialogueBox()
-    {
-        dialogueComponent.text = string.Empty;
-        nameComponent.text = string.Empty;
     }
 
     public void FinishLine(){

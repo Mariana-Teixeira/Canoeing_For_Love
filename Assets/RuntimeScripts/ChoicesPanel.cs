@@ -56,7 +56,6 @@ public class ChoicesPanel : MonoBehaviour
                 Button newButton = newButtonObject.GetComponent<Button>();
                 TextMeshProUGUI newTitle = newButton.GetComponentInChildren<TextMeshProUGUI>();
                 LayoutElement newLayout = newButton.GetComponent<LayoutElement>();
-                print(asset.faceInfo);
                 newTitle.font = asset;
                 newTitle.fontSize = 15;
                 newTitle.color = new Color(255,255,255,1);
@@ -69,7 +68,6 @@ public class ChoicesPanel : MonoBehaviour
             int buttonIndex = i;
             choiceButton.button.onClick.AddListener(() => AcceptAnswer(buttonIndex));
             choiceButton.title.text = choices[i].ChoiceDialogue;
-            print(choiceButton.title.preferredWidth);
             float buttonWidth = Mathf.Clamp(BUTTON_WIDTH_PADDING + choiceButton.title.preferredWidth, BUTTON_MIN_WIDTH, BUTTON_MAX_WIDTH);
             minWidth = Mathf.Min(minWidth, buttonWidth);
         }

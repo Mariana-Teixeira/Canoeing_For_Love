@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour, INodeSubscriber
 {
+    VisualManager vm;
     DialogueManager treeManager;
     InputInvoker invoker;
     ICommand command;
 
-    VisualManager vm;
 
     #region Node Publisher
     NodePublisher publisher;
