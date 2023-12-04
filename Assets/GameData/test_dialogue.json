@@ -11,7 +11,7 @@
   },
   {
     "id": 10,
-    "gotoboolnode": {"gotoprimarynode": 11, "gotobackupnode": 12, "character": "allen", "minimumscore": 1}
+    "gotopathnode": {"gotoprimarynode": 11, "gotobackupnode": 12, "character": "allen", "minimumscore": 1}
   },
   {
     "id": 9,

@@ -76,11 +76,11 @@ public class DialogueData
                 DialogueChoices[] choices = choices2.ToArray();
                 hasher.Add(DialogueEvents.SHOW_CHOICESPANEL, choices);
             }
-            if (node.GoToBoolNode != null)
+            if (node.GoToPathNode != null)
             {
-                var boolChoice = new DialogueBool(guids[node.GoToBoolNode.GoToPrimaryNode], guids[node.GoToBoolNode.GoToBackupNode],
-                    node.GoToBoolNode.Character, node.GoToBoolNode.MinimumScore);
-                hasher.Add(DialogueEvents.GOTO_BOOLNODE, boolChoice);
+                var pathChoice = new DialoguePath(guids[node.GoToPathNode.GoToPrimaryNode], guids[node.GoToPathNode.GoToBackupNode],
+                    node.GoToPathNode.Character, node.GoToPathNode.MinimumScore);
+                hasher.Add(DialogueEvents.GOTO_PATHNODE, pathChoice);
             }
             if (node.IncreaseCharacterScore != null)
             {
@@ -107,7 +107,7 @@ public class DialogueNode
     public string DisplayCharacter { get; set; }
     public string DisplayBackground { get; set; }
     public int GoToNextNode { get; set; }
-    public BoolChoice GoToBoolNode { get; set; }
+    public PathChoice GoToPathNode { get; set; }
     public string PlayAnimation { get; set; }
     public string PlayAudio {get; set;}
     public string IncreaseCharacterScore { get; set; }
@@ -120,7 +120,7 @@ public class Choice
     public string ShowDialogue { get; set; }
 }
 
-public class BoolChoice
+public class PathChoice
 {
     public int GoToPrimaryNode { get; set; }
     public int GoToBackupNode { get; set; }

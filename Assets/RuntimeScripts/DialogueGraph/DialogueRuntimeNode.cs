@@ -15,14 +15,14 @@ namespace DialogueTree
         }
     }
 
-    public struct DialogueBool
+    public struct DialoguePath
     {
         public Guid PrimaryNodeGUID { get; private set; }
         public Guid BackupNodeGUID { get; private set; }
         public string Character { get; private set; }
         public int MinimumScore { get; private set; }
 
-        public DialogueBool(Guid primaryNode, Guid backupNode, string character, int score)
+        public DialoguePath(Guid primaryNode, Guid backupNode, string character, int score)
         {
             this.PrimaryNodeGUID = primaryNode;
             this.BackupNodeGUID = backupNode;
@@ -51,7 +51,7 @@ namespace DialogueTree
         DISPLAY_BACKGROUND,
         ADD_SCORE,
         GOTO_NEXTNODE,
-        GOTO_BOOLNODE,
+        GOTO_PATHNODE,
         ANIMATE_CAMERA,
         PLAY_SOUND,
     }

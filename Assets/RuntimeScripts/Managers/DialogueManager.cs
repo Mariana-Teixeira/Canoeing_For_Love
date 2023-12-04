@@ -2,6 +2,8 @@ using System;
 using DialogueTree;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using System.Net.Sockets;
 
 public class DialogueManager : NodePublisher
 {
@@ -34,10 +36,10 @@ public class DialogueManager : NodePublisher
             DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.SHOW_CHOICESPANEL]);
             return;
         }
-        if (hash.ContainsKey(DialogueEvents.GOTO_BOOLNODE))
+        if (hash.ContainsKey(DialogueEvents.GOTO_PATHNODE))
         {
-            DialogueBool choices = (DialogueBool)hash[DialogueEvents.GOTO_BOOLNODE];
-            GoToBoolNode(choices);
+            DialoguePath choices = (DialoguePath)hash[DialogueEvents.GOTO_PATHNODE];
+            GoToPathNode(choices);
             return;
         }
         if (hash.ContainsKey(DialogueEvents.GOTO_NEXTNODE))
@@ -54,15 +56,15 @@ public class DialogueManager : NodePublisher
 
     public void GoToNextNode(Guid nextNodeGuid)
     {
-        Debug.Log("GOTONEXTNODE");
         tree.GoToNextNode(nextNodeGuid);
         NotifyObserver(tree.CurrentNode);
     }
 
-    public void GoToBoolNode(DialogueBool dialogueBool)
+    public void GoToPathNode(DialoguePath dialogueBool)
     {
-        Debug.Log("GOTOBOOLNODE");
-        tree.GoToNextNode(dialogueBool.PrimaryNodeGUID);
+        var score = dialogueBool.Character == "ken" ? inventory.KenScore : inventory.AllenScore;
+        var node = score >= dialogueBool.MinimumScore ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;
+        tree.GoToNextNode(node);
         NotifyObserver(tree.CurrentNode);
     }
 
