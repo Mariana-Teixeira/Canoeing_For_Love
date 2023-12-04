@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour, INodeSubscriber
 {
+
     AudioSource playSound;
 
     #region Node Publisher
@@ -12,6 +13,7 @@ public class AudioManager : MonoBehaviour, INodeSubscriber
     private void OnEnable() => publisher.AddObserver(this);
     private void OnDisable() => publisher.RemoveObserver(this);
     #endregion
+
     // // Start is called before the first frame update
     private void Awake()
     {

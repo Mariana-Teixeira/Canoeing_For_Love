@@ -1,0 +1,62 @@
+[
+    {
+        "id": 8,
+        "type": 1,
+        "showdialogue": "... better than my brother.",
+        "gotonextnode": 0,
+        "playaudio": "audio8"
+    },
+    {
+        "id": 7,
+        "type": 1,
+        "showdialogue": "Do you want to join me on a run? I can share some useful tips on how to be better...",
+        "gotonextnode": 8,
+        "playaudio": "audio7"
+    },
+    {
+        "id": 6,
+        "type": 1,
+        "showdialogue": "You understand the competitive spirit of wanting to be better THAN ANYONE ELSE. I respect that!",
+        "gotonextnode": 7,
+        "playaudio": "audio6"
+    },
+    {
+        "id": 5,
+        "type": 1,
+        "showdialogue": "I never though about that.",
+        "shownameplate": "Allen",
+        "displaycharacter": "allen",
+        "gotonextnode": 6,
+        "playaudio": "audio5"
+    },
+    {
+        "id": 4,
+        "type": 1,
+        "showdialogue": "You glance back at Allen's face.",
+        "gotonextnode": 5,
+        "playaudio": "audio4"
+    },
+    {
+        "id": 3,
+        "type": 1,
+        "showdialogue": "Probably better for your health too...",
+        "gotonextnode": 4,
+        "playaudio": "audio3"
+    },
+    {
+        "id": 2,
+        "type": 1,
+        "showdialogue": "You weren't wrong, running with shoes is probably better for your speed.",
+        "gotonextnode": 3,
+        "playaudio": "audio2"
+    },
+    {
+        "id": 1,
+        "type": 1,
+        "showdialogue": "You glance down towards Allen's shoes, but he is barefoot.",
+        "shownameplate": "Narrator",
+        "displaybackground": "forest",
+        "gotonextnode": 2,
+        "playaudio": "audio1"
+    }
+]

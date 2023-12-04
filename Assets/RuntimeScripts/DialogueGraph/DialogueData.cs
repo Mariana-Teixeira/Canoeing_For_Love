@@ -26,82 +26,105 @@ public class DialogueData
         };
 
         guids = new Dictionary<int, Guid>{};
-
         graph = new Dictionary<Guid, DialogueRuntimeNode> {};
 
-         var endNode = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
+        var endNode = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
         {
             { DialogueEvents.SHOW_DIALOGUE, "End of Playable" },
 
             { DialogueEvents.SHOW_NAMEPLATE, "Developers" },
 
-            { DialogueEvents.DISPLAY_BACKGROUND, "black" },
-        });    
+            { DialogueEvents.DISPLAY_BACKGROUND, string.Empty },
+        }); 
+
         guids.Add(dialogueNodes.Count+1, endNode.Guid);
         graph.Add(guids[key: dialogueNodes.Count+1], endNode);
 
         foreach (var node in dialogueNodes){
             Hashtable hasher = new Hashtable();
             guids.Add(node.Id, Guid.NewGuid());
-            if (node.Dialogue!=null){
-                hasher.Add(DialogueEvents.SHOW_DIALOGUE, node.Dialogue);
+            if (node.ShowDialogue!=null){
+                hasher.Add(DialogueEvents.SHOW_DIALOGUE, node.ShowDialogue);
             }
-            if (node.Background!=null){
-                hasher.Add(DialogueEvents.DISPLAY_BACKGROUND, node.Background);
+            if (node.ShowNameplate!=null){
+                hasher.Add(DialogueEvents.SHOW_NAMEPLATE, node.ShowNameplate);
             }
-            if (node.Character!=null){
-                hasher.Add(DialogueEvents.DISPLAY_CHARACTER, node.Character);
-                hasher.Add(DialogueEvents.SHOW_NAMEPLATE, string.Concat(node.Character[0].ToString().ToUpper(), node.Character.Substring(1)));
+            if (node.DisplayCharacter!=null){
+                hasher.Add(DialogueEvents.DISPLAY_CHARACTER, node.DisplayCharacter);
             }
-            if(node.NextNode!=0){
-                hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[node.NextNode]);
+            if (node.DisplayBackground!=null){
+                hasher.Add(DialogueEvents.DISPLAY_BACKGROUND, node.DisplayBackground);
             }
-            else if(node.NextNode==0){
+            if (node.GoToNextNode!=0){
+                hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[node.GoToNextNode]);
+            }
+            else if(node.GoToNextNode==0){
                 hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[dialogueNodes.Count+1]);
             }
-            if(node.Animation!=null){
-                hasher.Add(DialogueEvents.ANIMATE_CAMERA, cameraDict[node.Animation]);
+            if(node.PlayAnimation!=null){
+                hasher.Add(DialogueEvents.ANIMATE_CAMERA, cameraDict[node.PlayAnimation]);
             }
-            if(node.Audio!=null){
-                hasher.Add(DialogueEvents.PLAY_SOUND,node.Audio);
+            if(node.PlayAudio!=null){
+                hasher.Add(DialogueEvents.PLAY_SOUND,node.PlayAudio);
             }
-            if(node.Choices!=null){
+            if(node.ShowChoicePanel!=null){
                 List<DialogueChoices> choices2 = new ();
-                foreach(var choice in node.Choices){
-                    var ch = new DialogueChoices(guids[choice.NextNode], choice.Dialogue);
-                    choices2.Add(ch);
-                    
+                foreach(var choice in node.ShowChoicePanel)
+                {
+                    var _choice = new DialogueChoices(guids[choice.GoToNextNode], choice.ShowDialogue);
+                    choices2.Add(_choice);
                 }
                 DialogueChoices[] choices = choices2.ToArray();
-                hasher.Add(DialogueEvents.GOTO_CHOICESPANEL, choices);
+                hasher.Add(DialogueEvents.SHOW_CHOICESPANEL, choices);
+            }
+            if (node.GoToPathNode != null)
+            {
+                var pathChoice = new DialoguePath(guids[node.GoToPathNode.GoToPrimaryNode], guids[node.GoToPathNode.GoToBackupNode],
+                    node.GoToPathNode.Character, node.GoToPathNode.MinimumScore);
+                hasher.Add(DialogueEvents.GOTO_PATHNODE, pathChoice);
+            }
+            if (node.IncreaseCharacterScore != null)
+            {
+                hasher.Add(DialogueEvents.ADD_SCORE, node.IncreaseCharacterScore);
             }
             var npc = new DialogueRuntimeNode(guids[node.Id], hasher);
             if (node.Id==1){
                 headNode = npc.Guid;
             }
             graph.Add(guids[node.Id], npc);
-        }  
+        }
     }
 }
 
+// goto_node[node, character, score]
 
 public class DialogueNode
 {
     public int Id { get; set; }
     public int Type { get; set; }
-    public string Dialogue { get; set; }
-
-    public string Background { get; set; }
-    public string Character { get; set; }
-    public int NextNode { get; set; }
-    public string Animation { get; set; }
-
-    public string Audio {get; set;}
-    public List<Choice> Choices { get; set; }
+    public string ShowDialogue { get; set; }
+    public List<Choice> ShowChoicePanel { get; set; }
+    public string ShowNameplate { get; set; }
+    public string DisplayCharacter { get; set; }
+    public string DisplayBackground { get; set; }
+    public int GoToNextNode { get; set; }
+    public PathChoice GoToPathNode { get; set; }
+    public string PlayAnimation { get; set; }
+    public string PlayAudio {get; set;}
+    public string IncreaseCharacterScore { get; set; }
+    public string AcquireItem { get; set; }
 }
 
 public class Choice
 {
-    public int NextNode { get; set; }
-    public string Dialogue { get; set; }
+    public int GoToNextNode { get; set; }
+    public string ShowDialogue { get; set; }
+}
+
+public class PathChoice
+{
+    public int GoToPrimaryNode { get; set; }
+    public int GoToBackupNode { get; set; }
+    public string Character { get; set; }
+    public int MinimumScore { get; set; }
 }
