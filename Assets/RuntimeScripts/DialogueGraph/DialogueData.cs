@@ -36,6 +36,7 @@ public class DialogueData
 
             { DialogueEvents.DISPLAY_BACKGROUND, string.Empty },
         }); 
+
         guids.Add(dialogueNodes.Count+1, endNode.Guid);
         graph.Add(guids[key: dialogueNodes.Count+1], endNode);
 
