@@ -2,21 +2,35 @@ using System;
 using DialogueTree;
 using System.Collections;
 using UnityEngine;
+using System.Linq;
+using System.IO;
+using System.Drawing;
+using UnityEngine.Profiling;
+using Unity.VisualScripting;
 
 public class DialogueManager : NodePublisher
 {
     DialogueRuntimeTree tree;
     ChoicesPanel choicePanel;
 
+    [SerializeField] Camera cam;
+
+
+    public int headNode;
+
+    private readonly DataFileHandler dfh = new();
+
     public Guid nextNode = Guid.Empty;
 
     private void Awake() => tree = new DialogueRuntimeTree();
 
-    private void Start() => choicePanel = ChoicesPanel.instance;
+    private void Start() {
+        choicePanel = ChoicesPanel.instance;
+    } 
 
     public void StartDialogueTree()
     {
-        tree.GoToHeadNode();
+        tree.GoToHeadNode(tree.data.guids[headNode]);
         NotifyObserver(tree.CurrentNode);
     }
 
@@ -52,5 +66,14 @@ public class DialogueManager : NodePublisher
         yield return new WaitUntil(()=>choicePanel.GetAnswer()!=-1);
         nextNode = choices[choicePanel.GetAnswer()].NextNodeGUID;
         GoToNextNode(nextNode);
+    }
+
+
+    public void LoadGame(){
+        headNode = dfh.LoadGame();
+    }
+
+     public void SaveGame(){
+        dfh.SaveGame(tree, cam);
     }
 }

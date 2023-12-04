@@ -81,30 +81,34 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
     void DisplayNameplate(string name)
     {
-        if (name == "Narrator")
-            characterPortrait.color = Color.gray;
-        else
+        if (name == "Narrator" || name == "Developers")
+            characterPortrait.enabled = false;
+        else{
+            characterPortrait.enabled = true;
             characterPortrait.color = Color.white;
-
+        }
         nameComponent.text = name;
     }
 
     void DisplayCharacter(string characterPath)
     {
         Sprite characterSprite = Resources.Load("characters/" + characterPath) as Sprite;
-        print(characterSprite);
         characterPortrait.sprite = characterSprite;
     }
 
     void DisplayBackground(string backgroundPath)
     {
-        if (backgroundPath == string.Empty){
+        if (backgroundPath == "black"){
             characterPortrait.enabled = false;
             backgroundImage.color = Color.black;
         }
+        else{
+            backgroundImage.color = Color.white;
+            Sprite backgroundSprite = Resources.Load("backgrounds/" + backgroundPath) as Sprite;
+            backgroundImage.sprite = backgroundSprite;
+        }
         //characterPortrait.enabled = false;
-        Sprite backgroundSprite = Resources.Load("backgrounds/" + backgroundPath) as Sprite;
-        backgroundImage.sprite = backgroundSprite;
+        
     }
 
     void DisplayChoicesPanel(DialogueChoices[] choices)

@@ -35,7 +35,7 @@ public class DialogueData
 
             { DialogueEvents.SHOW_NAMEPLATE, "Developers" },
 
-            { DialogueEvents.DISPLAY_BACKGROUND, string.Empty },
+            { DialogueEvents.DISPLAY_BACKGROUND, "black" },
         });    
         guids.Add(dialogueNodes.Count+1, endNode.Guid);
         graph.Add(guids[key: dialogueNodes.Count+1], endNode);
@@ -63,7 +63,6 @@ public class DialogueData
                 hasher.Add(DialogueEvents.ANIMATE_CAMERA, cameraDict[node.Animation]);
             }
             if(node.Audio!=null){
-                UnityEngine.Debug.Log("TEmos audio no json");
                 hasher.Add(DialogueEvents.PLAY_SOUND,node.Audio);
             }
             if(node.Choices!=null){

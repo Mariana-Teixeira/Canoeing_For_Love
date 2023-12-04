@@ -200,7 +200,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &115260874
 RectTransform:
@@ -356,7 +356,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &142990329
 RectTransform:
@@ -397,7 +397,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &346030008
 RectTransform:
@@ -474,7 +474,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &361857736
 RectTransform:
@@ -675,7 +675,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &661118308
 MonoBehaviour:
@@ -787,7 +787,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &751563338
 RectTransform:
@@ -944,6 +944,8 @@ MonoBehaviour:
   nameComponent: {fileID: 1368397479}
   characterPortrait: {fileID: 938347717}
   backgroundImage: {fileID: 1625472353}
+  dialogueChecker: 
+  lineFinish: 0
   dialogueCanvas: {fileID: 661118312}
   choiceCanvas: {fileID: 801940097}
 --- !u!114 &752905248
@@ -970,6 +972,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43488d0f7b987804498fe50b372a1616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 137099907}
+  headNode: 0
 --- !u!4 &752905250
 Transform:
   m_ObjectHideFlags: 0
@@ -1014,6 +1018,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 643129351}
   gameCamera: {fileID: 137099907}
+  background: {fileID: 361857735}
+  character: {fileID: 115260873}
 --- !u!114 &752905253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,7 +1198,7 @@ GameObject:
   m_TagString: Ken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &938347716
 RectTransform:
@@ -1330,7 +1336,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1368397478
 RectTransform:
@@ -1465,7 +1471,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1625472352
 RectTransform:
@@ -1607,7 +1613,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &2088635827
 RectTransform:
