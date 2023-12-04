@@ -1,60 +1,93 @@
 [
   {
+    "id": 12,
+    "showdialogue": "Não leu a pontuação direito. ):",
+    "gotonextnode": 0
+  },
+  {
+    "id": 11,
+    "showdialogue": "Leu a pontuação. ):",
+    "gotonextnode": 0
+  },
+  {
+    "id": 10,
+    "gotoboolnode": {"gotoprimarynode": 11, "gotobackupnode": 12, "character": "allen", "minimumscore": 1}
+  },
+  {
+    "id": 9,
+    "showdialogue": "I'm increasing Allen's score. (:",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 10,
+    "playanimation": "normal",
+    "increasecharacterscore": "allen"
+  },
+  {
+    "id": 8,
+    "showdialogue": "I'm now increasing Ken's score. (:",
+    "displaycharacter": "ken",
+    "displaybackground": "forest",
+    "gotonextnode": 10,
+    "playanimation": "normal",
+    "increasecharacterscore": "ken"
+  },
+  {
+    "id": 7,
+    "showchoicepanel":[
+      {"gotonextnode": 8, "showdialogue": "Click here to increase Ken's score..."},
+      {"gotonextnode": 9, "showdialogue": "Here for Allen's score..."}
+    ]
+  },
+  {
     "id": 6,
-    "type":1,
-    "dialogue": "I'm feeling a little shit",
-    "character": "allen",
-    "nextnode": 0,
-    "animation": "shake",
-    "background": "forest",
-    "audio": "audio4"
+    "showdialogue": "I'm feeling a little shit...",
+    "displaycharacter": "allen",
+    "displaybackground": "forest",
+    "gotonextnode": 7,
+    "playanimation": "shake",
+    "playaudio": "audio4"
   },
   {
     "id": 5,
-    "type":1,
-    "dialogue": "I'm good, how about you? rereraraefsfbgrefasfdgfdbgrfeqwdeadsfdgf",
-    "character": "allen",
-    "nextnode": 0,
-    "animation": "normal",
-    "background": "kens_house",
-    "audio": "audio4"
+    "showdialogue": "I'm good, how about you?",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 7,
+    "playanimation": "normal",
+    "playaudio": "audio4"
   },
   {
     "id": 4,
-    "type":2,
-    "choices":[
-      {"nextnode": 5, "dialogue": "I'm good"},
-      {"nextnode": 6, "dialogue": "I'm not ok..."}
+    "showchoicepanel":[
+      {"gotonextnode": 5, "showdialogue": "I'm good"},
+      {"gotonextnode": 6, "showdialogue": "I'm not ok..."}
     ]
   },
   {
     "id": 3,
-    "type":1,
-    "dialogue": "How are you? rereraraefsfbgrefasfdgfdbgrfeqwdeadsfdgf",
-    "character": "ken",
-    "nextnode": 4,
-    "animation": "normal",
-    "background": "kens_house",
-    "audio": "audio3"
+    "showdialogue": "How are you?",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 4,
+    "playanimation": "normal",
+    "playaudio": "audio3"
   },
   {
     "id": 2,
-    "type":1,
-    "dialogue": "Hello Ken! rereraraefsfbgrefasfdgfdbgrfeqwdeadsfdgf",
-    "character": "allen",
-    "nextnode": 3,
-    "animation": "normal",
-    "background": "under_the_ocean",
-    "audio": "audio2"
+    "showdialogue": "Hello Ken!",
+    "displaycharacter": "allen",
+    "displaybackground": "under_the_ocean",
+    "gotonextnode": 3,
+    "playanimation": "normal",
+    "playaudio": "audio2"
   },
   {
     "id": 1,
-    "type":1,
-    "dialogue": "Hello good sir! rereraraefsfbgrefasfdgfdbgrfeqwdeadsfdgf",
-    "character": "ken",
-    "nextnode": 2,
-    "animation": "normal",
-    "background": "under_the_ocean",
-    "audio": "audio1"
+    "showdialogue": "Hello, good sir!",
+    "displaycharacter": "ken",
+    "displaybackground": "under_the_ocean",
+    "gotonextnode": 2,
+    "playanimation": "normal",
+    "playaudio": "audio1"
   }
 ]
