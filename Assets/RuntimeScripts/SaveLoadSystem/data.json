@@ -1,11 +1,11 @@
 {
   "loaders": [
     {
-      "node": 5,
+      "node": 91,
       "image": "image0"
     },
     {
-      "node": 7,
+      "node": 55,
       "image": "image1"
     },
     {
@@ -13,7 +13,7 @@
       "image": "image2"
     },
     {
-      "node": 54,
+      "node": 155,
       "image": "image3"
     },
     {

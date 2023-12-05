@@ -9,6 +9,8 @@ using System.Diagnostics;
 public class DialogueData
 {
     public Guid headNode { get; private set; }
+
+    string nametodisplay;
     public Dictionary<Guid, DialogueRuntimeNode> graph { get; private set; }
     public Dictionary<int, Guid> guids { get; private set; }
     public Dictionary<string,CameraAnimation> cameraDict { get; private set; }
@@ -49,7 +51,13 @@ public class DialogueData
             }
             if (node.DisplayCharacter!=null){
                 hasher.Add(DialogueEvents.DISPLAY_CHARACTER, node.DisplayCharacter);
-                hasher.Add(DialogueEvents.SHOW_NAMEPLATE, string.Concat(node.DisplayCharacter[0].ToString().ToUpper(), node.DisplayCharacter.Substring(1)));
+                nametodisplay = node.DisplayCharacter;
+                if (nametodisplay.Contains("_")){
+                    nametodisplay = node.DisplayCharacter.Split("_")[0];
+                    nametodisplay = string.Concat(nametodisplay[0].ToString().ToUpper(), nametodisplay.Substring(1));
+                }
+                
+                hasher.Add(DialogueEvents.SHOW_NAMEPLATE, nametodisplay);
             }
             if (node.DisplayBackground!=null){
                 hasher.Add(DialogueEvents.DISPLAY_BACKGROUND, node.DisplayBackground);

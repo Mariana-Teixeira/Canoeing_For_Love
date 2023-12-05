@@ -106,7 +106,7 @@
   {
     "id": 226,
     "showdialogue": "Don't worry I can always make more. Enjoy them!",
-    "displaycharacter": "ken",
+    "displaycharacter": "ken_shy",
     "displaybackground": "lake",
     "gotonextnode": 227,
     "playanimation": "normal"
@@ -388,7 +388,7 @@
   {
     "id": 191,
     "showdialogue": "Yes, don't worry I know.",
-    "displaycharacter": "ken",
+    "displaycharacter": "ken_sad",
     "displaybackground": "kens_house",
     "gotonextnode": 192,
     "playanimation": "normal"
@@ -436,7 +436,7 @@
   {
     "id": 185,
     "showdialogue": "Aaahhh... Well, you see... ",
-    "displaycharacter": "ken",
+    "displaycharacter": "ken_shy",
     "displaybackground": "kens_house",
     "gotonextnode": 186,
     "playanimation": "normal"
@@ -460,7 +460,7 @@
   {
     "id": 182,
     "showdialogue": "N...no! Of course not.",
-    "displaycharacter": "ken",
+    "displaycharacter": "ken_shy",
     "displaybackground": "kens_house",
     "gotonextnode": 183,
     "playanimation": "normal"
@@ -875,7 +875,7 @@
   {
     "id": 130,
     "showdialogue": "Ahm, that was trick to see if you were paying attention... That was actually the worst one...",
-    "displaycharacter": "ken",
+    "displaycharacter": "ken_sad",
     "displaybackground": "inside_hut",
     "gotonextnode": 131,
     "playanimation": "normal",
@@ -909,7 +909,7 @@
   {
     "id": 126,
     "showdialogue": "Nice, you actually paid attention! That's is easily the best one",
-    "displaycharacter": "ken",
+    "displaycharacter": "ken_shy",
     "displaybackground": "inside_hut",
     "gotonextnode": 127,
     "playanimation": "normal",
@@ -1384,7 +1384,7 @@
   {
     "id": 67,
     "showdialogue": "It's a shame we lost some ingredients. Now we can't make a fluffy yoghurt cake.",
-    "displaycharacter": "ken",
+    "displaycharacter": "ken_sad",
     "displaybackground": "lake",
     "gotonextnode": 68,
     "playanimation": "normal"
@@ -1481,7 +1481,7 @@
   {
     "id": 55,
     "showdialogue": "Uhhh, nevermind, just go inside and relax, I'll go by myself",
-    "displaycharacter": "ken",
+    "displaycharacter": "ken_sad",
     "displaybackground": "lake",
     "gotonextnode": 56,
     "playanimation": "normal"
