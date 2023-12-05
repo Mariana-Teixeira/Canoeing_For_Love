@@ -9,7 +9,11 @@ using System.IO;
 using System.Drawing;
 using UnityEngine.Profiling;
 using Unity.VisualScripting;
-
+using Random = System.Random;
+using UnityEditor;
+using System.Runtime.InteropServices;
+using System.Threading;
+using UnityEngine.EventSystems;
 
 public class DialogueManager : NodePublisher
 {
@@ -43,7 +47,6 @@ public class DialogueManager : NodePublisher
     public void ExecuteNodeTypeAction()
     {
         var hash = tree.CurrentNode.DialogueEvents;
-        Debug.Log(tree.CurrentNode.Guid);
         if (hash.ContainsKey(DialogueEvents.SHOW_CHOICESPANEL))
         {
             DisplayChoicesPanel((DialogueChoices[])hash[DialogueEvents.SHOW_CHOICESPANEL]);
@@ -51,8 +54,10 @@ public class DialogueManager : NodePublisher
         }
         if (hash.ContainsKey(DialogueEvents.GOTO_PATHNODE))
         {
+            Debug.Log("insede gotopathnode");
             DialoguePath choices = (DialoguePath)hash[DialogueEvents.GOTO_PATHNODE];
             GoToPathNode(choices);
+
             return;
         }
         if (hash.ContainsKey(DialogueEvents.GOTO_NEXTNODE))
@@ -75,12 +80,25 @@ public class DialogueManager : NodePublisher
 
     public void GoToPathNode(DialoguePath dialogueBool)
     {
-        var score = dialogueBool.Character == "ken" ? inventory.KenScore : inventory.AllenScore;
-        var node = score >= dialogueBool.MinimumScore ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;
-        tree.GoToNextNode(node);
-        NotifyObserver(tree.CurrentNode);
+        int score;
+        Guid node = Guid.Empty;
+        Debug.Log("yaaaaaaaaaaa");
+        if(dialogueBool.Character != null){
+            score = dialogueBool.Character == "ken" ? inventory.KenScore : inventory.AllenScore;
+            node = score >= dialogueBool.MinimumScore ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;
+        }
+        else{
+            Random random = new Random();
+            double test = random.NextDouble();
+            Debug.Log(test);
+            node = test > 0.5 ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;
+        }
+        Debug.Log(node);
+        GoToNextNode(node);
+        
     }
 
+    
     public IEnumerator CheckHasAnswer(DialogueChoices[] choices){
         yield return new WaitUntil(()=>choicePanel.GetAnswer()!=-1);
         nextNode = choices[choicePanel.GetAnswer()].NextNodeGUID;
@@ -101,3 +119,18 @@ public class DialogueManager : NodePublisher
         dfh.SaveGame(tree, cam);
     }
 }
+
+// public class Click : StandaloneInputModule
+// {
+//     public void ClickAt(float x, float y)
+//     {
+//         Input.simulateMouseWithTouches = true;
+//         var pointerData = GetTouchPointerEventData(new Touch() 
+//         {
+//             position = new Vector2(x, y),
+//         }, out bool b, out bool bb);
+
+//         ProcessTouchPress(pointerData, true, true);
+//     }
+
+// }

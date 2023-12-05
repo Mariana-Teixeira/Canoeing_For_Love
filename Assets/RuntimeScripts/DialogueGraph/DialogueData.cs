@@ -62,24 +62,24 @@ public class DialogueData
             if (node.DisplayBackground!=null){
                 hasher.Add(DialogueEvents.DISPLAY_BACKGROUND, node.DisplayBackground);
             }
-            if(node.GoToNextNode>100000){
-                Random random = new Random();
-                double test = random.NextDouble();
-                if(test<0.5){
-                    string help = node.GoToNextNode.ToString();
-                    string nextNode = help.Substring(0,3);
-                    int next = int.Parse(nextNode);
-                    hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[next]);
-                }
-                else{
-                    string help = node.GoToNextNode.ToString();
-                    string nextNode = help.Substring(3,3);
-                    int next = int.Parse(nextNode);
-                    hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[next]);
-                }
+            // if(node.GoToNextNode>100000){
+            //     Random random = new Random();
+            //     double test = random.NextDouble();
+            //     if(test<0.5){
+            //         string help = node.GoToNextNode.ToString();
+            //         string nextNode = help.Substring(0,3);
+            //         int next = int.Parse(nextNode);
+            //         hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[next]);
+            //     }
+            //     else{
+            //         string help = node.GoToNextNode.ToString();
+            //         string nextNode = help.Substring(3,3);
+            //         int next = int.Parse(nextNode);
+            //         hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[next]);
+            //     }
 
-            }
-            else if(node.GoToNextNode!=0){
+            // }
+            if(node.GoToNextNode!=0){
                 hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[node.GoToNextNode]);
             }
             else if(node.GoToNextNode==0){
@@ -110,8 +110,9 @@ public class DialogueData
             }
             if (node.GoToPathNode != null)
             {
-                var pathChoice = new DialoguePath(guids[node.GoToPathNode.GoToPrimaryNode], guids[node.GoToPathNode.GoToBackupNode],
-                    node.GoToPathNode.Character, node.GoToPathNode.MinimumScore);
+                UnityEngine.Debug.Log(message: "Aiaiaaiaiai");
+                var pathChoice = new DialoguePath(guids[node.GoToPathNode.GoToPrimaryNode], guids[node.GoToPathNode.GoToBackupNode],node.GoToPathNode.Character, node.GoToPathNode.MinimumScore);
+                UnityEngine.Debug.Log(node.GoToPathNode.GoToPrimaryNode.ToString() + node.GoToPathNode.GoToBackupNode.ToString() + pathChoice.Character + pathChoice.MinimumScore);
                 hasher.Add(DialogueEvents.GOTO_PATHNODE, pathChoice);
             }
             if (node.IncreaseCharacterScore != null)

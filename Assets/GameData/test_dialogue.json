@@ -562,11 +562,15 @@
     "playanimation": "normal"
   },
   {
+    "id": 240,
+    "gotopathnode": {"gotoprimarynode": 190, "gotobackupnode": 213}
+  },
+  {
     "id": 169,
     "showdialogue": "I think I have an answer!",
     "displaycharacter": "sello",
     "displaybackground": "kens_house",
-    "gotonextnode": 190213,
+    "gotonextnode": 240,
     "playanimation": "normal"
   },
   {
