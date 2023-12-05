@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 public class DialogueData
 {
@@ -46,16 +47,31 @@ public class DialogueData
             if (node.ShowDialogue!=null){
                 hasher.Add(DialogueEvents.SHOW_DIALOGUE, node.ShowDialogue);
             }
-            if (node.ShowNameplate!=null){
-                hasher.Add(DialogueEvents.SHOW_NAMEPLATE, node.ShowNameplate);
-            }
             if (node.DisplayCharacter!=null){
                 hasher.Add(DialogueEvents.DISPLAY_CHARACTER, node.DisplayCharacter);
+                hasher.Add(DialogueEvents.SHOW_NAMEPLATE, string.Concat(node.DisplayCharacter[0].ToString().ToUpper(), node.DisplayCharacter.Substring(1)));
             }
             if (node.DisplayBackground!=null){
                 hasher.Add(DialogueEvents.DISPLAY_BACKGROUND, node.DisplayBackground);
             }
-            if (node.GoToNextNode!=0){
+            if(node.GoToNextNode>100000){
+                Random random = new Random();
+                double test = random.NextDouble();
+                if(test<0.5){
+                    string help = node.GoToNextNode.ToString();
+                    string nextNode = help.Substring(0,3);
+                    int next = int.Parse(nextNode);
+                    hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[next]);
+                }
+                else{
+                    string help = node.GoToNextNode.ToString();
+                    string nextNode = help.Substring(3,3);
+                    int next = int.Parse(nextNode);
+                    hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[next]);
+                }
+
+            }
+            else if(node.GoToNextNode!=0){
                 hasher.Add(DialogueEvents.GOTO_NEXTNODE, guids[node.GoToNextNode]);
             }
             else if(node.GoToNextNode==0){
@@ -71,8 +87,15 @@ public class DialogueData
                 List<DialogueChoices> choices2 = new ();
                 foreach(var choice in node.ShowChoicePanel)
                 {
-                    var _choice = new DialogueChoices(guids[choice.GoToNextNode], choice.ShowDialogue);
-                    choices2.Add(_choice);
+                    if(choice.GoToNextNode==0){
+                        var _choice = new DialogueChoices(guids[dialogueNodes.Count+1], choice.ShowDialogue);
+                        choices2.Add(_choice);
+                    }
+                    else{
+                        var _choice = new DialogueChoices(guids[choice.GoToNextNode], choice.ShowDialogue);
+                        choices2.Add(_choice);
+                    }
+                    
                 }
                 DialogueChoices[] choices = choices2.ToArray();
                 hasher.Add(DialogueEvents.SHOW_CHOICESPANEL, choices);
@@ -86,6 +109,10 @@ public class DialogueData
             if (node.IncreaseCharacterScore != null)
             {
                 hasher.Add(DialogueEvents.ADD_SCORE, node.IncreaseCharacterScore);
+            }
+            if (node.DecreaseCharacterScore != null)
+            {
+                hasher.Add(DialogueEvents.REMOVE_SCORE, node.DecreaseCharacterScore);
             }
             var npc = new DialogueRuntimeNode(guids[node.Id], hasher);
             if (node.Id==1){
@@ -112,6 +139,7 @@ public class DialogueNode
     public string PlayAnimation { get; set; }
     public string PlayAudio {get; set;}
     public string IncreaseCharacterScore { get; set; }
+    public string DecreaseCharacterScore { get; set; }
     public string AcquireItem { get; set; }
 }
 

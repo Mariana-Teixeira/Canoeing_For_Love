@@ -1,4 +1,5 @@
 using System;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using DialogueTree;
@@ -7,6 +8,29 @@ using UnityEngine;
 
 public class DataFileHandler 
 {
+
+    public void NewGame(){
+        try{
+            string json = File.ReadAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json");
+            dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+            if(jsonObj["active"]==10){
+                Debug.Log("NEW GAME");
+                int i = 0;
+                foreach(var save in jsonObj["loaders"]){
+                    if(save["node"] == 0){
+                        jsonObj["active"] = i;
+                        string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+                        File.WriteAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json", output);
+                        break;
+                    }
+                    i++;
+                }
+            }   
+        }
+        catch(Exception e){
+            Debug.LogError(e);
+        }
+    }
 
 
     public int LoadGame(){
@@ -46,6 +70,7 @@ public class DataFileHandler
         // save game data: node and image
         jsonObj["loaders"][active]["node"] = d.getNode();
         jsonObj["loaders"][active]["image"] = "image" + active;
+        jsonObj["active"] = 10;
         string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json", output);
     }

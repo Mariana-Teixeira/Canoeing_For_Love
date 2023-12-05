@@ -50,6 +50,10 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
         {
             IncreaseRelationshipScore((string)hash[DialogueEvents.ADD_SCORE]);
         }
+        if (hash.ContainsKey(DialogueEvents.REMOVE_SCORE))
+        {
+            DecreaseRelationshipScore((string)hash[DialogueEvents.REMOVE_SCORE]);
+        }
     }
 
     public void IncreaseRelationshipScore(string character)
@@ -62,6 +66,20 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
         else if (character == "allen")
         {
             allenScore++;
+            allenSlider.value = allenScore;
+        }
+    }
+
+    public void DecreaseRelationshipScore(string character)
+    {
+        if (character == "ken")
+        {
+            kenScore--;
+            kenSlider.value = kenScore;
+        }
+        else if (character == "allen")
+        {
+            allenScore--;
             allenSlider.value = allenScore;
         }
     }

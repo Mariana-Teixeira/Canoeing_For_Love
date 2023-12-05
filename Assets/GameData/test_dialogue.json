@@ -1,654 +1,1923 @@
 [
-  {  
+
+  {
+    "id": 239,
+    "showchoicepanel":[
+      {"gotonextnode": 0, "showdialogue": "termit spary"},
+      {"gotonextnode": 0, "showdialogue": "beaver musk"}
+    ]
+  },
+  {
+    "id": 238,
+    "showdialogue": "Here I am, once again at your service! It's business time!\nSo what are you getting today? Everything has a purpose.",
+    "displaycharacter": "sello",
+    "displaybackground": "bedroom",
+    "gotonextnode": 239,
+    "playanimation": "normal"
+  },
+  {
+    "id": 237,
+    "showdialogue": "This time you're not as shocked.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 238,
+    "playanimation": "normal"
+  },
+  {
+    "id": 236,
+    "showdialogue": "You start drifting asleep when your window is violently shaken open... Again?!",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 237,
+    "playanimation": "normal"
+  },
+  {
+    "id": 235,
+    "showdialogue": "You get comfortable in your feathered bed once again. Today you made progress with your future man.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 236,
+    "playanimation": "normal"
+  },
+  {
+    "id": 234,
+    "showdialogue": "It's now time for bed, the day took a lot of energy out of you.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 235,
+    "playanimation": "normal"
+  },
+  {
+    "id": 233,
+    "showdialogue": "After a while, you get back to the shore. You go about your day and Ken stays to pack everything and keep working on his canoes. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 234,
+    "playanimation": "normal"
+  },
+  {
+    "id": 232,
+    "showdialogue": "You open up about your memories as children. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 233,
+    "playanimation": "normal"
+  },
+  {
+    "id": 231,
+    "showdialogue": "Oh.. don't worry I'm not sad. I like to talk about memories I'm fond of.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 232,
+    "playanimation": "normal"
+  },
+  {
+    "id": 230,
+    "showdialogue": "You take Ken's hand and squeeze and smile gently. Ken then gets shy by your gestor.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 231,
+    "playanimation": "normal"
+  },
+  {
+    "id": 229,
+    "showdialogue": "So I also take part in the yearly canoe slalom of the island. It's like a way to honour my mother and keep her memory with me.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 230,
+    "playanimation": "normal"
+  },
+  {
+    "id": 228,
+    "showdialogue": "I know my life may seem simple to other people, but I do what I love. I was inspired to love canoes because my mother was an Olympian. She participated in the Canoe Slalom.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 229,
+    "playanimation": "normal"
+  },
+  {
+    "id": 227,
+    "showdialogue": "Life is about taking every moment with you. Celebrating with people around you. And more importantly not regretting things.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 228,
+    "playanimation": "normal"
+  },
+  {
+    "id": 226,
+    "showdialogue": "Don't worry I can always make more. Enjoy them!",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 227,
+    "playanimation": "normal"
+  },
+  {
+    "id": 225,
+    "showdialogue": "You ask for another one and Ken offers you 3 more bars.\nYou try to refuse the extra two but in the end, Ken insists.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 226,
+    "playanimation": "normal"
+  },
+  {
+    "id": 224,
+    "showdialogue": "Don't worry I baked these this morning.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 225,
+    "playanimation": "normal"
+  },
+  {
+    "id": 223,
+    "showdialogue": "I sometimes get too excited and forget to bring food, so I have these with me wherever I go.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 224,
+    "playanimation": "normal"
+  },
+  {
+    "id": 222,
+    "showdialogue": "I made this myself. I always have some with me when I go canoeing.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 223,
+    "playanimation": "normal"
+  },
+  {
+    "id": 221,
+    "showdialogue": "He gives you a little mixed nut bar. You take a bite and your eyes light up. It's caramelized and so crunchy. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 222,
+    "playanimation": "normal"
+  },
+  {
+    "id": 220,
+    "showdialogue": "Here you go. Hope you like it. I may not be the best cook but I always try my best for others. ",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 221,
+    "playanimation": "normal"
+  },
+  {
+    "id": 219,
+    "showdialogue": "Ken stops the canoe in the middle of the lake and takes out a basket.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 220,
+    "playanimation": "normal"
+  },
+  {
+    "id": 218,
+    "showdialogue": "Ken helps you onto the canoe and canoes away.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 219,
+    "playanimation": "normal"
+  },
+  {
+    "id": 217,
+    "showdialogue": "Don't worry really. By the time we get back, he won't even remember why he was mad.\nLet's just enjoy nature and go canoeing. It always helps me relax being near the water.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 218,
+    "playanimation": "normal"
+  },
+  {
+    "id": 216,
+    "showdialogue": "You nod. You still feel a little bad you didn't want to cause problems between the brothers.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 217,
+    "playanimation": "normal"
+  },
+  {
+    "id": 215,
+    "showdialogue": "Even with his age he still gets very salty. It's not good for his health but I learned that if I try to comfort him, it only worsens his mood.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 216,
+    "playanimation": "normal"
+  },
+  {
+    "id": 214,
+    "showdialogue": "Hey, don't worry about him. He just needs to cool down, since he was little he was a very sour loser",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 215,
+    "playanimation": "normal"
+  },
+  {
+    "id": 213,
+    "showdialogue": "As soon as he heard it, Allen just stomps away without saying a word.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 214,
+    "playanimation": "normal",
+    "increasecharacterscore": "ken",
+    "decreasecharacterscore": "allen"
+  },
+  {
+    "id": 212,
+    "showdialogue": "You return to the lake shore. You go about your day and Allen stays to pack everything and then goes on his half marathon afternoon run.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 234,
+    "playanimation": "normal"
+  },
+  {
+    "id": 211,
+    "showdialogue": "You enjoy your date with Allen, and you share some recipes together. \nIt seems you both have a thing for cooking",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 212,
+    "playanimation": "normal"
+  },
+  {
+    "id": 210,
+    "showdialogue": "Here you go. I made a whole batch. And you don't need to worry about the calories, it has less sugar than you would think but still tastes really good.",
+    "displaycharacter": "allen",
+    "displaybackground": "lake",
+    "gotonextnode": 211,
+    "playanimation": "normal"
+  },
+  {
+    "id": 209,
+    "showdialogue": "You finish eating your cake pop and ask for another one.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 210,
+    "playanimation": "normal"
+  },
+  {
+    "id": 208,
+    "showdialogue": "Don't make that face. I know how to cook and bake.\nWhat better way to stay in shape when you make your own meals. That way you can control sugars, proteins, carbs ...  you know.",
+    "displaycharacter": "allen",
+    "displaybackground": "lake",
+    "gotonextnode": 209,
+    "playanimation": "normal"
+  },
+  {
+    "id": 207,
+    "showdialogue": "You nod and keep eating. But he does see your surprised face.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 208,
+    "playanimation": "normal"
+  },
+  {
+    "id": 206,
+    "showdialogue": "Isn't it good? I made them myself this early mourning.",
+    "displaycharacter": "allen",
+    "displaybackground": "lake",
+    "gotonextnode": 207,
+    "playanimation": "normal"
+  },
+  {
+    "id": 205,
+    "showdialogue": "What a pleasant surprise.\nAllen offers you one. You take it and taste it.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 206,
+    "playanimation": "normal"
+  },
+  {
+    "id": 204,
+    "showdialogue": "You are very surprised. One you didn't see the basket to begin with. Two, Allen being a gym bro and consuming so many calories and sugar seems odd, you would have thought he only consumed protein.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 205,
+    "playanimation": "normal"
+  },
+  {
+    "id": 203,
+    "showdialogue": "While the scene is nice all by itself having some cake pop makes it much better.",
+    "displaycharacter": "allen",
+    "displaybackground": "lake",
+    "gotonextnode": 204,
+    "playanimation": "normal"
+  },
+  {
+    "id": 202,
+    "showdialogue": "When you are in the middle of the lake Allen stops the canoe and takes out a little mini basket with cake pops.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 203,
+    "playanimation": "normal"
+  },
+  {
+    "id": 201,
+    "showdialogue": "You're canoeing, ... well Allen is, you are just enjoying the scenery.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 202,
+    "playanimation": "normal"
+  },
+  {
+    "id": 200,
+    "showdialogue": "You're canoeing, ... well Allen is, you are just enjoying the scenery.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 201,
+    "playanimation": "normal"
+  },
+  {
+    "id": 199,
+    "showdialogue": "Allen squeezes your hand back and helps you onto the canoe and sail away in the lake.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 200,
+    "playanimation": "normal"
+  },
+  {
+    "id": 198,
+    "showdialogue": "Great, thank you.",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 199,
+    "playanimation": "normal"
+  },
+  {
+    "id": 197,
+    "showdialogue": "You shake your head and step closer to him. You put your hands on his face and make him look into your eyes. You reassure him and in the end, you take his hand and go towards the canoe.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 198,
+    "playanimation": "normal"
+  },
+  {
+    "id": 196,
+    "showdialogue": "I won fair and square, right? It wasn't just out of pity, right?",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 197,
+    "playanimation": "normal"
+  },
+  {
+    "id": 195,
+    "showdialogue": "So shall we... \nBut before we go I have a question.",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 196,
+    "playanimation": "normal"
+  },
+  {
+    "id": 194,
+    "showdialogue": "Allen is still trying to fix his hair while grumbling. You wave goodbye.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 195,
+    "playanimation": "normal"
+  },
+  {
+    "id": 193,
+    "showdialogue": "Bye, guys! Have fun on the canoe. I'm going to pack this and start making a new canoe. See you later.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 194,
+    "playanimation": "normal"
+  },
+  {
+    "id": 192,
+    "showdialogue": "Ken just ruffles Allen's hair while smiling. He packs his stuff and leaves.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 193,
+    "playanimation": "normal"
+  },
+  {
+    "id": 191,
+    "showdialogue": "Yes, don't worry I know.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 192,
+    "playanimation": "normal"
+  },
+  {
+    "id": 190,
+    "showdialogue": "I knew you were a fair judge!\nSee Ken I'm just as good as you! No wait... I'm even better because I won!",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 191,
+    "playanimation": "normal",
+    "increasecharacterscore":"allen"
+  },
+  {
+    "id": 189,
+    "showchoicepanel":[
+      {"gotonextnode": 190, "showdialogue": "Allen is the winner!"},
+      {"gotonextnode": 213, "showdialogue": "Ken wins this round!"}
+    ]
+  },
+  {
+    "id": 188,
+    "showdialogue": "Now all you have to do is choose a man to win. Honestly, both canoes are great so just go with your gut feeling.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 189,
+    "playanimation": "normal"
+  },
+  {
+    "id": 187,
+    "showdialogue": "Oh wow. Seams fate is on your side just this once.\nSeducing a man is proving to be easier than thought.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 188,
+    "playanimation": "normal"
+  },
+  {
+    "id": 186,
+    "showdialogue": "What he is trying to say is, that whoever wins gets to take you on their canoe and have a lovely time together.",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 187,
+    "playanimation": "normal"
+  },
+  {
+    "id": 185,
+    "showdialogue": "Aaahhh... Well, you see... ",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 186,
+    "playanimation": "normal"
+  },
+  {
+    "id": 184,
+    "showdialogue": "You get confused and ask what the prize is. Since you are judging, knowing what is a stake is kinda of important.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 185,
+    "playanimation": "normal"
+  },
+  {
+    "id": 183,
+    "showdialogue": "You just want to get the prize.",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 184,
+    "playanimation": "normal"
+  },
+  {
+    "id": 182,
+    "showdialogue": "N...no! Of course not.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 183,
+    "playanimation": "normal"
+  },
+  {
+    "id": 181,
+    "showdialogue": "Ken gets flustered and stammers out.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 182,
+    "playanimation": "normal"
+  },
+  {
+    "id": 180,
+    "showdialogue": "Wow, fancy word there. Are you trying to butter them up?",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 181,
+    "playanimation": "normal"
+  },
+  {
+    "id": 179,
+    "showdialogue": "Allen, they are just doing their due diligence. ",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 180,
+    "playanimation": "normal"
+  },
+  {
+    "id": 178,
+    "showdialogue": "So have you decided on a winner? You don't need to examine everything so meticulously we both know I'm the winner here!",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 179,
+    "playanimation": "normal"
+  },
+  {
+    "id": 177,
+    "showdialogue": "You then go to see Kens' canoe. While they have different designs, they both seem really sturdy and don't appear to have holes\nHow are you going to make a decision?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 178,
+    "playanimation": "normal"
+  },
+  {
+    "id": 176,
+    "showdialogue": "You want to make this a fair competition.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 177,
+    "playanimation": "normal"
+  },
+  {
+    "id": 175,
+    "showdialogue": "You go around the canoe inspecting from all angles. You still have your phone out to compare with the guide you were studying.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 176,
+    "playanimation": "normal"
+  },
+  {
+    "id": 174,
+    "showdialogue": "I finished first so you can appreciate the exquisite craftsmanship I have here.\nClearly a winning canoe.",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 175,
+    "playanimation": "normal"
+  },
+  {
+    "id": 173,
+    "showdialogue": "A little later they finally have finished their canoes and present them to you.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 174,
+    "playanimation": "normal"
+  },
+  {
+    "id": 172,
+    "showdialogue": "Wow, the internet does have all the answers! And it's a step-by-step guide with images!",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 173,
+    "playanimation": "normal"
+  },
+  {
+    "id": 171,
+    "showdialogue": "While they finish you pull out your phone and search:\n<i>'How to Make a Canoe'</i>",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 172,
+    "playanimation": "normal"
+  },
+  {
+    "id": 170,
+    "showdialogue": "Although you just agreed to it, you get flustered. You don't know that much about canoes to judge. However, you still agree.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 171,
+    "playanimation": "normal"
+  },
+  {
+    "id": 169,
+    "showdialogue": "I think I have an answer!",
+    "displaycharacter": "sello",
+    "displaybackground": "kens_house",
+    "gotonextnode": 190213,
+    "playanimation": "normal"
+  },
+  {
+    "id": 168,
+    "showdialogue": "After a meticulous inspection, Sello has come to terms with a winner.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 169,
+    "playanimation": "normal"
+  },
+  {
+    "id": 167,
+    "showdialogue": "Relax, Allen. All of us know I'm the expert in canoes here. There is no way yours is better.",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 168,
+    "playanimation": "normal"
+  },
+  {
+    "id": 166,
+    "showdialogue": "What do you think, Sello? My canoe is exquisite isn't it? Clearly I win, right?",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 167,
+    "playanimation": "normal"
+  },
+  {
+    "id": 165,
+    "showdialogue": "You agree and, even though you didn't show much joy in it, you have made them both overly happy. You go get Sello. After coming back with him, both canoes are finished.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 166,
+    "playanimation": "normal"
+  },
+  {
+    "id": 164,
+    "showdialogue": "Yes, whoever builds the best canoe gets to take you on a lovely trip in it. What do you say?",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 165,
+    "playanimation": "normal"
+  },
+  {
+    "id": 163,
+    "showdialogue": "Hmm fine, but we have a proposition for you",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 164,
+    "playanimation": "normal"
+  },
+  {
+    "id": 162,
+    "showchoicepanel":[
+      {"gotonextnode": 170, "showdialogue": "I guess I can do it..."},
+      {"gotonextnode": 163, "showdialogue": "Not really, I'll go get Sello."}
+    ]
+  },
+  {
+    "id": 161,
+    "showdialogue": "I agree. Do you want to be our judge?",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 162,
+    "playanimation": "normal"
+  },
+  {
+    "id": 160,
+    "showdialogue": "That is true. We can't be judges. Well since you are here you can decide.",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 161,
+    "playanimation": "normal"
+  },
+  {
+    "id": 159,
+    "showdialogue": "Allen stops what he's doing when he hears this.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 160,
+    "playanimation": "normal"
+  },
+  {
+    "id": 158,
+    "showdialogue": "You nod and ask who is winning or how they are going to decide who wins.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 159,
+    "playanimation": "normal"
+  },
+  {
+    "id": 157,
+    "showdialogue": "Don't take it to heart. He just gets too enthusiastic when competing.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 158,
+    "playanimation": "normal"
+  },
+  {
+    "id": 156,
+    "showdialogue": "Hi. Can't talk right now, I'm doing hot boy shit.",
+    "displaycharacter": "allen",
+    "displaybackground": "kens_house",
+    "gotonextnode": 157,
+    "playanimation": "normal"
+  },
+  {
+    "id": 155,
+    "showdialogue": "Oh. Hi! Didn't hear you coming. Did you sleep well?",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 156,
+    "playanimation": "normal"
+  },
+  {
+    "id": 154,
+    "showdialogue": "You great them.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 155,
+    "playanimation": "normal"
+  },
+  {
+    "id": 153,
+    "showdialogue": "Seams Allen is in the clear today. They are having a competition to see who can make a better canoe.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 154,
+    "playanimation": "normal"
+  },
+  {
+    "id": 152,
+    "showdialogue": "You follow the sound and you find both brothers but they are not fighting.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 153,
+    "playanimation": "normal"
+  },
+  {
+    "id": 151,
+    "showdialogue": "As you're walking to the lake you finally start to hear some ruckus going on.\nIs Allen fighting Ken again?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 152,
+    "playanimation": "normal"
+  },
+  {
+    "id": 150,
+    "showdialogue": "You go outside. If they are not inside surely the brothers are outside. From the little you know them, Ken should be around canoes and Allen is either jogging or trying to compete with someone.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 151,
+    "playanimation": "normal"
+  },
+  {
+    "id": 149,
+    "showdialogue": "You look around and don't find anyone.\nYou try to listen for any clues as to where someone is.\nYou don't hear anything. It seems your perception check failed. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 150,
+    "playanimation": "normal"
+  },
+  {
+    "id": 148,
+    "showdialogue": "You get up from your bed and go to the living room to find out what is everyone doing today.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 149,
+    "playanimation": "normal"
+  },
+  {
+    "id": 147,
+    "showdialogue": "That is if you can make a decision.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 148,
+    "playanimation": "normal"
+  },
+  {
+    "id": 146,
+    "showdialogue": "It's a brand new day. Another chance to conquer the man of your dreams.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 147,
+    "playanimation": "normal"
+  },
+  {
+    "id": 145,
+    "showdialogue": "Sello leaves you and you quietly fall asleep.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 146,
+    "playanimation": "normal"
+  },
+  {
+    "id": 144,
+    "showdialogue": "I won't lie to you, friend. My backpack is very empty today, but I promise to bring better merchandise tomorrow.",
+    "displaycharacter": "sello",
+    "displaybackground": "bedroom",
+    "gotonextnode": 145,
+    "playanimation": "normal"
+  },
+  {
+    "id": 143,
+    "showdialogue": "You're not sure what to think about this but running isn't an option.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 144,
+    "playanimation": "normal"
+  },
+  {
+    "id": 142,
+    "showdialogue": "It was bothersome to break in everyday.",
+    "displaycharacter": "sello",
+    "displaybackground": "bedroom",
+    "gotonextnode": 143,
+    "playanimation": "normal"
+  },
+  {
+    "id": 141,
+    "showdialogue": "It's a great deal I made with Ken! I get a bed to sleep and he gets nothing in return! Before, they had every window locked.",
+    "displaycharacter": "sello",
+    "displaybackground": "bedroom",
+    "gotonextnode": 142,
+    "playanimation": "normal"
+  },
+  {
+    "id": 140,
+    "showdialogue": "I just do better business at night.\nI'm out and about doing business at night and you're out and about doing business during the day.",
+    "displaycharacter": "sello",
+    "displaybackground": "bedroom",
+    "gotonextnode": 141,
+    "playanimation": "normal"
+  },
+  {
+    "id": 139,
+    "showdialogue": "Don't worry, I also live here! So it's not like it is breaking and entering!",
+    "displaycharacter": "sello",
+    "displaybackground": "bedroom",
+    "gotonextnode": 140,
+    "playanimation": "normal"
+  },
+  {
+    "id": 138,
+    "showdialogue": "You just stare confused at what is going on.\nSello reads your expression.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 139,
+    "playanimation": "normal"
+  },
+  {
+    "id": 137,
+    "showdialogue": "Sello removes a few items from inside his backpack. This gnome-sized merchant gives you a sense of familiar comfort and undeniable capitalist horror.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 138,
+    "playanimation": "normal"
+  },
+  {
+    "id": 136,
+    "showdialogue": "I'm personally here for the latter",
+    "displaycharacter": "sello",
+    "displaybackground": "bedroom",
+    "gotonextnode": 137,
+    "playanimation": "normal"
+  },
+  {
+    "id": 135,
+    "showdialogue": "Here I am, at your service! I've heard all about your wonderous day with the boys, now it's time for some relaxation and business.",
+    "displaycharacter": "sello",
+    "displaybackground": "bedroom",
+    "gotonextnode": 136,
+    "playanimation": "normal"
+  },
+  {
+    "id": 134,
+    "showdialogue": "You start drifting asleep when your window is violently shaken open.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 135,
+    "playanimation": "normal"
+  },
+  {
+    "id": 133,
+    "showdialogue": "You get comfortable in your feathered bed. You have yet to seduce any man, but the time is in your favor.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 134,
+    "playanimation": "normal"
+  },
+  {
+    "id": 132,
+    "showdialogue": "With all the presentation done it is now late at night and everyone decides to go to bed.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 133,
+    "playanimation": "normal"
+  },
+  {
+    "id": 131,
+    "showdialogue": "After hearing Ken's disapointed response, Allen felt great that he didn't get through to you.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 132,
+    "playanimation": "normal"
+  },
+  {
+    "id": 130,
+    "showdialogue": "Ahm, that was trick to see if you were paying attention... That was actually the worst one...",
+    "displaycharacter": "ken",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 131,
+    "playanimation": "normal",
+    "increasecharacterscore": "allen",
+    "decreasecharacterscore": "ken"
+  },
+  {
+    "id": 129,
+    "showdialogue": "You felt embarrassed as you tried to pay attention, but failed miserably to impress Ken",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 132,
+    "playanimation": "normal"
+  },
+  {
+    "id": 128,
+    "showdialogue": "I mean... That's a good choice but not the best.",
+    "displaycharacter": "ken",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 129,
+    "playanimation": "normal"
+  },
+  {
+    "id": 127,
+    "showdialogue": "After hearing your answer and Ken's response, Allen was annoyed and left the room murmuring some words.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 132,
+    "playanimation": "normal"
+  },
+  {
+    "id": 126,
+    "showdialogue": "Nice, you actually paid attention! That's is easily the best one",
+    "displaycharacter": "ken",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 127,
+    "playanimation": "normal",
+    "increasecharacterscore": "ken",
+    "decreasecharacterscore": "allen"
+  },
+  {
+    "id": 125,
+    "showchoicepanel":[
+      {"gotonextnode": 126, "showdialogue": "Normal looking canoe, made of carbon"},
+      {"gotonextnode": 128, "showdialogue": "Rectangular shape canoe, made of wood"},
+      {"gotonextnode": 130, "showdialogue": "Circular shape canoe, made of steel"}
+    ]
+  },
+  {
+    "id": 124,
+    "showdialogue": "To think there could be so many variations to a canoe model.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 125,
+    "playanimation": "normal"
+  },
+  {
+    "id": 123,
+    "showdialogue": "So what do you think? Which is better? I narrowed down to these 3 options out of the 36 models I presented.",
+    "displaycharacter": "ken",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 124,
+    "playanimation": "normal"
+  },
+  {
+    "id": 122,
+    "showdialogue": "This one you actually try to pay attention and learn more about canoes and the event that's happening.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 123,
+    "playanimation": "normal"
+  },
+  {
+    "id": 121,
+    "showdialogue": "So... because the annual canoe race is in 3 days. I'm going to present the several models I have ready for the race.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 122,
+    "playanimation": "normal"
+  },
+  {
+    "id": 120,
+    "showdialogue": "Annnddd, before you can continue to assign a character to each person, Ken goes next.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 121,
+    "playanimation": "normal"
+  },
+  {
+    "id": 119,
+    "showdialogue": "Well, the bottom of the sea seems pretty good about now. Maybe it's time to visit Mr. Krabs. Now that you're thinking about it, Sello is Mr. Krabs.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 120,
+    "playanimation": "normal"
+  },
+  {
+    "id": 118,
+    "showdialogue": "Sello goes next and surprise surprise... talks about the stock market.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 119,
+    "playanimation": "normal"
+  },
+  {
+    "id": 117,
+    "showdialogue": "You sit through Allens' presentation and think 'Maybe Poseidon will take me back'.",
+    "displaycharacter": "sello",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 118,
+    "playanimation": "normal"
+  },
+  {
+    "id": 116,
+    "showdialogue": "Pay attention! This is the best part!",
+    "displaycharacter": "sello",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 117,
+    "playanimation": "normal"
+  },
+  {
+    "id": 115,
+    "showdialogue": "I have to get the stock ready, the is always demand. Where there is demand there is MONEY.",
+    "displaycharacter": "sello",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 116,
+    "playanimation": "normal"
+  },
+  {
+    "id": 114,
+    "showdialogue": "Nevertheless, you stay. You notice Sello taking note. And ask discreetly what is he doing.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 115,
+    "playanimation": "normal"
+  },
+  {
+    "id": 113,
+    "showdialogue": "You start to regret agreeing to join their PowerPoint night. A good night of sleep seems like heaven about 5 min into the presentation.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 114,
+    "playanimation": "normal"
+  },
+  {
+    "id": 112,
+    "showdialogue": "Alright! I'm setting it up now. Prepare yourselves for the best presentation. <i>'Why you need gloves for weightlifting'</i>",
+    "displaycharacter": "allen",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 113,
+    "playanimation": "normal"
+  },
+  {
+    "id": 111,
+    "showdialogue": "I agree. While it was good to understand the needs of the wood market, time is money.",
+    "displaycharacter": "sello",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 112,
+    "playanimation": "normal"
+  },
+  {
+    "id": 110,
+    "showdialogue": "I'm going first!\nLast time Ken went first and we were stuck listening about types of wood for canoes and their pros and cons for 1 hour.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 111,
+    "playanimation": "normal"
+  },
+  {
+    "id": 109,
+    "showdialogue": "It is now nighttime. Everyone is getting snacks and drinks ready.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 110,
+    "playanimation": "normal"
+  },
+  {
+    "id": 108,
+    "showdialogue": "Yes, we are! It's PowerPoint night!!!",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 109,
+    "playanimation": "normal"
+  },
+  {
+    "id": 107,
+    "showdialogue": "It looks like a scene from a movie with found family. What's next? Are we gonna have a TikTok trend?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 108,
+    "playanimation": "normal"
+  },
+  {
+    "id": 106,
+    "showdialogue": "You eat your lunch with the others, make conversation.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 107,
+    "playanimation": "normal"
+  },
+  {
+    "id": 105,
+    "showdialogue": "Alright let's go eat this healthy meal.",
+    "displaycharacter": "allen",
+    "displaybackground": "kitchen",
+    "gotonextnode": 106,
+    "playanimation": "normal"
+  },
+  {
+    "id": 104,
+    "showdialogue": "You nod and swear not to tell anyone",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 105,
+    "playanimation": "normal"
+  },
+  {
+    "id": 103,
+    "showdialogue": "Right on time. Guess that was our lore dump for the day.\nJust don't say anything to Ken, this stays between us.",
+    "displaycharacter": "allen",
+    "displaybackground": "kitchen",
+    "gotonextnode": 104,
+    "playanimation": "normal"
+  },
+  {
+    "id": 102,
+    "showdialogue": "The timer goes off exactly when he finishes talking.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 103,
+    "playanimation": "normal"
+  },
+  {
+    "id": 101,
+    "showdialogue": "Allen has a few layers, like onions. Onions have layers. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 102,
+    "playanimation": "normal"
+  },
+  {
+    "id": 100,
+    "showdialogue": "So.. I grew resentful and I try to make myself better than him ever since. It's really not that hard the guy has a canoe for a brain.",
+    "displaycharacter": "allen",
+    "displaybackground": "kitchen",
+    "gotonextnode": 101,
+    "playanimation": "normal"
+  },
+  {
+    "id": 99,
+    "showdialogue": "Well, when we were kids, we always played together. We enjoyed each other company, however as we got older, it was like I was invisible next to him. Ken always had the spotlight, no matter what I did. When in high school, he always got the love confessions.",
+    "displaycharacter": "allen",
+    "displaybackground": "kitchen",
+    "gotonextnode": 100,
+    "playanimation": "normal"
+  },
+  {
+    "id": 98,
+    "showdialogue": "I wish I could smile like you and find things easily funny.\nI don't remember the last time I was carefree. You're probably wondering why I'm like this and try to fight Ken all the time.",
+    "displaycharacter": "allen",
+    "displaybackground": "kitchen",
+    "gotonextnode": 99,
+    "playanimation": "normal"
+  },
+  {
+    "id": 97,
+    "showdialogue": "You sober up and smile at him.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 98,
+    "playanimation": "normal"
+  },
+  {
+    "id": 96,
+    "showdialogue": "Well, that got you smiling, didn't it? Worth it.",
+    "displaycharacter": "allen",
+    "displaybackground": "kitchen",
+    "gotonextnode": 97,
+    "playanimation": "normal"
+  },
+  {
+    "id": 95,
+    "showdialogue": "The face and the line Allen just said make you laugh.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 96,
+    "playanimation": "normal"
+  },
+  {
+    "id": 94,
+    "showdialogue": "So ... you come here often?",
+    "displaycharacter": "allen",
+    "displaybackground": "kitchen",
+    "gotonextnode": 95,
+    "playanimation": "normal"
+  },
+  {
+    "id": 93,
+    "showdialogue": "It was all going well, but the awkwardness. Not even saying 'you too' when the server says 'enjoy the food' is that awkward. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 94,
+    "playanimation": "normal"
+  },
+  {
+    "id": 92,
+    "showdialogue": "When you put your masterpiece in the oven there is an awkward silence. You exchange glances not knowing what to say.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 93,
+    "playanimation": "normal"
+  },
+  {
+    "id": 91,
+    "showdialogue": "You start chopping vegetables and following Allen's instructions. Your teamwork is flawless, like a well-oiled machine.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 92,
+    "playanimation": "normal"
+  },
+  {
+    "id": 90,
+    "showdialogue": "Come on let's get to work partner.",
+    "displaycharacter": "allen",
+    "displaybackground": "kitchen",
+    "gotonextnode": 91,
+    "playanimation": "normal"
+  },
+  {
+    "id": 89,
+    "showdialogue": "Now we are talking. Yes, I can make the most nutritious meal and still have all the flavour.",
+    "displaycharacter": "allen",
+    "displaybackground": "kitchen",
+    "gotonextnode": 90,
+    "playanimation": "normal",
+    "increasecharacterscore": "allen"
+  },
+  {
+    "id": 88,
+    "showdialogue": "Wow, this is really looking like a rom-com now. What's next? Are we gonna have a TikTok trend?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 108,
+    "playanimation": "normal"
+  },
+  {
+    "id": 87,
+    "showdialogue": "During your cooking, you smile and laugh together. Some of the ingredients end up all over the floor and yourselves.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 88,
+    "playanimation": "normal"
+  },
+  {
+    "id": 86,
+    "showdialogue": "You nod with a smile on your face.\nTo experience the genuine joy of someone doing something little, but the excitement is in their voice.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 87,
+    "playanimation": "normal"
+  },
+  {
+    "id": 85,
+    "showdialogue": "What do you think? Is this a good menu for our lunch?",
+    "displaycharacter": "ken",
+    "displaybackground": "kitchen",
+    "gotonextnode": 86,
+    "playanimation": "normal"
+  },
+  {
+    "id": 84,
+    "showdialogue": "Ken seems like a little kid on Christmas. You relax now that the tension between brothers is gone.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 85,
+    "playanimation": "normal"
+  },
+  {
+    "id": 83,
+    "showdialogue": "We can make fried chicken. And drink some local root beer. And make dessert that comes in little cups. I have just the cups, they're shaped canoes.",
+    "displaycharacter": "ken",
+    "displaybackground": "kitchen",
+    "gotonextnode": 84,
+    "playanimation": "normal"
+  },
+  {
     "id": 82,
-    "dialogue": "I won't lie to you, friend. My backpack is very empty today, but I promise to bring better merchandise tomorrow.",
-    "character": "sello",
-    "nextnode": 0,
-    "animation": "normal",
-    "background": "black"
+    "showchoicepanel":[
+      {"gotonextnode": 83, "showdialogue": "I think Ken can make a big meal"},
+      {"gotonextnode": 89, "showdialogue": "I feel Allen can make a healthy meal"}    
+    ]
   },
-  {  
+  {
     "id": 81,
-    "dialogue": "You're not sure what to think about this but running isn't an option.",
-    "character": "Narrator",
-    "nextnode": 82,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "At least that's something I can agree with. I think that was your half-brain cell usage for the day.",
+    "displaycharacter": "allen",
+    "displaybackground": "kitchen",
+    "gotonextnode": 82,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 80,
-    "dialogue": "It's a great deal I made with Ken! I get a bed to sleep and he gets nothing in return! Before, they had every window locked. It was bothersome to break in everyday.",
-    "character": "sello",
-    "nextnode": 81,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "Why don't you decide who you want to cook with? That way your opinion matters and we don't have to fight.",
+    "displaycharacter": "ken",
+    "displaybackground": "kitchen",
+    "gotonextnode": 81,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 79,
-    "dialogue": "Don't worry, I also live here! So it's not break and entering! I just do better business at night. I'm out and about doing business at night and you're out and about doing business during the day.",
-    "character": "sello",
-    "nextnode": 80,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "Ken just stands there looking at you smiling ignoring Allen.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 80,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 78,
-    "dialogue": "Sello removes a few items from inside his backpack. This gnome-sized merchant gives you a sense of familiar comfort and undeniable capitalist horror. You just stare confused at what is going on. Sello reads your expression.",
-    "character": "Narrator",
-    "nextnode": 79,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "You can feel some tension between the brothers. Allen seems to be provoking Ken to get a reaction however why you don't really know. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kitchen",
+    "gotonextnode": 79,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 77,
-    "dialogue": "Here I am, at your service! I've heard all about your wonderous day with the boys, now it's time for some relaxation and business. I'm personally here for the latter.",
-    "character": "sello",
-    "nextnode": 78,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "At least if someone didn't occupy half the kitchen just by standing there.",
+    "displaycharacter": "allen",
+    "displaybackground": "kitchen",
+    "gotonextnode": 78,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 76,
-    "dialogue": "You get comfortable in your feathered bed. You have yet to seduce any man, but the time is in your favor. You start drifting asleep when your window is violently shaken open.",
-    "character": "Narrator",
-    "nextnode": 77,
-    "animation": "shake",
-    "background": "black"
+    "showdialogue": "It's almost time to start making lunch, but the kitchen is not big enough for 3 people to cook at the same time.",
+    "displaycharacter": "allen",
+    "displaybackground": "kitchen",
+    "gotonextnode": 77,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 75,
-    "dialogue": "With all the presentation done it is now late at night and everyone decides to go to bed.",
-    "character": "Narrator",
-    "nextnode": 76,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "You enter the house and put the food away. When you turn around Allen and Ken are staring at each other, when they feel your gaze they look at you",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 76,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 74,
-    "dialogue": "I think that's perfect. Thank you for helping me.",
-    "character": "ken",
-    "nextnode": 75,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "The trip was uneventful. You get all the ingredients and while canoeing back to the house you hear Ken humming a song.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 75,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 73,
-    "dialogue": "To think there could be so many variations to a canoe model.",
-    "character": "Narrator",
-    "nextnode": 74,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "He helps you get on board and canoes away to the town's market.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 74,
+    "playanimation": "normal"
   },
   {
     "id": 72,
-    "choices":[
-      {"nextnode": 73, "dialogue": "big wooden canoe in a rectangular shape"},
-      {"nextnode": 73, "dialogue": "Normal canoe shape, steel canoe"},
-      {"nextnode": 73, "dialogue": "circular carbon canoe"}
+    "showdialogue": "You see Ken smile while preparing everything.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 73,
+    "playanimation": "normal"
+  },
+  {
+    "id": 71,
+    "showdialogue": "ihih, you'll love it. I'll just finish packing. It'll be quick.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 72,
+    "playanimation": "normal"
+  },
+  {
+    "id": 70,
+    "showdialogue": "You see a faint blush in Ken's cheek, before he turns his face away from you.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 71,
+    "playanimation": "normal",
+    "increasecharacterscore": "ken"
+  },
+  {
+    "id": 69,
+    "showdialogue": "wanted to prove your independence but in the end, guess what? Your plan backfired.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 75,
+    "playanimation": "normal"
+  },
+  {
+    "id": 68,
+    "showdialogue": "You are now wet and embarrassed.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 69,
+    "playanimation": "normal"
+  },
+  {
+    "id": 67,
+    "showdialogue": "It's a shame we lost some ingredients. Now we can't make a fluffy yoghurt cake.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 68,
+    "playanimation": "normal"
+  },
+  {
+    "id": 66,
+    "showdialogue": "Are you ok?",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 67,
+    "playanimation": "normal"
+  },
+  {
+    "id": 65,
+    "showdialogue": "On your way back, not to be predictable but... you end up almost drowning... again Ken saves you once again.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 66,
+    "playanimation": "shake"
+  },
+  {
+    "id": 64,
+    "showdialogue": "On your way back, Ken takes most of the ingredients.\nHe didn't want to say anything but he saw you struggling. So you only have a few items..",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 65,
+    "playanimation": "normal"
+  },
+  {
+    "id": 63,
+    "showdialogue": "The trip to the town's market in your canoes goes ok.\nIt could've been worse right? You didn't fall or tip the canoe... that just almost happened 5 times.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 64,
+    "playanimation": "normal"
+  },
+  {
+    "id": 62,
+    "showdialogue": "How cute of him, still helping you after you rudely turned him down. Oh well, you will need good luck and a lot of arm strength to row to town without any previous canoeing experience.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 63,
+    "playanimation": "normal"
+  },
+  {
+    "id": 61,
+    "showdialogue": "I'll prepare one just for you!",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 62,
+    "playanimation": "normal"
+  },
+  {
+    "id": 60,
+    "showdialogue": "You've never been on a canoe. Don't know why you thought that would be a good idea, genius.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 61,
+    "playanimation": "normal"
+  },
+  {
+    "id": 59,
+    "showdialogue": "I'm sorry! I wasn't trying to imply you didn't know how to canoe. I just haven't seen you on a canoe.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 60,
+    "playanimation": "normal",
+    "decreasecharacterscore": "ken"
+  },
+  {
+    "id": 58,
+    "showdialogue": "'Kachow, can I help you?'. After hearing you make a reference to the thing he hates most in this world, cars, Ken still needs your help, so he reluctantly accepts",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 75,
+    "playanimation": "normal"
+  },
+  {
+    "id": 57,
+    "showdialogue": "Since you were left alone, you decide to enjoy the rest of your morning appreciating the view. After a while you just go back home and see Ken was lightning fast and is starting to unpack the groceries.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 58,
+    "playanimation": "normal"
+  },
+  {
+    "id": 56,
+    "showdialogue": "He doesn't even let you speak and is already canoeing away to the market, leaving you alone.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 57,
+    "playanimation": "normal"
+  },
+  {
+    "id": 55,
+    "showdialogue": "Uhhh, nevermind, just go inside and relax, I'll go by myself",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 56,
+    "playanimation": "normal"
+  },
+  {
+    "id": 54,
+    "showdialogue": "You leave Ken completely speechless. The thought of walking over canoeing frightens him. All embarressed he quickly utters some words.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 55,
+    "playanimation": "normal",
+    "decreasecharacterscore": "ken"
+  },
+  {
+    "id": 53,
+    "showchoicepanel":[
+      {"gotonextnode": 59, "showdialogue": "I will go on my own canoe."},
+      {"gotonextnode": 70, "showdialogue": "I'd love to go in your canoe."},
+      {"gotonextnode": 54, "showdialogue": "Why don't we just walk?"}
     ]
   },
-  {  
-    "id": 71,
-    "dialogue": "So what do you think? Which is better? I narrowed down to these 3 options out of the 36 models I presented.",
-    "character": "ken",
-    "nextnode": 72,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 70,
-    "dialogue": "This one you actually pay attention and learn more about canoes and the event that's happening.",
-    "character": "Narrator",
-    "nextnode": 71,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 69,
-    "dialogue": "So... because the annual canoe race is in 3 days. I'm going to present the several models I have ready for the race.",
-    "character": "ken",
-    "nextnode": 70,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 68,
-    "dialogue": "You sit through Allens' presentation and think 'Maybe Poseidon will take me back'. Sello goes next and surprise surprise... talks about the stock market. Well, the bottom of the sea seems pretty good about now. Maybe it's time to visit Mr. Krabs. Now that you're thinking about it, Sello is Mr. Krabs. Before you can continue to assign a character to each person, Ken goes next.",
-    "character": "Narrator",
-    "nextnode": 69,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 67,
-    "dialogue": "I have to get the stock ready, the is always demand. Where there is demand there is MONEY.",
-    "character": "sello",
-    "nextnode": 68,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 66,
-    "dialogue": "You start to regret agreeing to join their PowerPoint night. A good night of sleep seems like heaven about 5 min into the presentation. Nevertheless, you stay. You notice Sello taking note. And ask discreetly what is he doing.",
-    "character": "Narrator",
-    "nextnode": 67,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 65,
-    "dialogue": "Alright! I'm setting it up now. Prepare yourselves for the best presentation. 'Why you need gloves for weightlifting'",
-    "character": "allen",
-    "nextnode": 66, 
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 64,
-    "dialogue": "Agreed. While it was good to understand the needs of the wood market, time is money.",
-    "character": "sello",
-    "nextnode": 65,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 63,
-    "dialogue": "I'm going first! Last time Ken went first and we were stuck listening about types of wood for canoes and their pros and cons for 1 hour.",
-    "character": "allen",
-    "nextnode": 64,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 62,
-    "dialogue": "Yes, we are! It's PowerPoint night. It is now nighttime. Everyone is getting snacks and drinks ready.",
-    "character": "Narrator",
-    "nextnode": 63,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 61,
-    "dialogue": "You eat your lunch we the others, make conversation. It looks like a scene from a movie with found family. Next, are we gonna have a TikTok trend?",
-    "character": "Narrator",
-    "nextnode": 62,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 60,
-    "dialogue": "You eat your lunch we the others, make conversation. It looks like a scene from a movie with found family. Next, are we gonna have a TikTok trend?",
-    "character": "Narrator",
-    "nextnode": 61,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 59,
-    "dialogue": "Alright let's go eat this healthy meal.",
-    "character": "allen",
-    "nextnode": 60,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 58,
-    "dialogue": "You nod and swear not to tell anyone.",
-    "character": "Narrator",
-    "nextnode": 59,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 57,
-    "dialogue": "Right on time. Guess that was our lore dump for the day. Just don't say anything to Ken, this stays between us.",
-    "character": "allen",
-    "nextnode": 58,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 56,
-    "dialogue": "Allen has a few layers, like onions. Onions have layers. The timer goes off exactly when he finishes talking.",
-    "character": "Narrator",
-    "nextnode": 57,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 55,
-    "dialogue": "Well when we were kids, we always played together. We enjoyed each other company, however as we got older, it was like I was invisible next to him. Ken always had the spotlight no matter what I did when in high school he always got the love confessions. So.. I grew resentful and I try to make myself better than him ever since. It's really not that hard the guy has a canoe for a brain.",
-    "character": "allen",
-    "nextnode": 56,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 54,
-    "dialogue": "I wish I could smile like you and find things easily funny. I don't remember the last time I was carefree. You're probably wondering why I'm like this and try to fight Ken all the time.",
-    "character": "allen",
-    "nextnode": 55,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
-    "id": 53,
-    "dialogue": "You sober up and smile at him.",
-    "character": "Narrator",
-    "nextnode": 54,
-    "animation": "normal",
-    "background": "black"
-  },
-  {  
+  {
     "id": 52,
-    "dialogue": "Well, that got you smiling, didn't it? Worth it.",
-    "character": "allen",
-    "nextnode": 53,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "Oh? Strap yourself onto my canoe then! Ahah...\nDon't actually do that, it's very dangerous. I'll get a two person canoe, just give me a few minutes.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 53,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 51,
-    "dialogue": "The face and the line Allen just said make you laugh.",
-    "character": "Narrator",
-    "nextnode": 52,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "Well, I guess that's a topic when insomnia kicks in",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 76,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 50,
-    "dialogue": "So ... you come here often?",
-    "character": "allen",
-    "nextnode": 51,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "Ken entered the room while you were trying to figure out how the cows actually help.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 51,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 49,
-    "dialogue": "You start chopping vegetables and following Allen's instructions. Your teamwork is flawless, like a well-oiled machine. When you put your masterpiece in the oven there is an awkward silence. You exchange glances not knowing what to say. It was all going well, but the awkwardness. Not even saying 'you too' when the server says 'enjoy the food' is that awkward.",
-    "character": "Narrator",
-    "nextnode": 50,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "And Allen is ALREADY THERE?! MAYBE RUUNING WITH COWS REALLY HELPS? Who knows?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 50,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 48,
-    "dialogue": "Now we are talking. Yes, I can make the most nutritious meal and still have all the flavour. Come on let's get to work, partner.",
-    "character": "allen",
-    "nextnode": 49,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "You enter the house.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 49,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 47,
-    "dialogue": "You nod with a smile on your face. To experience the genuine joy of someone doing something little, but the excitement is in their voice. During your cooking, you smile and laugh together. Some of the ingredients end up all over the floor and yourselves. Wow, this is really looking like a rom-com now. Next, are we gonna have a TikTok trend?",
-    "character": "Narrator",
-    "nextnode": 60,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "You enter the house. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 48,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 46,
-    "dialogue": "What do you think? Is this a good menu for our lunch?",
-    "character": "ken",
-    "nextnode": 47,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "It is now time for lunch. And because you keep running away from problems you're starving.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 47,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 45,
-    "dialogue": "Ken seems like a little kid on Christmas. You relax now that the tension between brothers is gone.",
-    "character": "Narrator",
-    "nextnode": 46,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "While you make your way to the house you never see Allen pass by.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 46,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 44,
-    "dialogue": "We can make fried chicken. And drink some local root beer. And make dessert that comes in little cups. I have just the cups, they're shaped canoes.",
-    "character": "ken",
-    "nextnode": 45,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "But I'll still get to the house first.",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 45,
+    "playanimation": "normal"
   },
   {
     "id": 43,
-    "choices":[
-      {"nextnode": 44, "dialogue": "I think Ken can make a big meal"},
-      {"nextnode": 48, "dialogue": "I feel Allen can make a healthy meal."}
-    ]
+    "showdialogue": "Don't worry, next time you will have more stamina. While you make your way back I'll run another lap in the forest.",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 44,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 42,
-    "dialogue": "At least that's something I can agree with. I think that was your half-brain cell usage for the day.",
-    "character": "allen",
-    "nextnode": 43,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "However, at some point, you just can't run anymore. So you say goodbye to Allen.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 43,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 41,
-    "dialogue": "Why don't you decide who you want to cook with? That way your opinion matters and we don't have to fight.",
-    "character": "ken",
-    "nextnode": 42,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "However, at some point, you just can't run anymore. So you say goodbye to Allen.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 42,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 40,
-    "dialogue": "You can feel some tension between the brothers. Allen seems to be provoking Ken to get a reaction however why you don't really know. Ken just stands there looking at you smiling ignoring Allen.",
-    "character": "Narrator",
-    "nextnode": 41,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "While running you get multiple times out of breath and surprisingly Allen gives good advice about breathing techniques.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 41,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 39,
-    "dialogue": "It's almost time to start making lunch, but the kitchen is not big enough for 3 people to cook at the same time. At least if someone didn't occupy half the kitchen just by standing there.",
-    "character": "allen",
-    "nextnode": 40,
-    "animation": "shake",
-    "background": "black"
+    "showdialogue": "You join Allen with the run... but you keep your shoes on.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 40,
+    "playanimation": "normal",
+    "increasecharacterscore": "allen"
   },
-  {  
+  {
     "id": 38,
-    "dialogue": "You enter the house and put the food away. When you turn around Allen and Ken are staring at each other, when they feel your gaze they look at you.",
-    "character": "ken",
-    "nextnode": 39,
-    "animation": "normal",
-    "background": "kens_house"
+    "showdialogue": "After *swiftly* rejecting Allen, you go on a walk back to the hut, enjoying everything the mountain has to offer.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 46,
+    "playanimation": "normal"
   },
-  {  
+  {
     "id": 37,
-    "dialogue": "You see Ken smile while preparing everything. He helps you get on board and canoes away to the town's market. The trip was uneventful. You get all the ingredients and while canoeing back to the house you hear Ken humming a song.",
-    "character": "Narrator",
-    "nextnode": 38,
-    "animation": "normal",
-    "background": "lake"
+    "showdialogue": "Oh well, your loss, whatever...",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 38,
+    "playanimation": "normal",
+    "decreasecharacterscore": "allen"
   },
   {
     "id": 36,
-    "dialogue": "I'll just finish packing. It'll be quick.",
-    "character": "ken",
-    "nextnode": 37,
-    "animation": "normal",
-    "background": "lake"
+    "showchoicepanel":[
+      {"gotonextnode": 39, "showdialogue": "Of Course, I'd love that!"},
+      {"gotonextnode": 37, "showdialogue": "Uhhh, I haven't done my stretches today, sorry."}
+    ]
   },
   {
     "id": 35,
-    "dialogue": "You see a faint blush in Ken's cheek, before he turns his face away from you.",
-    "character": "Narrator",
-    "nextnode": 36,
-    "animation": "normal",
-    "background": "lake"
+    "showdialogue": "Do you want to join me on a run? I can share some useful tips to be better.",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 36,
+    "playanimation": "normal"
   },
   {
     "id": 34,
-    "dialogue": "You are now wet and embarrassed. You wanted to prove your independence but in the end, it backfired.",
-    "character": "Narrator",
-    "nextnode": 38,
-    "animation": "normal",
-    "background": "kens_house"
+    "showdialogue": "You understand the competitive spirit of wanting to be better than everyone else. I respect that!",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 35,
+    "playanimation": "normal"
   },
   {
     "id": 33,
-    "dialogue": "Are you ok? It's a shame we lost some ingredients. Now we can't make a fluffy yoghurt cake.",
-    "character": "ken",
-    "nextnode": 34,
-    "animation": "normal",
-    "background": "kens_house"
+    "showdialogue": "I never thought about that.",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 34,
+    "playanimation": "normal"
   },
   {
     "id": 32,
-    "dialogue": "The trip to the town's market in your canoes goes ok. It could've been worse right? You didn't fall or tip the canoe... that just almost happened 5 times. On your way back, Ken takes most of the ingredients. He didn't want to say anything but he saw you struggling. So you only have a few items. On your way back, not to be predictable but... you end up almost drowning... again. Ken saves you once again.",
-    "character": "Narrator",
-    "nextnode": 33,
-    "animation": "normal",
-    "background": "lake"
+    "showdialogue": "You glance back at Allen's face.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 33,
+    "playanimation": "normal"
   },
   {
     "id": 31,
-    "dialogue": "You will need good luck and a lot of arm strength to row to town without any previous canoeing experience.",
-    "character": "ken",
-    "nextnode": 32,
-    "animation": "normal",
-    "background": "lake"
+    "showdialogue": "Probably better for your health too.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 32,
+    "playanimation": "normal"
   },
   {
     "id": 30,
-    "dialogue": "I'll prepare one just for you!",
-    "character": "ken",
-    "nextnode": 31,
-    "animation": "normal",
-    "background": "lake"
+    "showdialogue": "You weren't wrong, running with shoes is probably better for your speed.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 31,
+    "playanimation": "normal"
   },
   {
     "id": 29,
-    "dialogue": "You've never been on a canoe.",
-    "character": "Narrator",
-    "nextnode": 30,
-    "animation": "normal",
-    "background": "lake"
+    "showdialogue": "You glance down towards Allen's shoes, but he is barefoot.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 30,
+    "playanimation": "normal",
+    "increasecharacterscore": "allen"
   },
   {
     "id": 28,
-    "dialogue": "I'm sorry! I wasn't trying to imply you didn't know how to canoe. I just haven't seen you on a canoe.",
-    "character": "ken",
-    "nextnode": 29,
-    "animation": "normal",
-    "background": "lake"
+    "showdialogue": "Some time passed since your interaction with Allen.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 43,
+    "playanimation": "normal"
   },
   {
     "id": 27,
-    "choices":[
-      {"nextnode": 28, "dialogue": "I will go on my own canoe."},
-      {"nextnode": 35, "dialogue": "I'd love to go in your canoe."}
-    ]
+    "showdialogue": "When he finishes his mansplaining about running you just say you're going to try and run off.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 28,
+    "playanimation": "normal"
   },
   {
     "id": 26,
-    "dialogue": "Oh? Strap yourself onto my canoe then! Ahah... Don't actually do that, it's very dangerous. I'll get a two person canoe, just give me a few minutes.",
-    "character": "ken",
-    "nextnode": 27,
-    "animation": "normal",
-    "background": "lake"
+    "showdialogue": "You are now very confused and just nod along.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 27,
+    "playanimation": "normal"
   },
   {
     "id": 25,
-    "dialogue": "It is now time for lunch. And because you keep running away from problems you're starving. You enter the house. And Allen is already there?! Maybe running with cows really helps? Who knows? Ken entered the room while you were trying to figure out how the cows actually help. Well, I guess that's a topic when insomnia kicks in.",
-    "character": "Narrator",
-    "nextnode": 39,
-    "animation": "normal",
-    "background": "forest"
+    "showdialogue": "Allen keeps going on and on about... running with cows? Were there even cows on this island?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 26,
+    "playanimation": "normal"
   },
   {
     "id": 24,
-    "dialogue": "While you make your way to the house you never see Allen pass by.",
-    "character": "Narrator",
-    "nextnode": 25,
-    "animation": "normal",
-    "background": "forest"
+    "showdialogue": "You know you should run too. I saw online that the more you exercise your legs every day the better you get at thinking. I know it sounds crazy, but listen...",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 25,
+    "playanimation": "normal"
   },
   {
     "id": 23,
-    "dialogue": "Don't worry, next time you will have more stamina. While you make your way back I'll run another lap in the forest. But I'll still get to the house first.",
-    "character": "allen",
-    "nextnode": 24,
-    "animation": "normal",
-    "background": "forest"
+    "showdialogue": "Allen's concentration was broken.\nHe looks annoyed.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 24,
+    "playanimation": "normal"
   },
   {
     "id": 22,
-    "dialogue": "You join Allen with the run... but you keep your shows on. While running you get multiple times out of breath and surprisingly Allen gives good advice about breathing techniques. However, at some point, you just can't run anymore. So you say goodbye to Allen.",
-    "character": "Narrator",
-    "nextnode": 23,
-    "animation": "normal",
-    "background": "forest"
+    "showdialogue": "Why is everyone so scared of the sun? I don't need sunscreen, I'm not scared of a floating ball of fire.",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 23,
+    "playanimation": "normal"
   },
   {
     "id": 21,
-    "dialogue": "I never thought about that. You understand the competitive spirit of wanting to be better than everyone else. I respect that! Do you want to join me on a run? I can share some useful tips to be better.",
-    "character": "allen",
-    "nextnode": 22,
-    "animation": "normal",
-    "background": "forest"
+    "showdialogue": "Allen stops almost immediately after hearing you. He stops so abruptly, you can't help but wonder if his knees are okay.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 22,
+    "playanimation": "normal",
+    "decreasecharacterscore":"allen"
   },
   {
     "id": 20,
-    "dialogue": "You glance down towards Allen's shoes, but he is barefoot. You weren't wrong, running with shoes is probably better for your speed. Probably better for your health too. You glance back at Allen's face.",
-    "character": "Narrator",
-    "nextnode": 21,
-    "animation": "normal",
-    "background": "forest"
+    "showchoicepanel":[
+      {"gotonextnode": 21, "showdialogue": "Did you remember to put on sunscreen?"},
+      {"gotonextnode": 29, "showdialogue": "You could run faster with better running shoes."}
+    ]
   },
   {
     "id": 19,
-    "dialogue": "Some time passed since your interaction with Allen.",
-    "character": "Narrator",
-    "nextnode": 25,
-    "animation": "normal",
-    "background": "forest"
+    "showdialogue": "You smell the river breeze, wood pine and... sweat. You hold your breath as Allen races pass you down the mountain. He'll continue to race without glancing at you, unless you say something.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 20,
+    "playanimation": "normal"
   },
   {
     "id": 18,
-    "dialogue": "Allen keeps going on and on about... running with cows? Were there even cows on this island? You are now very confused and just nod along. When he finishes his mansplaining about running you just say you're going to try and run off.",
-    "character": "Narrator",
-    "nextnode": 19,
-    "animation": "normal",
-    "background": "forest"
+    "showchoicepanel":[
+      {"gotonextnode": 19, "showdialogue": "I'm going to go check on Allen."},
+      {"gotonextnode": 52, "showdialogue": "I want to go to the Market with you."}
+    ]
   },
   {
     "id": 17,
-    "dialogue": "You know you should run too. I saw online that the more you exercise your legs every day the better you get at thinking. I know it sounds crazy, but listen...",
-    "character": "allen",
-    "nextnode": 18,
-    "animation": "normal",
-    "background": "forest"
+    "showdialogue": "I'm not sure what that is, but I hope he didn't forget to put on sunscreen again.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 18,
+    "playanimation": "normal"
   },
   {
     "id": 16,
-    "dialogue": "Allen's concentration was broken. He looks annoyed.",
-    "character": "Narrator",
-    "nextnode": 17,
-    "animation": "normal",
-    "background": "forest"
+    "showdialogue": "Allen was saying something about going to the mountains for a self-imposed 'manly marathon'. ",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 17,
+    "playanimation": "normal"
   },
   {
     "id": 15,
-    "dialogue": "Why is everyone so scared of the sun? I don't need sunscreen, I'm not scared of a floating ball of fire.",
-    "character": "allen",
-    "nextnode": 16,
-    "animation": "normal",
-    "background": "forest"
+    "showdialogue": "There's never transit on the island, there aren't many motor vehicles around. Nevertheless, he gets ready to hop on his canoe and row away.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 16,
+    "playanimation": "normal"
   },
   {
     "id": 14,
-    "dialogue": "Allen stops almost immediately after hearing you. He stops so abruptly, you can't help but wonder if his knees are okay.",
-    "character": "Narrator",
-    "nextnode": 15,
-    "animation": "normal",
-    "background": "forest"
+    "showdialogue": "Even when he needs to go downtown, he always chooses to canoe: there's never transit through the river.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 15,
+    "playanimation": "normal"
   },
   {
     "id": 13,
-    "choices":[
-      {"nextnode": 14, "dialogue": "Did you remember to put on sunscreen?"},
-      {"nextnode": 20, "dialogue": "You could run faster with better running shoes."}
-    ]
+    "showdialogue": "Morning! I forgot to buy ingredients to make pancakes for breakfast, so I'm packing my canoe to go to the market.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 14,
+    "playanimation": "normal"
   },
   {
     "id": 12,
-    "dialogue": "You smell the river breeze, wood pine and... sweat. You hold your breath as Allen races pass you down the mountain. He'll continue to race without glancing at you, unless you say something.",
-    "character": "Narrator",
-    "nextnode": 13,
-    "animation": "normal",
-    "background": "forest"
+    "showdialogue": "You hear someone packing a canoe outside the hut and and decide to check who's outside.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 13,
+    "playanimation": "normal"
   },
   {
     "id": 11,
-    "choices":[
-      {"nextnode": 12, "dialogue": "I'm going to go check on Allen!"},
-      {"nextnode": 26, "dialogue": "I want to go to the Market with you."}
-    ]
+    "showdialogue": "You are unsuccessful, the kitchen is empty. How are you suppose to seduce a handsome fellow with an empty stomach?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 12,
+    "playanimation": "normal"
   },
   {
     "id": 10,
-    "dialogue": "Allen was saying something about going to the mountains for a self-imposed 'manly marathon'. I'm not sure what that is, but I hope he didn't forget to put on sunscreen again.",
-    "character": "ken",
-    "nextnode": 11,
-    "animation": "normal",
-    "background": "kens_house"
+    "showdialogue": "You make your way into Ken's kitchen. The brothers are nowhere to be seen, so you grab one of the canoe shaped bowls and look for something to eat.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 11,
+    "playanimation": "normal"
   },
   {
     "id": 9,
-    "dialogue": "Even when he needs to go downtown, he always chooses to canoe: there's never transit through the river. There's never transit on the island, there aren't many motor vehicles around. Nevertheless, he gets ready to hop on his canoe and row away.",
-    "character": "Narrator",
-    "nextnode": 10,
-    "animation": "normal",
-    "background": "kens_house"
+    "showdialogue": "It's time to make your seductive move. After breakfast!",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 10,
+    "playanimation": "normal"
   },
   {
     "id": 8,
-    "dialogue": "Morning! I forgot to buy ingredients to make pancakes for breakfast, so I'm packing my canoe to go to the market.",
-    "character": "ken",
-    "nextnode": 9,
-    "animation": "shake",
-    "background": "kens_house"
+    "showdialogue": "It's been a few weeks since you were saved. You've gotten to know Ken and his brother Allen.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 9,
+    "playanimation": "normal"
   },
   {
     "id": 7,
-    "dialogue": "You make your way into Ken's kitchen. The brothers are nowhere to be seen, so you grab one of the canoe shaped bowls and look for something to eat. You are unsuccessful, the kitchen is empty. How are you suppose to seduce a handsome fellow with an empty stomach? You hear someone packing a canoe outside the hut and and decide to check who's outside.",
-    "character": "Narrator",
-    "nextnode": 8,
-    "animation": "normal",
-    "background": "kens_house"
+    "showdialogue": "You were found on the shore of a small island and are saved by a beautiful man named Ken. He took you back to his hut and nursed you back to health.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 8,
+    "playanimation": "shake"
   },
   {
     "id": 6,
-    "dialogue": "It's been a few weeks since you were saved. You've gotten to know Ken and his brother Allen. It's time to make your seductive move. After breakfast!",
-    "character": "Narrator",
-    "nextnode": 7,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "And before you could understand his mysteriously and oddly gamefied instructions, you become unconscious.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "under_the_ocean",
+    "gotonextnode": 7,
+    "playanimation": "normal"
   },
   {
     "id": 5,
-    "dialogue": "You were found on the shore of a small island and are saved by a beautiful man named Ken. He took you back to his hut and nursed you back to health.",
-    "character": "Narrator",
-    "nextnode": 6,
-    "animation": "normal",
-    "background": "black"
+    "showdialogue": "Hear my voice, do as I plea and I will bring you salvation. I will give you four days to seduce the man of your dreams. If you fail, I will pull you back to sea with the strength of a hundred waves.",
+    "displaycharacter": "poseidon",
+    "displaybackground": "under_the_ocean",
+    "gotonextnode": 6,
+    "playanimation": "normal"
   },
   {
     "id": 4,
-    "dialogue": "And before you could understand his mysteriously and oddly gamefied instructions, you become unconscious.",
-    "character": "Narrator",
-    "nextnode": 5,
-    "animation": "normal",
-    "background": "under_the_ocean"
+    "showdialogue": "Before your mind collapsed from the lack of oxygen, you saw Poseidon, God of the Seas, who spoke to you.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "under_the_ocean",
+    "gotonextnode": 5,
+    "playanimation": "normal"
   },
   {
     "id": 3,
-    "dialogue": "Hear my voice, do as I plea and I will bring you salvation. I will give you four days to seduce the man of your dreams. If you fail, I will pull you back to sea with the strength of a hundred waves.",
-    "character": "Poseidon",
-    "nextnode": 4,
-    "animation": "normal",
-    "background": "under_the_ocean"
+    "showdialogue": "I'm joking around. Between gasping for air and breathing salt water, you began hallucinating.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "under_the_ocean",
+    "gotonextnode": 4,
+    "playanimation": "normal"
   },
   {
     "id": 2,
-    "dialogue": "I'm joking around. Between gasping for air and breathing salt water, you began hallucinating. Before your mind collapsed from the lack of oxygen, you saw Poseidon, God of the Seas, who spoke to you.",
-    "character": "Narrator",
-    "nextnode": 3,
-    "animation": "normal",
-    "background": "under_the_ocean"
+    "showdialogue": "After your cruise sank, you were saved by a beautiful merman with long-flowing hair. He grabbed you by the waist, pulling you near him and you smelled his scent of coconut oil and fresh shrimp. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "under_the_ocean",
+    "gotonextnode": 3,
+    "playanimation": "normal"
   },
   {
     "id": 1,
-    "dialogue": "It doesn't matter who you are. It doesn't matter who you were. Only that you decided to take a luxurious cruise on the wrong day at the wrong time. After your cruise sank, you were saved by a beautiful merman with long-flowing hair. He grabbed you by the waist, pulling you near him and you smelled his scent of coconut oil and fresh shrimp.",
-    "character": "Narrator",
-    "nextnode": 2,
-    "animation": "normal",
-    "background": "under_the_ocean"
+    "showdialogue": "It doesn't matter who you are. It doesn't matter who you were. Only that you decided to take a luxurious cruise on the wrong day at the wrong time.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "under_the_ocean",
+    "gotonextnode": 2,
+    "playanimation": "normal"
   }
 ]

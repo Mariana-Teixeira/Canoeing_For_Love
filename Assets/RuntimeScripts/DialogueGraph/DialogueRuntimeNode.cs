@@ -50,6 +50,7 @@ namespace DialogueTree
         DISPLAY_CHARACTER,
         DISPLAY_BACKGROUND,
         ADD_SCORE,
+        REMOVE_SCORE,
         GOTO_NEXTNODE,
         GOTO_PATHNODE,
         ANIMATE_CAMERA,

@@ -9,9 +9,6 @@ public class InputManager : MonoBehaviour, INodeSubscriber
     ICommand command;
     ICommand comms;
 
-    VisualManager vm;
-
-
     #region Node Publisher
     NodePublisher publisher;
 
@@ -27,6 +24,8 @@ public class InputManager : MonoBehaviour, INodeSubscriber
     }
     private void Start()
     {
+        comms = new NewFileCommand(treeManager);
+        invoker.AddCommand(comms);
         comms = new LoadFileCommand(treeManager);
         invoker.AddCommand(comms);
         command = new StartDialogueCommand(treeManager);

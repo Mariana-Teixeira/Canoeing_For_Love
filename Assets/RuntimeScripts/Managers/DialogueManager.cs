@@ -92,6 +92,11 @@ public class DialogueManager : NodePublisher
         headNode = dfh.LoadGame();
     }
 
+    public void NewGame(){
+        dfh.NewGame();
+        headNode = 1;
+    }
+
      public void SaveGame(){
         dfh.SaveGame(tree, cam);
     }
