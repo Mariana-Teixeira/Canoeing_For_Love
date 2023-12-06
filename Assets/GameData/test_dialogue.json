@@ -1,51 +1,487 @@
 [
 
   {
-    "id": 239,
+    "id": 294,
     "showchoicepanel":[
       {"gotonextnode": 0, "showdialogue": "termit spary"},
       {"gotonextnode": 0, "showdialogue": "beaver musk"}
     ]
   },
   {
-    "id": 238,
+    "id": 293,
     "showdialogue": "Here I am, once again at your service! It's business time!\nSo what are you getting today? Everything has a purpose.",
     "displaycharacter": "sello",
     "displaybackground": "bedroom",
+    "gotonextnode": 294,
+    "playanimation": "normal"
+  },
+  {
+    "id": 292,
+    "showdialogue": "This time you're not as shocked.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 293,
+    "playanimation": "normal"
+  },
+  {
+    "id": 291,
+    "showdialogue": "You start drifting asleep when your window is violently shaken open... Again?!",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 292,
+    "playanimation": "normal"
+  },
+  {
+    "id": 290,
+    "showdialogue": "You get comfortable in your feathered bed once again. Today you made progress with your future man.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 291,
+    "playanimation": "normal"
+  },
+  {
+    "id": 289,
+    "showdialogue": "It's now time for bed, the day took a lot of energy out of you.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 290,
+    "playanimation": "normal"
+  },
+  {
+    "id": 288,
+    "showdialogue": "You go about the rest of your day.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 289,
+    "playanimation": "normal"
+  },
+  {
+    "id": 287,
+    "showdialogue": "Maybe he could've helped you and you would've had fun. But oh well, now he is gone.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 288,
+    "playanimation": "normal"
+  },
+  {
+    "id": 286,
+    "showdialogue": "Oh ok, have a nice afternoon then.",
+    "displaycharacter": "ken_sad",
+    "displaybackground": "lake",
+    "gotonextnode": 287,
+    "playanimation": "normal"
+  },
+  {
+    "id": 285,
+    "showdialogue": "You rejected the idea because you didn't want to waste wood on what you already knew was going to be a bad paddle.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 286,
+    "playanimation": "normal",
+    "decreasecharacterscore":"ken"
+  },
+  {
+    "id": 284,
+    "showdialogue": "You go about the rest of your day.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 289,
+    "playanimation": "normal"
+  },
+  {
+    "id": 283,
+    "showdialogue": "After a while, you both finish up the paddle. It really is, as he described it, a masterpiece.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "shed",
+    "gotonextnode": 284,
+    "playanimation": "normal"
+  },
+  {
+    "id": 282,
+    "showdialogue": "Ken, ends up going to get the tweezers himself, while you were left wondering if you were really that rude or if he is just a big wuss",
+    "displaycharacter": "Narrator",
+    "displaybackground": "shed",
+    "gotonextnode": 283,
+    "playanimation": "normal"
+  },
+  {
+    "id": 281,
+    "showdialogue": "No need to be that rude...",
+    "displaycharacter": "ken_sad",
+    "displaybackground": "shed",
+    "gotonextnode": 282,
+    "playanimation": "normal"
+  },
+  {
+    "id": 280,
+    "showdialogue": "You tell him to toughen up. In your mind, Allen would never have screamed like that.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "shed",
+    "gotonextnode": 281,
+    "playanimation": "normal"
+  },
+  {
+    "id": 279,
+    "showdialogue": "You tell him to toughen up. In your mind, Allen would never have screamed like that. Ken, ends up going to get the tweezers himself.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "shed",
+    "gotonextnode": 280,
+    "playanimation": "normal",
+    "increasecharacterscore":"allen",
+    "decreasecharacterscore":"ken"
+  },
+  {
+    "id": 278,
+    "showdialogue": "You go about the rest of your day.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 289,
+    "playanimation": "normal"
+  },
+  {
+    "id": 277,
+    "showdialogue": "After a while, you both finish up the paddle. It really is, as he described it, a masterpiece.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "shed",
+    "gotonextnode": 278,
+    "playanimation": "normal"
+  },
+  {
+    "id": 276,
+    "showdialogue": "Thanks! That really hurt.",
+    "displaycharacter": "ken_shy",
+    "displaybackground": "shed",
+    "gotonextnode": 277,
+    "playanimation": "normal"
+  },
+  {
+    "id": 275,
+    "showdialogue": "You go get the tweezers ans help Ken take out the splinter from his finger.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "shed",
+    "gotonextnode": 276,
+    "playanimation": "normal",
+    "increasecharacterscore":"ken"
+  },
+  {
+    "id": 274,
+    "showchoicepanel":[
+      {"gotonextnode": 275, "showdialogue": "Don't worry I will be quick!"},
+      {"gotonextnode": 279, "showdialogue": "Pff grow up, be a man"}
+    ]
+  },
+  {
+    "id": 273,
+    "showdialogue": "I have a splinter stuck in my finger, please go get the tweezers.",
+    "displaycharacter": "ken",
+    "displaybackground": "shed",
+    "gotonextnode": 274,
+    "playanimation": "normal"
+  },
+  {
+    "id": 272,
+    "showdialogue": "You quickly go over to him to see what happened.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "shed",
+    "gotonextnode": 273,
+    "playanimation": "normal"
+  },
+  {
+    "id": 271,
+    "showdialogue": "AHHHHHHHH AY CARAMBAA!!",
+    "displaycharacter": "ken",
+    "displaybackground": "shed",
+    "gotonextnode": 272,
+    "playanimation": "normal"
+  },
+  {
+    "id": 270,
+    "showdialogue": "All of a sudden you hear Ken scream",
+    "displaycharacter": "Narrator",
+    "displaybackground": "shed",
+    "gotonextnode": 271,
+    "playanimation": "shake"
+  },
+  {
+    "id": 269,
+    "showdialogue": "You feel like he is buttering you up, while opening up, which you really appreciate.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "shed",
+    "gotonextnode": 270,
+    "playanimation": "normal"
+  },
+  {
+    "id": 268,
+    "showdialogue": "You know? This the only thing where I can't let Allen win. He always wants to beat at everything and I'm ok with it. But canoes? Canoes are my thing. With this paddle I will definetily win this race.",
+    "displaycharacter": "ken",
+    "displaybackground": "shed",
+    "gotonextnode": 269,
+    "playanimation": "normal"
+  },
+  {
+    "id": 268,
+    "showdialogue": "The both of you are having fun making the paddle for the race. He tells you about all the races he has won.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "shed",
+    "gotonextnode": 269,
+    "playanimation": "normal"
+  },
+  {
+    "id": 267,
+    "showdialogue": "You go with Ken to the shed and he lets you behold all of his handmade canoes and paddles. Quite the collection he has made for himself.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "shed",
+    "gotonextnode": 268,
+    "playanimation": "normal"
+  },
+  {
+    "id": 266,
+    "showdialogue": "Cool, come with me. We will cook up a masterpiece, don't you worry.",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 267,
+    "playanimation": "normal"
+  },
+  {
+    "id": 265,
+    "showchoicepanel":[
+      {"gotonextnode": 266, "showdialogue": "Yes, Ken. Let's do it"},
+      {"gotonextnode": 285, "showdialogue": "I don't to waste wood, sorry"}
+    ]
+  },
+  {
+    "id": 264,
+    "showdialogue": "Oioi partner, what's up? Do you wanna come with me and make a paddle for the canoe race?",
+    "displaycharacter": "ken",
+    "displaybackground": "lake",
+    "gotonextnode": 265,
+    "playanimation": "normal"
+  },
+  {
+    "id": 263,
+    "showdialogue": "Suddenly you hear someone calling you and wake up.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 264,
+    "playanimation": "normal"
+  },
+  {
+    "id": 262,
+    "showdialogue": "",
+    "displaycharacter": "",
+    "displaybackground": "black",
+    "gotonextnode": 263,
+    "playanimation": "shake"
+  },
+  {
+    "id": 261,
+    "showdialogue": "It's now afternoon and you go out and enjoy a little alone time by the lake. After a while you start to fall asleep. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 262,
+    "playanimation": "normal"
+  },
+  {
+    "id": 260,
+    "gotopathnode": {"gotoprimarynode": 261, "gotobackupnode": 289, "character": "ken", "minimumscore": 3}
+  },
+  {
+    "id": 259,
+    "showdialogue": "You go about the rest of your day.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 289,
+    "playanimation": "normal"
+  },
+  {
+    "id": 258,
+    "showdialogue": "You were left wondering if you were too harsh on Allen.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 259,
+    "playanimation": "normal"
+  },
+  {
+    "id": 257,
+    "showdialogue": "Uhhh ok, that's a bummer.",
+    "displaycharacter": "allen",
+    "displaybackground": "lake",
+    "gotonextnode": 258,
+    "playanimation": "normal"
+  },
+  {
+    "id": 256,
+    "showdialogue": "You don't really know anything about podcasting so you tell him you prefer to sit this one out.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
+    "gotonextnode": 257,
+    "playanimation": "normal",
+    "decreasecharacterscore":"allen"
+  },
+  {
+    "id": 255,
+    "showdialogue": "You go about the rest of your day.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 289,
+    "playanimation": "normal"
+  },
+  {
+    "id": 254,
+    "showdialogue": "Allen abruptly shuts down the recording and leaves, leaving you wondering if you should have lied to him about it.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "podcast_setting",
+    "gotonextnode": 255,
+    "playanimation": "normal"
+  },
+  {
+    "id": 253,
+    "showdialogue": "What? You think KEN IS GOING TO BEAT ME? GET OUT NOW!",
+    "displaycharacter": "allen",
+    "displaybackground": "podcast_setting",
+    "gotonextnode": 254,
+    "playanimation": "shake",
+    "increasecharacterscore":"ken",
+    "decreasecharacterscore":"allen"
+  },
+  {
+    "id": 252,
+    "showdialogue": "You go about the rest of your day.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 289,
+    "playanimation": "normal"
+  },
+  {
+    "id": 251,
+    "showdialogue": "You had a great time too.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "podcast_setting",
+    "gotonextnode": 252,
+    "playanimation": "normal"
+  },
+  {
+    "id": 250,
+    "showdialogue": "Thanks a lot! I had a great time!",
+    "displaycharacter": "allen",
+    "displaybackground": "podcast_setting",
+    "gotonextnode": 251,
+    "playanimation": "normal"
+  },
+  {
+    "id": 249,
+    "showdialogue": "You have now finished recording the podcast and you help Allen putting everything away.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "podcast_setting",
+    "gotonextnode": 250,
+    "playanimation": "normal"
+  },
+  {
+    "id": 248,
+    "showdialogue": "I knew it, I am definetily beating Ken this year!",
+    "displaycharacter": "allen",
+    "displaybackground": "podcast_setting",
+    "gotonextnode": 249,
+    "playanimation": "normal",
+    "increasecharacterscore":"allen"
+  },
+  {
+    "id": 247,
+    "showchoicepanel":[
+      {"gotonextnode": 248, "showdialogue": "Yes, you will do it"},
+      {"gotonextnode": 253, "showdialogue": "I think Ken will beat you"}
+    ]
+  },
+  {
+    "id": 246,
+    "showdialogue": "What do you think? I'm winning right? I mean I already know the answer...",
+    "displaycharacter": "allen",
+    "displaybackground": "podcast_setting",
+    "gotonextnode": 247,
+    "playanimation": "normal"
+  },
+  {
+    "id": 245,
+    "showdialogue": "Allen looks at you and asks you",
+    "displaycharacter": "Narrator",
+    "displaybackground": "podcast_setting",
+    "gotonextnode": 246,
+    "playanimation": "normal"
+  },
+  {
+    "id": 244,
+    "showdialogue": "While we are on the subject of winners, I'm announcing that I will win this year's race, so if you were participating, there's no point in doing so.",
+    "displaycharacter": "allen",
+    "displaybackground": "podcast_setting",
+    "gotonextnode": 245,
+    "playanimation": "normal"
+  },
+  {
+    "id": 243,
+    "showdialogue": "You let out a little smirk.\nYou hear Allen talk about the traditions, and you find them quite amusing, because where on Earth would you find a canoe race that has a siren with horse noises to start it?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "podcast_setting",
+    "gotonextnode": 244,
+    "playanimation": "normal"
+  },
+  {
+    "id": 242,
+    "showdialogue": "Today's topic is the canoe race. We will be talking about the traditions of this day and obviously about me, because I will win it this year.",
+    "displaycharacter": "allen",
+    "displaybackground": "podcast_setting",
+    "gotonextnode": 243,
+    "playanimation": "normal"
+  },
+  {
+    "id": 241,
+    "showdialogue": "You agree, and go with Allen to his podcast recording station.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 242,
+    "playanimation": "normal"
+  },
+  {
+    "id": 239,
+    "showchoicepanel":[
+      {"gotonextnode": 241, "showdialogue": "Yeah, of course Allen!"},
+      {"gotonextnode": 256, "showdialogue": "I'm sorry, I know nothing about podcasts"}
+    ]
+  },
+  {
+    "id": 238,
+    "showdialogue": "Hey, I wanna ask you something. Do you wanna be apart of my podcast?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "lake",
     "gotonextnode": 239,
     "playanimation": "normal"
   },
   {
     "id": 237,
-    "showdialogue": "This time you're not as shocked.",
+    "showdialogue": "Suddenly you hear someone calling you and wake up.",
     "displaycharacter": "Narrator",
-    "displaybackground": "bedroom",
+    "displaybackground": "black",
     "gotonextnode": 238,
     "playanimation": "normal"
   },
   {
     "id": 236,
-    "showdialogue": "You start drifting asleep when your window is violently shaken open... Again?!",
-    "displaycharacter": "Narrator",
-    "displaybackground": "bedroom",
+    "showdialogue": "",
+    "displaycharacter": "",
+    "displaybackground": "black",
     "gotonextnode": 237,
-    "playanimation": "normal"
+    "playanimation": "shake"
   },
   {
     "id": 235,
-    "showdialogue": "You get comfortable in your feathered bed once again. Today you made progress with your future man.",
+    "showdialogue": "It's now afternoon and you go out and enjoy a little alone time by the lake. After a while you start to fall asleep.",
     "displaycharacter": "Narrator",
-    "displaybackground": "bedroom",
+    "displaybackground": "lake",
     "gotonextnode": 236,
     "playanimation": "normal"
   },
   {
     "id": 234,
-    "showdialogue": "It's now time for bed, the day took a lot of energy out of you.",
-    "displaycharacter": "Narrator",
-    "displaybackground": "bedroom",
-    "gotonextnode": 235,
-    "playanimation": "normal"
+    "gotopathnode": {"gotoprimarynode": 235, "gotobackupnode": 260, "character": "allen", "minimumscore": 3}
   },
   {
     "id": 233,

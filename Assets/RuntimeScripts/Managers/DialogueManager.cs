@@ -54,10 +54,8 @@ public class DialogueManager : NodePublisher
         }
         if (hash.ContainsKey(DialogueEvents.GOTO_PATHNODE))
         {
-            Debug.Log("insede gotopathnode");
             DialoguePath choices = (DialoguePath)hash[DialogueEvents.GOTO_PATHNODE];
             GoToPathNode(choices);
-
             return;
         }
         if (hash.ContainsKey(DialogueEvents.GOTO_NEXTNODE))
