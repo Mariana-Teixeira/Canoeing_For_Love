@@ -1,28 +1,40 @@
 {
   "loaders": [
     {
-      "node": 91,
-      "image": "image0"
+      "node": 70,
+      "image": "image0",
+      "kenScore": 1,
+      "allenScore": 0
     },
     {
       "node": 55,
-      "image": "image1"
+      "image": "image1",
+      "kenScore": 0,
+      "allenScore": 0
     },
     {
       "node": 13,
-      "image": "image2"
+      "image": "image2",
+      "kenScore": 0,
+      "allenScore": 0
     },
     {
-      "node": 193,
-      "image": "image3"
+      "node": 213,
+      "image": "image3",
+      "kenScore": 0,
+      "allenScore": 0
     },
     {
       "node": 220,
-      "image": "image4"
+      "image": "image4",
+      "kenScore": 0,
+      "allenScore": 0
     },
     {
       "node": 13,
-      "image": "image5"
+      "image": "image5",
+      "kenScore": 0,
+      "allenScore": 0
     }
   ],
   "active": 10

@@ -50,9 +50,36 @@ public class DataFileHandler
         return headNode;
     }
 
-     public void SaveGame(DialogueRuntimeTree tree, Camera cam){
+     public void SaveGame(DialogueRuntimeTree tree, Camera cam, int KenScore, int AllenScore){
         // maybe refactor in the future, maybe not
         DataToSave d = new DataToSave();
+        int kenneth = KenScore;
+        int allenboy = AllenScore;
+        if (tree.CurrentNode.DialogueEvents.ContainsKey(DialogueEvents.ADD_SCORE))
+        {
+            var name = (string)tree.CurrentNode.DialogueEvents[DialogueEvents.ADD_SCORE];
+            if(name == "ken"){
+                kenneth--;
+            }
+            if(name == "allen"){
+                allenboy--;
+            }
+            
+            
+        }
+        if (tree.CurrentNode.DialogueEvents.ContainsKey(DialogueEvents.REMOVE_SCORE))
+        {
+            var name = (string)tree.CurrentNode.DialogueEvents[DialogueEvents.REMOVE_SCORE];
+            if(name == "ken"){
+                kenneth++;
+            }
+            if(name == "allen"){
+                allenboy++;
+            }
+            
+            
+        }
+        Debug.Log(kenneth + " : " + allenboy);
         d.setNode(tree.data.guids.FirstOrDefault(x => x.Value == tree.CurrentNode.Guid).Key);
         string json = File.ReadAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json");
         dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
@@ -70,6 +97,8 @@ public class DataFileHandler
         // save game data: node and image
         jsonObj["loaders"][active]["node"] = d.getNode();
         jsonObj["loaders"][active]["image"] = "image" + active;
+        jsonObj["loaders"][active]["kenScore"] = kenneth;
+        jsonObj["loaders"][active]["allenScore"] = allenboy;
         jsonObj["active"] = 10;
         string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json", output);

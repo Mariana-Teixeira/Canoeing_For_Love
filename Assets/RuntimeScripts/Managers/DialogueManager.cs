@@ -30,12 +30,14 @@ public class DialogueManager : NodePublisher
 
     public Guid nextNode = Guid.Empty;
 
-    private void Awake() => tree = new DialogueRuntimeTree();
+    private void Awake() {
+        inventory = gameObject.GetComponent<InventoryManager>();
+        tree = new DialogueRuntimeTree();
+    } 
 
     private void Start()
     {
         choicePanel = ChoicesPanel.instance;
-        inventory = GetComponent<InventoryManager>();
     }
 
     public void StartDialogueTree()
@@ -80,18 +82,35 @@ public class DialogueManager : NodePublisher
     {
         int score;
         Guid node = Guid.Empty;
-        Debug.Log("yaaaaaaaaaaa");
         if(dialogueBool.Character != null){
-            score = dialogueBool.Character == "ken" ? inventory.KenScore : inventory.AllenScore;
-            node = score >= dialogueBool.MinimumScore ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;
+            if(dialogueBool.Character == "both"){
+                // Inside this if, primaryNode is for Ken, secondaryNode is for Allen, backupNode is for backup
+                // Outside of this if, primaryNode can be for both, depends on the character name
+                // if there's no character name, then go down to random
+                if(inventory.KenScore>inventory.AllenScore){
+                    node = inventory.KenScore >= dialogueBool.MinimumScore ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;
+                }
+                else if(inventory.KenScore<inventory.AllenScore){
+                    node = inventory.AllenScore >= dialogueBool.MinimumScore ? dialogueBool.SecondaryNodeGUID : dialogueBool.BackupNodeGUID;
+                }
+                else if(inventory.KenScore==inventory.AllenScore){
+                    Random random = new Random();
+                    double test = random.NextDouble();
+                    node = inventory.AllenScore >= dialogueBool.MinimumScore ? test > 0.5 ? dialogueBool.PrimaryNodeGUID : dialogueBool.SecondaryNodeGUID : dialogueBool.BackupNodeGUID;
+                }
+                GoToNextNode(node);
+            }
+            else{
+                score = dialogueBool.Character == "ken" ? inventory.KenScore : inventory.AllenScore;
+                node = score >= dialogueBool.MinimumScore ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;
+            }
         }
         else{
+            // here we have the ability to have a random, picks a random node, out of the two given
             Random random = new Random();
             double test = random.NextDouble();
-            Debug.Log(test);
             node = test > 0.5 ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;
         }
-        Debug.Log(node);
         GoToNextNode(node);
         
     }
@@ -106,15 +125,18 @@ public class DialogueManager : NodePublisher
 
     public void LoadGame(){
         headNode = dfh.LoadGame();
+        inventory.LoadInventory();
     }
 
     public void NewGame(){
         dfh.NewGame();
         headNode = 1;
+        inventory.NewInventory();
     }
 
      public void SaveGame(){
-        dfh.SaveGame(tree, cam);
+        // dfh.SaveGame(tree, cam);
+        inventory.SaveInventory(tree, cam);
     }
 }
 

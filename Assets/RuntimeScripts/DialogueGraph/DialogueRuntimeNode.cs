@@ -18,13 +18,16 @@ namespace DialogueTree
     public struct DialoguePath
     {
         public Guid PrimaryNodeGUID { get; private set; }
+
+        public Guid SecondaryNodeGUID { get; private set; }
         public Guid BackupNodeGUID { get; private set; }
         public string Character { get; private set; }
         public int MinimumScore { get; private set; }
 
-        public DialoguePath(Guid primaryNode, Guid backupNode, string character, int score)
+        public DialoguePath(Guid primaryNode, Guid secondaryNode, Guid backupNode, string character, int score)
         {
             this.PrimaryNodeGUID = primaryNode;
+            this.SecondaryNodeGUID = secondaryNode;
             this.BackupNodeGUID = backupNode;
             this.Character = character;
             this.MinimumScore = score;

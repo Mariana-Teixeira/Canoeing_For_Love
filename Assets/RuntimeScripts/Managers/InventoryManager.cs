@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+using System.Linq;
 using DialogueTree;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +9,8 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
 {
     public Slider kenSlider;
     public Slider allenSlider;
+
+    private readonly DataFileHandler dfh = new();
 
     int kenScore = 0;
     int allenScore = 0;
@@ -74,13 +79,41 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
     {
         if (character == "ken")
         {
-            kenScore--;
-            kenSlider.value = kenScore;
+            if(kenScore > 0){
+                kenScore--;
+                kenSlider.value = kenScore;
+            }
         }
         else if (character == "allen")
         {
-            allenScore--;
-            allenSlider.value = allenScore;
+            if(allenScore > 0){
+                allenScore--;
+                allenSlider.value = allenScore;
+            }
         }
     }
+
+    public void LoadInventory(){
+        try{
+            string json = File.ReadAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json");
+            dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+            int active = jsonObj["active"];
+            allenScore = jsonObj["loaders"][active]["allenScore"];
+            kenScore = jsonObj["loaders"][active]["kenScore"];
+        }
+        catch(Exception e){
+            Debug.LogError(e);
+        }
+    }
+
+    public void NewInventory(){
+        kenScore = 0;
+        allenScore = 0;
+    }
+
+    public void SaveInventory(DialogueRuntimeTree tree, Camera cam){
+        dfh.SaveGame(tree, cam, kenScore, allenScore);
+    }
+
+
 }
