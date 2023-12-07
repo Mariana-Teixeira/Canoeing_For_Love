@@ -49,14 +49,14 @@ public class DialogueData
             if (node.ShowDialogue!=null){
                 hasher.Add(DialogueEvents.SHOW_DIALOGUE, node.ShowDialogue);
             }
-            if (node.DisplayCharacter!=null){
+            if (node.DisplayCharacter!=null && node.DisplayCharacter != ""){
                 hasher.Add(DialogueEvents.DISPLAY_CHARACTER, node.DisplayCharacter);
                 nametodisplay = node.DisplayCharacter;
                 if (nametodisplay.Contains("_")){
                     nametodisplay = node.DisplayCharacter.Split("_")[0];
-                    nametodisplay = string.Concat(nametodisplay[0].ToString().ToUpper(), nametodisplay.Substring(1));
                 }
-                
+                UnityEngine.Debug.Log(nametodisplay);
+                nametodisplay = string.Concat(nametodisplay[0].ToString().ToUpper(), nametodisplay.Substring(1));
                 hasher.Add(DialogueEvents.SHOW_NAMEPLATE, nametodisplay);
             }
             if (node.DisplayBackground!=null){
