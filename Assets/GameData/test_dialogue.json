@@ -1,10 +1,630 @@
 [
-
+  {
+    "id": 372,
+    "showdialogue": "Time passes by and you slowly fall asleep",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 0,
+    "playanimation": "normal"
+  },
+  {
+    "id": 371,
+    "showdialogue": "Sello leaves and you can't fall asleep straight away because you are getting anxious for the race.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 372,
+    "playanimation": "normal"
+  },
+  {
+    "id": 3370,
+    "showchoicepanel":[
+      {"gotonextnode": 371, "showdialogue": "Cake pops"},
+      {"gotonextnode": 371, "showdialogue": "Nut bar"}
+    ]
+  },
+  {
+    "id": 369,
+    "showdialogue": "So, what are you getting today? I told you today was a good day to buy things!",
+    "displaycharacter": "sello",
+    "displaybackground": "bedroom",
+    "gotonextnode": 3370,
+    "playanimation": "normal"
+  },
+  {
+    "id": 368,
+    "showdialogue": "Here I am, as I said I would be! It's business time!",
+    "displaycharacter": "sello",
+    "displaybackground": "bedroom",
+    "gotonextnode": 369,
+    "playanimation": "normal"
+  },
+  {
+    "id": 367,
+    "showdialogue": "You grunt and get up angry. Really has soon as you were about to sleep when you were waiting for this exact moment not to happen.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 368,
+    "playanimation": "normal"
+  },
+  {
+    "id": 366,
+    "showdialogue": "As soon as you start drifting asleep when your window is violently shaken open.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 367,
+    "playanimation": "normal"
+  },
+  {
+    "id": 365,
+    "showdialogue": "By know you give up it been forever so you get in bed and don't think twice.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 366,
+    "playanimation": "normal"
+  },
+  {
+    "id": 364,
+    "showdialogue": "It has now passed a considerable time and you are tired. Maybe they had business elsewhere. But they did say they would come.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 365,
+    "playanimation": "normal"
+  },
+  {
+    "id": 363,
+    "showdialogue": "This time you know better. You stay in your room but don't go to sleep because you know Sello will come it's just a matter of when.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 364,
+    "playanimation": "normal"
+  },
+  {
+    "id": 362,
+    "showdialogue": "Well, it does look like you can do much so you decide to turn in early and relax in your room and think about the last few days. What has your life become.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 363,
+    "playanimation": "normal"
+  },
+  {
+    "id": 361,
+    "showdialogue": "You arrive back at the house and everyone just goes their separate ways to prepare.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 362,
+    "playanimation": "normal"
+  },
+  {
+    "id": 360,
+    "showdialogue": "Let's go back we have a lot to prepare.",
+    "displaycharacter": "allen",
+    "displaybackground": "town_center",
+    "gotonextnode": 361,
+    "playanimation": "normal"
+  },
+  {
+    "id": 359,
+    "showdialogue": "Well, you just have to wait to see me win that's for sure.",
+    "displaycharacter": "allen",
+    "displaybackground": "town_center",
+    "gotonextnode": 360,
+    "playanimation": "normal"
+  },
+  {
+    "id": 358,
+    "showdialogue": "Yes! Now we just have to prepare and wait for tomorrow.",
+    "displaycharacter": "ken",
+    "displaybackground": "town_center",
+    "gotonextnode": 359,
+    "playanimation": "normal"
+  },
+  {
+    "id": 357,
+    "showdialogue": "So got everything?",
+    "displaycharacter": "sello",
+    "displaybackground": "town_center",
+    "gotonextnode": 358,
+    "playanimation": "normal"
+  },
+  {
+    "id": 356,
+    "showdialogue": "Oh, here they come.",
+    "displaycharacter": "sello",
+    "displaybackground": "town_center",
+    "gotonextnode": 357,
+    "playanimation": "normal"
+  },
+  {
+    "id": 355,
+    "showdialogue": "If you are honest, you will be glad if it's something normal, like even if it's a canoe shaped bowl. It would have more purpose than whatever it was that you've been picking.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 356,
+    "playanimation": "normal"
+  },
+  {
+    "id": 354,
+    "showdialogue": "So later on I have good stuff. I think you're gonna like even more than the items from last night.",
+    "displaycharacter": "sello",
+    "displaybackground": "town_center",
+    "gotonextnode": 355,
+    "playanimation": "normal"
+  },
+  {
+    "id": 353,
+    "showdialogue": "In the mean time you and Sello stand on the side.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 354,
+    "playanimation": "normal"
+  },
+  {
+    "id": 352,
+    "showdialogue": "Allen goes first, then Ken.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 353,
+    "playanimation": "normal"
+  },
+  {
+    "id": 351,
+    "showdialogue": "You, Ken, Allen and Sello arrive together to the competition stand.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 352,
+    "playanimation": "normal"
+  },
+  {
+    "id": 350,
+    "showdialogue": "You walk and go meet with the others, while you wait for Allen to go and grab the competition banners at the Town Center.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 351,
+    "playanimation": "normal"
+  },
+  {
+    "id": 349,
+    "showdialogue": "Uff Allen was a bit harsh and you took one on the chin. Maybe he isn't your knight in shining armor.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 350,
+    "playanimation": "normal"
+  },
+  {
+    "id": 348,
+    "showdialogue": "Wait, you are coming with me? I don't really need you holding me back and slouching around.",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 349,
+    "playanimation": "normal",
+    "decreasecharacterscore":"allen"
+  },
+  {
+    "id": 347,
+    "showdialogue": "You walk back to the house to gather everyone.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 351,
+    "playanimation": "normal"
+  },
+  {
+    "id": 346,
+    "showdialogue": "That was lucky! Anymore running and you would have thrown a rock at his head or maybe yours. You cannot run if you're unconscious.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 347,
+    "playanimation": "normal"
+  },
+  {
+    "id": 345,
+    "showdialogue": "Now we need to go to town. Let's get the others so we can go fetch our competition banners.",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 346,
+    "playanimation": "normal"
+  },
+  {
+    "id": 344,
+    "showdialogue": "Well, that's done.",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 345,
+    "playanimation": "normal"
+  },
+  {
+    "id": 343,
+    "showdialogue": "Allen then stops suddenly and looks at his watch.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 344,
+    "playanimation": "normal"
+  },
+  {
+    "id": 342,
+    "showdialogue": "Beep beep beep.",
+    "displaycharacter": "",
+    "displaybackground": "mountain",
+    "gotonextnode": 343,
+    "playanimation": "normal"
+  },
+  {
+    "id": 341,
+    "showdialogue": "Even if you wanted to get to know him better if was kind of impossible. Your lungs were not made for this. At this point you think, is this really worth it, this maniac can keep running but you not so much.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 342,
+    "playanimation": "normal"
+  },
+  {
+    "id": 340,
+    "showdialogue": "You nod and run along with Allen for some time.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 341,
+    "playanimation": "normal"
+  },
+  {
+    "id": 339,
+    "showdialogue": "Are you sure you can keep up?",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 340,
+    "playanimation": "normal",
+    "increasecharacterscore":"allen"
+  },
+  {
+    "id": 338,
+    "showdialogue": "You think about it little bit and join him on his run.\nIt's not like you have anything better to do.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotopathnode": {"gotoprimarynode": 339, "gotobackupnode": 348, "character":"allen", "minimumscore": 6},
+    "playanimation": "normal"
+  },
+  {
+    "id": 337,
+    "showdialogue": "I really need to go now. I still need a lot more power.",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 338,
+    "playanimation": "normal"
+  },
+  {
+    "id": 336,
+    "showdialogue": "I need more power, so I can beat Ken!",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 337,
+    "playanimation": "normal"
+  },
+  {
+    "id": 335,
+    "showdialogue": "Well, it's a paddle that can boost me in the competition, it charges up with my step count. That's why I'm always running. ",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 336,
+    "playanimation": "normal"
+  },
+  {
+    "id": 334,
+    "showdialogue": "You ask him what that device is.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 335,
+    "playanimation": "normal"
+  },
+  {
+    "id": 333,
+    "showdialogue": "He says this in a manner of fact way, but you are still confused maybe even more now.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 334,
+    "playanimation": "normal"
+  },
+  {
+    "id": 332,
+    "showdialogue": "Because I need those steps to charge my 'Paddlinator'.",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 333,
+    "playanimation": "normal"
+  },
+  {
+    "id": 331,
+    "showdialogue": "You look at him slightly confused and ask why.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 332,
+    "playanimation": "normal"
+  },
+  {
+    "id": 330,
+    "showdialogue": "Hi! Whatever you have to say it has to be fast. I need more steps count.",
+    "displaycharacter": "allen",
+    "displaybackground": "mountain",
+    "gotonextnode": 331,
+    "playanimation": "normal"
+  },
+  {
+    "id": 329,
+    "showdialogue": "You finally catch up with him and greet him.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 330,
+    "playanimation": "normal"
+  },
+  {
+    "id": 328,
+    "showdialogue": "Allen gets startled for a moment and turns around and spots you so he slows down.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 329,
+    "playanimation": "normal"
+  },
+  {
+    "id": 327,
+    "showdialogue": "You see a ball of hair a little ahead so you shout his name.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 328,
+    "playanimation": "normal"
+  },
+  {
+    "id": 326,
+    "showdialogue": "You run to the forest entrance to try and catch up with Allen.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "mountain",
+    "gotonextnode": 327,
+    "playanimation": "normal",
+    "increasecharacterscore": "allen",
+    "playaudio":"AMB_Forest"
+  },
+  {
+    "id": 325,
+    "showdialogue": "Afterwards you go meet Allen and Sello to go pick up the numbers for the canoe race.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 351,
+    "playanimation": "normal"
+  },
+  {
+    "id": 324,
+    "showdialogue": "He talks about canoes for awhile until the conversation dies down. You finish up and he thanks you for the company and help, even though you spent most of the time in complete silence.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 325,
+    "playanimation": "normal"
+  },
+  {
+    "id": 323,
+    "showdialogue": "Oh ok, I wanted to get to know you a little more, but I guess that's okay too.",
+    "displaycharacter": "ken_sad",
+    "displaybackground": "kens_house",
+    "gotonextnode": 324,
+    "playanimation": "normal"
+  },
+  {
+    "id": 322,
+    "showdialogue": "You try to comfort him, by saying he can talk about canoes.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 323,
+    "playanimation": "normal"
+  },
+  {
+    "id": 321,
+    "showdialogue": "O oh... s... sorry. I ... I didn't mean to put you on the spot.",
+    "displaycharacter": "ken_shy",
+    "displaybackground": "kens_house",
+    "gotonextnode": 322,
+    "playanimation": "normal",
+    "decreasecharacterscore": "ken"
+  },
+  {
+    "id": 320,
+    "showdialogue": "You nod and gather everyone.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 351,
+    "playanimation": "normal"
+  },
+  {
+    "id": 319,
+    "showdialogue": "Well thank you for the company, the time passed by and I did everything I needed to. Shall we get everyone to go pick up our numbers for the competition?",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 320,
+    "playanimation": "normal"
+  },
+  {
+    "id": 318,
+    "showdialogue": "You listen to some other stories Ken tells, and you keep revealing stories of your own.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 319,
+    "playanimation": "normal"
+  },
+  {
+    "id": 317,
+    "showdialogue": "Some might call me delulu. But I think it's the solulu for bad things to turn good.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 318,
+    "playanimation": "normal"
+  },
+  {
+    "id": 316,
+    "showdialogue": "It wasn't always a good memory, but if you see things from different perspectives they start to change.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 317,
+    "playanimation": "normal"
+  },
+  {
+    "id": 315,
+    "showdialogue": "That day was special because I remember it was the first time I learned how to canoe. My mother taught me.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 316,
+    "playanimation": "normal"
+  },
+  {
+    "id": 314,
+    "showdialogue": "So when I was younger me and my mother were playing in a river. Allen was away with our father.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 315,
+    "playanimation": "normal"
+  },
+  {
+    "id": 313,
+    "showdialogue": "After your sharing, Ken feels like it's his time to tell stories about the past.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 314,
+    "playanimation": "normal"
+  },
+  {
+    "id": 312,
+    "showdialogue": "You tell him about that one time where you and your family went on a camping trip. It was kind of a disaster. Your father set the tent on fire and your mother almost drowned. Kinda like you, algthough she probably didn't see Poseidon.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 313,
+    "playanimation": "normal"
+  },
+  {
+    "id": 311,
+    "showdialogue": "Although, upon his request you get a little embarrassed, you accept.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 312,
+    "playanimation": "normal",
+    "increasecharacterscore": "ken"
+  },
+  {
+    "id": 310,
+    "showdialogue": "But if you really want to, why don't you tell me some story about yourself. I know so little about you.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotopathnode": {"gotoprimarynode": 311, "gotobackupnode": 321, "character":"ken", "minimumscore": 6},
+    "playanimation": "normal"
+  },
+  {
+    "id": 309,
+    "showdialogue": "You don't have to worry, I'm just doing some final touches to the canoe for the race tomorrow.",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 310,
+    "playanimation": "normal"
+  },
+  {
+    "id": 308,
+    "showdialogue": "Oh, you want to help out?",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 309,
+    "playanimation": "normal"
+  },
+  {
+    "id": 307,
+    "showdialogue": "You nod and ask how you can help him out.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 308,
+    "playanimation": "normal"
+  },
+  {
+    "id": 306,
+    "showdialogue": "Hi! Had a good night of sleep?",
+    "displaycharacter": "ken",
+    "displaybackground": "kens_house",
+    "gotonextnode": 307,
+    "playanimation": "normal"
+  },
+  {
+    "id": 305,
+    "showdialogue": "You go up to Ken and greet him with a smile.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "kens_house",
+    "gotonextnode": 306,
+    "playanimation": "normal",
+    "increasecharacterscore":"ken"
+  },
+  {
+    "id": 304,
+    "showchoicepanel":[
+      {"gotonextnode": 305, "showdialogue": "Ken might need some help"},
+      {"gotonextnode": 326, "showdialogue": "There goes Allen, lets help out with the workout"}
+    ]
+  },
+  {
+    "id": 303,
+    "showdialogue": "You look outside and see Ken working on his canoe and Allen just ran past into the woods.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut",
+    "gotonextnode": 304,
+    "playanimation": "normal"
+  },
+  {
+    "id": 302,
+    "showdialogue": "You get out of bed. Today is your day. So you go looking for brothers.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 303,
+    "playanimation": "normal"
+  },
+  {
+    "id": 301,
+    "showdialogue": "The race is tomorrow so everyone is going to be busy today. That complicates things.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 302,
+    "playanimation": "normal"
+  },
+  {
+    "id": 300,
+    "showdialogue": "Time is running out and you are not any closer to making a decision.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 301,
+    "playanimation": "normal"
+  },
+  {
+    "id": 299,
+    "showdialogue": "Another day, another adventure!",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 300,
+    "playanimation": "normal"
+  },
+  {
+    "id": 298,
+    "showdialogue": "",
+    "displaycharacter": "",
+    "displaybackground": "bedroom",
+    "gotonextnode": 299,
+    "playanimation": "normal"
+  },
+  {
+    "id": 297,
+    "showdialogue": "After choosing an item, Sello happily leaves you.\nAs you start to wonder if you will ever find real love, you start to fall asleep.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 298,
+    "playanimation": "normal"
+  },
+  {
+    "id": 296,
+    "showdialogue": "After choosing an item, Sello happily leaves you.\nAs you start to wonder if you will ever find real love, you start to fall asleep.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 297,
+    "playanimation": "normal"
+  },
   {
     "id": 295,
     "showchoicepanel":[
-      {"gotonextnode": 0, "showdialogue": "termit spary"},
-      {"gotonextnode": 0, "showdialogue": "beaver musk"}
+      {"gotonextnode": 296, "showdialogue": "termit spary"},
+      {"gotonextnode": 296, "showdialogue": "beaver musk"}
     ]
   },
   {
@@ -1624,7 +2244,8 @@
     "displaycharacter": "Narrator",
     "displaybackground": "kitchen",
     "gotonextnode": 92,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"AMB_Cooking"
   },
   {
     "id": 90,
@@ -1690,7 +2311,8 @@
     "displaybackground": "kitchen",
     "gotonextnode": 84,
     "playanimation": "normal",
-    "increasecharacterscore": "ken"
+    "increasecharacterscore": "ken",
+    "playaudio":"AMB_Cooking"
   },
   {
     "id": 82,
@@ -1745,7 +2367,8 @@
     "displaycharacter": "allen",
     "displaybackground": "kitchen",
     "gotonextnode": 77,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio": "AMB_KenHutKitchen"
   },
   {
     "id": 75,
@@ -1785,7 +2408,8 @@
     "displaycharacter": "ken",
     "displaybackground": "lake",
     "gotonextnode": 72,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"AMB_KenPacking"
   },
   {
     "id": 70,
@@ -2208,7 +2832,8 @@
     "displaybackground": "mountain",
     "gotonextnode": 20,
     "playanimation": "normal",
-    "increasecharacterscore":"allen"
+    "increasecharacterscore":"allen",
+    "playaudio": "AMB_Forest"
   },
   {
     "id": 18,
@@ -2263,7 +2888,8 @@
     "displaycharacter": "Narrator",
     "displaybackground": "kens_house",
     "gotonextnode": 13,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"AMB_KenPacking"
   },
   {
     "id": 11,
@@ -2279,7 +2905,8 @@
     "displaycharacter": "Narrator",
     "displaybackground": "kitchen",
     "gotonextnode": 11,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"AMB_KenHutKitchen"
   },
   {
     "id": 9,
@@ -2351,6 +2978,7 @@
     "displaycharacter": "Narrator",
     "displaybackground": "under_the_ocean",
     "gotonextnode": 2,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio": "AMB_PoseidonAppearence"
   }
 ]

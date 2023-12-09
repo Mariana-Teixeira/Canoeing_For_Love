@@ -1,5 +1,6 @@
 using DialogueTree;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour, INodeSubscriber
 {
@@ -35,7 +36,8 @@ public class InputManager : MonoBehaviour, INodeSubscriber
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) ){
+        
+        if (Input.GetMouseButtonDown(0) && (EventSystem.current.currentSelectedGameObject == null || EventSystem.current.currentSelectedGameObject.name == "ButtonPrefab(Clone)")){
             if(vm.lineFinish){
                 invoker.AddCommand(command);
             }

@@ -40,6 +40,7 @@ public class DataFileHandler
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             int active = jsonObj["active"];
             headNode = jsonObj["loaders"][active]["node"];
+            Debug.Log(headNode);
             if (headNode==0){
                 headNode = 1;
             }
@@ -50,7 +51,7 @@ public class DataFileHandler
         return headNode;
     }
 
-     public void SaveGame(DialogueRuntimeTree tree, Camera cam, int KenScore, int AllenScore){
+     public void SaveGame(DialogueRuntimeTree tree, Camera cam, int KenScore, int AllenScore, bool close){
         // maybe refactor in the future, maybe not
         DataToSave d = new DataToSave();
         int kenneth = KenScore;
@@ -79,13 +80,14 @@ public class DataFileHandler
             
             
         }
-        Debug.Log(kenneth + " : " + allenboy);
         d.setNode(tree.data.guids.FirstOrDefault(x => x.Value == tree.CurrentNode.Guid).Key);
         string json = File.ReadAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json");
         dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+        
         int active = jsonObj["active"];
         // render and save screenshot
         RenderTexture screenTexture = new RenderTexture(Screen.width, Screen.height, 16);
+        var a = cam.targetTexture;
         cam.targetTexture = screenTexture;
         RenderTexture.active = screenTexture;
         cam.Render();
@@ -94,12 +96,15 @@ public class DataFileHandler
         RenderTexture.active = null;
         byte[] byteArray = renderedTexture.EncodeToPNG();
         File.WriteAllBytes("Assets/Resources/screens/image" + active + ".png", byteArray);
+        cam.targetTexture = a;
         // save game data: node and image
         jsonObj["loaders"][active]["node"] = d.getNode();
         jsonObj["loaders"][active]["image"] = "image" + active;
         jsonObj["loaders"][active]["kenScore"] = kenneth;
         jsonObj["loaders"][active]["allenScore"] = allenboy;
-        jsonObj["active"] = 10;
+        if(close){
+            jsonObj["active"] = 10;
+        }
         string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json", output);
     }

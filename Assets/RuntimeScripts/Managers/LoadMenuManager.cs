@@ -26,8 +26,8 @@ public class LoadMenuManager : MonoBehaviour
     [SerializeField] public Image img5;
     [SerializeField] public Image img6;
 
-    static string json = File.ReadAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json");
-    dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+    static string json;
+    dynamic jsonObj;
 
 
     // Start is called before the first frame update
@@ -42,6 +42,8 @@ public class LoadMenuManager : MonoBehaviour
     }
 
     void Update(){
+        json = File.ReadAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json");
+        jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
         if(jsonObj["loaders"][0]["image"]!="" && img1.sprite == null){
             Sprite image = Resources.Load<Sprite>("screens/" + jsonObj["loaders"][0]["image"]);
             img1.sprite = image;

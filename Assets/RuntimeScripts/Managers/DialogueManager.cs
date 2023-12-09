@@ -134,9 +134,14 @@ public class DialogueManager : NodePublisher
         inventory.NewInventory();
     }
 
-     public void SaveGame(){
+    public void SaveGame(){
         // dfh.SaveGame(tree, cam);
         inventory.SaveInventory(tree, cam);
+    }
+
+    public void SaveGameWithoutExit(){
+        // dfh.SaveGame(tree, cam);
+        inventory.SaveInventoryWithoutExit(tree, cam);
     }
 }
 

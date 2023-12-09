@@ -55,7 +55,6 @@ public class DialogueData
                 if (nametodisplay.Contains("_")){
                     nametodisplay = node.DisplayCharacter.Split("_")[0];
                 }
-                UnityEngine.Debug.Log(nametodisplay);
                 nametodisplay = string.Concat(nametodisplay[0].ToString().ToUpper(), nametodisplay.Substring(1));
                 hasher.Add(DialogueEvents.SHOW_NAMEPLATE, nametodisplay);
             }

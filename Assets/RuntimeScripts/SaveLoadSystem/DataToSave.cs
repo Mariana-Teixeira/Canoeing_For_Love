@@ -12,10 +12,13 @@ public class DataToSave{
 
     public int allenScore;
 
-    public DataToSave(int KenScore = 0, int AllenScore = 0){
+    public string img;
+
+    public DataToSave(int KenScore = 0, int AllenScore = 0, string image = ""){
         this.node = 1;
         this.allenScore = AllenScore;
         this.kenScore = KenScore;
+        this.img = image;
     }
 
     public void setNode(int n){

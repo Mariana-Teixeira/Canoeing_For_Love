@@ -22,6 +22,8 @@ public class MenuManager: MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetString("music", "on");
+        PlayerPrefs.SetString("sound", "on");
         newGameButton.onClick.AddListener(() => ManageButtons(0));
         resumeButton.onClick.AddListener(() => ManageButtons(1));
         creditButton.onClick.AddListener(() => ManageButtons(2));

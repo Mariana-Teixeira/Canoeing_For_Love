@@ -14,7 +14,7 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
 
     int kenScore = 0;
     int allenScore = 0;
-    int maxScore = 3;
+    int maxScore = 20;
 
     public int KenScore
     {
@@ -112,7 +112,11 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
     }
 
     public void SaveInventory(DialogueRuntimeTree tree, Camera cam){
-        dfh.SaveGame(tree, cam, kenScore, allenScore);
+        dfh.SaveGame(tree, cam, kenScore, allenScore, true);
+    }
+
+    public void SaveInventoryWithoutExit(DialogueRuntimeTree tree, Camera cam){
+        dfh.SaveGame(tree, cam, kenScore, allenScore, false);
     }
 
 
