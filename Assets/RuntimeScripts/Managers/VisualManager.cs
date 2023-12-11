@@ -87,7 +87,7 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     }
 
     void DisplayCharacter(string characterPath)
-    {
+    {   
         Sprite characterSprite = Resources.Load("characters/" + characterPath) as Sprite;
         characterPortrait.sprite = characterSprite;
     }

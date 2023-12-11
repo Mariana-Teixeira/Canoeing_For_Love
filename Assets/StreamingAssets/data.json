@@ -1,14 +1,14 @@
 {
   "loaders": [
     {
-      "node": 1,
+      "node": 10,
       "image": "image0",
       "kenScore": 0,
       "allenScore": 0
     },
     {
-      "node": 0,
-      "image": "",
+      "node": 13,
+      "image": "image1",
       "kenScore": 0,
       "allenScore": 0
     },

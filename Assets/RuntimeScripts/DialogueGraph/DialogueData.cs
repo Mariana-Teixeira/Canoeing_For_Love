@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using UnityEngine;
 
 public class DialogueData
 {
@@ -18,7 +19,7 @@ public class DialogueData
     
     public DialogueData()
     {
-        StreamReader reader = new StreamReader("Assets/GameData/test_dialogue.json");
+        StreamReader reader = new StreamReader(Path.Combine(Application.streamingAssetsPath, "test_dialogue.json"));
         var json = reader.ReadToEnd();
         List<DialogueNode> dialogueNodes = JsonConvert.DeserializeObject<List<DialogueNode>>(json);
 

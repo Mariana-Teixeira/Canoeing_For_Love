@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -29,10 +30,11 @@ public class LoadMenuManager : MonoBehaviour
     static string json;
     dynamic jsonObj;
 
-
+    
     // Start is called before the first frame update
     void Start()
     {
+        
         button1.onClick.AddListener(() => ManageButtons(0));
         button2.onClick.AddListener(() => ManageButtons(1));
         button3.onClick.AddListener(() => ManageButtons(2));
@@ -42,31 +44,55 @@ public class LoadMenuManager : MonoBehaviour
     }
 
     void Update(){
-        json = File.ReadAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json");
+        json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
         jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
         if(jsonObj["loaders"][0]["image"]!="" && img1.sprite == null){
-            Sprite image = Resources.Load<Sprite>("screens/" + jsonObj["loaders"][0]["image"]);
-            img1.sprite = image;
+            var imgData1 = File.ReadAllBytes(Path.Combine(Application.streamingAssetsPath, "image0.png"));
+            Texture2D tex = new Texture2D(2, 2);
+            Vector2 pivot = new Vector2(0.5f, 0.5f);
+            tex.LoadImage(imgData1);
+            Sprite sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), pivot, 100.0f);
+            img1.sprite = sprite;
         }
         if(jsonObj["loaders"][1]["image"]!="" && img2.sprite == null){
-            Sprite image = Resources.Load<Sprite>("screens/" + jsonObj["loaders"][1]["image"]);
-            img2.sprite = image;
+            var imgData2 = File.ReadAllBytes(Path.Combine(Application.streamingAssetsPath, "image1.png"));
+            Texture2D tex = new Texture2D(2, 2);
+            Vector2 pivot = new Vector2(0.5f, 0.5f);
+            tex.LoadImage(imgData2);
+            Sprite sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), pivot, 100.0f);
+            img2.sprite = sprite;
         }
         if(jsonObj["loaders"][2]["image"]!="" && img3.sprite == null){
-            Sprite image = Resources.Load<Sprite>("screens/" + jsonObj["loaders"][2]["image"]);
-            img3.sprite = image;
+            var imgData3 = File.ReadAllBytes(Path.Combine(Application.streamingAssetsPath, "image2.png"));
+            Texture2D tex = new Texture2D(2, 2);
+            Vector2 pivot = new Vector2(0.5f, 0.5f);
+            tex.LoadImage(imgData3);
+            Sprite sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), pivot, 100.0f);
+            img3.sprite = sprite;
         }
         if(jsonObj["loaders"][3]["image"]!="" && img4.sprite == null){
-            Sprite image = Resources.Load<Sprite>("screens/" + jsonObj["loaders"][3]["image"]);
-            img4.sprite = image;
+            var imgData4 = File.ReadAllBytes(Path.Combine(Application.streamingAssetsPath, "image3.png"));
+            Texture2D tex = new Texture2D(2, 2);
+            Vector2 pivot = new Vector2(0.5f, 0.5f);
+            tex.LoadImage(imgData4);
+            Sprite sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), pivot, 100.0f);
+            img4.sprite = sprite;
         }
         if(jsonObj["loaders"][4]["image"]!="" && img5.sprite == null){
-            Sprite image = Resources.Load<Sprite>("screens/" + jsonObj["loaders"][4]["image"]);
-            img5.sprite = image;
+            var imgData5 = File.ReadAllBytes(Path.Combine(Application.streamingAssetsPath, "image4.png"));
+            Texture2D tex = new Texture2D(2, 2);
+            Vector2 pivot = new Vector2(0.5f, 0.5f);
+            tex.LoadImage(imgData5);
+            Sprite sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), pivot, 100.0f);
+            img5.sprite = sprite;
         }
         if(jsonObj["loaders"][5]["image"]!="" && img6.sprite == null){
-            Sprite image = Resources.Load<Sprite>("screens/" + jsonObj["loaders"][5]["image"]);
-            img6.sprite = image;
+            var imgData6 = File.ReadAllBytes(Path.Combine(Application.streamingAssetsPath, "image5.png"));
+            Texture2D tex = new Texture2D(2, 2);
+            Vector2 pivot = new Vector2(0.5f, 0.5f);
+            tex.LoadImage(imgData6);
+            Sprite sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), pivot, 100.0f);
+            img6.sprite = sprite;
         }
     }
 
@@ -76,7 +102,7 @@ public class LoadMenuManager : MonoBehaviour
         // dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
         jsonObj["active"]= i;
         string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-        File.WriteAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json", output);
+        File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
         SceneManager.LoadScene(1);
     }
 }

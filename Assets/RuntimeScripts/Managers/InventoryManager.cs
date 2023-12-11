@@ -95,7 +95,7 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
 
     public void LoadInventory(){
         try{
-            string json = File.ReadAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json");
+            string json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             int active = jsonObj["active"];
             allenScore = jsonObj["loaders"][active]["allenScore"];

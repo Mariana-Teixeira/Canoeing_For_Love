@@ -11,7 +11,7 @@ public class DataFileHandler
 
     public void NewGame(){
         try{
-            string json = File.ReadAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json");
+            string json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             if(jsonObj["active"]==10){
                 Debug.Log("NEW GAME");
@@ -20,7 +20,7 @@ public class DataFileHandler
                     if(save["node"] == 0){
                         jsonObj["active"] = i;
                         string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-                        File.WriteAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json", output);
+                        File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
                         break;
                     }
                     i++;
@@ -36,7 +36,7 @@ public class DataFileHandler
     public int LoadGame(){
         int headNode = 0;
         try{
-            string json = File.ReadAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json");
+            string json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             int active = jsonObj["active"];
             headNode = jsonObj["loaders"][active]["node"];
@@ -81,7 +81,7 @@ public class DataFileHandler
             
         }
         d.setNode(tree.data.guids.FirstOrDefault(x => x.Value == tree.CurrentNode.Guid).Key);
-        string json = File.ReadAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json");
+        string json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
         dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
         
         int active = jsonObj["active"];
@@ -95,7 +95,7 @@ public class DataFileHandler
         renderedTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
         RenderTexture.active = null;
         byte[] byteArray = renderedTexture.EncodeToPNG();
-        File.WriteAllBytes("Assets/Resources/screens/image" + active + ".png", byteArray);
+        File.WriteAllBytes(Path.Combine(Application.streamingAssetsPath, "image" + active + ".png"), byteArray);
         cam.targetTexture = a;
         // save game data: node and image
         jsonObj["loaders"][active]["node"] = d.getNode();
@@ -106,6 +106,6 @@ public class DataFileHandler
             jsonObj["active"] = 10;
         }
         string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-        File.WriteAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json", output);
+        File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
     }
 }
