@@ -31,10 +31,8 @@ public class MenuManager: MonoBehaviour
     }
 
     public void ManageButtons(int i){
-        if (i == 0){
-            SceneManager.LoadScene(1);
-        }
-        else if (i == 1){
+        if (i == 0 || i == 1){
+            PlayerPrefs.SetInt("Previous Scene", 0);
             SceneManager.LoadScene(2);
         }
         else if (i == 2){

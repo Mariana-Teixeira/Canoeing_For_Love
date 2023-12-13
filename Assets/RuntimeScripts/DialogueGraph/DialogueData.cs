@@ -6,6 +6,7 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using UnityEngine;
+using System.Drawing.Printing;
 
 public class DialogueData
 {
@@ -94,6 +95,7 @@ public class DialogueData
             if (node.GoToPathNode != null)
             {
                 DialoguePath pathChoice;
+                UnityEngine.Debug.Log(node.GoToPathNode.GoToSecondaryNode);
                 if(node.GoToPathNode.GoToSecondaryNode>0){
                     pathChoice = new DialoguePath(guids[node.GoToPathNode.GoToPrimaryNode], guids[node.GoToPathNode.GoToSecondaryNode], guids[node.GoToPathNode.GoToBackupNode],node.GoToPathNode.Character, node.GoToPathNode.MinimumScore);
                 }

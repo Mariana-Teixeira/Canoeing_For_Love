@@ -1,38 +1,38 @@
 {
   "loaders": [
     {
-      "node": 10,
-      "image": "image0",
+      "node": 0,
+      "image": "",
+      "kenScore": 0,
+      "allenScore": 0
+    },
+    {
+      "node": 0,
+      "image": "",
+      "kenScore": 0,
+      "allenScore": 0
+    },
+    {
+      "node": 0,
+      "image": "",
+      "kenScore": 0,
+      "allenScore": 0
+    },
+    {
+      "node": 0,
+      "image": "",
+      "kenScore": 0,
+      "allenScore": 0
+    },
+    {
+      "node": 0,
+      "image": "",
       "kenScore": 0,
       "allenScore": 0
     },
     {
       "node": 13,
-      "image": "image1",
-      "kenScore": 0,
-      "allenScore": 0
-    },
-    {
-      "node": 0,
-      "image": "",
-      "kenScore": 0,
-      "allenScore": 0
-    },
-    {
-      "node": 0,
-      "image": "",
-      "kenScore": 0,
-      "allenScore": 0
-    },
-    {
-      "node": 0,
-      "image": "",
-      "kenScore": 0,
-      "allenScore": 0
-    },
-    {
-      "node": 0,
-      "image": "",
+      "image": "image5",
       "kenScore": 0,
       "allenScore": 0
     }

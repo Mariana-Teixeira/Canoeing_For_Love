@@ -59,3 +59,6 @@ TagManager:
   - name: Dialog
     uniqueID: 120259311
     locked: 0
+  - name: UiWarning
+    uniqueID: 1995683289
+    locked: 0

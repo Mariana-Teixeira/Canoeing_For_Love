@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 public class InputManager : MonoBehaviour, INodeSubscriber
 {
     VisualManager vm;
+
+    UIGameManager ui;
     DialogueManager treeManager;
     InputInvoker invoker;
     ICommand command;
@@ -32,12 +34,12 @@ public class InputManager : MonoBehaviour, INodeSubscriber
         command = new StartDialogueCommand(treeManager);
         invoker.AddCommand(command);
         vm = VisualManager.instanceVisual;
+        ui = UIGameManager.instance;
     }
 
     void Update()
     {
-        
-        if (Input.GetMouseButtonDown(0) && (EventSystem.current.currentSelectedGameObject == null || EventSystem.current.currentSelectedGameObject.name == "ButtonPrefab(Clone)")){
+        if (Input.GetMouseButtonDown(0) && (EventSystem.current.currentSelectedGameObject == null || EventSystem.current.currentSelectedGameObject.name == "ButtonPrefab(Clone)") && !ui.waitingOnUser){
             if(vm.lineFinish){
                 invoker.AddCommand(command);
             }

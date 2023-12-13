@@ -70,7 +70,6 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
         lineFinish = false;
         ToggleChoiceCanvas(false);
         StopAllCoroutines();
-    
         dialogueComponent.text = string.Empty;
         StartCoroutine(TypeLine(dialogue));  
     }
@@ -110,7 +109,7 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     void DisplayChoicesPanel(DialogueChoices[] choices)
     {
         StopAllCoroutines();
-        ToggleChoiceCanvas(true);
+        ToggleChoiceCanvas(boolean: true);
         StartCoroutine(choicePanel.GenerateChoices(choices));
     }
 

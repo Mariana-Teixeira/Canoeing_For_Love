@@ -100,6 +100,9 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
             int active = jsonObj["active"];
             allenScore = jsonObj["loaders"][active]["allenScore"];
             kenScore = jsonObj["loaders"][active]["kenScore"];
+            allenSlider.value = allenScore;
+            kenSlider.value = kenScore;
+
         }
         catch(Exception e){
             Debug.LogError(e);
