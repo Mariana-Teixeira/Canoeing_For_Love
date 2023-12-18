@@ -1,40 +1,46 @@
 {
   "loaders": [
     {
-      "node": 0,
-      "image": "",
+      "node": 213,
+      "image": "image0",
+      "kenScore": 4,
+      "allenScore": 1,
+      "items": ""
+    },
+    {
+      "node": 1,
+      "image": "image1",
       "kenScore": 0,
-      "allenScore": 0
+      "allenScore": 0,
+      "items": ""
     },
     {
       "node": 0,
       "image": "",
       "kenScore": 0,
-      "allenScore": 0
+      "allenScore": 0,
+      "items": ""
     },
     {
       "node": 0,
       "image": "",
       "kenScore": 0,
-      "allenScore": 0
+      "allenScore": 0,
+      "items": ""
     },
     {
       "node": 0,
       "image": "",
       "kenScore": 0,
-      "allenScore": 0
+      "allenScore": 0,
+      "items": ""
     },
     {
-      "node": 0,
-      "image": "",
-      "kenScore": 0,
-      "allenScore": 0
-    },
-    {
-      "node": 13,
+      "node": 299,
       "image": "image5",
       "kenScore": 0,
-      "allenScore": 0
+      "allenScore": 0,
+      "items": "red shell_termit spray_"
     }
   ],
   "active": 10

@@ -1,10 +1,1752 @@
 [
   {
+    "id": 585,
+    "showdialogue": "Yes, that's what you really want. To relax and not have to deal with people.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "under_the_ocean",
+    "gotonextnode": 0,
+    "playanimation": "normal"
+  },
+  {
+    "id": 584,
+    "showdialogue": "You get swollen by the water and start thinking about your life. It was a good life maybe the bottom of the sea will give you a calm life.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 585,
+    "playanimation": "normal"
+  },
+  {
+    "id": 583,
+    "showdialogue": "It's time to meet the bottom of the sea!",
+    "displaycharacter": "poseidon",
+    "displaybackground": "town_center",
+    "gotonextnode": 584,
+    "playanimation": "normal"
+  },
+  {
+    "id": 5582,
+    "showdialogue": "Mission failed and you won't get a next time.",
+    "displaycharacter": "poseidon",
+    "displaybackground": "town_center",
+    "gotonextnode": 583,
+    "playanimation": "normal"
+  },
+  {
+    "id": 581,
+    "showdialogue": "Mortal. You did not complete your mission.",
+    "displaycharacter": "poseidon",
+    "displaybackground": "town_center",
+    "gotonextnode": 5582,
+    "playanimation": "normal"
+  },
+  {
+    "id": 580,
+    "showdialogue": "In the background, you start to see the water sway violently. It makes a water tornado and Poseiden comes forward.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 581,
+    "playanimation": "normal"
+  },
+  {
+    "id": 579,
+    "showdialogue": "You are mortified. You thought it wrong clearly.",
+    "displaycharacter": "ken",
+    "displaybackground": "town_center",
+    "gotonextnode": 580,
+    "playanimation": "normal"
+  },
+  {
+    "id": 578,
+    "showdialogue": "My canoes come first.",
+    "displaycharacter": "ken",
+    "displaybackground": "town_center",
+    "gotonextnode": 579,
+    "playanimation": "normal"
+  },
+  {
+    "id": 577,
+    "showdialogue": "You are really nice but I believe we are not meant to be. I don't want to hurt you but I don't see us together.",
+    "displaycharacter": "ken",
+    "displaybackground": "town_center",
+    "gotonextnode": 578,
+    "playanimation": "normal"
+  },
+  {
+    "id": 576,
+    "showdialogue": "I don't think you understand me and my love for canoes. I think we are better off as friends.",
+    "displaycharacter": "ken",
+    "displaybackground": "town_center",
+    "gotonextnode": 577,
+    "playanimation": "normal"
+  },
+  {
+    "id": 575,
+    "showdialogue": "But I don't think that is true...",
+    "displaycharacter": "ken",
+    "displaybackground": "town_center",
+    "gotonextnode": 576,
+    "playanimation": "normal"
+  },
+  {
+    "id": 574,
+    "showdialogue": "This is the end you wanted, finding a new place to be yourself even if it's among half-merman.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 0,
+    "playanimation": "normal"
+  },
+  {
+    "id": 573,
+    "showdialogue": "Overwhelmed, but you still reciprocate the kiss.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 574,
+    "playanimation": "normal"
+  },
+  {
+    "id": 572,
+    "showdialogue": "Ken is excited and kisses you.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 573,
+    "playanimation": "normal"
+  },
+  {
+    "id": 571,
+    "showdialogue": "You look with fondness in your eye and now.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 572,
+    "playanimation": "normal"
+  },
+  {
+    "id": 570,
+    "showdialogue": "You take a moment to digest this new information. And suddenly remember the person that saved you has a tail. So it wasn't a dream it really was Ken the merman.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 571,
+    "playanimation": "normal"
+  },
+  {
+    "id": 569,
+    "showdialogue": "Do you still want to be with me?",
+    "displaycharacter": "ken_shy",
+    "displaybackground": "town_center",
+    "gotonextnode": 570,
+    "playanimation": "normal"
+  },
+  {
+    "id": 568,
+    "showdialogue": "That's why I always have to be near water and love canoes so much. It fascinates me how humans invented another to travel across the water.",
+    "displaycharacter": "ken",
+    "displaybackground": "town_center",
+    "gotonextnode": 569,
+    "playanimation": "normal"
+  },
+  {
+    "id": 567,
+    "showdialogue": "I'm a Merman, well technically half-merman. My mother was human but my dad was a merman.",
+    "displaycharacter": "ken",
+    "displaybackground": "town_center",
+    "gotonextnode": 568,
+    "playanimation": "normal"
+  },
+  {
+    "id": 566,
+    "showdialogue": "I'm still the same person... just maybe not the same species...",
+    "displaycharacter": "ken_shy",
+    "displaybackground": "town_center",
+    "gotonextnode": 567,
+    "playanimation": "normal"
+  },
+  {
+    "id": 565,
+    "showdialogue": "But if you want to stay with me you need to know something.",
+    "displaycharacter": "ken_shy",
+    "displaybackground": "town_center",
+    "gotonextnode": 566,
+    "playanimation": "normal"
+  },
+  {
+    "id": 564,
+    "showdialogue": "And you are the river to my canoe.",
+    "displaycharacter": "ken_shy",
+    "displaybackground": "town_center",
+    "gotonextnode": 565,
+    "playanimation": "normal"
+  },
+  {
+    "id": 563,
+    "showdialogue": "Oh.. oh! Thank you...",
+    "displaycharacter": "ken_shy",
+    "displaybackground": "town_center",
+    "gotopathnode": {"gotoprimarynode": 564, "gotobackupnode": 575, "character":"ken", "minimumscore": 10},
+    "playanimation": "normal"
+  },
+  {
+    "id": 562,
+    "showdialogue": "'You are my person. You are the beginning and the end.'",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 563,
+    "playanimation": "normal"
+  },
+  {
+    "id": 561,
+    "showdialogue": "You shake your head and finally say the words.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 562,
+    "playanimation": "normal"
+  },
+  {
+    "id": 560,
+    "showdialogue": "Why are you staring? Do I have something on my face?",
+    "displaycharacter": "ken_shy",
+    "displaybackground": "town_center",
+    "gotonextnode": 561,
+    "playanimation": "normal"
+  },
+  {
+    "id": 559,
+    "showdialogue": "But you don't find anything.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 560,
+    "playanimation": "normal"
+  },
+  {
+    "id": 558,
+    "showdialogue": "You smile at him for a bit while searching his face for any signs that you could have been wrong.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 559,
+    "playanimation": "normal"
+  },
+  {
+    "id": 557,
+    "showdialogue": "Today was fun thank you for participating. I lost you among the crowd for a bit. What's up?",
+    "displaycharacter": "ken",
+    "displaybackground": "town_center",
+    "gotonextnode": 558,
+    "playanimation": "normal"
+  },
+  {
+    "id": 556,
+    "showdialogue": "You nod your head to the side and Ken understands you want to talk alone.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 557,
+    "playanimation": "normal"
+  },
+  {
+    "id": 555,
+    "showdialogue": "You find him and make eye contact across the crowd. You both smile.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 556,
+    "playanimation": "normal"
+  },
+  {
+    "id": 554,
+    "showdialogue": "With a smile on your face, you go searching for Ken in the middle of the crowd of people celebrating.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 555,
+    "playanimation": "normal"
+  },
+  {
+    "id": 553,
+    "showdialogue": "You only need to think for a moment because the answer has already been there since the beginning when he saved you.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 554,
+    "playanimation": "normal"
+  },
+  {
+    "id": 552,
+    "showdialogue": "Yes, that's what you really want. To relax and not have to deal with people.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "under_the_ocean",
+    "gotonextnode": 0,
+    "playanimation": "normal"
+  },
+  {
+    "id": 551,
+    "showdialogue": "That's the last words as you get pulled into the water and lose yourself.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "under_the_ocean",
+    "gotonextnode": 552,
+    "playanimation": "normal"
+  },
+  {
+    "id": 550,
+    "showdialogue": "'I curse you! All of you! None shall have peaceful waters, you shall not pass! You won't canoe in my waters!'",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 551,
+    "playanimation": "normal"
+  },
+  {
+    "id": 549,
+    "showdialogue": "So before you lose yourself, you scream.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 550,
+    "playanimation": "normal"
+  },
+  {
+    "id": 548,
+    "showdialogue": "You plead but nothing comes of it.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 549,
+    "playanimation": "normal"
+  },
+  {
+    "id": 547,
+    "showdialogue": "No more mortal! Stop resisting, this is your fate!",
+    "displaycharacter": "poseidon",
+    "displaybackground": "black",
+    "gotonextnode": 548,
+    "playanimation": "normal"
+  },
+  {
+    "id": 546,
+    "showdialogue": "No that's not what you want! You want to make that excuse of man suffer like he did to you.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 547,
+    "playanimation": "normal"
+  },
+  {
+    "id": 545,
+    "showdialogue": "You get swollen by the water and start thinking about your life. It was a good life maybe the bottom of the sea will give you a calm life.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "black",
+    "gotonextnode": 546,
+    "playanimation": "normal"
+  },
+  {
+    "id": 544,
+    "showdialogue": "It's time to meet the bottom of the sea!",
+    "displaycharacter": "poseidon",
+    "displaybackground": "town_center",
+    "gotonextnode": 545,
+    "playanimation": "normal"
+  },
+  {
+    "id": 543,
+    "showdialogue": "Mission failed and you won't get a next time.",
+    "displaycharacter": "poseidon",
+    "displaybackground": "town_center",
+    "gotonextnode": 544,
+    "playanimation": "normal"
+  },
+  {
+    "id": 542,
+    "showdialogue": "Mortal. You did not complete your mission.",
+    "displaycharacter": "poseidon",
+    "displaybackground": "town_center",
+    "gotonextnode": 543,
+    "playanimation": "normal"
+  },
+  {
+    "id": 541,
+    "showdialogue": "In the background, you start to see the water sway violently. It makes a water tornado and Poseiden comes forward.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 542,
+    "playanimation": "normal"
+  },
+  {
+    "id": 540,
+    "showdialogue": "How could you have read the situation wrong? He has a resting bitch face, but you thought the spark in his eyes where for you.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 541,
+    "playanimation": "normal"
+  },
+  {
+    "id": 539,
+    "showdialogue": "You are mortified. You got your heart out and now it's broken.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 540,
+    "playanimation": "normal"
+  },
+  {
+    "id": 538,
+    "showdialogue": "But sorry not sorry, I only love my cow. She understands me when I run and keeps up.",
+    "displaycharacter": "allen",
+    "displaybackground": "town_center",
+    "gotonextnode": 539,
+    "playanimation": "normal"
+  },
+  {
+    "id": 537,
+    "showdialogue": "It's not your fault that you thought I was the best in your eyes. I'm surprised it took this long. ",
+    "displaycharacter": "allen",
+    "displaybackground": "town_center",
+    "gotonextnode": 538,
+    "playanimation": "normal"
+  },
+  {
+    "id": 536,
+    "showdialogue": "You can't even run properly. I need someone who understands my need to win to be perfect.",
+    "displaycharacter": "allen",
+    "displaybackground": "town_center",
+    "gotonextnode": 537,
+    "playanimation": "normal"
+  },
+  {
+    "id": 535,
+    "showdialogue": "Not good enough for me. ",
+    "displaycharacter": "allen",
+    "displaybackground": "town_center",
+    "gotonextnode": 536,
+    "playanimation": "normal"
+  },
+  {
+    "id": 534,
+    "showdialogue": "But... I think you are ... ",
+    "displaycharacter": "allen_shy",
+    "displaybackground": "town_center",
+    "gotonextnode": 535,
+    "playanimation": "normal"
+  },
+  {
+    "id": 533,
+    "showdialogue": "Now I don't have to fear that I'm not the one in your mind. You choose over Ken, over everyone else and for me that is the best feeling... so thank you.",
+    "displaycharacter": "allen",
+    "displaybackground": "town_center",
+    "gotonextnode": 0,
+    "playanimation": "normal"
+  },
+  {
+    "id": 532,
+    "showdialogue": "Let's get out of here. Now it's time to finally get to know each other.",
+    "displaycharacter": "allen",
+    "displaybackground": "town_center",
+    "gotonextnode": 533,
+    "playanimation": "normal"
+  },
+  {
+    "id": 531,
+    "showdialogue": "If that is your way to shut me up,... I... I won't mind.",
+    "displaycharacter": "allen_shy",
+    "displaybackground": "town_center",
+    "gotonextnode": 532,
+    "playanimation": "normal"
+  },
+  {
+    "id": 530,
+    "showdialogue": "Allen is shocked for a few moments but reciprocates immediately.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 531,
+    "playanimation": "normal"
+  },
+  {
+    "id": 529,
+    "showdialogue": "You smile and nod back at him. He keeps talking so to shut him up and get his full attention you grab his face and kiss him.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 530,
+    "playanimation": "normal"
+  },
+  {
+    "id": 528,
+    "showdialogue": "But he is yours, and in the end, you would do all that just to spend more time with him.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 529,
+    "playanimation": "normal"
+  },
+  {
+    "id": 527,
+    "showdialogue": "Well, the beginning sounds good, but as he goes on, you think about all the exercise you're going to have to endure. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 528,
+    "playanimation": "normal"
+  },
+  {
+    "id": 526,
+    "showdialogue": "Does that mean you would like to stay with me? Run marathons together? Improve yourself in order to be the best?",
+    "displaycharacter": "allen_shy",
+    "displaybackground": "town_center",
+    "gotonextnode": 527,
+    "playanimation": "normal"
+  },
+  {
+    "id": 525,
+    "showdialogue": "But... I also think you are ... great.",
+    "displaycharacter": "allen_shy",
+    "displaybackground": "town_center",
+    "gotonextnode": 526,
+    "playanimation": "normal"
+  },
+  {
+    "id": 5524,
+    "showdialogue": "Oh.. oh! I knew that! Of course, you would fall for my charms! I'm a great catch.",
+    "displaycharacter": "allen_shy",
+    "displaybackground": "town_center",
+    "gotopathnode": {"gotoprimarynode": 525, "gotobackupnode": 534, "character":"allen", "minimumscore": 10},
+    "playanimation": "normal"
+  },
+  {
+    "id": 524,
+    "showdialogue": "'You are my person. Despite all the ups and downs, you are my final destination.'",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 5524,
+    "playanimation": "normal"
+  },
+  {
+    "id": 523,
+    "showdialogue": "So what was it that you were trying to say?",
+    "displaycharacter": "allen",
+    "displaybackground": "town_center",
+    "gotonextnode": 524,
+    "playanimation": "normal"
+  },
+  {
+    "id": 522,
+    "showdialogue": "Well apparently your hand genters would equal to a crazy chicken dance somehow, but you got Allen to go with you alone. So that's a victory in your book.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 523,
+    "playanimation": "normal"
+  },
+  {
+    "id": 521,
+    "showdialogue": "You know what it's too crowded here let's go to a quieter place.",
+    "displaycharacter": "allen",
+    "displaybackground": "town_center",
+    "gotonextnode": 522,
+    "playanimation": "normal"
+  },
+  {
+    "id": 520,
+    "showdialogue": "What were you trying to do with your hand?",
+    "displaycharacter": "allen",
+    "displaybackground": "town_center",
+    "gotonextnode": 521,
+    "playanimation": "normal"
+  },
+  {
+    "id": 519,
+    "showdialogue": "He doesn't seem to get it at first, so you cross the crowd. You get hit by a few elbows and some stomps but manage. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 520,
+    "playanimation": "normal"
+  },
+  {
+    "id": 518,
+    "showdialogue": "You make hand gestures to convey that you want to talk to him on the side.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 519,
+    "playanimation": "normal"
+  },
+  {
+    "id": 517,
+    "showdialogue": "You find him and make eye contact across the crowd. He doesn't smile but at least he doesn't make a disgusted face.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 518,
+    "playanimation": "normal"
+  },
+  {
+    "id": 516,
+    "showdialogue": "With a smile on your face, you go searching for Allen in the middle of the crowd of people celebrating.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 517,
+    "playanimation": "normal"
+  },
+  {
+    "id": 515,
+    "showdialogue": "You only need to think for a moment because the answer has already been there since the beginning when he saved you.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode":516,
+    "playanimation": "normal"
+  },
+  {
+    "id": 514,
+    "showchoicepanel":[
+      {"gotonextnode": 515, "showdialogue": "Allen"},
+      {"gotonextnode": 553, "showdialogue": "Ken"}
+    ]
+  },
+  {
+    "id": 513,
+    "showdialogue": "Who is the one for you?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 514,
+    "playanimation": "normal"
+  },
+  {
+    "id": 512,
+    "showdialogue": "Oh no, the dead line is almost over. Now is the time to make the final decision.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 513,
+    "playanimation": "normal"
+  },
+  {
+    "id": 511,
+    "showdialogue": "You start to get a headache and an ominous feeling starts to take over.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 512,
+    "playanimation": "normal"
+  },
+  {
+    "id": 5510,
+    "showdialogue": "You go to the side to get a minute for yourself. It's been 4 days exactly since this whole adventure started.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 511,
+    "playanimation": "normal"
+  },
+  {
+    "id": 510,
+    "showdialogue": "It all passes in a blur, the finish line, the cheering, the awards ceremony. It's all too much.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 5510,
+    "playanimation": "normal"
+  },
+  {
+    "id": 509,
+    "showdialogue": "Everyone around you seems to also not care who won, they just want to spend time celebrating.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 510,
+    "playanimation": "normal"
+  },
+  {
+    "id": 508,
+    "showdialogue": "You enjoyed the excitement and the thrill of it all. It was an adventure of a lifetime. Coldplay could be playing right now but copyright is a serious issue.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 509,
+    "playanimation": "normal"
+  },
+  {
+    "id": 507,
+    "showdialogue": "You won! You can hardly believe it.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 508,
+    "playanimation": "normal",
+    "increasecharacterscore":"ken"
+  },
+  {
+    "id": 506,
+    "showdialogue": "You won! You can hardly believe it.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 508,
+    "playanimation": "normal",
+    "increasecharacterscore":"allen"
+  },
+  {
+    "id": 505,
+    "showdialogue": "Everyone around you seems to also not care, they just want to spend time celebrating.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 510,
+    "playanimation": "normal"
+  },
+  {
+    "id": 504,
+    "showdialogue": "You don't get too sad about it, you enjoyed the excitement and the thrill of the race.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 505,
+    "playanimation": "normal"
+  },
+  {
+    "id": 503,
+    "showdialogue": "Despite your best efforts you didn't manage to win the race.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 504,
+    "playanimation": "normal",
+    "decreasecharacterscore":"ken"
+  },
+  {
+    "id": 502,
+    "showdialogue": "Despite your best efforts you didn't manage to win the race.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "town_center",
+    "gotonextnode": 504,
+    "playanimation": "normal",
+    "decreasecharacterscore":"allen"
+  },
+  {
+    "id": 501,
+    "showdialogue": "Let's finish this race and celebrate!",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotopathnode": {"gotoprimarynode": 503, "gotobackupnode": 507, "character": "check_ken"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 500,
+    "showdialogue": "You brought along a nut bar! Those are perfect for a strength boost.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 501,
+    "playanimation": "normal"
+  },
+  {
+    "id": 499,
+    "showdialogue": "You look in your bag and take out a nut bar, maybe food will give the final boost to win.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 500,
+    "playanimation": "normal"
+  },
+  {
+    "id": 498,
+    "showdialogue": "There needs to be just a final push.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 499,
+    "playanimation": "normal"
+  },
+  {
+    "id": 497,
+    "showdialogue": "Ken and Allen are head-to-head. Who will win?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 498,
+    "playanimation": "normal"
+  },
+  {
+    "id": 496,
+    "showdialogue": "The finish line is just ahead.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 497,
+    "playanimation": "normal",
+    "increasecharacterscore":"ken"
+  },
+  {
+    "id": 495,
+    "showdialogue": "We should have cake when we finish the race not now. Let's finish this race.",
+    "displaycharacter": "ken_sad",
+    "displaybackground": "water_rapids3",
+    "gotopathnode": {"gotoprimarynode": 503, "gotobackupnode": 507, "character": "check_ken"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 494,
+    "showdialogue": "A cake pop! How is that going to help?",
+    "displaycharacter": "ken_sad",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 495,
+    "playanimation": "normal"
+  },
+  {
+    "id": 493,
+    "showdialogue": "You look in your bag and take out a cake pop, maybe food will give the final boost to win.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 494,
+    "playanimation": "normal"
+  },
+  {
+    "id": 492,
+    "showdialogue": "There needs to be just a final push.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 493,
+    "playanimation": "normal"
+  },
+  {
+    "id": 491,
+    "showdialogue": "Ken and Allen are head-to-head. Who will win?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 492,
+    "playanimation": "normal"
+  },
+  {
+    "id": 490,
+    "showdialogue": "The finish line is just ahead.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 491,
+    "playanimation": "normal",
+    "decreasecharacterscore":"ken"
+  },
+  {
+    "id": 489,
+    "showdialogue": "No, my canoe!",
+    "displaycharacter": "ken_sad",
+    "displaybackground": "water_rapids2",
+    "gotopathnode": {"gotoprimarynode": 490, "gotobackupnode": 496, "character": "item_cake pop"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 488,
+    "showdialogue": "It does the trick but now you still have termites trying to eat your canoe and a piece of the canoe missing.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 489,
+    "playanimation": "normal"
+  },
+  {
+    "id": 487,
+    "showdialogue": "In your panic to solve this new problem you stop rowing and wave your paddle around to scare the beavers away.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 488,
+    "playanimation": "normal"
+  },
+  {
+    "id": 486,
+    "showdialogue": "Well, no of course not. One of the beaver get close enough and takes a bite out of the canoe.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 487,
+    "playanimation": "normal"
+  },
+  {
+    "id": 485,
+    "showdialogue": "Will this turn out to be like a snow-white story and the beavers help push the canoe?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 486,
+    "playanimation": "normal"
+  },
+  {
+    "id": 484,
+    "showdialogue": "When you finished using it there was a horrible smell now. And it seems the nearby beavers are coming for you. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 485,
+    "playanimation": "normal"
+  },
+  {
+    "id": 483,
+    "showdialogue": "You remember that Sello sold you some spray. You look through your bag again and find it.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 484,
+    "playanimation": "normal"
+  },
+  {
+    "id": 482,
+    "showdialogue": "This must be Allen's doing. We have to fix this!",
+    "displaycharacter": "ken",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 483,
+    "playanimation": "normal"
+  },
+  {
+    "id": 481,
+    "showdialogue": "How has this happened? I always take excellent care of the wood and even do treatments for it. Like how some people use skincare I do wood care.",
+    "displaycharacter": "ken_sad",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 482,
+    "playanimation": "normal"
+  },
+  {
+    "id": 480,
+    "showdialogue": "You tell Ken about this.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 481,
+    "playanimation": "normal"
+  },
+  {
+    "id": 479,
+    "showdialogue": "As you keep rowing you feel something in your leg. You look down and see some termites in the canoe and they are doing real damage. If the holes that are rapidly forming are any indicative.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 480,
+    "playanimation": "normal"
+  },
+  {
+    "id": 478,
+    "showdialogue": "You seem to be on a roll but Allen seems to catch up really quickly.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 479,
+    "playanimation": "normal",
+    "decreasecharacterscore":"ken"
+  },
+  {
+    "id": 477,
+    "showdialogue": "You're a canoe saver! Just a little bit more till the finish line.",
+    "displaycharacter": "ken",
+    "displaybackground": "water_rapids2",
+    "gotopathnode": {"gotoprimarynode": 490, "gotobackupnode": 496, "character": "item_cake pop"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 476,
+    "showdialogue": "When you finish using it, it prevents your canoe from getting any real damage.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 477,
+    "playanimation": "normal"
+  },
+  {
+    "id": 475,
+    "showdialogue": "You remember that Sello did have termite spray. You look through your bag again and find it.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 476,
+    "playanimation": "normal"
+  },
+  {
+    "id": 474,
+    "showdialogue": "This must be Allen's doing. We have to fix this!",
+    "displaycharacter": "ken",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 475,
+    "playanimation": "normal"
+  },
+  {
+    "id": 473,
+    "showdialogue": "How has this happened? I always take excellent care of the wood and even do treatments for it. Like how some people use skincare I do wood care.",
+    "displaycharacter": "ken_sad",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 474,
+    "playanimation": "normal"
+  },
+  {
+    "id": 472,
+    "showdialogue": "You tell Ken about this.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 473,
+    "playanimation": "normal"
+  },
+  {
+    "id": 471,
+    "showdialogue": "As you keep rowing you feel something in your leg. You look down and see some termites in the canoe and they are doing real damage. If the holes that are rapidly forming are any indicative.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 472,
+    "playanimation": "normal"
+  },
+  {
+    "id": 470,
+    "showdialogue": "You seem to be on a roll but Allen seems to catch up really quickly.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 471,
+    "playanimation": "normal",
+    "increasecharacterscore":"ken"
+  },
+  {
+    "id": 469,
+    "showdialogue": "You should focus on rowing and not playing with the turtles. I thought you liked rowing with me.",
+    "displaycharacter": "ken_sad",
+    "displaybackground": "water_rapids",
+    "gotopathnode": {"gotoprimarynode": 470, "gotobackupnode": 478, "character": "item_termit spray"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 468,
+    "showdialogue": "Well... you throw but it just sinks. At least that's less weight on the canoe.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 469,
+    "playanimation": "normal"
+  },
+  {
+    "id": 467,
+    "showdialogue": "You see the green shell Sello sold you on the first day. You're not sure how this might help but you throw it anyways.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 468,
+    "playanimation": "normal"
+  },
+  {
+    "id": 466,
+    "showdialogue": "You want to help so you look in your bag for something.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 467,
+    "playanimation": "normal"
+  },
+  {
+    "id": 465,
+    "showdialogue": "Ken doesn't look bothered that it's only him and Allen. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 466,
+    "playanimation": "normal",
+    "decreasecharacterscore":"ken"
+  },
+  {
+    "id": 464,
+    "showdialogue": "It looks like we're making progress. Let's keep it up!",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotopathnode": {"gotoprimarynode": 470, "gotobackupnode": 478, "character": "item_termit spray"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 463,
+    "showdialogue": "It does indeed hit Allen and slows him down a bit. You hear him curse at you. You get concerned, should a person be able to turn that shade of red?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 464,
+    "playanimation": "normal"
+  },
+  {
+    "id": 462,
+    "showdialogue": "As soon as you let go, the shell starts making noises and goes towards Allen, like the gods have said 'This will strike true!'.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 463,
+    "playanimation": "normal"
+  },
+  {
+    "id": 461,
+    "showdialogue": "You see the red shell Sello sold you on the first day. You're not sure how this might help but you throw it anyways.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 462,
+    "playanimation": "normal"
+  },
+  {
+    "id": 460,
+    "showdialogue": "You want to help so you look in your bag for something.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 461,
+    "playanimation": "normal"
+  },
+  {
+    "id": 459,
+    "showdialogue": "Ken doesn't look bothered that it's only him and Allen.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 460,
+    "playanimation": "normal"
+  },
+  {
+    "id": 458,
+    "showdialogue": "Things are about to get serious.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotopathnode": {"gotoprimarynode": 459, "gotobackupnode": 465, "character": "item_red shell"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 457,
+    "showdialogue": "The other participants seem to be left behind, it's only you and Ken versus Allen.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 458,
+    "playanimation": "normal"
+  },
+  {
+    "id": 456,
+    "showdialogue": "The race starts, and it's all very hectic. But you keep focus.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 457,
+    "playanimation": "normal"
+  },
+  {
+    "id": 455,
+    "showdialogue": "Boom.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 456,
+    "playanimation": "normal"
+  },
+  {
+    "id": 454,
+    "showdialogue": "So... You also yell out Jason Derulo. Maybe it was a tradition for Ken when competing? Who knows, but he's smiling back at you and seems confident.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 455,
+    "playanimation": "normal"
+  },
+  {
+    "id": 453,
+    "showdialogue": "Of all the things Ken could have said, that was one you had not expected. Since when was Ken a fan of Jason Derulo??",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 454,
+    "playanimation": "normal"
+  },
+  {
+    "id": 452,
+    "showdialogue": "Jason Deluroooooooooo!",
+    "displaycharacter": "ken",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 453,
+    "playanimation": "normal"
+  },
+  {
+    "id": 451,
+    "showdialogue": "Ok, let's do this then! But.. before we start we need to yell a battle cry.",
+    "displaycharacter": "ken",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 452,
+    "playanimation": "normal"
+  },
+  {
+    "id": 450,
+    "showdialogue": "You and Ken get the canoe to the starting lineup.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 451,
+    "playanimation": "normal"
+  },
+  {
+    "id": 449,
+    "showdialogue": "You nod and smile. It's not what you had in mind, but now you are determined to see this through!",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 450,
+    "playanimation": "normal"
+  },
+  {
+    "id": 448,
+    "showdialogue": "Are you sure about this? I don't want to pressure you.",
+    "displaycharacter": "ken",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 449,
+    "playanimation": "normal"
+  },
+  {
+    "id": 447,
+    "showdialogue": "Ok, everything is set up, now we get in the canoe and go to the lineup.",
+    "displaycharacter": "ken",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 448,
+    "playanimation": "normal"
+  },
+  {
+    "id": 446,
+    "showdialogue": "You can hardly believe what you got yourself mixed up in",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 447,
+    "playanimation": "normal"
+  },
+  {
+    "id": 445,
+    "showdialogue": "You help Ken get ready for the race.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 446,
+    "playanimation": "normal",
+    "increasecharacterscore":"ken"
+  },
+  {
+    "id": 444,
+    "showdialogue": "You are slilty hurt by his actions but focus on the race nonhteless. The finish line is just ahead.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotopathnode": {"gotoprimarynode": 502, "gotobackupnode": 506, "character": "check_allen"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 443,
+    "showdialogue": "Allen slaps your hand and the bar does flying into the river.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 444,
+    "playanimation": "normal"
+  },
+  {
+    "id": 442,
+    "showdialogue": "You brought along a nut bar! Are you crazy? Take that away from me! I'm allergic!",
+    "displaycharacter": "allen_angry",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 443,
+    "playanimation": "normal"
+  },
+  {
+    "id": 441,
+    "showdialogue": "You look in your bag and take out a cake pop, maybe food will give the final boost in order to win.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 442,
+    "playanimation": "normal"
+  },
+  {
+    "id": 440,
+    "showdialogue": "There needs to be just a final push.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 441,
+    "playanimation": "normal"
+  },
+  {
+    "id": 439,
+    "showdialogue": "Ken and Allen are head-to-head. Who will win?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 440,
+    "playanimation": "normal"
+  },
+  {
+    "id": 438,
+    "showdialogue": "The finish line is just ahead.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 439,
+    "playanimation": "normal",
+    "decreasecharacterscore":"allen"
+  },
+  {
+    "id": 437,
+    "showdialogue": "You brought along a cake pop! Those are my favourite food to give a final push. Thank you! Let's finish this race!",
+    "displaycharacter": "allen",
+    "displaybackground": "water_rapids3",
+    "gotopathnode": {"gotoprimarynode": 502, "gotobackupnode": 506, "character": "check_allen"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 436,
+    "showdialogue": "You look in your bag and take out a cake pop, maybe food will give the final boost in order to win.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 437,
+    "playanimation": "normal"
+  },
+  {
+    "id": 435,
+    "showdialogue": "There needs to be just a final push.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 436,
+    "playanimation": "normal"
+  },
+  {
+    "id": 434,
+    "showdialogue": "Ken and Allen are head-to-head. Who will win?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 435,
+    "playanimation": "normal"
+  },
+  {
+    "id": 433,
+    "showdialogue": "The finish line is just ahead.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids3",
+    "gotonextnode": 434,
+    "playanimation": "normal",
+    "increasecharacterscore":"allen"
+  },
+  {
+    "id": 432,
+    "showdialogue": "Why did you do that! Now we are worse and KEN HAS A CHANCE TO WIN!",
+    "displaycharacter": "allen_angry",
+    "displaybackground": "water_rapids2",
+    "gotopathnode": {"gotoprimarynode": 433, "gotobackupnode": 438, "character": "item_cake pop"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 431,
+    "showdialogue": "It does the trick but now you still have termites trying to eat your canoe and a piece of the canoe missing.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 432,
+    "playanimation": "normal"
+  },
+  {
+    "id": 430,
+    "showdialogue": "In your panic to solve this new problem you stop rowing and wave you paddle around to scare the beavers away.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 431,
+    "playanimation": "normal"
+  },
+  {
+    "id": 429,
+    "showdialogue": "Well, no of course not. You of the beaver gets close enough and takes a bite out of the canoe.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 430,
+    "playanimation": "normal"
+  },
+  {
+    "id": 428,
+    "showdialogue": "Will this turn out to be like a snow-white story and the beavers help push the canoe?",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 429,
+    "playanimation": "normal"
+  },
+  {
+    "id": 427,
+    "showdialogue": "You finished using it. There is a horrible smell now. And it seems the nearby beavers are coming for you. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 428,
+    "playanimation": "normal"
+  },
+  {
+    "id": 426,
+    "showdialogue": "You remember that Sello sold you some spray. You look through you bag again and find it.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 427,
+    "playanimation": "normal"
+  },
+  {
+    "id": 425,
+    "showdialogue": "These should be in Ken's canoe maybe some got stuck on my cloths. We got to fix this!",
+    "displaycharacter": "allen",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 426,
+    "playanimation": "normal"
+  },
+  {
+    "id": 424,
+    "showdialogue": "Damn it! I was careless.",
+    "displaycharacter": "allen_angry",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 425,
+    "playanimation": "normal"
+  },
+  {
+    "id": 423,
+    "showdialogue": "You tell Allen about this.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 424,
+    "playanimation": "normal"
+  },
+  {
+    "id": 422,
+    "showdialogue": "As you keep rowing you feel something in your leg. You look down and see some termite in the canoe and they are doing real damages. If the holes that are rapidly forming are any indicative.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 423,
+    "playanimation": "normal"
+  },
+  {
+    "id": 421,
+    "showdialogue": "You seem to be on a roll but Ken seems to catch up really quickly.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 422,
+    "playanimation": "normal",
+    "decreasecharacterscore":"allen"
+  },
+  {
+    "id": 420,
+    "showdialogue": "Good job! Just a little bit more till the finish line.",
+    "displaycharacter": "allen",
+    "displaybackground": "water_rapids2",
+    "gotopathnode": {"gotoprimarynode": 433, "gotobackupnode": 438, "character": "item_cake pop"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 419,
+    "showdialogue": "When you finished using it prevented from your canoe getting any real damage.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 420,
+    "playanimation": "normal"
+  },
+  {
+    "id": 418,
+    "showdialogue": "You remember that Sello did have termite spray. You look through you bag again and find it.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 419,
+    "playanimation": "normal"
+  },
+  {
+    "id": 417,
+    "showdialogue": "These should be in Ken's canoe maybe some got stuck on my cloths. We got to fix this!",
+    "displaycharacter": "allen",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 418,
+    "playanimation": "normal"
+  },
+  {
+    "id": 416,
+    "showdialogue": "Damn it! I was careless.",
+    "displaycharacter": "allen_angry",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 417,
+    "playanimation": "normal"
+  },
+  {
+    "id": 415,
+    "showdialogue": "You tell Allen about this.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 416,
+    "playanimation": "normal"
+  },
+  {
+    "id": 4414,
+    "showdialogue": "As you keep rowing you feel something in your leg. You look down and see some termite in the canoe and they are doing real damages. If the holes that are rapidly forming are any indicative.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 415,
+    "playanimation": "normal"
+  },
+  {
+    "id": 414,
+    "showdialogue": "You seem to be on a roll but Ken seems to catch up really quickly.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids2",
+    "gotonextnode": 4414,
+    "playanimation": "normal"
+  },
+  {
+    "id": 413,
+    "showdialogue": "What are you doing keep rowing or we are going to lose!",
+    "displaycharacter": "allen",
+    "displaybackground": "water_rapids",
+    "gotopathnode": {"gotoprimarynode": 414, "gotobackupnode": 421, "character": "item_termit spray"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 412,
+    "showdialogue": "Well... you throw but it just sinks. At least that's less weight on the canoe.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 413,
+    "playanimation": "normal"
+  },
+  {
+    "id": 411,
+    "showdialogue": "You do not want to anger Allen so you throw the shell.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 412,
+    "playanimation": "normal"
+  },
+  {
+    "id": 410,
+    "showdialogue": "You look in your bag and see the red shell Sello sold you on the first day.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 411,
+    "playanimation": "normal"
+  },
+  {
+    "id": 409,
+    "showdialogue": "Well talk about short fuse.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 410,
+    "playanimation": "normal"
+  },
+  {
+    "id": 408,
+    "showdialogue": "We can't let Ken win! I WILL NOT LET KEN WIN!",
+    "displaycharacter": "allen",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 409,
+    "playanimation": "normal",
+    "decreasecharacterscore":"allen"
+  },
+  {
+    "id": 407,
+    "showdialogue": "That's the spirit! I knew I liked you for a reason.",
+    "displaycharacter": "allen",
+    "displaybackground": "water_rapids",
+    "gotopathnode": {"gotoprimarynode": 414, "gotobackupnode": 421, "character": "item_termit spray"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 406,
+    "showdialogue": "It does indeed hit Ken and slows him down a bit.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 407,
+    "playanimation": "normal"
+  },
+  {
+    "id": 405,
+    "showdialogue": "As soon as you let go, the shell start making noises and goes towards Kens like the gods have said 'This will strike true!'.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 406,
+    "playanimation": "normal"
+  },
+  {
+    "id": 404,
+    "showdialogue": "You do not want to anger Allen so you throw the shell.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 405,
+    "playanimation": "normal"
+  },
+  {
+    "id": 403,
+    "showdialogue": "You look in your bag and see the red shell Sello sold you on the first day.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 404,
+    "playanimation": "normal"
+  },
+  {
+    "id": 402,
+    "showdialogue": "Well talk about short fuse.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 403,
+    "playanimation": "normal"
+  },
+  {
+    "id": 401,
+    "showdialogue": "We can't let Ken win! I WILL NOT LET KEN WIN!",
+    "displaycharacter": "allen",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 402,
+    "playanimation": "normal",
+    "increasecharacterscore":"allen"
+  },
+  {
+    "id": 400,
+    "showdialogue": "Things are about to get serious.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotopathnode": {"gotoprimarynode": 401, "gotobackupnode": 408, "character": "item_red shell"},
+    "playanimation": "normal"
+  },
+  {
+    "id": 399,
+    "showdialogue": "The other participants seem to be left behind, it's only you and Allen versus Ken.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 400,
+    "playanimation": "normal"
+  },
+  {
+    "id": 398,
+    "showdialogue": "The race starts, it is all very hectic. But you keep focus.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 399,
+    "playanimation": "normal"
+  }, 
+  {
+    "id": 397,
+    "showdialogue": "Boom",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 398,
+    "playanimation": "normal"
+  }, 
+  {
+    "id": 396,
+    "showdialogue": "The race is about to start and you and Allen nod to each other and don't speak anymore, you are too focused.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 397,
+    "playanimation": "normal"
+  }, 
+  {
+    "id": 395,
+    "showdialogue": "You just nod and focus on what's to come.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 396,
+    "playanimation": "normal"
+  }, 
+  {
+    "id": 394,
+    "showdialogue": "Just remember not to mess up and you need to help out too.",
+    "displaycharacter": "allen",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 395,
+    "playanimation": "normal"
+  }, 
+  {
+    "id": 393,
+    "showdialogue": "Ok everything is set up, now we get in the canoe and go to the lineup.",
+    "displaycharacter": "allen",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 394,
+    "playanimation": "normal"
+  }, 
+  {
+    "id": 392,
+    "showdialogue": "You can hardly believe what you got yourself mixed up in.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 393,
+    "playanimation": "normal"
+  }, 
+  {
+    "id": 391,
+    "showdialogue": "You help out Allen get ready for the race. ",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 392,
+    "playanimation": "normal",
+    "increasecharacterscore":"allen"
+  }, 
+  {
+    "id": 390,
+    "showchoicepanel":[
+      {"gotonextnode": 391, "showdialogue": "Allen"},
+      {"gotonextnode": 445, "showdialogue": "Ken"}
+    ]
+  },
+  {
+    "id": 389,
+    "showdialogue": "What do you say? Who do you want to go with?",
+    "displaycharacter": "ken",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 390,
+    "playanimation": "normal"
+  },
+  {
+    "id": 388,
+    "showdialogue": "Well, I don't really care for that. I just want them to have more happy experiences while on the island.",
+    "displaycharacter": "ken",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 389,
+    "playanimation": "normal"
+  },
+  {
+    "id": 387,
+    "showdialogue": "Well, it would weight down the canoe and I did not count for that. However, if I won with that handicap, it would be even better.",
+    "displaycharacter": "allen",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 388,
+    "playanimation": "normal"
+  },
+  {
+    "id": 386,
+    "showdialogue": "Wait! Why not take our esteemed guest on the race?",
+    "displaycharacter": "sello",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 387,
+    "playanimation": "normal"
+  },
+  {
+    "id": 385,
+    "showdialogue": "Well let's get ready!",
+    "displaycharacter": "ken",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 386,
+    "playanimation": "normal"
+  },
+  {
+    "id": 384,
+    "showdialogue": "You arrive at the river side. There are a lot of people, seems like the whole town is here.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "water_rapids",
+    "gotonextnode": 385,
+    "playanimation": "normal"
+  },
+  {
+    "id": 383,
+    "showdialogue": "Eventually Allen also finishes packing and you all leave together for the race.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut_day",
+    "gotonextnode": 384,
+    "playanimation": "normal"
+  },
+  {
+    "id": 382,
+    "showdialogue": "You start getting ready as fast as you can. When you finish and get back to them, they are still packing. Well... only Allen is. Talk about being stressed.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut_day",
+    "gotonextnode": 383,
+    "playanimation": "normal"
+  },
+  {
+    "id": 381,
+    "showdialogue": "You nod and smile back at Ken for his interference.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut_day",
+    "gotonextnode": 382,
+    "playanimation": "normal"
+  },
+  {
+    "id": 380,
+    "showdialogue": "Just try to get ready as fast as you can. We still have time but not too much.",
+    "displaycharacter": "ken",
+    "displaybackground": "inside_hut_day",
+    "gotonextnode": 381,
+    "playanimation": "normal"
+  },
+  {
+    "id": 379,
+    "showdialogue": "Don't say that!",
+    "displaycharacter": "ken_sad",
+    "displaybackground": "inside_hut_day",
+    "gotonextnode": 380,
+    "playanimation": "normal"
+  },
+  {
+    "id": 378,
+    "showdialogue": "Oh, hi! You should hurry up, we are almost ready and we won't wait up for you. Today is a big day!",
+    "displaycharacter": "allen",
+    "displaybackground": "inside_hut_day",
+    "gotonextnode": 379,
+    "playanimation": "normal"
+  },
+  {
+    "id": 377,
+    "showdialogue": "Hi! Good morning! Ready for the racing today?",
+    "displaycharacter": "ken",
+    "displaybackground": "inside_hut_day",
+    "gotonextnode": 378,
+    "playanimation": "normal"
+  },
+  {
+    "id": 376,
+    "showdialogue": "Ken notices you first.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut_day",
+    "gotonextnode": 377,
+    "playanimation": "normal"
+  },
+  {
+    "id": 375,
+    "showdialogue": "Looks like everyone is just packing their belongings and getting ready to leave.",
+    "displaycharacter": "Narrator",
+    "displaybackground": "inside_hut_day",
+    "gotonextnode": 376,
+    "playanimation": "normal"
+  },
+  {
+    "id": 374,
+    "showdialogue": "Today is the final day! Today you make the final decision!",
+    "displaycharacter": "Narrator",
+    "displaybackground": "bedroom",
+    "gotonextnode": 375,
+    "playanimation": "normal"
+  },
+  {
+    "id": 373,
+    "showdialogue": "",
+    "displaycharacter": "",
+    "displaybackground": "black",
+    "gotonextnode": 374,
+    "playanimation": "normal"
+  },
+  {
     "id": 372,
     "showdialogue": "Time passes by and you slowly fall asleep",
     "displaycharacter": "Narrator",
     "displaybackground": "bedroom",
-    "gotonextnode": 0,
+    "gotonextnode": 373,
     "playanimation": "normal"
   },
   {
@@ -18,8 +1760,8 @@
   {
     "id": 3370,
     "showchoicepanel":[
-      {"gotonextnode": 371, "showdialogue": "Cake pops"},
-      {"gotonextnode": 371, "showdialogue": "Nut bar"}
+      {"gotonextnode": 371, "showdialogue": "Cake pops", "additem":"cake pops"},
+      {"gotonextnode": 371, "showdialogue": "Nut bar", "additem":"nut bar"}
     ]
   },
   {
@@ -615,8 +2357,8 @@
   {
     "id": 295,
     "showchoicepanel":[
-      {"gotonextnode": 296, "showdialogue": "termit spary"},
-      {"gotonextnode": 296, "showdialogue": "beaver musk"}
+      {"gotonextnode": 296, "showdialogue": "Termit spary", "additem":"termit spray"},
+      {"gotonextnode": 296, "showdialogue": "Beaver musk", "additem":"beaver musk"}
     ]
   },
   {
@@ -1797,8 +3539,8 @@
   {
     "id": 144,
     "showchoicepanel":[
-      {"gotonextnode": 145, "showdialogue": "Red Shell"},
-      {"gotonextnode": 145, "showdialogue": "Green Shell"}
+      {"gotonextnode": 145, "showdialogue": "Red Shell", "additem":"red shell"},
+      {"gotonextnode": 145, "showdialogue": "Green Shell", "additem":"green shell"}
     ]
   },
   {

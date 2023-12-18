@@ -38,11 +38,13 @@ namespace DialogueTree
     {
         public Guid NextNodeGUID { get; private set; }
         public string ChoiceDialogue { get; private set; }
+        public string AddItem { get; private set; }
 
-        public DialogueChoices(Guid nextNode, string dialogue)
+        public DialogueChoices(Guid nextNode, string dialogue, string item)
         {
             this.NextNodeGUID = nextNode;
             this.ChoiceDialogue = dialogue;
+            this.AddItem = item;
         }
     }
     public enum DialogueEvents

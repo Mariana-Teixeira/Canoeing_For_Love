@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
@@ -14,7 +15,6 @@ public class DataFileHandler
             string json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             if(jsonObj["active"]==10){
-                Debug.Log("NEW GAME");
                 int i = 0;
                 foreach(var save in jsonObj["loaders"]){
                     if(save["node"] == 0){
@@ -40,7 +40,6 @@ public class DataFileHandler
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             int active = jsonObj["active"];
             headNode = jsonObj["loaders"][active]["node"];
-            Debug.Log(headNode);
             if (headNode==0){
                 headNode = 1;
             }
@@ -51,7 +50,7 @@ public class DataFileHandler
         return headNode;
     }
 
-     public void SaveGame(DialogueRuntimeTree tree, Camera cam, int KenScore, int AllenScore, bool close){
+     public void SaveGame(DialogueRuntimeTree tree, Camera cam, int KenScore, int AllenScore, List<string> itemsChosen, bool close){
         // maybe refactor in the future, maybe not
         DataToSave d = new DataToSave();
         int kenneth = KenScore;
@@ -109,6 +108,15 @@ public class DataFileHandler
         jsonObj["loaders"][active]["image"] = "image" + active;
         jsonObj["loaders"][active]["kenScore"] = kenneth;
         jsonObj["loaders"][active]["allenScore"] = allenboy;
+        string itemsSaved = jsonObj["loaders"][active]["items"];
+        int count = itemsSaved.Split("_").Length;
+        Debug.Log("Saved items: " + count);
+        Debug.Log("Items To save: " + itemsChosen.Count);
+        while(count<itemsChosen.Count){
+            itemsSaved = itemsSaved + itemsChosen[count] + "_";
+            count++;
+        }
+        jsonObj["loaders"][active]["items"] = itemsSaved;
         if(close){
             jsonObj["active"] = 10;
         }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using DialogueTree;
@@ -10,11 +11,22 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
     public Slider kenSlider;
     public Slider allenSlider;
 
+    public List<string> itemsChosen = new();
+
+
     private readonly DataFileHandler dfh = new();
 
     int kenScore = 0;
     int allenScore = 0;
-    int maxScore = 20;
+    int maxScore = 15;
+
+    public List<string> ItemsChosen
+    {
+        get
+        {
+            return itemsChosen;
+        }
+    }
 
     public int KenScore
     {
@@ -100,6 +112,12 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
             int active = jsonObj["active"];
             allenScore = jsonObj["loaders"][active]["allenScore"];
             kenScore = jsonObj["loaders"][active]["kenScore"];
+            string A = jsonObj["loaders"][active]["items"];
+            string[] a = A.Split("_");
+            foreach (var item in a){
+                itemsChosen.Add(item);
+            }            
+            print(itemsChosen.Count);
             allenSlider.value = allenScore;
             kenSlider.value = kenScore;
 
@@ -115,11 +133,11 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
     }
 
     public void SaveInventory(DialogueRuntimeTree tree, Camera cam){
-        dfh.SaveGame(tree, cam, kenScore, allenScore, true);
+        dfh.SaveGame(tree, cam, kenScore, allenScore, itemsChosen, true);
     }
 
     public void SaveInventoryWithoutExit(DialogueRuntimeTree tree, Camera cam){
-        dfh.SaveGame(tree, cam, kenScore, allenScore, false);
+        dfh.SaveGame(tree, cam, kenScore, allenScore, itemsChosen, false);
     }
 
 

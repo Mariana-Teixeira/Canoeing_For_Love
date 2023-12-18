@@ -14,6 +14,7 @@ using UnityEditor;
 using System.Runtime.InteropServices;
 using System.Threading;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class DialogueManager : NodePublisher
 {
@@ -30,6 +31,7 @@ public class DialogueManager : NodePublisher
 
     public Guid nextNode = Guid.Empty;
 
+    
     private void Awake() {
         inventory = gameObject.GetComponent<InventoryManager>();
         tree = new DialogueRuntimeTree();
@@ -69,6 +71,7 @@ public class DialogueManager : NodePublisher
     }
     public void DisplayChoicesPanel(DialogueChoices[] choices)
     {
+
         StartCoroutine(CheckHasAnswer(choices: choices));
     }
 
@@ -119,6 +122,7 @@ public class DialogueManager : NodePublisher
     public IEnumerator CheckHasAnswer(DialogueChoices[] choices){
         yield return new WaitUntil(()=>choicePanel.GetAnswer()!=-1);
         nextNode = choices[choicePanel.GetAnswer()].NextNodeGUID;
+        inventory.itemsChosen.Add(choices[choicePanel.GetAnswer()].AddItem);
         GoToNextNode(nextNode);
     }
 

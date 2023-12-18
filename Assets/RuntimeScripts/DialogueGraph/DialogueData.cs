@@ -80,11 +80,11 @@ public class DialogueData
                 foreach(var choice in node.ShowChoicePanel)
                 {
                     if(choice.GoToNextNode==0){
-                        var _choice = new DialogueChoices(guids[dialogueNodes.Count+1], choice.ShowDialogue);
+                        var _choice = new DialogueChoices(guids[dialogueNodes.Count+1], choice.ShowDialogue, choice.AddItem);
                         choices2.Add(_choice);
                     }
                     else{
-                        var _choice = new DialogueChoices(guids[choice.GoToNextNode], choice.ShowDialogue);
+                        var _choice = new DialogueChoices(guids[choice.GoToNextNode], choice.ShowDialogue, choice.AddItem);
                         choices2.Add(_choice);
                     }
                     
@@ -95,7 +95,6 @@ public class DialogueData
             if (node.GoToPathNode != null)
             {
                 DialoguePath pathChoice;
-                UnityEngine.Debug.Log(node.GoToPathNode.GoToSecondaryNode);
                 if(node.GoToPathNode.GoToSecondaryNode>0){
                     pathChoice = new DialoguePath(guids[node.GoToPathNode.GoToPrimaryNode], guids[node.GoToPathNode.GoToSecondaryNode], guids[node.GoToPathNode.GoToBackupNode],node.GoToPathNode.Character, node.GoToPathNode.MinimumScore);
                 }
@@ -146,6 +145,7 @@ public class Choice
 {
     public int GoToNextNode { get; set; }
     public string ShowDialogue { get; set; }
+    public string AddItem { get; set; }
 }
 
 public class PathChoice
