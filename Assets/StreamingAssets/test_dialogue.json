@@ -24,7 +24,7 @@
     "playanimation": "normal"
   },
   {
-    "id": 586,
+    "id": 5586,
     "showdialogue": "",
     "displaycharacter": "",
     "displaybackground": "ending1",
@@ -452,7 +452,7 @@
     "showdialogue": "Now I don't have to fear that I'm not the one in your mind. You choose over Ken, over everyone else and for me that is the best feeling... so thank you.",
     "displaycharacter": "allen",
     "displaybackground": "town_center",
-    "gotonextnode": 586,
+    "gotonextnode": 5586,
     "playanimation": "normal"
   },
   {

@@ -109,6 +109,11 @@ public class DialogueManager : NodePublisher
                 }
                 GoToNextNode(node);
             }
+            else if(dialogueBool.Character.Contains("item_")){
+                string item = dialogueBool.Character.Split("_")[1];
+                node = inventory.itemsChosen.Contains(item) ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;
+                GoToNextNode(node);
+            }
             else{
                 score = dialogueBool.Character == "ken" ? inventory.KenScore : inventory.AllenScore;
                 node = score >= dialogueBool.MinimumScore ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;
