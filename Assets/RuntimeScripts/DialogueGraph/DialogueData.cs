@@ -35,11 +35,7 @@ public class DialogueData
 
         var endNode = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
         {
-            { DialogueEvents.SHOW_DIALOGUE, "End of Playable" },
-
-            { DialogueEvents.SHOW_NAMEPLATE, "Developers" },
-
-            { DialogueEvents.DISPLAY_BACKGROUND, string.Empty },
+            { DialogueEvents.SHOW_CREDITS, "Developers" },
         }); 
 
         guids.Add(dialogueNodes.Count+1, endNode.Guid);

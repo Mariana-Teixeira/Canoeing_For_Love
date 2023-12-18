@@ -1,10 +1,42 @@
 [
   {
+    "id": 589,
+    "showdialogue": "",
+    "displaycharacter": "",
+    "displaybackground": "ending4",
+    "gotonextnode": 0,
+    "playanimation": "normal"
+  },
+  {
+    "id": 588,
+    "showdialogue": "",
+    "displaycharacter": "",
+    "displaybackground": "ending3",
+    "gotonextnode": 0,
+    "playanimation": "normal"
+  },
+  {
+    "id": 587,
+    "showdialogue": "",
+    "displaycharacter": "",
+    "displaybackground": "ending2",
+    "gotonextnode": 0,
+    "playanimation": "normal"
+  },
+  {
+    "id": 586,
+    "showdialogue": "",
+    "displaycharacter": "",
+    "displaybackground": "ending1",
+    "gotonextnode": 0,
+    "playanimation": "normal"
+  },
+  {
     "id": 585,
     "showdialogue": "Yes, that's what you really want. To relax and not have to deal with people.",
     "displaycharacter": "Narrator",
     "displaybackground": "under_the_ocean",
-    "gotonextnode": 0,
+    "gotonextnode": 589,
     "playanimation": "normal"
   },
   {
@@ -92,7 +124,7 @@
     "showdialogue": "This is the end you wanted, finding a new place to be yourself even if it's among half-merman.",
     "displaycharacter": "Narrator",
     "displaybackground": "town_center",
-    "gotonextnode": 0,
+    "gotonextnode": 588,
     "playanimation": "normal"
   },
   {
@@ -268,7 +300,7 @@
     "showdialogue": "Yes, that's what you really want. To relax and not have to deal with people.",
     "displaycharacter": "Narrator",
     "displaybackground": "under_the_ocean",
-    "gotonextnode": 0,
+    "gotonextnode": 587,
     "playanimation": "normal"
   },
   {
@@ -420,7 +452,7 @@
     "showdialogue": "Now I don't have to fear that I'm not the one in your mind. You choose over Ken, over everyone else and for me that is the best feeling... so thank you.",
     "displaycharacter": "allen",
     "displaybackground": "town_center",
-    "gotonextnode": 0,
+    "gotonextnode": 586,
     "playanimation": "normal"
   },
   {

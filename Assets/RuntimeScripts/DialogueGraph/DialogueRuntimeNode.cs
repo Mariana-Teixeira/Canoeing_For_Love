@@ -60,5 +60,6 @@ namespace DialogueTree
         GOTO_PATHNODE,
         ANIMATE_CAMERA,
         PLAY_SOUND,
+        SHOW_CREDITS,
     }
 }

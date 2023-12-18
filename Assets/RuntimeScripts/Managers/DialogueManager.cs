@@ -15,6 +15,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : NodePublisher
 {
@@ -66,6 +67,11 @@ public class DialogueManager : NodePublisher
         {
             nextNode = (Guid)hash[DialogueEvents.GOTO_NEXTNODE];
             GoToNextNode(nextNode);
+            return;
+        } 
+        if (hash.ContainsKey(DialogueEvents.SHOW_CREDITS))
+        {
+            SceneManager.LoadScene(3);
             return;
         }       
     }
