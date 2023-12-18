@@ -109,6 +109,35 @@ public class DialogueManager : NodePublisher
                 }
                 GoToNextNode(node);
             }
+            else if(dialogueBool.Character.Contains("item_")){
+                string item = dialogueBool.Character.Split("_")[1];
+                node = inventory.itemsChosen.Contains(item) ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;
+                GoToNextNode(node);
+            }
+            else if(dialogueBool.Character.Contains("check_")){
+                string character = dialogueBool.Character.Split("_")[1];
+                int race = 0;
+                if(inventory.ItemsChosen.Contains("red shell")){
+                    race++;
+                }
+                if(inventory.ItemsChosen.Contains("termit spray")){
+                    race++;
+                }
+                if (character == "allen"){
+                    if(inventory.ItemsChosen.Contains("cake pops")){
+                        race++;
+                    }
+                }
+                else if(character == "ken"){
+                    if(inventory.ItemsChosen.Contains("nut bar")){
+                        race++;
+                    }
+                }
+                print("items: " + inventory.itemsChosen.Count);
+                print("points from race: " + race);
+                node = race < 2 ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;
+                GoToNextNode(node);
+            }
             else{
                 score = dialogueBool.Character == "ken" ? inventory.KenScore : inventory.AllenScore;
                 node = score >= dialogueBool.MinimumScore ? dialogueBool.PrimaryNodeGUID : dialogueBool.BackupNodeGUID;

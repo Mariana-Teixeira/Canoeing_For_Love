@@ -15,31 +15,31 @@
       "items": ""
     },
     {
-      "node": 0,
-      "image": "",
+      "node": 2,
+      "image": "image2",
       "kenScore": 0,
       "allenScore": 0,
       "items": ""
     },
     {
-      "node": 0,
-      "image": "",
+      "node": 2,
+      "image": "image3",
       "kenScore": 0,
       "allenScore": 0,
       "items": ""
     },
     {
-      "node": 0,
-      "image": "",
-      "kenScore": 0,
-      "allenScore": 0,
-      "items": ""
+      "node": 87,
+      "image": "image4",
+      "kenScore": 1,
+      "allenScore": 1,
+      "items": "____"
     },
     {
-      "node": 299,
+      "node": 506,
       "image": "image5",
       "kenScore": 0,
-      "allenScore": 0,
+      "allenScore": 2,
       "items": "red shell_termit spray_"
     }
   ],

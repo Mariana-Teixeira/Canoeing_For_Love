@@ -707,7 +707,6 @@ RectTransform:
   - {fileID: 2088635827}
   - {fileID: 1729583661}
   - {fileID: 601520111}
-  - {fileID: 1094963125}
   m_Father: {fileID: 661118311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1824,6 +1823,10 @@ MonoBehaviour:
   dialogueChecker: 
   lineFinish: 0
   dialogueCanvas: {fileID: 661118312}
+  dialogueUI: {fileID: 2088635826}
+  attractionUI: {fileID: 1729583660}
+  menuUI: {fileID: 601520110}
+  charactersUI: {fileID: 115260873}
   choiceCanvas: {fileID: 801940097}
 --- !u!114 &752905248
 MonoBehaviour:
@@ -1927,6 +1930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kenSlider: {fileID: 673211128}
   allenSlider: {fileID: 5844989}
+  itemsChosen: []
 --- !u!114 &752905255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2905,19 +2909,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094963124}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1556407429}
   - {fileID: 883749629}
-  m_Father: {fileID: 142990329}
-  m_RootOrder: 5
+  m_Father: {fileID: 1729583661}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -100}
+  m_AnchoredPosition: {x: -100.00003, y: -25.000023}
   m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1095726901
@@ -4674,6 +4678,7 @@ RectTransform:
   m_Children:
   - {fileID: 673211127}
   - {fileID: 5844988}
+  - {fileID: 1094963125}
   m_Father: {fileID: 142990329}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
