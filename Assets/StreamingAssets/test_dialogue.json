@@ -2,7 +2,7 @@
   {
     "id": 589,
     "showdialogue": "",
-    "displaycharacter": "",
+    "displaycharacter": "ENDING",
     "displaybackground": "ending4",
     "gotonextnode": 0,
     "playanimation": "normal"
@@ -10,7 +10,7 @@
   {
     "id": 588,
     "showdialogue": "",
-    "displaycharacter": "",
+    "displaycharacter": "ENDING",
     "displaybackground": "ending3",
     "gotonextnode": 0,
     "playanimation": "normal"
@@ -18,7 +18,7 @@
   {
     "id": 587,
     "showdialogue": "",
-    "displaycharacter": "",
+    "displaycharacter": "ENDING",
     "displaybackground": "ending2",
     "gotonextnode": 0,
     "playanimation": "normal"
@@ -26,7 +26,7 @@
   {
     "id": 5586,
     "showdialogue": "",
-    "displaycharacter": "",
+    "displaycharacter": "ENDING",
     "displaybackground": "ending1",
     "gotonextnode": 0,
     "playanimation": "normal"
@@ -449,8 +449,8 @@
   },
   {
     "id": 533,
-    "showdialogue": "Now I don't have to fear that I'm not the one in your mind. You choose over Ken, over everyone else and for me that is the best feeling... so thank you.",
-    "displaycharacter": "allen",
+    "showdialogue": "Now I don't have to fear that I'm not the one in your mind. You chose me over Ken, over everyone else and for me that is the best feeling... so thank you.",
+    "displaycharacter": "allen_shy",
     "displaybackground": "town_center",
     "gotonextnode": 5586,
     "playanimation": "normal"
@@ -458,7 +458,7 @@
   {
     "id": 532,
     "showdialogue": "Let's get out of here. Now it's time to finally get to know each other.",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_shy",
     "displaybackground": "town_center",
     "gotonextnode": 533,
     "playanimation": "normal"
@@ -538,7 +538,7 @@
   {
     "id": 523,
     "showdialogue": "So what was it that you were trying to say?",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_shy",
     "displaybackground": "town_center",
     "gotonextnode": 524,
     "playanimation": "normal"
@@ -554,7 +554,7 @@
   {
     "id": 521,
     "showdialogue": "You know what it's too crowded here let's go to a quieter place.",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_shy",
     "displaybackground": "town_center",
     "gotonextnode": 522,
     "playanimation": "normal"
@@ -1244,7 +1244,7 @@
   {
     "id": 437,
     "showdialogue": "You brought along a cake pop! Those are my favourite food to give a final push. Thank you! Let's finish this race!",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_shy",
     "displaybackground": "water_rapids3",
     "gotopathnode": {"gotoprimarynode": 502, "gotobackupnode": 506, "character": "check_allen"},
     "playanimation": "normal"
@@ -1486,7 +1486,7 @@
   {
     "id": 408,
     "showdialogue": "We can't let Ken win! I WILL NOT LET KEN WIN!",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_angry",
     "displaybackground": "water_rapids",
     "gotonextnode": 409,
     "playanimation": "normal",
@@ -1543,7 +1543,7 @@
   {
     "id": 401,
     "showdialogue": "We can't let Ken win! I WILL NOT LET KEN WIN!",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_angry",
     "displaybackground": "water_rapids",
     "gotonextnode": 402,
     "playanimation": "normal",
@@ -2712,7 +2712,7 @@
   {
     "id": 253,
     "showdialogue": "What? You think KEN IS GOING TO BEAT ME? GET OUT NOW!",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_angry",
     "displaybackground": "podcast_setting",
     "gotonextnode": 254,
     "playanimation": "shake",
@@ -2826,7 +2826,7 @@
   {
     "id": 238,
     "showdialogue": "Hey, I wanna ask you something. Do you wanna be apart of my podcast?",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_shy",
     "displaybackground": "lake",
     "gotonextnode": 239,
     "playanimation": "normal"
@@ -3958,7 +3958,7 @@
   {
     "id": 96,
     "showdialogue": "Well, that got you smiling, didn't it? Worth it.",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_shy",
     "displaybackground": "kitchen",
     "gotonextnode": 97,
     "playanimation": "normal"
@@ -3974,7 +3974,7 @@
   {
     "id": 94,
     "showdialogue": "So ... you come here often?",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_shy",
     "displaybackground": "kitchen",
     "gotonextnode": 95,
     "playanimation": "normal"
@@ -4113,7 +4113,7 @@
   {
     "id": 77,
     "showdialogue": "At least if someone didn't occupy half the kitchen just by standing there.",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_angry",
     "displaybackground": "kitchen",
     "gotonextnode": 78,
     "playanimation": "normal"
@@ -4440,7 +4440,7 @@
   {
     "id": 35,
     "showdialogue": "Do you want to join me on a run? I can share some useful tips to be better.",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_shy",
     "displaybackground": "mountain",
     "gotonextnode": 36,
     "playanimation": "normal"
@@ -4545,7 +4545,7 @@
   {
     "id": 22,
     "showdialogue": "Why is everyone so scared of the sun? I don't need sunscreen, I'm not scared of a floating ball of fire.",
-    "displaycharacter": "allen",
+    "displaycharacter": "allen_angry",
     "displaybackground": "mountain",
     "gotonextnode": 23,
     "playanimation": "normal"

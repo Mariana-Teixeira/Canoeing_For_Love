@@ -18,6 +18,11 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
 
     [SerializeField] private CanvasGroup dialogueCanvas;
+
+    [SerializeField] private GameObject dialogueUI;
+    [SerializeField] private GameObject attractionUI;
+    [SerializeField] private GameObject menuUI;
+    [SerializeField] private GameObject charactersUI;
     [SerializeField] private CanvasGroup choiceCanvas;
 
     private ChoicesPanel choicePanel;
@@ -87,6 +92,12 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
     void DisplayCharacter(string characterPath)
     {   
+        if(characterPath=="ENDING"){
+            dialogueUI.SetActive(false);
+            attractionUI.SetActive(false);
+            menuUI.SetActive(false);
+            charactersUI.SetActive(false);
+        }
         Sprite characterSprite = Resources.Load("characters/" + characterPath) as Sprite;
         characterPortrait.sprite = characterSprite;
     }
