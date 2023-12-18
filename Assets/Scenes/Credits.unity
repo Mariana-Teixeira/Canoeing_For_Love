@@ -599,56 +599,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet,
-
-    consectetur adipiscing elit.
-
-    Nulla
-    aliquam semper metus
-
-    , ac scelerisque mi accumsan
-
-    et. In luctus posuere
-    suscipit.
-
-    Sed at pretium felis. Sed
-
-    egestas sollicitudin purus,
-
-    at
-    venenatis ligula. Mauris
-
-    nulla arcu, luctus eget
-
-    sollicitudin vitae,
-    feugiat et mi.
-
-    Phasellus nec erat sit amet
-
-    dui suscipit laoreet ut
-    vel ante.
-
-    Nam accumsan metus et ante
-
-    ornare, non varius orci suscipit.
-
-    Aliquam
-    suscipit suscipit
-
-    dapibus. Aliquam erat volutpat.
-
-    Cras aliquet, lorem
-    nec
-
-    scelerisque hendrerit, ante eros
-
-    dignissim tortor, eu lacinia nulla
-
-    nulla
-    at arcu.'
+  m_text: "Developers\nA. Margarida Prata\r\nBernardo Leandro\nGon\xE7alo Reis\nMariana
+    Teixeira\r\n\nProducers\nA. Margarida Prata\nBernardo Leandro\nGon\xE7alo Reis\nMariana
+    Teixeira\n\nProject Manager\nA. Margarida Prata\r\nMariana Teixeira\r\n\nGame
+    Design\r\nGon\xE7alo Reis\r\nMariana Teixeira\r\n\nLead Writer\nA. Margarida
+    Prata\n\nWriters\nMariana Teixeira\r\nGon\xE7alo Reis\nBernardo Leandro\n\r\nProgramming\r\nBernardo
+    Leandro\r\nMariana Teixeira\n\r\nCharacter Artists\nA. Margarida Prata\r\nMariana
+    Teixeira\n\r\nAmbient Art\nA. Margarida Prata\n\r\nSound Design\r\nGon\xE7alo
+    Reis\n\nUX/UI\nA. Margarida Prata\r\nBernardo Leandro\n\nQA\nA. Margarida Prata\r\nBernardo
+    Leandro\r\nGon\xE7alo Reis\n\nSpecial Thanks\nProfessor M\xF3nica Aresta, for
+    the feedback we needed.\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 65f5461bdc306fa4295bd83c2c3c88a2, type: 2}
-  m_sharedMaterial: {fileID: 2452710880603632923, guid: 65f5461bdc306fa4295bd83c2c3c88a2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 07db8eb3a9cfb9c4d90d9b06361b80a9, type: 2}
+  m_sharedMaterial: {fileID: 7228543368040915334, guid: 07db8eb3a9cfb9c4d90d9b06361b80a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
