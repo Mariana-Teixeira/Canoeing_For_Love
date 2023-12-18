@@ -677,7 +677,8 @@
     "displaybackground": "town_center",
     "gotonextnode": 508,
     "playanimation": "normal",
-    "increasecharacterscore":"ken"
+    "increasecharacterscore":"ken",
+    "playaudio":"AMB_SlalomRaceEnd"
   },
   {
     "id": 506,
@@ -686,7 +687,8 @@
     "displaybackground": "town_center",
     "gotonextnode": 508,
     "playanimation": "normal",
-    "increasecharacterscore":"allen"
+    "increasecharacterscore":"allen",
+    "playaudio":"AMB_SlalomRaceEnd"
   },
   {
     "id": 505,
@@ -711,7 +713,8 @@
     "displaybackground": "town_center",
     "gotonextnode": 504,
     "playanimation": "normal",
-    "decreasecharacterscore":"ken"
+    "decreasecharacterscore":"ken",
+    "playaudio":"AMB_SlalomRaceEnd"
   },
   {
     "id": 502,
@@ -720,7 +723,8 @@
     "displaybackground": "town_center",
     "gotonextnode": 504,
     "playanimation": "normal",
-    "decreasecharacterscore":"allen"
+    "decreasecharacterscore":"allen",
+    "playaudio":"AMB_SlalomRaceEnd"
   },
   {
     "id": 501,
@@ -915,7 +919,8 @@
     "displaybackground": "water_rapids2",
     "gotonextnode": 479,
     "playanimation": "normal",
-    "decreasecharacterscore":"ken"
+    "decreasecharacterscore":"ken",
+    "playaudio":"AMB_SlalomRaceRapids"
   },
   {
     "id": 477,
@@ -980,7 +985,8 @@
     "displaybackground": "water_rapids2",
     "gotonextnode": 471,
     "playanimation": "normal",
-    "increasecharacterscore":"ken"
+    "increasecharacterscore":"ken",
+    "playaudio":"AMB_SlalomRaceRapids"
   },
   {
     "id": 469,
@@ -1101,7 +1107,8 @@
     "displaycharacter": "Narrator",
     "displaybackground": "water_rapids",
     "gotonextnode": 456,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"AMB_SlalomRaceStart"
   },
   {
     "id": 454,
@@ -1377,7 +1384,8 @@
     "displaybackground": "water_rapids2",
     "gotonextnode": 422,
     "playanimation": "normal",
-    "decreasecharacterscore":"allen"
+    "decreasecharacterscore":"allen",
+    "playaudio":"AMB_SlalomRaceRapids"
   },
   {
     "id": 420,
@@ -1441,7 +1449,8 @@
     "displaycharacter": "Narrator",
     "displaybackground": "water_rapids2",
     "gotonextnode": 4414,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"AMB_SlalomRaceRapids"
   },
   {
     "id": 413,
@@ -1579,7 +1588,8 @@
     "displaycharacter": "Narrator",
     "displaybackground": "water_rapids",
     "gotonextnode": 398,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"AMB_SlalomRaceStart"
   }, 
   {
     "id": 396,
