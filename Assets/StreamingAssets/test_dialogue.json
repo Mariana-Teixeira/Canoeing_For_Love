@@ -117,7 +117,8 @@
     "displaycharacter": "ken",
     "displaybackground": "town_center",
     "gotonextnode": 576,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"kb1"
   },
   {
     "id": 574,
@@ -205,7 +206,8 @@
     "displaycharacter": "ken_shy",
     "displaybackground": "town_center",
     "gotonextnode": 565,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"kg1"
   },
   {
     "id": 563,
@@ -437,7 +439,8 @@
     "displaycharacter": "allen",
     "displaybackground": "town_center",
     "gotonextnode": 536,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"ab3"
   },
   {
     "id": 534,
@@ -453,7 +456,8 @@
     "displaycharacter": "allen_shy",
     "displaybackground": "town_center",
     "gotonextnode": 5586,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"ag2"
   },
   {
     "id": 532,
@@ -517,7 +521,8 @@
     "displaycharacter": "allen_shy",
     "displaybackground": "town_center",
     "gotonextnode": 526,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"ag1"
   },
   {
     "id": 5524,
@@ -740,7 +745,8 @@
     "displaycharacter": "Narrator",
     "displaybackground": "water_rapids3",
     "gotonextnode": 501,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"kg1"
   },
   {
     "id": 499,
@@ -789,7 +795,8 @@
     "displaycharacter": "ken_sad",
     "displaybackground": "water_rapids3",
     "gotonextnode": 495,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"kb3"
   },
   {
     "id": 493,
@@ -928,7 +935,8 @@
     "displaycharacter": "ken",
     "displaybackground": "water_rapids2",
     "gotopathnode": {"gotoprimarynode": 490, "gotobackupnode": 496, "character": "item_cake pop"},
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"kg2"
   },
   {
     "id": 476,
@@ -994,7 +1002,8 @@
     "displaycharacter": "ken_sad",
     "displaybackground": "water_rapids",
     "gotopathnode": {"gotoprimarynode": 470, "gotobackupnode": 478, "character": "item_termit spray"},
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"kb2"
   },
   {
     "id": 468,
@@ -1213,7 +1222,8 @@
     "displaycharacter": "allen_angry",
     "displaybackground": "water_rapids3",
     "gotonextnode": 443,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"ab3"
   },
   {
     "id": 441,
@@ -1254,7 +1264,8 @@
     "displaycharacter": "allen_shy",
     "displaybackground": "water_rapids3",
     "gotopathnode": {"gotoprimarynode": 502, "gotobackupnode": 506, "character": "check_allen"},
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"ag2"
   },
   {
     "id": 436,
@@ -1295,7 +1306,8 @@
     "displaycharacter": "allen_angry",
     "displaybackground": "water_rapids2",
     "gotopathnode": {"gotoprimarynode": 433, "gotobackupnode": 438, "character": "item_cake pop"},
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"ab1"
   },
   {
     "id": 431,
@@ -1458,7 +1470,8 @@
     "displaycharacter": "allen",
     "displaybackground": "water_rapids",
     "gotopathnode": {"gotoprimarynode": 414, "gotobackupnode": 421, "character": "item_termit spray"},
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"ab1"
   },
   {
     "id": 412,
@@ -1507,7 +1520,8 @@
     "displaycharacter": "allen",
     "displaybackground": "water_rapids",
     "gotopathnode": {"gotoprimarynode": 414, "gotobackupnode": 421, "character": "item_termit spray"},
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"ag1"
   },
   {
     "id": 406,
@@ -2054,7 +2068,8 @@
     "displaybackground": "mountain",
     "gotonextnode": 340,
     "playanimation": "normal",
-    "increasecharacterscore":"allen"
+    "increasecharacterscore":"allen",
+    "playaudio":"ag1"
   },
   {
     "id": 338,
@@ -2201,7 +2216,8 @@
     "displaybackground": "kens_house",
     "gotonextnode": 322,
     "playanimation": "normal",
-    "decreasecharacterscore": "ken"
+    "decreasecharacterscore": "ken",
+    "playaudio":"kb1"
   },
   {
     "id": 320,
@@ -2465,7 +2481,8 @@
     "displaycharacter": "ken_sad",
     "displaybackground": "lake",
     "gotonextnode": 288,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"kb2"
   },
   {
     "id": 286,
@@ -2506,7 +2523,8 @@
     "displaycharacter": "ken_sad",
     "displaybackground": "shed",
     "gotonextnode": 283,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"kb3"
   },
   {
     "id": 280,
@@ -2540,7 +2558,8 @@
     "displaycharacter": "ken_shy",
     "displaybackground": "shed",
     "gotonextnode": 278,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"kg1"
   },
   {
     "id": 276,
@@ -2629,7 +2648,8 @@
     "displaybackground": "lake",
     "gotonextnode": 267,
     "playanimation": "normal",
-    "increasecharacterscore": "ken"
+    "increasecharacterscore": "ken",
+    "playaudio":"kg3"
   },
   {
     "id": 265,
@@ -2692,7 +2712,8 @@
     "displaycharacter": "allen",
     "displaybackground": "lake",
     "gotonextnode": 258,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"ab3"
   },
   {
     "id": 256,
@@ -2727,7 +2748,8 @@
     "gotonextnode": 254,
     "playanimation": "shake",
     "increasecharacterscore":"ken",
-    "decreasecharacterscore":"allen"
+    "decreasecharacterscore":"allen",
+    "playaudio":"ab2"
   },
   {
     "id": 252,
@@ -2768,7 +2790,8 @@
     "displaybackground": "podcast_setting",
     "gotonextnode": 249,
     "playanimation": "normal",
-    "increasecharacterscore":"allen"
+    "increasecharacterscore":"allen",
+    "playaudio":"ag2"
   },
   {
     "id": 247,
@@ -3210,7 +3233,8 @@
     "displaybackground": "kens_house",
     "gotonextnode": 191,
     "playanimation": "normal",
-    "increasecharacterscore":"allen"
+    "increasecharacterscore":"allen",
+    "playaudio":"ag2"
   },
   {
     "id": 189,
@@ -3697,7 +3721,8 @@
     "gotonextnode": 131,
     "playanimation": "normal",
     "increasecharacterscore": "allen",
-    "decreasecharacterscore": "ken"
+    "decreasecharacterscore": "ken",
+    "playaudio":"kb1"
   },
   {
     "id": 129,
@@ -3731,7 +3756,8 @@
     "gotonextnode": 127,
     "playanimation": "normal",
     "increasecharacterscore": "ken",
-    "decreasecharacterscore": "allen"
+    "decreasecharacterscore": "allen",
+    "playaudio":"kg2"
   },
   {
     "id": 125,
@@ -4029,7 +4055,8 @@
     "displaybackground": "kitchen",
     "gotonextnode": 90,
     "playanimation": "normal",
-    "increasecharacterscore": "allen"
+    "increasecharacterscore": "allen",
+    "playaudio":"ag2"
   },
   {
     "id": 88,
@@ -4274,7 +4301,8 @@
     "displaybackground": "lake",
     "gotonextnode": 60,
     "playanimation": "normal",
-    "decreasecharacterscore": "ken"
+    "decreasecharacterscore": "ken",
+    "playaudio":"kb2"
   },
   {
     "id": 58,
@@ -4315,7 +4343,8 @@
     "displaybackground": "lake",
     "gotonextnode": 55,
     "playanimation": "normal",
-    "decreasecharacterscore": "ken"
+    "decreasecharacterscore": "ken",
+    "playaudio":"kb3"
   },
   {
     "id": 53,
@@ -4332,7 +4361,8 @@
     "displaybackground": "lake",
     "gotonextnode": 53,
     "playanimation": "normal",
-    "increasecharacterscore":"ken"
+    "increasecharacterscore":"ken",
+    "playaudio":"kg3"
   },
   {
     "id": 51,
@@ -4438,7 +4468,8 @@
     "displaybackground": "mountain",
     "gotonextnode": 38,
     "playanimation": "normal",
-    "decreasecharacterscore": "allen"
+    "decreasecharacterscore": "allen",
+    "playaudio":"ab3"
   },
   {
     "id": 36,
@@ -4469,7 +4500,8 @@
     "displaycharacter": "allen",
     "displaybackground": "mountain",
     "gotonextnode": 34,
-    "playanimation": "normal"
+    "playanimation": "normal",
+    "playaudio":"ag1"
   },
   {
     "id": 32,
@@ -4567,7 +4599,8 @@
     "displaybackground": "mountain",
     "gotonextnode": 22,
     "playanimation": "normal",
-    "decreasecharacterscore":"allen"
+    "decreasecharacterscore":"allen",
+    "playaudio":"ab1"
   },
   {
     "id": 20,
