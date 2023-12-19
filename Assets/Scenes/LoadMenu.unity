@@ -1488,7 +1488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &571936708
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3327,7 +3327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1770724790
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4168,7 +4168,6 @@ GameObject:
   - component: {fileID: 2089159839}
   - component: {fileID: 2089159838}
   - component: {fileID: 2089159842}
-  - component: {fileID: 2089159843}
   m_Layer: 5
   m_Name: LoadingScreen
   m_TagString: Untagged
@@ -4313,19 +4312,3 @@ MonoBehaviour:
   img4: {fileID: 1089572925}
   img5: {fileID: 1024447728}
   img6: {fileID: 1802333028}
---- !u!114 &2089159843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089159837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e6782dbd0d659140a0f24b1ee543bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sound: {fileID: 597684594}
-  crossSound: {fileID: 571936707}
-  crossMusic: {fileID: 1770724789}
-  music: {fileID: 272960402}

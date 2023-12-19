@@ -58,31 +58,16 @@ public class UIGameManager : MonoBehaviour
         if(savingAnim.activeSelf==true && anim.GetCurrentAnimatorStateInfo(layerIndex: 0).normalizedTime>1){
             savingAnim.SetActive(false);
             if(clickedButton == 1){
-                if(save == false){
-                    SceneManager.LoadScene(2);
-                }
-                else{
-                    dm.SaveGame();
-                    SceneManager.LoadScene(2);
-                }
+                dm.SaveGame();
+                SceneManager.LoadScene(2);
             }
             if(clickedButton == 2){
-                if(save == false){
-                    SceneManager.LoadScene(0);
-                }
-                else{
-                    dm.SaveGame();
-                    SceneManager.LoadScene(0);
-                }
+                dm.SaveGame();
+                SceneManager.LoadScene(0);
             }
             if(clickedButton == 3){
-                if(save == false){
-                    Application.Quit();
-                }
-                else{
-                    dm.SaveGame();
-                    Application.Quit();
-                }
+                dm.SaveGame();
+                Application.Quit();
             }
         }
     }
@@ -124,18 +109,26 @@ public class UIGameManager : MonoBehaviour
                     savingAnim.SetActive(true);
                     anim.Play("saving"); 
                 }
+                else{
+                    SceneManager.LoadScene(2);
+                }
             }
             if(clickedButton == 2){
                 if(save == true){
                     savingAnim.SetActive(true);
                     anim.Play("saving"); 
-                
+                }
+                else{
+                    SceneManager.LoadScene(0);
                 }
             }
             if(clickedButton == 3){
                 if(save == true){
                     savingAnim.SetActive(true);
                     anim.Play("saving"); 
+                }
+                else{
+                    Application.Quit();
                 }
             }  
     }

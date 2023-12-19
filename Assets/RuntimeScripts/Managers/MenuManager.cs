@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class MenuManager: MonoBehaviour
 {
 
+    BackgroundMusicManager bmm;
+
     //Button new game
     [SerializeField] public Button newGameButton;
 
@@ -27,7 +29,7 @@ public class MenuManager: MonoBehaviour
         newGameButton.onClick.AddListener(() => ManageButtons(0));
         resumeButton.onClick.AddListener(() => ManageButtons(1));
         creditButton.onClick.AddListener(() => ManageButtons(2));
-        exitButton.onClick.AddListener(() => ManageButtons(3));
+        exitButton.onClick.AddListener(() => ManageButtons(3));        
     }
 
     public void ManageButtons(int i){

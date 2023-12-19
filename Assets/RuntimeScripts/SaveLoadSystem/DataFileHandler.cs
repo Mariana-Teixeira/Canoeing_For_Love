@@ -113,7 +113,9 @@ public class DataFileHandler
         Debug.Log("Saved items: " + count);
         Debug.Log("Items To save: " + itemsChosen.Count);
         while(count<itemsChosen.Count){
-            itemsSaved = itemsSaved + itemsChosen[count] + "_";
+            if(itemsChosen[count].Length>2){
+                itemsSaved = itemsSaved + itemsChosen[count] + "_";
+            }
             count++;
         }
         jsonObj["loaders"][active]["items"] = itemsSaved;

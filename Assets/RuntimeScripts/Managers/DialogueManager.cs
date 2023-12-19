@@ -71,8 +71,7 @@ public class DialogueManager : NodePublisher
         } 
         if (hash.ContainsKey(DialogueEvents.SHOW_CREDITS))
         {
-            SceneManager.LoadScene(3);
-            return;
+            tree.GoToCredits();
         }       
     }
     public void DisplayChoicesPanel(DialogueChoices[] choices)

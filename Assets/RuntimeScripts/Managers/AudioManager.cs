@@ -5,82 +5,112 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class AudioManager : MonoBehaviour, INodeSubscriber
+public class AudioManager : MonoBehaviour
 {
 
-    AudioSource playSound;
+    public static AudioManager instance = null;
 
-    AudioSource bgdMusic;
+    SoundGameManager sgm;
+    BackgroundMusicManager bmm;
 
-    [SerializeField] Button sound;
+    Button sound;
 
-    [SerializeField] GameObject crossSound;
+    GameObject crossSound;
 
-    [SerializeField] GameObject crossMusic;
-    [SerializeField] Button music;
+    GameObject crossMusic;
+    Button music;
 
-    #region Node Publisher
-    NodePublisher publisher;
+    
     private void OnEnable(){
-        if(SceneManager.GetActiveScene().name.Contains("Dialogue")){
-            publisher.AddObserver(this);
-        }
+        SceneManager.sceneLoaded += SceneManager_sceneLoaded;
     } 
     private void OnDisable(){
-        if(SceneManager.GetActiveScene().name.Contains("Dialogue")){
-            publisher.RemoveObserver(this);
-        }
-    } 
-    #endregion
-
-    // // Start is called before the first frame update
-    private void Awake()
-    {
-        MuteUnmute(2);
-        publisher = GetComponent<NodePublisher>();
-        playSound = gameObject.AddComponent<AudioSource>();
-        bgdMusic = gameObject.AddComponent<AudioSource>();
-        sound.onClick.AddListener(() => MuteUnmute(0));
-        music.onClick.AddListener(() => MuteUnmute(1));
-        
+        SceneManager.sceneLoaded -= SceneManager_sceneLoaded;
     }
 
+    private void Awake()
+    {
+        bmm = gameObject.AddComponent<BackgroundMusicManager>();
+    }
+
+    private void SceneManager_sceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(scene.isLoaded && !scene.name.Contains("Credits"))
+        {
+            if(scene.name.Contains("Dialogue")){
+                sgm = GameObject.Find("GameManager").GetComponent<SoundGameManager>();
+            }
+            sound = GameObject.Find("sound").GetComponent<Button>();
+            music = GameObject.Find("music").GetComponent<Button>();
+            crossSound = GameObject.Find("sound_cross");
+            crossMusic = GameObject.Find("music_cross");
+            sound.onClick.AddListener(() => MuteUnmute(0));
+            music.onClick.AddListener(() => MuteUnmute(1));
+            if(!scene.name.Contains("Main")){
+                MuteUnmute(2);
+            }
+        }
+    }
+
+    
+
+    void Start(){
+        bmm.StartMusic();
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(base.gameObject); 
+        }
+        else
+        {
+            Destroy(base.gameObject);
+        }
+        //DontDestroyOnLoad(this);
+    }
+
+
+    
     // Update is called once per frame
     void Update()
     {
-        if (PlayerPrefs.GetString("sound") == "off"){
-            playSound.volume = 0;
-        }
         if (PlayerPrefs.GetString("music") == "off"){
-            bgdMusic.volume = 0;
+            bmm.MuteMusic();
+        }
+        else if (PlayerPrefs.GetString("music") == "on"){
+            bmm.PlayMusic();
+        }
+        if(SceneManager.GetActiveScene().name.Contains("Dialogue")){
+            bmm.MuteMusic();
         }
     }
 
     public void MuteUnmute(int i){
-        
         if(i == 0){
             if(PlayerPrefs.GetString("sound") == "on"){
                 print("sound off");
                 PlayerPrefs.SetString("sound", "off");
                 crossSound.SetActive(true);
-                playSound.volume = 0;
+                if(SceneManager.GetActiveScene().name.Contains("Dialogue")){
+                    sgm.MuteSound();
+                }
+                
             }
             else if (PlayerPrefs.GetString("sound") == "off"){
                 PlayerPrefs.SetString("sound", "on");
                 crossSound.SetActive(false);
-                playSound.volume = 1;
+                sgm.PlaySound();
             }
         }
         if(i == 1 && !SceneManager.GetActiveScene().name.Contains("Dialogue")){
             if(PlayerPrefs.GetString("music") == "on"){
                 PlayerPrefs.SetString("music", "off");
                 crossMusic.SetActive(true);
-                bgdMusic.volume = 0;
+                bmm.MuteMusic();
             }
             else if (PlayerPrefs.GetString("music") == "off"){
                 PlayerPrefs.SetString("music", "on");
                 crossMusic.SetActive(false);
-                bgdMusic.volume = 1;
+                bmm.PlayMusic();
             }
         }
         if(i == 2){
@@ -99,13 +129,5 @@ public class AudioManager : MonoBehaviour, INodeSubscriber
         }
     }
 
-    public void OnNotifyNode(DialogueRuntimeNode node)
-    {   
-        if (node.DialogueEvents == null) return;
-        if (!node.DialogueEvents.ContainsKey(DialogueEvents.PLAY_SOUND)) return;
-        if(PlayerPrefs.GetString("sound") == "off") return;
-        playSound.clip = Resources.Load("audio/" + (string)node.DialogueEvents[DialogueEvents.PLAY_SOUND]) as AudioClip;
-        playSound.Play();
-    }
 
 }

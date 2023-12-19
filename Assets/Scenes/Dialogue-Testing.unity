@@ -230,7 +230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &37176237
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1794,9 +1794,9 @@ GameObject:
   - component: {fileID: 752905247}
   - component: {fileID: 752905251}
   - component: {fileID: 752905252}
-  - component: {fileID: 752905253}
   - component: {fileID: 752905254}
   - component: {fileID: 752905255}
+  - component: {fileID: 752905256}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1900,22 +1900,6 @@ MonoBehaviour:
   gameCamera: {fileID: 137099907}
   background: {fileID: 361857735}
   character: {fileID: 115260873}
---- !u!114 &752905253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 752905246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e6782dbd0d659140a0f24b1ee543bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sound: {fileID: 2071967406}
-  crossSound: {fileID: 826129832}
-  crossMusic: {fileID: 1229900937}
-  music: {fileID: 37176238}
 --- !u!114 &752905254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1953,6 +1937,19 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 661118312}
   savingAnim: {fileID: 272526597}
   waitingOnUser: 0
+--- !u!114 &752905256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752905246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6f40eaba4d96645a8d4dc13198d0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playSound: {fileID: 0}
 --- !u!1 &779756014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,7 +2116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &826129833
 Transform:
   m_ObjectHideFlags: 0
@@ -3575,7 +3572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1229900938
 Transform:
   m_ObjectHideFlags: 0
@@ -3584,7 +3581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229900937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9717.16}
+  m_LocalPosition: {x: 2971, y: 767, z: -9717.16}
   m_LocalScale: {x: 7017.9497, y: 7017.9497, z: 7017.9497}
   m_ConstrainProportionsScale: 1
   m_Children: []
