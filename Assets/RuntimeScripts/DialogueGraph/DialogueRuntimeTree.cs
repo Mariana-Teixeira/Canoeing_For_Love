@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DialogueTree
 {
@@ -23,6 +24,11 @@ namespace DialogueTree
         {
             Debug.Log("Iterating through the Node Tree");
             data.graph.TryGetValue(nextNode, out currentNode);
+        }
+
+        public void GoToCredits()
+        {
+            SceneManager.LoadScene(3);
         }
     }
 }

@@ -11,10 +11,10 @@ public class ChoicesPanel : MonoBehaviour
 
     private const float BUTTON_MIN_WIDTH = 125;
     private const float BUTTON_MAX_WIDTH = 1000;
-    private const float BUTTON_WIDTH_PADDING = 50;
+    private const float BUTTON_WIDTH_PADDING = 40;
 
-    private const float BUTTON_HEIGHT_LINE = 50f;
-    private const float BUTTON_HEIGHT_PADDING = 20;
+    private const float BUTTON_HEIGHT_LINE = 30f;
+    private const float BUTTON_HEIGHT_PADDING = 10;
 
     public TMP_FontAsset asset;
 
@@ -56,9 +56,8 @@ public class ChoicesPanel : MonoBehaviour
                 Button newButton = newButtonObject.GetComponent<Button>();
                 TextMeshProUGUI newTitle = newButton.GetComponentInChildren<TextMeshProUGUI>();
                 LayoutElement newLayout = newButton.GetComponent<LayoutElement>();
-                print(asset.faceInfo);
                 newTitle.font = asset;
-                newTitle.fontSize = 15;
+                newTitle.fontSize = 12;
                 newTitle.color = new Color(255,255,255,1);
 
                 choiceButton = new ChoiceButton {button=newButton, title=newTitle, layout=newLayout};
@@ -69,7 +68,6 @@ public class ChoicesPanel : MonoBehaviour
             int buttonIndex = i;
             choiceButton.button.onClick.AddListener(() => AcceptAnswer(buttonIndex));
             choiceButton.title.text = choices[i].ChoiceDialogue;
-            print(choiceButton.title.preferredWidth);
             float buttonWidth = Mathf.Clamp(BUTTON_WIDTH_PADDING + choiceButton.title.preferredWidth, BUTTON_MIN_WIDTH, BUTTON_MAX_WIDTH);
             minWidth = Mathf.Min(minWidth, buttonWidth);
         }

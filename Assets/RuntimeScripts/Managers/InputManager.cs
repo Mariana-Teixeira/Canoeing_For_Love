@@ -1,15 +1,16 @@
 using DialogueTree;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour, INodeSubscriber
 {
+    VisualManager vm;
+
+    UIGameManager ui;
     DialogueManager treeManager;
     InputInvoker invoker;
     ICommand command;
-
     ICommand comms;
-
-    VisualManager vm;
 
     #region Node Publisher
     NodePublisher publisher;
@@ -26,16 +27,19 @@ public class InputManager : MonoBehaviour, INodeSubscriber
     }
     private void Start()
     {
+        comms = new NewFileCommand(treeManager);
+        invoker.AddCommand(comms);
         comms = new LoadFileCommand(treeManager);
         invoker.AddCommand(comms);
         command = new StartDialogueCommand(treeManager);
         invoker.AddCommand(command);
         vm = VisualManager.instanceVisual;
+        ui = UIGameManager.instance;
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) ){
+        if (Input.GetMouseButtonDown(0) && (EventSystem.current.currentSelectedGameObject == null || EventSystem.current.currentSelectedGameObject.name == "ButtonPrefab(Clone)") && !ui.waitingOnUser){
             if(vm.lineFinish){
                 invoker.AddCommand(command);
             }
