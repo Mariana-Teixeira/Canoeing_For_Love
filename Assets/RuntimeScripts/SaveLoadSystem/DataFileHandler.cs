@@ -133,6 +133,7 @@ public class DataFileHandler
         jsonObj["loaders"][i]["image"] = "";
         jsonObj["loaders"][i]["kenScore"] = 0;
         jsonObj["loaders"][i]["allenScore"] = 0;
+        jsonObj["loaders"][i]["items"] = "";
         string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
     }
