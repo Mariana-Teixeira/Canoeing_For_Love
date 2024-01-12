@@ -1,46 +1,58 @@
 {
   "loaders": [
     {
-      "node": 216,
+      "node": 5,
       "image": "image0",
-      "kenScore": 5,
-      "allenScore": 0,
-      "items": ""
-    },
-    {
-      "node": 3,
-      "image": "image1",
       "kenScore": 0,
       "allenScore": 0,
-      "items": ""
+      "items": "",
+      "savename": "ooppçç",
+      "savedate": "20:35:44 12/01/2024"
+    },
+    {
+      "node": 0,
+      "image": "",
+      "kenScore": 0,
+      "allenScore": 0,
+      "items": "",
+      "savename": "",
+      "savedate": ""
     },
     {
       "node": 1,
       "image": "image2",
       "kenScore": 0,
       "allenScore": 0,
-      "items": ""
+      "items": "",
+      "savename": "",
+      "savedate": ""
     },
     {
-      "node": 6,
-      "image": "image3",
+      "node": 0,
+      "image": "",
       "kenScore": 0,
       "allenScore": 0,
-      "items": ""
+      "items": "",
+      "savename": "",
+      "savedate": ""
     },
     {
-      "node": 1,
-      "image": "image4",
+      "node": 0,
+      "image": "",
       "kenScore": 0,
       "allenScore": 0,
-      "items": ""
+      "items": "",
+      "savename": "",
+      "savedate": ""
     },
     {
       "node": 583,
       "image": "image5",
       "kenScore": 0,
       "allenScore": 2,
-      "items": "red shell_termit spray_"
+      "items": "red shell_termit spray_",
+      "savename": "",
+      "savedate": ""
     }
   ],
   "active": 10
