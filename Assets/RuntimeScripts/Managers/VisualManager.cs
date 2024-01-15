@@ -74,7 +74,9 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
             DisplayNameplate((string)hash[DialogueEvents.SHOW_NAMEPLATE]);
 
         if (hash.ContainsKey(DialogueEvents.ADD_SCORE))
-            heartAnimator.SetTrigger("HeartChoice");
+            heartAnimator.SetTrigger("HeartWin");
+        if (hash.ContainsKey(DialogueEvents.REMOVE_SCORE))
+            heartAnimator.SetTrigger("HeartLost");
     }
 
     void DisplayDialogue(string dialogue)
