@@ -5,8 +5,9 @@ using System;
 
 public class CameraManager : MonoBehaviour, INodeSubscriber
 {
+    //Camera Manager with the usage of a virtual camera. Zoom in, Zoom out, Shake and Normal are the possible States for the camera.
+    // There's also the possibility of panning the camera
     [SerializeField] CinemachineVirtualCamera virtualCamera;
-    [SerializeField] Camera gameCamera;
 
     [SerializeField] GameObject background;
 
@@ -111,8 +112,6 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
 
     public void StartShake()
     {
-        // multiChannelPerlin = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        // multiChannelPerlin.m_AmplitudeGain = shakeIntensity;
         background.transform.position = (Vector3)(UnityEngine.Random.insideUnitCircle * shakeIntensity);  
         character.transform.position = (Vector3)(UnityEngine.Random.insideUnitCircle * shakeIntensity);  
         
