@@ -15,6 +15,8 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     public Image backgroundImage;
     float textSpeed = 0.03f;
 
+    string nametodisplay;
+
     [HideInInspector] public string dialogueChecker = "";
     [HideInInspector] public bool lineFinish = false;
 
@@ -71,13 +73,18 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
         if (hash.ContainsKey(DialogueEvents.DISPLAY_BACKGROUND))
             DisplayBackground((string)hash[DialogueEvents.DISPLAY_BACKGROUND]);
 
-        if (hash.ContainsKey(DialogueEvents.SHOW_NAMEPLATE))
+        if (hash.ContainsKey(DialogueEvents.SHOW_NAMEPLATE)){
             DisplayNameplate((string)hash[DialogueEvents.SHOW_NAMEPLATE]);
+            nametodisplay = (string)hash[DialogueEvents.SHOW_NAMEPLATE];
+            nametodisplay = string.Concat(nametodisplay[0].ToString().ToLower(), nametodisplay.Substring(1));
+        }
 
-        if (hash.ContainsKey(DialogueEvents.ADD_SCORE))
+        if (hash.ContainsKey(DialogueEvents.ADD_SCORE) && ((string)hash[DialogueEvents.ADD_SCORE] == nametodisplay || (nametodisplay != "ken" &&  nametodisplay != "allen"))){
             heartAnimator.SetTrigger("HeartWin");
-        if (hash.ContainsKey(DialogueEvents.REMOVE_SCORE))
+        }
+        else if (hash.ContainsKey(DialogueEvents.REMOVE_SCORE) && ((string)hash[DialogueEvents.REMOVE_SCORE] == nametodisplay || (nametodisplay != "ken" &&  nametodisplay != "allen"))){
             heartAnimator.SetTrigger("HeartLost");
+        }
     }
 
     void DisplayDialogue(string dialogue)
