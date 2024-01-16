@@ -33,6 +33,7 @@ public class AudioManager : MonoBehaviour
         bmm = gameObject.AddComponent<BackgroundMusicManager>();
     }
 
+    // Used for consistency with different scenes
     private void SceneManager_sceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if(scene.isLoaded && !scene.name.Contains("Credits"))
@@ -65,7 +66,6 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(base.gameObject);
         }
-        //DontDestroyOnLoad(this);
     }
 
 
@@ -84,10 +84,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    // Audio manager logic
+    // updates playerPrefs to maintain consistency throughout the game and the different scenes 
     public void MuteUnmute(int i){
         if(i == 0){
             if(PlayerPrefs.GetString("sound") == "on"){
-                print("sound off");
                 PlayerPrefs.SetString("sound", "off");
                 crossSound.SetActive(true);
                 if(SceneManager.GetActiveScene().name.Contains("Dialogue")){

@@ -1,4 +1,5 @@
 using DialogueTree;
+using System;
 using System.Collections;
 using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
@@ -149,7 +150,33 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     IEnumerator TypeLine(string dialogue)
     {
         dialogueChecker = dialogue;
-        foreach (char c in dialogue.ToCharArray())
+        var chars = dialogue.ToCharArray();
+        int charBreak = 72;
+        int i = 0;
+        foreach (char c in chars)
+        {
+            if (c == char.Parse("\n")){
+                if(i>charBreak){
+                    charBreak += i%charBreak;
+                    i=0;
+                }
+                else{
+                    charBreak += i;
+                    i=0;
+                }
+            }
+            i++;
+        }
+        while(charBreak <= chars.Length){
+            if(chars[charBreak] == char.Parse(" ")){
+                chars[charBreak] = char.Parse("\n");
+                charBreak += 72;
+            }
+            else{
+                charBreak--;
+            }
+        }
+        foreach (char c in chars)
         {
             dialogueComponent.text += c;
             yield return new WaitForSeconds(textSpeed);

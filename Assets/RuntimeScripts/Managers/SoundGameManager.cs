@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SoundGameManager : MonoBehaviour, INodeSubscriber
 {
+    // Sound effects Manager, and it's logic
     public static SoundGameManager instance {set; get;}
 
     public AudioSource playSound;

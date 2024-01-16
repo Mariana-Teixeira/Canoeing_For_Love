@@ -122,19 +122,20 @@ public class DataFileHandler
         if(close){
             jsonObj["active"] = 10;
         }
+        jsonObj["loaders"][active]["savedate"] = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy");
         string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
     }
 
-    public void EliminateSave(int i){
-        string json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
-        dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
-        jsonObj["loaders"][i]["node"] = 0;
-        jsonObj["loaders"][i]["image"] = "";
-        jsonObj["loaders"][i]["kenScore"] = 0;
-        jsonObj["loaders"][i]["allenScore"] = 0;
-        jsonObj["loaders"][i]["items"] = "";
-        string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-        File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
-    }
+    // public void EliminateSave(int i){
+    //     string json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
+    //     dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+    //     jsonObj["loaders"][i]["node"] = 0;
+    //     jsonObj["loaders"][i]["image"] = "";
+    //     jsonObj["loaders"][i]["kenScore"] = 0;
+    //     jsonObj["loaders"][i]["allenScore"] = 0;
+    //     jsonObj["loaders"][i]["items"] = "";
+    //     string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+    //     File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
+    // }
 }

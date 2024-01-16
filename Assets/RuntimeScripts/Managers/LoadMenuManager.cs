@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using System.IO;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -41,13 +43,41 @@ public class LoadMenuManager : MonoBehaviour
     [SerializeField] public Image img5;
     [SerializeField] public Image img6;
 
+    [SerializeField] public TMP_InputField name1;
+    [SerializeField] public TMP_InputField name2;
+    [SerializeField] public TMP_InputField name3;
+    [SerializeField] public TMP_InputField name4;
+    [SerializeField] public TMP_InputField name5;
+    [SerializeField] public TMP_InputField name6;
+
+    [SerializeField] public TMP_Text date1;
+    [SerializeField] public TMP_Text date2;
+    [SerializeField] public TMP_Text date3;
+    [SerializeField] public TMP_Text date4;
+    [SerializeField] public TMP_Text date5;
+    [SerializeField] public TMP_Text date6;
+
     static string json;
     dynamic jsonObj;
 
     
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
+        jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+        name1.text = jsonObj["loaders"][0]["savename"];
+        name2.text = jsonObj["loaders"][1]["savename"];
+        name3.text = jsonObj["loaders"][2]["savename"];
+        name4.text = jsonObj["loaders"][3]["savename"];
+        name5.text = jsonObj["loaders"][4]["savename"];
+        name6.text = jsonObj["loaders"][5]["savename"];
+        date1.text = jsonObj["loaders"][0]["savedate"];
+        date2.text = jsonObj["loaders"][1]["savedate"];
+        date3.text = jsonObj["loaders"][2]["savedate"];
+        date4.text = jsonObj["loaders"][3]["savedate"];
+        date5.text = jsonObj["loaders"][4]["savedate"];
+        date6.text = jsonObj["loaders"][5]["savedate"];
         button1.onClick.AddListener(() => ManageButtons(0));
         button2.onClick.AddListener(() => ManageButtons(1));
         button3.onClick.AddListener(() => ManageButtons(2));
@@ -73,10 +103,10 @@ public class LoadMenuManager : MonoBehaviour
             img2.sprite = LoadImages("image1.png");
         }
         if(jsonObj["loaders"][2]["image"]!="" && img3.sprite == null){
-            img3.sprite = LoadImages("image2.png");;
+            img3.sprite = LoadImages("image2.png");
         }
         if(jsonObj["loaders"][3]["image"]!="" && img4.sprite == null){
-            img4.sprite = LoadImages("image3.png");;
+            img4.sprite = LoadImages("image3.png");
         }
         if(jsonObj["loaders"][4]["image"]!="" && img5.sprite == null){
             img5.sprite = LoadImages("image4.png");
@@ -88,39 +118,74 @@ public class LoadMenuManager : MonoBehaviour
 
     // Update is called once per frame
     public void ManageButtons(int i){
-        // string json = File.ReadAllText("Assets/RuntimeScripts/SaveLoadSystem/data.json");
-        // dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
         jsonObj["active"]= i;
+        if(i == 0){
+            jsonObj["loaders"][i]["savename"] = name1.text;
+        }
+        else if(i == 1){
+            jsonObj["loaders"][i]["savename"] = name2.text;
+        }
+        else if(i == 2){
+            jsonObj["loaders"][i]["savename"] = name3.text;
+        }
+        else if(i == 3){
+            jsonObj["loaders"][i]["savename"] = name4.text;
+        }
+        else if(i == 4){
+            jsonObj["loaders"][i]["savename"] = name5.text;
+        }
+        else if(i == 5){
+            jsonObj["loaders"][i]["savename"] = name6.text;
+        }
         string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
         SceneManager.LoadScene(1);
     }
 
     public void TrashButtons(int i){
-        string json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
-        dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
         jsonObj["loaders"][i]["node"] = 0;
         jsonObj["loaders"][i]["image"] = "";
         jsonObj["loaders"][i]["kenScore"] = 0;
         jsonObj["loaders"][i]["allenScore"] = 0;
+        jsonObj["loaders"][i]["items"] = "";
+        jsonObj["loaders"][i]["savename"] = "";
+        jsonObj["loaders"][i]["savedate"] = "";
         if(i == 0){
             img1.sprite = null;
+            name1.text = "";
         }
         else if(i == 1){
             img2.sprite = null;
+            name2.text = "";
         }
         else if(i == 2){
             img3.sprite = null;
+            name3.text = "";
         }
         else if(i == 3){
             img4.sprite = null;
+            name4.text = "";
         }
         else if(i == 4){
             img5.sprite = null;
+            name5.text = "";
         }
         else if(i == 5){
             img6.sprite = null;
+            name6.text = "";
         }
+        name1.text = jsonObj["loaders"][0]["savename"];
+        name2.text = jsonObj["loaders"][1]["savename"];
+        name3.text = jsonObj["loaders"][2]["savename"];
+        name4.text = jsonObj["loaders"][3]["savename"];
+        name5.text = jsonObj["loaders"][4]["savename"];
+        name6.text = jsonObj["loaders"][5]["savename"];
+        date1.text = jsonObj["loaders"][0]["savedate"];
+        date2.text = jsonObj["loaders"][1]["savedate"];
+        date3.text = jsonObj["loaders"][2]["savedate"];
+        date4.text = jsonObj["loaders"][3]["savedate"];
+        date5.text = jsonObj["loaders"][4]["savedate"];
+        date6.text = jsonObj["loaders"][5]["savedate"];
         string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
     }

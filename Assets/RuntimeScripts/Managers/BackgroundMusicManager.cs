@@ -6,7 +6,7 @@ using UnityEngine;
 public class BackgroundMusicManager: MonoBehaviour
 {
     AudioSource bgdMusic;
-    
+    // Background Music Manager, and it's logic
     void Awake(){
         bgdMusic = gameObject.AddComponent<AudioSource>();
         bgdMusic.loop = true;
