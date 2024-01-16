@@ -1,6 +1,7 @@
 using DialogueTree;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,6 +25,9 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
     [SerializeField] private GameObject menuUI;
     [SerializeField] private GameObject charactersUI;
     [SerializeField] private CanvasGroup choiceCanvas;
+    [SerializeField] private CanvasGroup choiceUI;
+
+    [SerializeField] private Animator heartAnimator;
 
     private ChoicesPanel choicePanel;
 
@@ -68,6 +72,11 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
         if (hash.ContainsKey(DialogueEvents.SHOW_NAMEPLATE))
             DisplayNameplate((string)hash[DialogueEvents.SHOW_NAMEPLATE]);
+
+        if (hash.ContainsKey(DialogueEvents.ADD_SCORE))
+            heartAnimator.SetTrigger("HeartWin");
+        if (hash.ContainsKey(DialogueEvents.REMOVE_SCORE))
+            heartAnimator.SetTrigger("HeartLost");
     }
 
     void DisplayDialogue(string dialogue)
