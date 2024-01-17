@@ -78,12 +78,12 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
         if (character == "ken")
         {
             kenScore++;
-            kenSlider.value = kenScore;
+            kenSlider.value++;
         }
         else if (character == "allen")
         {
             allenScore++;
-            allenSlider.value = allenScore;
+            allenSlider.value++;
         }
     }
 
@@ -93,14 +93,14 @@ public class InventoryManager : MonoBehaviour, INodeSubscriber
         {
             if(kenScore > 0){
                 kenScore--;
-                kenSlider.value = kenScore;
+                kenSlider.value--;
             }
         }
         else if (character == "allen")
         {
             if(allenScore > 0){
                 allenScore--;
-                allenSlider.value = allenScore;
+                allenSlider.value--;
             }
         }
     }

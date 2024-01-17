@@ -112,16 +112,18 @@ public class DataFileHandler
         int count = itemsSaved.Split("_").Length;
         Debug.Log("Saved items: " + count);
         Debug.Log("Items To save: " + itemsChosen.Count);
+        foreach(string stri in itemsChosen){
+            Debug.Log("Item: " + stri);
+        }
         while(count<itemsChosen.Count){
-            if(itemsChosen[count].Length>2){
-                itemsSaved = itemsSaved + itemsChosen[count] + "_";
+            if(itemsChosen[count]!=null){
+                if(itemsChosen[count].Length>2){
+                    itemsSaved = itemsSaved + itemsChosen[count] + "_";
+                }
             }
             count++;
         }
         jsonObj["loaders"][active]["items"] = itemsSaved;
-        if(close){
-            jsonObj["active"] = 10;
-        }
         jsonObj["loaders"][active]["savedate"] = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy");
         string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
