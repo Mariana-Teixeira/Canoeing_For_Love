@@ -1,7 +1,13 @@
 # Canoeing For Love
 This repository serves as the main avenue of documentation storage for the project of PJ2 - Projeto de Jogo 2D (2D Game Project), a course that's part of the Major in Game Development, being taken in the University of Aveiro.
 
-> Canoeing for Love is a game where the player must seduce the man of their dreams or suffer the wrath of Poseidon. You are given four days to seduce the love of your life. Will you be able to flirt your way into the sweet guy's heart or will you be attracted to his overly competitive brother?
+## Game Concept
+Canoeing for Love is a Dating-Simulator where the player must seduce the man of their dreams or suffer the wrath of Poseidon. You are given four days to seduce the love of your life. Will you be able to flirt your way into the sweet guy's heart or will you be attracted to his overly competitive brother?
+
+### Features
+- Two Romanceable Characters
+- Four Unique Endings
+- Narrative filled with Humour
 
 ## Group
   - A. Margarida Prata, 118328
