@@ -86,6 +86,7 @@ public class DialogueManager : NodePublisher
         NotifyObserver(tree.CurrentNode);
     }
 
+    // When there are conditionants to the players path, either based on score, items in the inventory or random
     public void GoToPathNode(DialoguePath dialogueBool)
     {
         int score;
@@ -152,7 +153,7 @@ public class DialogueManager : NodePublisher
         
     }
 
-    
+    // Check if the player has chosen an option
     public IEnumerator CheckHasAnswer(DialogueChoices[] choices){
         yield return new WaitUntil(()=>choicePanel.GetAnswer()!=-1);
         nextNode = choices[choicePanel.GetAnswer()].NextNodeGUID;
@@ -161,6 +162,7 @@ public class DialogueManager : NodePublisher
     }
 
 
+    // Load/New/Save game
     public void LoadGame(){
         inventory.LoadInventory();
         headNode = dfh.LoadGame();
@@ -173,12 +175,10 @@ public class DialogueManager : NodePublisher
     }
 
     public void SaveGame(){
-        // dfh.SaveGame(tree, cam);
         inventory.SaveInventory(tree, cam);
     }
 
     public void SaveGameWithoutExit(){
-        // dfh.SaveGame(tree, cam);
         inventory.SaveInventoryWithoutExit(tree, cam);
     }
 }

@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class UIGameManager : MonoBehaviour
 {
+    // Manager for the ingame UI, save, load, menu, exit buttons and the warning for saving
+
     DialogueManager dm;
 
     public static UIGameManager instance {get; set;}
 
-    private readonly DataFileHandler dfh = new();
     [SerializeField] Button mainMenuButton;
 
     [SerializeField] Button loadMenuButton;
@@ -33,8 +34,6 @@ public class UIGameManager : MonoBehaviour
     public bool waitingOnUser;
 
     int clickedButton = 0;
-    // Start is called before the first frame update
-
     bool save = false;
     void Awake(){
         instance = this;

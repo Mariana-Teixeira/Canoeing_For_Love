@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour, INodeSubscriber
 {
+
+    // manages Input from the player, very simple as the player only needs the mouse
     VisualManager vm;
 
     UIGameManager ui;

@@ -12,6 +12,8 @@ using UnityEngine.UI;
 
 public class LoadMenuManager : MonoBehaviour
 {
+
+    // All the logic from the Load Menu, the buttons to choose a save, the thumbnails from each save, as well as the save date, name, number and discard button
     [SerializeField] public Button button1;
     [SerializeField] public Button button2;
 

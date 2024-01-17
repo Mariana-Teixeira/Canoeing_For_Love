@@ -11,6 +11,7 @@ public class DataFileHandler
 {
 
     public void NewGame(){
+        // new game logic
         try{
             string json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
@@ -34,6 +35,7 @@ public class DataFileHandler
 
 
     public int LoadGame(){
+        // load game logic
         int headNode = 0;
         try{
             string json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
@@ -51,7 +53,7 @@ public class DataFileHandler
     }
 
      public void SaveGame(DialogueRuntimeTree tree, Camera cam, int KenScore, int AllenScore, List<string> itemsChosen, bool close){
-        // maybe refactor in the future, maybe not
+        // Saving logic and every correction to the current data, so there are no score or item bugs that can be explored
         DataToSave d = new DataToSave();
         int kenneth = KenScore;
         int allenboy = AllenScore;
@@ -102,6 +104,7 @@ public class DataFileHandler
         RenderTexture.active = null;
         byte[] byteArray = renderedTexture.EncodeToPNG();
         File.WriteAllBytes(Path.Combine(Application.streamingAssetsPath, "image" + active + ".png"), byteArray);
+        // returning to original camera texture, after taking thumbnail
         cam.targetTexture = a;
         // save game data: node and image
         jsonObj["loaders"][active]["node"] = d.getNode();
@@ -128,16 +131,4 @@ public class DataFileHandler
         string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
     }
-
-    // public void EliminateSave(int i){
-    //     string json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));
-    //     dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
-    //     jsonObj["loaders"][i]["node"] = 0;
-    //     jsonObj["loaders"][i]["image"] = "";
-    //     jsonObj["loaders"][i]["kenScore"] = 0;
-    //     jsonObj["loaders"][i]["allenScore"] = 0;
-    //     jsonObj["loaders"][i]["items"] = "";
-    //     string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-    //     File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
-    // }
 }

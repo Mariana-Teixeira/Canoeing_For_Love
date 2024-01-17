@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class VisualManager : MonoBehaviour, INodeSubscriber
 {
+
+    // manages what is visually demonstrated: background, characters, dialogue on screen, character name and love score feedback
     public static VisualManager instanceVisual {get; set;}
     public TextMeshProUGUI dialogueComponent;
     public TextMeshProUGUI nameComponent;
@@ -156,6 +158,7 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
 
     IEnumerator TypeLine(string dialogue)
     {
+        // check for limits due to dialogue box bug and inserts a \n instead of a space to fix it
         dialogueChecker = dialogue;
         var chars = dialogue.ToCharArray();
         int charBreak = 72;
@@ -183,6 +186,7 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
                 charBreak--;
             }
         }
+        // add characters to the screen
         foreach (char c in chars)
         {
             dialogueComponent.text += c;

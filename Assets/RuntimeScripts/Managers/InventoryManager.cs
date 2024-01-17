@@ -8,6 +8,9 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour, INodeSubscriber
 {
+
+    // Inventory manager manages the love score for each character and the items chosen for the race.
+    // Also saves/loads those informations from the save file.
     public Slider kenSlider;
     public Slider allenSlider;
 

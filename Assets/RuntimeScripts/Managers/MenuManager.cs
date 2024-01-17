@@ -63,6 +63,7 @@ public class MenuManager: MonoBehaviour
     }
 
     public void ManageButtons(int i){
+        // Manages buttons functionalities and ui warnings and changes.
         if(quitWarning.activeSelf != true && saveWarning.activeSelf!=true){
             if(i == 0){
                 json = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "data.json"));

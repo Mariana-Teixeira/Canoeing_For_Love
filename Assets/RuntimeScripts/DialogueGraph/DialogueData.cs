@@ -19,11 +19,13 @@ public class DialogueData
     public StreamReader reader { get; private set; }
     
     public DialogueData()
-    {
+    {   
+        // reading all story nodes and inserting them into a List 
         StreamReader reader = new StreamReader(Path.Combine(Application.streamingAssetsPath, "test_dialogue.json"));
         var json = reader.ReadToEnd();
         List<DialogueNode> dialogueNodes = JsonConvert.DeserializeObject<List<DialogueNode>>(json);
 
+        // Dictionary for camera functionalities used
         cameraDict = new Dictionary<string,CameraAnimation>
         {
             { "normal", CameraAnimation.NORMAL },
@@ -33,6 +35,7 @@ public class DialogueData
         guids = new Dictionary<int, Guid>{};
         graph = new Dictionary<Guid, DialogueRuntimeNode> {};
 
+        // last node
         var endNode = new DialogueRuntimeNode(Guid.NewGuid(), new Hashtable
         {
             { DialogueEvents.SHOW_CREDITS, "Developers" },
@@ -41,6 +44,10 @@ public class DialogueData
         guids.Add(dialogueNodes.Count+1, endNode.Guid);
         graph.Add(guids[key: dialogueNodes.Count+1], endNode);
 
+
+        // logic to interpret data gotten from the json file
+        // This loop checks for the existence of dialogue, character, animations, backgrounds, next node, audio, and love score changes.
+        // The ones that are detected call an event from DialogueEvents and pass the needed value. 
         foreach (var node in dialogueNodes){
             Hashtable hasher = new Hashtable();
             guids.Add(node.Id, Guid.NewGuid());
@@ -119,6 +126,7 @@ public class DialogueData
 
 // goto_node[node, character, score]
 
+// Objects that are gonna be fetched from json files
 public class DialogueNode
 {
     public int Id { get; set; }

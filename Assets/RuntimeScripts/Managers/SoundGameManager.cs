@@ -47,6 +47,7 @@ public class SoundGameManager : MonoBehaviour, INodeSubscriber
         playSound.volume = 1;
     }
 
+    // When it receives the notification it plays the sound that was needed
     public void OnNotifyNode(DialogueRuntimeNode node)
     {
         if (node.DialogueEvents == null) return;

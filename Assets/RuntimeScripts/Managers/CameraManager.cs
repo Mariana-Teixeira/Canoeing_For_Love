@@ -53,6 +53,7 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
         }
     }
 
+    // Changes camera state 
     public void ChangeState(CameraAnimation newState)
     {
         if (newState == currentState) return;
@@ -62,6 +63,7 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
         EnterState();
     }
 
+    // When notification is received, operates the needed changes to the camera state
     public void OnNotifyNode(DialogueRuntimeNode node)
     {
         if (node.DialogueEvents == null) return;
@@ -75,6 +77,7 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
         }
     }
 
+    // Enters camera state 
     void EnterState()
     {
         switch(currentState)
@@ -100,6 +103,7 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
         }
     }
 
+    // Exits camera state 
     void ExitState()
     {
         switch(currentState)
@@ -110,6 +114,7 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
         }
     }
 
+    // Starts shake animation
     public void StartShake()
     {
         background.transform.position = (Vector3)(UnityEngine.Random.insideUnitCircle * shakeIntensity);  
@@ -117,6 +122,7 @@ public class CameraManager : MonoBehaviour, INodeSubscriber
         
     }
 
+    // Stops shake animation
     public void StopShake()
     {
         multiChannelPerlin = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();

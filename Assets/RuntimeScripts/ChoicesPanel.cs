@@ -31,9 +31,6 @@ public class ChoicesPanel : MonoBehaviour
         asset = TMP_FontAsset.CreateFontAsset(font);
     }
 
-
-    
-
     /// <summary>
     /// Generate and display buttons for each dialogue choice on screen.
     /// </summary>
