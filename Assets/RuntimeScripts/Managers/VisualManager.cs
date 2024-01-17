@@ -6,10 +6,11 @@ using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// <c>VisualManager</c> is concerned with the graphical display of character, background, text and animations.
+/// </summary>
 public class VisualManager : MonoBehaviour, INodeSubscriber
 {
-
-    // manages what is visually demonstrated: background, characters, dialogue on screen, character name and love score feedback
     public static VisualManager instanceVisual {get; set;}
     public TextMeshProUGUI dialogueComponent;
     public TextMeshProUGUI nameComponent;
@@ -55,6 +56,10 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
         choiceCanvas.enabled = false;
     }
 
+    ///<summary>
+    /// Sort trough the <c>DialogueEvents</c> Dictionary Keys and display paired Values.
+    ///</summary>
+    /// <param name="node"> Fetch <c>DialogueEvents</c> Dictionary from this argument. </param>
     public void OnNotifyNode(DialogueRuntimeNode node)
     {
         var hash = node.DialogueEvents;
@@ -98,6 +103,10 @@ public class VisualManager : MonoBehaviour, INodeSubscriber
         StartCoroutine(TypeLine(dialogue));  
     }
 
+    /// <summary>
+    /// Nameplate refers to the TextMeshPro Object that displays the name of the character talking.
+    /// </summary>
+    /// <param name="name"> Name of the character that is speaking. </param>
     void DisplayNameplate(string name)
     {
         if (name == "Narrator" || name == "Developers")

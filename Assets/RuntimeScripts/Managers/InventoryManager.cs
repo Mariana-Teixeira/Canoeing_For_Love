@@ -6,6 +6,9 @@ using DialogueTree;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// <c>InventoryManager</c> is concerned with saving the relationship scores of each character and the items chosen by the player in the current playsession.
+/// </summary>
 public class InventoryManager : MonoBehaviour, INodeSubscriber
 {
 
