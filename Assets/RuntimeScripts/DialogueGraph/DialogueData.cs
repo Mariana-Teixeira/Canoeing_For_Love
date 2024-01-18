@@ -13,19 +13,19 @@ public class DialogueData
     public Guid headNode { get; private set; }
 
     string nametodisplay;
+    ///<value> Dictionary containing all nodes of the dialogue graph. </value>
     public Dictionary<Guid, DialogueRuntimeNode> graph { get; private set; }
     public Dictionary<int, Guid> guids { get; private set; }
+    ///<value> Dictionary containing all camera animations. </value>
     public Dictionary<string,CameraAnimation> cameraDict { get; private set; }
     public StreamReader reader { get; private set; }
     
     public DialogueData()
-    {   
+    {
         // reading all story nodes and inserting them into a List 
         StreamReader reader = new StreamReader(Path.Combine(Application.streamingAssetsPath, "test_dialogue.json"));
         var json = reader.ReadToEnd();
         List<DialogueNode> dialogueNodes = JsonConvert.DeserializeObject<List<DialogueNode>>(json);
-
-        // Dictionary for camera functionalities used
         cameraDict = new Dictionary<string,CameraAnimation>
         {
             { "normal", CameraAnimation.NORMAL },

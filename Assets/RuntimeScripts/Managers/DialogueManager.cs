@@ -17,6 +17,9 @@ using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Dialogue Manager is concerned with the saving, loading and iterating of a dialogue graph.
+/// </summary>
 public class DialogueManager : NodePublisher
 {
     DialogueRuntimeTree tree;
@@ -49,6 +52,10 @@ public class DialogueManager : NodePublisher
         NotifyObserver(tree.CurrentNode);
     }
 
+    /// <summary>
+    /// Called when the current node of the dialogue graph is updated.
+    /// Executes an action for each <c>DialogueEvent</c> stored in the current node.
+    /// </summary>
     public void ExecuteNodeTypeAction()
     {
         var hash = tree.CurrentNode.DialogueEvents;
@@ -86,6 +93,10 @@ public class DialogueManager : NodePublisher
         NotifyObserver(tree.CurrentNode);
     }
 
+    /// <summary>
+    /// Choses a dialogue branch based on a conditionant.
+    /// </summary>
+    /// <param name="dialogueBool"> Stores a character, respective minimum score, item or random and the paths available for that branch. </param>
     // When there are conditionants to the players path, either based on score, items in the inventory or random
     public void GoToPathNode(DialoguePath dialogueBool)
     {

@@ -15,6 +15,9 @@ namespace DialogueTree
         }
     }
 
+    /// <summary>
+    /// Used when the dialogue system needs a conditional branch.
+    /// </summary>
     public struct DialoguePath
     {
         public Guid PrimaryNodeGUID { get; private set; }
@@ -47,6 +50,10 @@ namespace DialogueTree
             this.AddItem = item;
         }
     }
+
+    /// <summary>
+    /// Collection of possible events each <c>DialogueRuntimeNode</c> stores. <c>DialogueTree</c> sends these events to other systems.
+    /// </summary>
     public enum DialogueEvents
     {
         SHOW_DIALOGUE,
