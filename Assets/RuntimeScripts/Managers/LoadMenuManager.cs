@@ -121,26 +121,7 @@ public class LoadMenuManager : MonoBehaviour
     // Update is called once per frame
     public void ManageButtons(int i){
         jsonObj["active"]= i;
-        if(i == 0){
-            jsonObj["loaders"][i]["savename"] = name1.text;
-        }
-        else if(i == 1){
-            jsonObj["loaders"][i]["savename"] = name2.text;
-        }
-        else if(i == 2){
-            jsonObj["loaders"][i]["savename"] = name3.text;
-        }
-        else if(i == 3){
-            jsonObj["loaders"][i]["savename"] = name4.text;
-        }
-        else if(i == 4){
-            jsonObj["loaders"][i]["savename"] = name5.text;
-        }
-        else if(i == 5){
-            jsonObj["loaders"][i]["savename"] = name6.text;
-        }
-        string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-        File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
+        saveLoadNames();
         SceneManager.LoadScene(1);
     }
 
@@ -202,6 +183,20 @@ public class LoadMenuManager : MonoBehaviour
     }
 
     public void GoToPreviousScene(){
+        saveLoadNames();
+
         SceneManager.LoadScene(PlayerPrefs.GetInt("Previous Scene"));
+    }
+
+
+    public void saveLoadNames(){
+        jsonObj["loaders"][0]["savename"] = name1.text;
+        jsonObj["loaders"][1]["savename"] = name2.text;
+        jsonObj["loaders"][2]["savename"] = name3.text;
+        jsonObj["loaders"][3]["savename"] = name4.text;
+        jsonObj["loaders"][4]["savename"] = name5.text;
+        jsonObj["loaders"][5]["savename"] = name6.text;
+        string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+        File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "data.json"), output);
     }
 }
