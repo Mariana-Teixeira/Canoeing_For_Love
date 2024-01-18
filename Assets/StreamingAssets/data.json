@@ -1,49 +1,49 @@
 {
   "loaders": [
     {
-      "node": 5,
-      "image": "image0",
+      "node": 0,
+      "image": "",
       "kenScore": 0,
       "allenScore": 0,
       "items": "",
-      "savename": "load1",
-      "savedate": "15:21:45 18/01/2024"
+      "savename": "",
+      "savedate": ""
     },
     {
-      "node": 3,
-      "image": "image1",
+      "node": 0,
+      "image": "",
       "kenScore": 0,
       "allenScore": 0,
       "items": "",
-      "savename": "load2",
-      "savedate": "12:34:16 17/01/2024"
+      "savename": "",
+      "savedate": ""
     },
     {
-      "node": 4,
-      "image": "image2",
+      "node": 0,
+      "image": "",
       "kenScore": 0,
       "allenScore": 0,
       "items": "",
-      "savename": "load3",
-      "savedate": "12:04:31 17/01/2024"
+      "savename": "",
+      "savedate": ""
     },
     {
-      "node": 1,
-      "image": "image3",
+      "node": 0,
+      "image": "",
       "kenScore": 0,
       "allenScore": 0,
       "items": "",
-      "savename": "load4",
-      "savedate": "12:04:37 17/01/2024"
+      "savename": "",
+      "savedate": ""
     },
     {
-      "node": 1,
-      "image": "image4",
+      "node": 0,
+      "image": "",
       "kenScore": 0,
       "allenScore": 0,
       "items": "",
-      "savename": "load5",
-      "savedate": "12:04:43 17/01/2024"
+      "savename": "",
+      "savedate": ""
     },
     {
       "node": 0,
@@ -55,5 +55,5 @@
       "savedate": ""
     }
   ],
-  "active": 0
+  "active": 5
 }

@@ -70,7 +70,7 @@ public class MenuManager: MonoBehaviour
                 jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
                 jsonObj["active"] = 10;
                 int load = 0;
-                while(load < 5){
+                while(load <= 5){
                     if (jsonObj["loaders"][load]["node"] == 0){
                         jsonObj["active"]= load;
                         break;
