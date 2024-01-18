@@ -32,4 +32,7 @@ Special Thanks to Professor Mónica Aresta
 ## How to Run
 Extract the zip file in the main directory, launch executable and play.
 
-
+## Documentation
+  - Drive: https://drive.google.com/drive/folders/1IXwGCdZB73CzQpUx1x0sGAlB6VEcm63f
+  - Twine: in Documents Folder
+  - Video:
