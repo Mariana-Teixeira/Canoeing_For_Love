@@ -1,0 +1,13 @@
+26-03-2024
++ Decided that I needed to learn how my working developer did the loading system.
++ Learned he didn't have a state machine and was checking for everything possible UI state, which given our loading system, were a lot of if-statements that sounded like:
+"if x.warning is not active and y.warning is not active and z.warning is not active then do"
++ Given how messy and hard to read the code was, I decided it would be best to rewrite most scripts to become readable.
++ Even meaningless code, like changing the colour of a button, was inside of three if-statements. To save myself the headache, I simply removed features that were not imperative to the game working.
++ Doing this caused code elsewhere to stop working: proof that the spaguetti was well cooked, but not tasty. I was easily able to make temporary code to spot mistakes and still allow the game to run (while missing some features: event-based camera movement).
++ As I was unspaguetting the bolonegsa, I realized that our issue was a lack of good code architecture, which made saving and loading code a living nightmare to understand.
++ With this realization, I opened every script related to loading to start purging loading code so I could at least start the game (even if I couldn't save or load it).
++ As I kept researching I started thinking that our problem wasn't the buttons not reading the mouse input, but them not being able to save/load data from the game. We initially made Canoeing For Love as a windows executable. WebGL requires a different approach to saving and loading files, and not the "file system access" that we were using.
++ As I kept working, I found more issues in different places. Dangerous public variables and methods, bad documentation. All of this is a product of having to rush certains features of our game.
++ I decided that deleting code was too harsh of a decision to make, so I went back to a previous commit, pasted the previous code and commented out what I thought should be deleted.
++ I then faced a new problem. The game wasn't reading the .json file that contained the whole dialogue tree. After some googling I discovered that WebGL doesn't read directly from StreamingAssets folder.

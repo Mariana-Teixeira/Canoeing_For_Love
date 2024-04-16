@@ -1,0 +1,13 @@
++ For Day 3 I started looking into fixing a few visual issues, such as: assets being out of place, UI that didn't was no longer usable in WebGL (save and load). I removed UI that didn't have any function attached and renamed/replaced assets as well as making sure every canvas was scaling according to screen size.
++ I realized the assets weren't modular and couldn't be altered properly (dialogue box always assumed you had a save button). I didn't want to focus on visual development, so I simply ignored those assets.
+
++ I also noticed the code was very difficult to read through the manager, so I made a mental note: "I need to clean the code to declutter the Unity Inspector, and if need by, create custom inspector scripts.
+
++ While fixing some issues caused by removing unusable buttons (such as exit game), I encountered more if-else statementes that were about a page long. Another mental note about how I needed to decouple buttons from their functions. However, I still had more relevant issues, so I kept going.
+
++ I fixed some issues, arranged some assets and I decided to test the game when I realized the choice panel was throwing errors.
++ I just deleted a Vertical Layout Group by accident, hi hi.
+
++ I fixed a few more visual issues, like choice buttons being impossibly small.
+
++ I faced my first hard problem. Some choices threw an exception, being unable to render the text character-by-character. I still don't understand why, but as it's nearly midnight, I decided to call it quits for the rest of the day.

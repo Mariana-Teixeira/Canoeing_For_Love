@@ -9,11 +9,11 @@ public class ChoicesPanel : MonoBehaviour
 {
     public static ChoicesPanel instance {set; get;}
 
-    private const float BUTTON_MIN_WIDTH = 125;
-    private const float BUTTON_MAX_WIDTH = 1000;
-    private const float BUTTON_WIDTH_PADDING = 40;
+    private const float BUTTON_MIN_WIDTH = 200;
+    private const float BUTTON_MAX_WIDTH = 800;
+    private const float BUTTON_WIDTH_PADDING = 10;
 
-    private const float BUTTON_HEIGHT_LINE = 30f;
+    private const float BUTTON_HEIGHT_LINE = 60f;
     private const float BUTTON_HEIGHT_PADDING = 10;
 
     public TMP_FontAsset asset;
@@ -25,7 +25,8 @@ public class ChoicesPanel : MonoBehaviour
     	
     public ChoicePanelDecision decision {get; private set;} = null;
 
-    void Awake() {
+    void Awake()
+    {
         instance = this;
         Font font = Resources.Load<Font>("Montserrat-Regular");
         asset = TMP_FontAsset.CreateFontAsset(font);
@@ -34,7 +35,8 @@ public class ChoicesPanel : MonoBehaviour
     /// <summary>
     /// Generate and display buttons for each dialogue choice on screen.
     /// </summary>
-    public IEnumerator GenerateChoices(DialogueChoices[] choices){
+    public IEnumerator GenerateChoices(DialogueChoices[] choices)
+    {
         decision = new ChoicePanelDecision(choices);
         float minWidth = 1111110;
         
@@ -54,7 +56,7 @@ public class ChoicesPanel : MonoBehaviour
                 TextMeshProUGUI newTitle = newButton.GetComponentInChildren<TextMeshProUGUI>();
                 LayoutElement newLayout = newButton.GetComponent<LayoutElement>();
                 newTitle.font = asset;
-                newTitle.fontSize = 12;
+                newTitle.fontSize = 28;
                 newTitle.color = new Color(255,255,255,1);
 
                 choiceButton = new ChoiceButton {button=newButton, title=newTitle, layout=newLayout};
