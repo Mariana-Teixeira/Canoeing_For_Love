@@ -29,7 +29,7 @@ public class DialogueData
         cameraDict = new Dictionary<string,CameraAnimation>
         {
             { "normal", CameraAnimation.NORMAL },
-            { "shake", CameraAnimation.SHAKE_UP },
+            { "shake", CameraAnimation.SHAKE },
         };
 
         guids = new Dictionary<int, Guid>{};

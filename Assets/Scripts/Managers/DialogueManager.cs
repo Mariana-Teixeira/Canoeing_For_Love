@@ -24,6 +24,8 @@ public class DialogueManager : NodePublisher
 
     public Guid nextNode = Guid.Empty;
 
+    public Animator Transition;
+
     
     private void Awake() {
         Debug.Log("DialogueManager Awake Method");
@@ -54,7 +56,8 @@ public class DialogueManager : NodePublisher
             Debug.Log("Creating Dialogue Tree...");
             var json = request.downloadHandler.text;
             tree = new DialogueRuntimeTree(json);
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(2);
+            Transition.SetTrigger("Fade");
             StartDialogueTree();
         }
 

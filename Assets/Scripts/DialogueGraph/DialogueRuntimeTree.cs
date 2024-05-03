@@ -40,7 +40,7 @@ namespace DialogueTree
 
         public void GoToCredits()
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene("Credits");
         }
     }
 }
