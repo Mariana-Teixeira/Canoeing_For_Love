@@ -62,6 +62,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+    outputs:
+      buildVersion: ${{ steps.buildStep.outputs.buildVersion }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -91,16 +93,14 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: Build-StandaloneWindows64
-          path: build/StandaloneWindows64
+          path: build
         
- deploy:
+ deployPages:
    needs: 
     - buildWebGL
     - buildForWindowsAndLinux
    name: Deploy to Itch.io 🚀
    runs-on: ubuntu-latest
-   strategy:
-    fail-fast: false
    steps:
      - name: Checkout code
        uses: actions/checkout@v3
