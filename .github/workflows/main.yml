@@ -59,7 +59,7 @@ jobs:
          
  deployPages:
    needs: buildWebGL
-   name: Deploy to Itch.io 🚀
+   name: Deploy to Itch.io as WebGL 🚀
    runs-on: ubuntu-latest
    steps:
      - name: Checkout code
@@ -88,3 +88,75 @@ jobs:
          ITCH_USER: MaryTeixeira
          BRANCH: itch-io
          PACKAGE: build/WebGL
+
+buildForWindowsAndLinux:
+    name: Build for ${{ matrix.targetPlatform }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        targetPlatform:
+          - StandaloneWindows64 # Build a Windows 64-bit standalone.
+          - StandaloneLinux64 # Build a Linux 64-bit standalone.
+    outputs:
+      buildVersion: ${{ steps.buildStep.outputs.buildVersion }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+          
+      - uses: actions/cache@v3
+        with:
+          path: Library
+          key:
+            Library-${{ matrix.targetPlatform }}-${{ hashFiles('Assets/**', 'Packages/**',
+            'ProjectSettings/**') }}
+          restore-keys: |
+            Library-${{ matrix.targetPlatform }}-
+            Library-
+
+      - uses: game-ci/unity-builder@v4
+        id: buildStep
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: ${{ matrix.targetPlatform }}
+          versioning: Semantic
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Build-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
+
+ deployPages:
+   needs: buildForWindowsAndLinux
+   name: Deploy to Itch.io as Executable 🚀
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout code
+       uses: actions/checkout@v3
+
+     - uses: actions/download-artifact@v2
+       with:
+         name: build-windows
+         path: build
+
+     - name: Display structure of root files
+       run: ls -R
+       working-directory: build/windows
+
+     - name: Deploy 🚀
+       uses: JamesIves/github-pages-deploy-action@4.1.4
+       with:
+         branch: itch-io
+         folder: build/windows
+         
+     - uses: manleydev/butler-publish-itchio-action@master
+       env:
+         BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
+         CHANNEL: windows
+         ITCH_GAME: canoeing-for-love
+         ITCH_USER: MaryTeixeira
+         BRANCH: itch-io
+         PACKAGE: build/windows
