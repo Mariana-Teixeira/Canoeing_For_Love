@@ -116,8 +116,8 @@ jobs:
      
      - uses: actions/download-artifact@v2
        with:
-        name: Build-${{ matrix.targetPlatform }}
-        path: build/${{ matrix.targetPlatform }}
+        name: build-StandaloneWindows64
+        path: build
 
      - name: Display structure of root files
        run: ls -R
