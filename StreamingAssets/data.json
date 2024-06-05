@@ -1,0 +1,59 @@
+{
+  "loaders": [
+    {
+      "node": 1,
+      "image": "image0",
+      "kenScore": 0,
+      "allenScore": 0,
+      "items": "",
+      "savename": "",
+      "savedate": "20:22:07 26/03/2024"
+    },
+    {
+      "node": 1,
+      "image": "image1",
+      "kenScore": 0,
+      "allenScore": 0,
+      "items": "",
+      "savename": "",
+      "savedate": "20:23:57 26/03/2024"
+    },
+    {
+      "node": 1,
+      "image": "image2",
+      "kenScore": 0,
+      "allenScore": 0,
+      "items": "",
+      "savename": "",
+      "savedate": "20:25:02 26/03/2024"
+    },
+    {
+      "node": 0,
+      "image": "",
+      "kenScore": 0,
+      "allenScore": 0,
+      "items": "",
+      "savename": "",
+      "savedate": ""
+    },
+    {
+      "node": 0,
+      "image": "",
+      "kenScore": 0,
+      "allenScore": 0,
+      "items": "",
+      "savename": "",
+      "savedate": ""
+    },
+    {
+      "node": 0,
+      "image": "",
+      "kenScore": 0,
+      "allenScore": 0,
+      "items": "",
+      "savename": "",
+      "savedate": ""
+    }
+  ],
+  "active": 2
+}
