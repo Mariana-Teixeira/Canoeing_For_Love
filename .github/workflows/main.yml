@@ -88,12 +88,3 @@ jobs:
          ITCH_USER: MaryTeixeira
          BRANCH: itch-io
          PACKAGE: build/WebGL
-
-     - uses: manleydev/butler-publish-itchio-action@master
-       env:
-         BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
-         CHANNEL: windows
-         ITCH_GAME: canoeing-for-love
-         ITCH_USER: MaryTeixeira
-         BRANCH: itch-io
-         PACKAGE: build/windows
